@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "physics",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 10 — Physik",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Optik",
+      "topics": [
+        {
+          "title": "Brechung und Linsen",
+          "concepts": [
+            "Brechungsgesetz",
+            "Totalreflexion",
+            "Sammellinse",
+            "Zerstreuungslinse"
+          ],
+          "keyFormulas": [
+            "n₁sinθ₁=n₂sinθ₂",
+            "1/f=1/g+1/b"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Elektrizitätslehre",
+      "topics": [
+        {
+          "title": "Grundgrößen und Schaltungen",
+          "concepts": [
+            "Spannung",
+            "Stromstärke",
+            "Widerstand",
+            "Reihen-/Parallelschaltung"
+          ],
+          "keyFormulas": [
+            "U=R·I",
+            "P=U·I",
+            "R_ges=R₁+R₂ (Reihe)",
+            "1/R_ges=1/R₁+1/R₂ (Parallel)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

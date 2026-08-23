@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "physics",
+    "curriculum": "greek",
+    "curriculumName": "Greek Lykeio C — Physics",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Oscillations and Waves",
+      "topics": [
+        {
+          "title": "Simple Harmonic Motion",
+          "concepts": [
+            "restoring force",
+            "energy in SHM",
+            "resonance"
+          ],
+          "keyFormulas": [
+            "x=Asinωt",
+            "v=Aωcosωt",
+            "a=-ω²x",
+            "T=2π/ω"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Electromagnetism",
+      "topics": [
+        {
+          "title": "Faraday's Law and Applications",
+          "concepts": [
+            "electromagnetic induction",
+            "Lenz's law",
+            "AC generator"
+          ],
+          "keyFormulas": [
+            "ε=-dΦ/dt",
+            "Φ=BAcosθ"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

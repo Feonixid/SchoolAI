@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "physics",
+    "curriculum": "greek",
+    "curriculumName": "Πανελλαδικές — Φυσική",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Oscillations (SHM)",
+      "topics": [
+        {
+          "title": "Full SHM Analysis",
+          "concepts": [
+            "spring",
+            "pendulum",
+            "energy",
+            "resonance",
+            "damping"
+          ],
+          "keyFormulas": [
+            "x=Acosωt",
+            "v=-Aωsinωt",
+            "a=-ω²x",
+            "E=½kA²",
+            "T=2π√(m/k)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Electromagnetic Induction",
+      "topics": [
+        {
+          "title": "Faraday and Applications",
+          "concepts": [
+            "flux",
+            "EMF",
+            "Lenz's law",
+            "AC generator",
+            "transformer"
+          ],
+          "keyFormulas": [
+            "ε=-NdΦ/dt",
+            "Φ=BAcosθ",
+            "V₁/V₂=N₁/N₂"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

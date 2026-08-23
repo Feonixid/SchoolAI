@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Educational AI platform powered by Gemma 4, running locally via Ollama" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>EduAI – AI Tutor for Every School</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="css/style.css?v=2.0" />
+  <link rel="stylesheet" href="css/subjects-voice.css?v=2.0" />
+  <link rel="stylesheet" href="css/settings.css?v=2.0" />
+  <link rel="stylesheet" href="css/econ-tools.css?v=1.0" />
+  <link rel="stylesheet" href="css/subject-tools.css?v=1.0" />
+  <link rel="stylesheet" href="css/school-os.css?v=1.0" />
+  <link rel="stylesheet" href="css/socratic-tutor.css?v=1.0" />
+  <link rel="stylesheet" href="css/interactive-lab.css?v=1.0" />
+  <link rel="stylesheet" href="css/essay-coach.css?v=1.0" />
+  <link rel="stylesheet" href="css/quiz-battle.css?v=1.0" />
+  <link rel="stylesheet" href="css/pronunciation-coach.css?v=1.0" />
+  <link rel="stylesheet" href="css/teacher-grading.css?v=1.0" />
+  <link rel="stylesheet" href="css/flashcards.css?v=1.0" />
+  <link rel="stylesheet" href="css/learning-roadmap.css?v=1.0" />
+  <link rel="stylesheet" href="css/challenges.css?v=1.0" />
+  <link rel="stylesheet" href="css/study-calendar.css?v=1.0" />
+  <link rel="stylesheet" href="css/workspace.css?v=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous" onerror="console.warn('KaTeX CDN offline - using plain text fallback')"></script>
+  <script>window.markdownLoaded = false;</script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"
+    onload="window.markdownLoaded = true" onerror="console.warn('Markdown CDN offline - using local fallback')"></script>
+  <script>
+    setTimeout(() => {
+      if (!window.markdownLoaded && !window.markdownit) {
+        window.markdownit = () => ({ render: t => (t || '').replace(/\n/g,'<br>') });
+      }
+      if (!window.katex) {
+        window.katex = { renderToString: (expr) => expr };
+      }
+      if (!window.jspdf) {
+        window.jspdf = { jsPDF: class { text() {} save() { window.Toast?.info?.('PDF export requires online access or local jsPDF bundle.'); } } };
+      }
+    }, 2000);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" onerror="console.warn('jsPDF CDN offline')"></script>
+  <script src="node_modules/xterm/lib/xterm.js" onerror="console.warn('xterm local module not found')"></script>
+  <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js" onerror="console.warn('PeerJS CDN offline')"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer onerror="console.warn('Google GSI offline')"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header" role="banner">
+  <button id="panelToggle" class="icon-btn" title="Toggle sidebar" aria-expanded="false">☰</button>
+  <div class="headerCenter">
+    <div class="logoBox"><img id="schoolLogo" src="arsakeio.jpg" alt="School logo" /></div>
+    <h1 class="siteTitle">EduAI <span>· AI Tutor for Every School</span></h1>
+  </div>
+  <div class="header-actions">
+    <button id="interactiveLabBtn" class="icon-btn" title="🔬 Interactive Learning Lab (Physics, Biology, Chemistry, Math)">🔬</button>
+    <button id="schoolOsBtn"      class="icon-btn" title="🚀 School Mini OS (Focus Timer, Notes, Flashcards, Planner)">🚀</button>
+    <button id="studentPortalBtn" class="icon-btn" title="🎓 Student Portal & Hub">🎓</button>
+    <button id="teacherToggle"    class="icon-btn" title="Switch Student/Teacher Mode" aria-label="Toggle Teacher Mode">👩‍🏫</button>
+    <button id="announcementsBtn" class="icon-btn" title="Announcements & School News">📢</button>
+    <button id="collapseTopBarBtn" class="icon-btn" title="Toggle Full Workspace Mode">▲</button>
+    <button id="gradingBtn"       class="icon-btn" title="Grading System">📊</button>
+    <button id="settingsBtn"      class="icon-btn" title="Settings">⚙️</button>
+    <button id="accountBtn"       class="icon-btn" title="Account">👤</button>
+    <button id="themeToggle"      class="icon-btn" title="Toggle theme">🌙</button>
+  </div>
+</div>
+
+<!-- Subject Tab Bar injected by subjects.js -->
+
+<!-- MAIN CONTAINER -->
+<div class="container" role="main">
+
+  <!-- LEFT SIDE PANEL -->
+  <aside id="sidePanel" class="sidePanel" aria-hidden="true">
+    <div class="sideInner" id="sideInner">
+
+      <!-- Student Tools -->
+      <div id="studentToolsSection">
+        <h2 class="panel-title" data-i18n="sidebar.aiTools">AI Tools</h2>
+        <div class="panel-chips" id="toolsPanel" role="group">
+          <button class="chip active" data-tool="normal">Chat</button>
+          <button class="chip" data-tool="shpjego">Explain</button>
+          <button class="chip" data-tool="kryefjala">Find Subject</button>
+          <button class="chip" data-tool="analize">Full Analysis</button>
+        </div>
+        <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px">
+          <button id="openLabSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#059669,#10b981);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(16,185,129,0.25)">
+            <span>🔬</span> <span>Interactive Learning Lab</span>
+          </button>
+          <button id="openQuizBattleSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#f59e0b,#ef4444);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(245,158,11,0.25)">
+            <span>⚔️</span> <span>Arena e Betejës (60s Quiz)</span>
+          </button>
+          <button id="openSpeechCoachSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#06b6d4,#3b82f6);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(6,182,212,0.25)">
+            <span>🗣️</span> <span>AI Speech &amp; Pronunciation</span>
+          </button>
+          <button id="openEssayStudioSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#ec4899,#8b5cf6);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(236,72,153,0.25)">
+            <span>✍️</span> <span>AI Essay &amp; Writing Studio</span>
+          </button>
+          <button id="openFlashcardsSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#8b5cf6,#6366f1);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(139,92,246,0.25)">
+            <span>🗂️</span> <span>Kartat e Dijes (Flashcards)</span>
+          </button>
+          <button id="openRoadmapSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#10b981,#059669);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(16,185,129,0.25)">
+            <span>🗺️</span> <span>Harta e Dijes (Roadmaps)</span>
+          </button>
+          <button id="openChallengesSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#f59e0b,#d97706);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(245,158,11,0.25)">
+            <span>🏆</span> <span>Sfidat &amp; Ushtrimet (XP)</span>
+          </button>
+          <button id="openCalendarSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(59,130,246,0.25)">
+            <span>📅</span> <span>Kalendari &amp; Orari</span>
+          </button>
+          <button id="openTeacherGradingSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#0284c7,#0d9488);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(2,132,199,0.25)">
+            <span>📝</span> <span>Studio e Vlerësimit (Mësuesi)</span>
+          </button>
+          <button id="openSchoolOsSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(99,102,241,0.25)">
+            <span>🚀</span> <span>School Mini OS Hub</span>
+          </button>
+          <button id="openStudentPortalSidebarBtn" style="width:100%;padding:8px 12px;background:rgba(99,102,241,0.08);color:var(--text);border:1px solid rgba(99,102,241,0.2);border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit">
+            <span>🎓</span> <span>Student Portal & Hub</span>
+          </button>
+          <button id="joinClassBtn" style="width:100%;padding:8px 12px;background:var(--accent);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit">
+            <span>🆔</span> <span data-i18n="sidebar.signin">Sign In / Register</span>
+          </button>
+        </div>
+        <div style="height:10px"></div>
+        <h2 class="panel-title" data-i18n="sidebar.difficulty">Difficulty</h2>
+        <div class="panel-chips" id="difficultyPanel" role="group">
+          <button class="chip" data-diff="parashkollor" data-i18n="diff.preschool">Pre-school</button>
+          <button class="chip active" data-diff="fillor" data-i18n="diff.primary">Primary</button>
+          <button class="chip" data-diff="mesem" data-i18n="diff.middle">Middle</button>
+          <button class="chip" data-diff="mesem_i_larte" data-i18n="diff.advanced">Advanced</button>
+        </div>
+        <div style="height:10px"></div>
+        <h2 class="panel-title" data-i18n="sidebar.examples">Quick Examples</h2>
+        <div class="panel-chips" id="examplesPanel">
+          <button class="chip example">Kush e theu vazon?</button>
+          <button class="chip example">Beni po shkonte në shkollë.</button>
+          <button class="chip example">Ia solli atij librin.</button>
+          <button class="chip example">Si përdoren përemrat?</button>
+        </div>
+        <div style="height:10px"></div>
+        <h2 class="panel-title" data-i18n="sidebar.options">Options</h2>
+        <div class="toggleRow">
+          <input type="checkbox" id="includeDev" class="checkbox" checked />
+          <label for="includeDev" class="smallNote">Include curriculum encyclopedia</label>
+        </div>
+        <div class="toggleRow">
+          <input type="checkbox" id="includeGamification" class="checkbox" checked />
+          <label for="includeGamification" class="smallNote">Gamification (Points &amp; Badges)</label>
+        </div>
+        <div style="height:10px"></div>
+        <h2 class="panel-title" data-i18n="sidebar.games">🎮 Games</h2>
+        <button id="openQuizGameBtn" style="width:100%;padding:9px;background:linear-gradient(135deg,#10b981,#059669);color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-size:13.5px">
+          <span>🧠</span> Play Quiz
+        </button>
+      </div>
+
+      <!-- Teacher Tools -->
+      <div id="teacherToolsSection" style="display:none">
+        <div class="teacher-header">
+          <h2 class="panel-title">Teacher Mode 🔑</h2>
+          <span id="teacherLockStatus" class="lock-status locked">🔒 Locked</span>
+        </div>
+        <p class="smallNote">Select a grade (1–12), then a chapter.</p>
+        <h3 class="panel-title" style="margin-top:8px">Grade</h3>
+        <div class="gradeSelect" id="gradeSelect" role="group"></div>
+        <h3 class="panel-title" style="margin-top:8px">Chapters</h3>
+        <div class="chapterList" id="chapterList" role="group"></div>
+        <div style="height:6px"></div>
+        <h3 class="panel-title">Active Focus</h3>
+        <div id="selectedFocus" class="smallNote" style="min-height:34px">No chapter selected.</div>
+        <div style="height:8px"></div>
+        <h3 class="panel-title">Students</h3>
+        <div style="display:flex;gap:6px">
+          <input id="studentNameInput" placeholder="Add student name"
+            style="flex:1;padding:8px;border-radius:7px;border:1px solid var(--border);background:var(--input-bg);color:var(--text);font-family:inherit;font-size:13px;outline:none" />
+          <button id="addStudentBtn" style="padding:8px 12px;border-radius:7px;background:var(--accent);color:#fff;border:none;cursor:pointer;font-weight:600;font-size:13px;font-family:inherit">Add</button>
+        </div>
+        <div class="studentList" id="studentList" role="list"></div>
+        <div style="height:8px"></div>
+        <h3 class="panel-title">⚙️ Teacher Tools</h3>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <button id="generateQuizBtn" class="quizBtn" style="width:100%;text-align:center">Generate 3 Questions</button>
+          <button id="quizHintBtn"     class="quizBtn" style="width:100%;text-align:center">Quick Question Ideas</button>
+        </div>
+        <div id="teacherFeatureButtons"></div>
+        <div style="height:8px"></div>
+        <div class="toggleRow">
+          <input type="checkbox" id="privacyModeToggle" class="checkbox" />
+          <label for="privacyModeToggle" class="smallNote">Don't save chat history</label>
+        </div>
+        <div style="height:8px"></div>
+        <p class="smallNote">
+          <a id="closeTeacher" href="#" style="color:var(--accent);text-decoration:none">← Exit Teacher Mode</a>
+        </p>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- MAIN CHAT -->
+  <div class="main">
+    <div id="chat" role="log" aria-live="polite"></div>
+    <div class="inputArea">
+      <textarea id="input" placeholder="Type your question here…" rows="1"></textarea>
+      <div class="controls">
+        <div class="watermark">Gemma 4 · Offline · EduAI</div>
+        <div class="buttonRow">
+          <button id="micBtn" class="mic-btn" title="Fli me zë (Voice Speech-to-Text)">🎙️</button>
+          <button class="send" id="sendBtn">Send</button>
+          <button class="clear" id="clearBtn">Clear</button>
+          <button id="exportChatBtn" class="chat-dock-toggle-btn" title="Eksporto bisedën (PDF / Markdown)">📑 Eksporto</button>
+          <button id="toggleChatDockBtn" class="chat-dock-toggle-btn" title="Minimizo ose zgjero bisedën me AI">▼ Minimizo</button>
+        </div>
+        <div class="toggleRow" style="margin-top:3px">
+          <input type="checkbox" id="practiceModeToggle" class="checkbox" />
+          <label for="practiceModeToggle" class="smallNote">Practice Mode (no answers until asked)</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dev panel injected by terminal.js -->
+
+</div>
+
+<!-- ============ MODALS ============ -->
+
+<!-- Teacher password -->
+<div id="passwordModalOverlay" class="modal-overlay" role="dialog" aria-modal="true">
+  <div id="passwordModal" class="modal">
+    <h3>🔒 Enter Teacher Mode</h3>
+    <p class="smallNote" style="margin-bottom:12px">Enter the teacher password to unlock.</p>
+    <div class="modalRow">
+      <label for="passwordInput">Password</label>
+      <input type="password" id="passwordInput" placeholder="Enter password" autocomplete="off" />
+    </div>
+    <div id="passwordError" class="error-message" style="display:none"></div>
+    <div class="modalButtons">
+      <button id="passwordCancel" class="btn-secondary">Cancel</button>
+      <button id="passwordSubmit" class="btn-primary">Enter</button>
+    </div>
+  </div>
+</div>
+
+<!-- Grading System -->
+<div id="gradingModalOverlay" class="modal-overlay" role="dialog" aria-modal="true" style="z-index:3000">
+  <div class="modal" style="max-width:540px;padding:0;overflow:hidden;border-radius:14px">
+    <div style="padding:18px 22px 14px;border-bottom:1px solid var(--border)">
+      <h3 style="margin:0 0 4px;font-size:17px">📊 Grading System</h3>
+      <p class="smallNote" style="margin:0">Choose the grading scale used at your school.</p>
+    </div>
+    <div id="gradingOptions" style="padding:14px 22px;display:flex;flex-direction:column;gap:8px;max-height:62vh;overflow-y:auto"></div>
+    <div style="padding:12px 22px;border-top:1px solid var(--border);display:flex;justify-content:flex-end">
+      <button id="gradingClose" class="btn-secondary">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hardware optimization -->
+<div id="optModalOverlay" class="modal-overlay" role="dialog" aria-modal="true">
+  <div id="optModal" class="modal" style="max-width:480px;padding:0;overflow:hidden;border-radius:14px">
+    <div style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.08)">
+      <h3 style="margin:0 0 4px;color:#e0e0e0;font-size:17px">⚙️ Hardware Optimization</h3>
+      <p style="margin:0;font-size:12px;color:#8892a4">Configure ShqipAI for your specific hardware.</p>
+    </div>
+    <div style="padding:20px 24px">
+      <div id="optSysInfo" style="background:rgba(88,166,255,0.06);border:1px solid rgba(88,166,255,0.15);border-radius:8px;padding:12px;margin-bottom:16px;font-size:12px;color:#8892a4;font-family:'Cascadia Code',monospace">
+        <div style="font-weight:700;color:#58a6ff;margin-bottom:6px;font-size:11px;text-transform:uppercase;letter-spacing:0.5px">🖥️ Detected System</div>
+        <div id="optDetectedCpu">CPU: Detecting...</div>
+        <div id="optDetectedCores">Cores: —</div>
+        <div id="optDetectedMem">Memory: —</div>
+        <div id="optDetectedPlatform">Platform: —</div>
+      </div>
+      <label style="display:block;font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px">CPU Brand</label>
+      <select id="cpuBrand" style="width:100%;padding:8px 10px;border-radius:6px;font-family:inherit;font-size:13px;background:var(--input-bg);color:var(--text);border:1px solid var(--border);margin-bottom:12px">
+        <option value="auto">Auto-Detect</option><option value="intel">Intel</option>
+        <option value="amd">AMD</option><option value="apple">Apple Silicon</option><option value="arm">ARM</option>
+      </select>
+      <label style="display:block;font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px">CPU Generation</label>
+      <select id="cpuGen" style="width:100%;padding:8px 10px;border-radius:6px;font-family:inherit;font-size:13px;background:var(--input-bg);color:var(--text);border:1px solid var(--border);margin-bottom:12px">
+        <option value="auto">Auto-Detect</option>
+        <optgroup label="Intel"><option value="intel_12">12th Gen</option><option value="intel_13">13th Gen</option><option value="intel_14">14th Gen</option></optgroup>
+        <optgroup label="AMD"><option value="amd_5000">Ryzen 5000</option><option value="amd_7000">Ryzen 7000</option></optgroup>
+        <optgroup label="Apple"><option value="apple_m1">M1</option><option value="apple_m2">M2</option><option value="apple_m3">M3</option></optgroup>
+      </select>
+      <label style="display:block;font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px">Performance Target</label>
+      <select id="cpuPreset" style="width:100%;padding:8px 10px;border-radius:6px;font-family:inherit;font-size:13px;background:var(--input-bg);color:var(--text);border:1px solid var(--border);margin-bottom:12px">
+        <option value="max">🔥 Max Performance</option>
+        <option value="balanced" selected>⚖️ Balanced</option>
+        <option value="saver">🔋 Power Saver</option>
+      </select>
+      <label style="display:block;font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px">Memory Allocation</label>
+      <select id="memLimit" style="width:100%;padding:8px 10px;border-radius:6px;font-family:inherit;font-size:13px;background:var(--input-bg);color:var(--text);border:1px solid var(--border);margin-bottom:4px">
+        <option value="1024">1 GB</option><option value="2048">2 GB</option>
+        <option value="4096" selected>4 GB</option><option value="8192">8 GB</option><option value="16384">16 GB</option>
+      </select>
+    </div>
+    <div style="display:flex;justify-content:flex-end;gap:8px;padding:14px 24px;background:rgba(0,0,0,0.15);border-top:1px solid var(--border)">
+      <button id="optCancel" class="btn-secondary">Cancel</button>
+      <button id="optSubmit" class="btn-primary" style="min-width:130px">💾 Save &amp; Apply</button>
+    </div>
+  </div>
+</div>
+
+<!-- Account -->
+<div id="accountModalOverlay" class="modal-overlay" style="z-index:2000">
+  <div id="accountModal" class="modal"></div>
+</div>
+
+<!-- Student profile -->
+<div id="studentModalOverlay" class="modal-overlay" role="dialog" aria-modal="true">
+  <div id="studentModal" class="modal"></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SCRIPTS — state.js MUST be first                            -->
+<!-- ============================================================ -->
+<script src="js/state.js?v=1.5"></script>
+<script src="js/security.js?v=1.3"></script>
+<script src="js/fingerprint.js?v=1.3"></script>
+<script src="js/accounts.js?v=1.3"></script>
+<script src="js/personalization.js?v=1.0"></script>
+<script src="js/models.js?v=1.3"></script>
+<script src="js/subjects.js?v=2.1"></script>
+<script src="js/classroom.js?v=1.0"></script>
+<script src="js/connectivity.js?v=1.0"></script>
+<script src="js/ui.js?v=1.3"></script>
+<script src="js/students.js?v=1.3"></script>
+<script src="js/quiz.js?v=1.3"></script>
+<script src="js/memory.js?v=1.0"></script>
+<script src="js/ai-context.js?v=1.0"></script>
+<script src="js/ai-core.js?v=1.5"></script>
+<script src="js/attendance.js?v=1.3"></script>
+<script src="js/behavior.js?v=1.3"></script>
+<script src="js/calendar.js?v=1.3"></script>
+<script src="js/communication.js?v=1.3"></script>
+<script src="js/analytics.js?v=1.3"></script>
+<script src="js/assignments.js?v=1.3"></script>
+<script src="js/reports.js?v=1.3"></script>
+<script src="js/gamification.js?v=1.3"></script>
+<script src="js/quiz-game.js?v=1.3"></script>
+<script src="js/ai-feedback.js?v=1.3"></script>
+<script src="js/initialize-features.js?v=1.3"></script>
+<script src="js/dialog.js?v=1.0"></script>
+<script src="js/projects.js?v=2.1"></script>
+<script src="js/toast.js?v=1.0"></script>
+<script src="js/api-utils.js?v=1.0"></script>
+<script src="js/textbook.js?v=1.0"></script>
+<script src="js/monaco-init.js?v=1.0"></script>
+<script src="js/memory-ui.js?v=1.0"></script>
+<script src="js/cyber-challenges.js?v=1.0"></script>
+<script src="js/terminal.js?v=2.2"></script>
+<script src="js/voice.js?v=1.0"></script>
+<script src="js/i18n.js?v=2.0"></script>
+<script src="js/hardware-profile.js?v=2.0"></script>
+<script src="js/model-loader.js?v=1.0"></script>
+<script src="js/settings.js?v=2.0"></script>
+<script src="js/tts.js?v=2.0"></script>
+<script src="js/accessibility.js?v=2.0"></script>
+<script src="js/multimodal.js?v=2.0"></script>
+<script src="js/textbook-rag.js?v=2.0"></script>
+<script src="js/learning-analytics.js?v=2.0"></script>
+<script src="js/webllm-engine.js?v=2.0"></script>
+<script src="js/curriculum-rag.js?v=1.0"></script>
+<script src="js/curriculum-selector.js?v=1.0"></script>
+<script src="js/student-dashboard.js?v=1.0"></script>
+<script src="js/econ-tools.js?v=1.0"></script>
+<script src="js/student-workspace.js?v=1.0"></script>
+<script src="js/teacher-analytics.js?v=1.0"></script>
+<script src="js/class-monitor.js?v=1.0"></script>
+<script src="js/plagiarism.js?v=1.0"></script>
+<script src="js/parent-portal.js?v=1.0"></script>
+<script src="js/slide-builder.js?v=1.0"></script>
+<script src="js/practice-test.js?v=1.0"></script>
+<script src="js/my-path.js?v=1.0"></script>
+<script src="js/subject-tools.js?v=1.0"></script>
+<script src="js/school-os.js?v=1.0"></script>
+<script src="js/socratic-tutor.js?v=1.0"></script>
+<script src="js/interactive-lab.js?v=1.0"></script>
+<script src="js/essay-coach.js?v=1.0"></script>
+<script src="js/quiz-battle.js?v=1.0"></script>
+<script src="js/pronunciation-coach.js?v=1.0"></script>
+<script src="js/teacher-grading.js?v=1.0"></script>
+<script src="js/flashcards.js?v=1.0"></script>
+<script src="js/learning-roadmap.js?v=1.0"></script>
+<script src="js/challenges.js?v=1.0"></script>
+<script src="js/study-calendar.js?v=1.0"></script>
+<script>
+// Initialize hardware detection, model selection, and settings
+(async function() {
+  // Detect hardware
+  if (window.HardwareProfile) {
+    const saved = window.HardwareProfile.loadSaved();
+    if (!saved) {
+      const hw = await window.HardwareProfile.detect();
+      console.log('Hardware detected:', hw);
+    }
+  }
+  
+  // Initialize model loader for hardware-adaptive model selection
+  if (window.ModelLoader) {
+    const loader = new window.ModelLoader();
+    const profile = await loader.detectHardware();
+    const model = loader.selectModel();
+    console.log('Model selected:', model);
+    window.modelLoader = loader; // Make globally available
+    // Apply selected model to AppState so ai-core uses it
+    if (model && window.AppState?.api) {
+      // Map tier to available Ollama model names
+      const tierModelMap = {
+        1: 'gemma3:12b',
+        2: 'gemma3:4b',
+        3: 'gemma3:4b',
+        4: 'gemma3:1b',
+        5: 'gemma3:1b'
+      };
+      const ollamaModel = tierModelMap[profile.tier] || 'gemma3:4b';
+      window.AppState.api.model = ollamaModel;
+      console.log(`Hardware tier ${profile.tier} → Ollama model: ${ollamaModel}`);
+    }
+  }
+  
+  // Settings button
+  document.getElementById('settingsBtn')?.addEventListener('click', () => {
+    window.Settings?.open();
+  });
+})();
+</script>
+<script>
+// Register service worker for PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((reg) => console.log('SW registered:', reg.scope))
+      .catch((err) => console.warn('SW registration failed:', err));
+  });
+}
+</script>
+
+<!-- Grading modal wiring (needs state.js already loaded) -->
+<script>
+(function() {
+  function renderGradingOptions() {
+    const opts = document.getElementById('gradingOptions');
+    if (!opts || !window.GradingSystems) return;
+    const activeId = localStorage.getItem('shqipai_grading') || 'albanian';
+    opts.innerHTML = '';
+    Object.entries(window.GradingSystems).forEach(([id, gs]) => {
+      const isActive = activeId === id;
+      const card = document.createElement('div');
+      card.style.cssText = [
+        'display:flex;align-items:center;gap:12px;padding:12px 14px',
+        'border-radius:10px;cursor:pointer;transition:all .15s',
+        `border:2px solid ${isActive ? 'var(--accent)' : 'var(--border)'}`,
+        `background:${isActive ? 'rgba(74,108,247,0.07)' : 'var(--panel)'}`
+      ].join(';');
+      const badges = gs.scale.slice(0,3).map(b =>
+        `<span style="background:${b.color};color:#fff;font-size:10px;padding:1px 6px;border-radius:10px;font-weight:600">${b.label}</span>`
+      ).join(' ');
+      card.innerHTML = `
+        <span style="font-size:24px;flex-shrink:0">${gs.flag}</span>
+        <div style="flex:1;min-width:0">
+          <div style="font-weight:700;font-size:13.5px">${gs.name}</div>
+          <div style="margin-top:4px;display:flex;gap:4px;flex-wrap:wrap">${badges}</div>
+          ${gs.note ? `<div style="font-size:11px;color:var(--muted);margin-top:3px">⚠️ ${gs.note}</div>` : ''}
+        </div>
+        ${isActive ? '<span style="color:var(--accent);font-size:20px;flex-shrink:0">✓</span>' : ''}
+      `;
+      card.addEventListener('click', () => {
+        window.setGradingSystem(id);
+        renderGradingOptions();
+      });
+      opts.appendChild(card);
+    });
+  }
+
+  document.getElementById('gradingBtn')?.addEventListener('click', () => {
+    renderGradingOptions();
+    document.getElementById('gradingModalOverlay').style.display = 'flex';
+  });
+  document.getElementById('gradingClose')?.addEventListener('click', () => {
+    document.getElementById('gradingModalOverlay').style.display = 'none';
+  });
+  document.getElementById('gradingModalOverlay')?.addEventListener('click', function(e) {
+    if (e.target === this) this.style.display = 'none';
+  });
+})();
+</script>
+
+</body>
+</html>

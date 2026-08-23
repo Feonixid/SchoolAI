@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "economics",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 12 — VWL (International)",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Internationale Wirtschaftsbeziehungen",
+      "topics": [
+        {
+          "title": "Außenhandel und Globalisierung",
+          "concepts": [
+            "komparativer Vorteil",
+            "EU-Binnenmarkt",
+            "Wechselkurse",
+            "Handelspolitik"
+          ],
+          "keyFacts": [
+            "EU-Binnenmarkt: Freier Verkehr von Waren, Dienstleistungen, Kapital, Personen",
+            "Euro: gemeinsame Währung, EZB-Geldpolitik"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

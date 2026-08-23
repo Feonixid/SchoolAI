@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "physics",
+    "curriculum": "uk",
+    "curriculumName": "UK GCSE Physics — Electricity and Forces",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Electricity",
+      "topics": [
+        {
+          "title": "Circuit Fundamentals",
+          "concepts": [
+            "current",
+            "potential difference",
+            "resistance",
+            "Ohm's law",
+            "I-V characteristics"
+          ],
+          "keyFormulas": [
+            "V=IR",
+            "P=IV",
+            "E=Pt",
+            "Q=It"
+          ],
+          "keyFacts": [
+            "Ohmic conductor: straight line through origin",
+            "Filament lamp: curved (resistance increases with temperature)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Forces",
+      "topics": [
+        {
+          "title": "Newton's Laws and Momentum",
+          "concepts": [
+            "resultant force",
+            "F=ma",
+            "momentum",
+            "conservation of momentum"
+          ],
+          "keyFormulas": [
+            "F=ma",
+            "p=mv",
+            "F=Δp/Δt",
+            "m₁u₁+m₂u₂=m₁v₁+m₂v₂"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

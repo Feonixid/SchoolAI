@@ -1,0 +1,221 @@
+/* css/learning-roadmap.css — Visual Learning Roadmaps & Skill Trees */
+/* ================================================================= */
+
+.roadmap-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 4800;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: roadmapFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes roadmapFadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.roadmap-window {
+  width: 1060px;
+  max-width: 96vw;
+  height: 760px;
+  max-height: 94vh;
+  background: var(--panel, #ffffff);
+  color: var(--text, #1e293b);
+  border-radius: 20px;
+  border: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .roadmap-window {
+  background: #0f172a;
+  color: #f3f4f6;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.roadmap-header {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(99, 102, 241, 0.12));
+  border-bottom: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roadmap-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.roadmap-subject-nav {
+  width: 200px;
+  min-width: 200px;
+  border-right: 1px solid var(--border, #cbd5e1);
+  padding: 16px 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(248, 250, 252, 0.5);
+}
+
+[data-theme="dark"] .roadmap-subject-nav {
+  background: rgba(15, 23, 42, 0.4);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.roadmap-subject-btn {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text, #334155);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: left;
+  font-family: inherit;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.roadmap-subject-btn:hover {
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.roadmap-subject-btn.active {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.roadmap-tree-area {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Skill Node */
+.skill-node {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.skill-node::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.3), rgba(99, 102, 241, 0.08));
+}
+
+.skill-node:last-child::before {
+  display: none;
+}
+
+.skill-node-dot {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+  border: 2.5px solid var(--border, #cbd5e1);
+  background: var(--panel, #ffffff);
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .skill-node-dot {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.skill-node-dot.completed {
+  background: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+.skill-node-dot.current {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: white;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25);
+  animation: currentPulse 2s ease-in-out infinite;
+}
+
+@keyframes currentPulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25); }
+  50% { box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.12); }
+}
+
+.skill-node-dot.locked {
+  opacity: 0.5;
+}
+
+.skill-node-body {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border, #e2e8f0);
+  background: var(--panel, #ffffff);
+  transition: all 0.15s ease;
+}
+
+[data-theme="dark"] .skill-node-body {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.skill-node-body.completed {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.skill-node-body.current {
+  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.skill-progress-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(148, 163, 184, 0.2);
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.skill-progress-fill.done {
+  background: linear-gradient(90deg, #10b981, #059669);
+}

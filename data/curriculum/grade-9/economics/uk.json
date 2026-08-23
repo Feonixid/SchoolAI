@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "economics",
+    "curriculum": "uk",
+    "curriculumName": "UK GCSE Economics — Theme 1",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Introduction",
+      "topics": [
+        {
+          "title": "Basic Economic Problem",
+          "concepts": [
+            "scarcity",
+            "opportunity cost",
+            "economic agents",
+            "specialisation"
+          ],
+          "keyFacts": [
+            "Specialisation increases productivity but creates interdependence",
+            "Trade allows countries to consume beyond their PPF"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

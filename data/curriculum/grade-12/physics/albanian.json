@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "physics",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Fizikë Klasa 12",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Fizika moderne",
+      "topics": [
+        {
+          "title": "Efekti fotoelektrik",
+          "concepts": [
+            "fotoni",
+            "energjia e fotonit",
+            "funksioni i daljes",
+            "pragu i frekuencës"
+          ],
+          "keyFormulas": [
+            "E=hf",
+            "KE_max=hf-φ",
+            "h=6.63×10⁻³⁴ J·s"
+          ],
+          "keyFacts": [
+            "Drita sillet si grimcë (foton) në efektin fotoelektrik",
+            "Einstein 1905: shpjegimi kuantik"
+          ]
+        },
+        {
+          "title": "Fizika bërthamore",
+          "concepts": [
+            "fisioni",
+            "fuzioni",
+            "radioaktiviteti",
+            "zbërthimi"
+          ],
+          "keyFormulas": [
+            "E=mc²",
+            "N=N₀e^(-λt)",
+            "t₁/₂=ln2/λ"
+          ],
+          "keyFacts": [
+            "Fisioni: bërthama e rëndë ndahet",
+            "Fuzioni: bërthama të lehta bashkohen",
+            "Energjia lidhëse për nukleon: maksimale te Fe-56"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

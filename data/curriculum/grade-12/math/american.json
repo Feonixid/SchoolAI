@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "math",
+    "curriculum": "american",
+    "curriculumName": "AP Calculus AB",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Limits and Continuity",
+      "topics": [
+        {
+          "title": "Limits",
+          "concepts": [
+            "limit definition",
+            "one-sided limits",
+            "infinite limits",
+            "limits at infinity",
+            "squeeze theorem"
+          ],
+          "keyFormulas": [
+            "lim(x→0)sinx/x=1",
+            "lim(x→∞)1/x=0"
+          ],
+          "keyFacts": [
+            "Indeterminate forms: 0/0, ∞/∞ — use L'Hôpital or algebra"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Differentiation",
+      "topics": [
+        {
+          "title": "Derivative Rules",
+          "concepts": [
+            "power rule",
+            "product rule",
+            "quotient rule",
+            "chain rule",
+            "implicit differentiation"
+          ],
+          "keyFormulas": [
+            "d/dx[xⁿ]=nxⁿ⁻¹",
+            "d/dx[sin x]=cos x",
+            "d/dx[eˣ]=eˣ",
+            "d/dx[ln x]=1/x"
+          ]
+        },
+        {
+          "title": "Applications",
+          "concepts": [
+            "related rates",
+            "optimization",
+            "linear approximation",
+            "Mean Value Theorem"
+          ],
+          "keyFormulas": [
+            "L(x)=f(a)+f'(a)(x-a)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Integration",
+      "topics": [
+        {
+          "title": "Fundamental Theorem and Techniques",
+          "concepts": [
+            "Riemann sums",
+            "FTC Part 1 & 2",
+            "u-substitution",
+            "area between curves",
+            "volume of revolution"
+          ],
+          "keyFormulas": [
+            "d/dx[∫ₐˣf(t)dt]=f(x) (FTC1)",
+            "∫ₐᵇf(x)dx=F(b)-F(a) (FTC2)",
+            "V=π∫ₐᵇ[R(x)]²dx (disk method)",
+            "V=2π∫ₐᵇx·f(x)dx (shell method)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Differential Equations",
+      "topics": [
+        {
+          "title": "Separable DEs and Slope Fields",
+          "concepts": [
+            "slope fields",
+            "separation of variables",
+            "exponential growth/decay"
+          ],
+          "keyFormulas": [
+            "dy/dx=ky → y=Ce^(kt)"
+          ],
+          "keyFacts": [
+            "AP exam: sketch slope field by evaluating dy/dx at grid points",
+            "Verify solution by substituting back into DE"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Section I: 45 MC (1h45min)",
+      "Section II: 6 FRQ (1h30min)"
+    ],
+    "tips": [
+      "MC: no calculator on Part A, calculator on Part B",
+      "FRQ: show ALL work, answers without work = no credit",
+      "Euler's method may appear on calculator section"
+    ]
+  }
+}

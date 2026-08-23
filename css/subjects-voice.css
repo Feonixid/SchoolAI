@@ -1,0 +1,465 @@
+/* ============================================================
+   DEVELOPER PANEL (Terminal + Projects)
+   Added to style.css — right-side panel for coding/cyber tabs
+   ============================================================ */
+
+/* ── Panel container ── */
+#devPanel {
+  width: 0;
+  min-width: 0;
+  background: #0d1117;
+  border-left: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: width 0.2s ease, min-width 0.2s ease;
+  color: #c9d1d9;
+  font-family: "Cascadia Code", "Fira Code", "Consolas", "Courier New", monospace;
+}
+
+#devPanel.open {
+  width: 44%;
+  min-width: 360px;
+}
+
+@media (max-width: 900px) {
+  #devPanel.open { width: 100%; min-width: 0; border-left: none; border-top: 1px solid rgba(255,255,255,0.06); }
+  .container.dev-open { flex-direction: column; }
+}
+
+/* ── Projects bar (file tabs) ── */
+#devProjectsBar {
+  background: #161b22;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+#devProjectsTopRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.dev-project-select {
+  background: #21262d;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #c9d1d9;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  min-width: 120px;
+}
+
+.dev-project-select:focus { border-color: #58a6ff; }
+
+.dev-icon-btn {
+  background: #21262d;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #8b949e;
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.1s, color 0.1s;
+  flex-shrink: 0;
+}
+
+.dev-icon-btn:hover { background: #30363d; color: #c9d1d9; }
+
+/* File tabs row */
+#devFileTabs {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 0 6px;
+  gap: 2px;
+  min-height: 32px;
+}
+#devFileTabs::-webkit-scrollbar { display: none; }
+
+.dev-file-tab {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid transparent;
+  border-bottom: none;
+  background: transparent;
+  color: #6e7681;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.1s, background 0.1s;
+  position: relative;
+}
+
+.dev-file-tab:hover { color: #c9d1d9; background: #1c2128; }
+
+.dev-file-tab.active {
+  color: #c9d1d9;
+  background: #0d1117;
+  border-color: rgba(255,255,255,0.06);
+}
+
+.dev-file-tab-close {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  color: #6e7681;
+  font-size: 11px;
+  opacity: 0;
+  transition: opacity 0.1s, background 0.1s;
+}
+
+.dev-file-tab:hover .dev-file-tab-close,
+.dev-file-tab.active .dev-file-tab-close { opacity: 1; }
+.dev-file-tab-close:hover { background: rgba(255,255,255,0.1); color: #f85149; }
+
+.dev-add-file-btn {
+  color: #58a6ff;
+  font-size: 16px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.1s;
+  flex-shrink: 0;
+}
+.dev-add-file-btn:hover { background: rgba(88,166,255,0.1); }
+
+/* ── Toolbar (coding mode) ── */
+#devToolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  background: #161b22;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+
+.dev-lang-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.dev-run-btn {
+  background: #238636;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: filter 0.1s;
+}
+.dev-run-btn:hover { filter: brightness(1.15); }
+.dev-run-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.dev-ai-btn {
+  background: #1f6feb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: filter 0.1s;
+  margin-left: auto;
+}
+.dev-ai-btn:hover { filter: brightness(1.15); }
+
+#devStatus {
+  font-size: 11px;
+  color: #3fb950;
+  margin-left: 4px;
+}
+
+/* ── Code editor pane ── */
+#devEditorPane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+#devEditor {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: "Cascadia Code", "Fira Code", "Consolas", monospace;
+  font-size: 13.5px;
+  line-height: 1.6;
+  padding: 14px 16px;
+  tab-size: 4;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+}
+#devEditor::selection { background: rgba(88,166,255,0.2); }
+
+/* ── Resize handle ── */
+#devResizeHandle {
+  height: 5px;
+  background: rgba(255,255,255,0.04);
+  cursor: ns-resize;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+#devResizeHandle:hover { background: rgba(88,166,255,0.2); }
+
+/* ── Output pane (coding) ── */
+#devOutput {
+  height: 38%;
+  min-height: 80px;
+  max-height: 70%;
+  background: #010409;
+  overflow-y: auto;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: #3fb950;
+  flex-shrink: 0;
+}
+
+#devOutput .out-err   { color: #f85149; }
+#devOutput .out-warn  { color: #d29922; }
+#devOutput .out-sys   { color: #58a6ff; font-style: italic; }
+#devOutput .out-html-label { color: #8b949e; font-style: italic; font-size: 11px; }
+
+#devOutputHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 12px;
+  background: #161b22;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 11px;
+  color: #8b949e;
+  flex-shrink: 0;
+}
+
+#devHtmlPreview {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+/* ── Cyber terminal mode ── */
+#cyberTerminal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+#cyberHistory {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#cyberHistory .cy-prompt { color: #58a6ff; }
+#cyberHistory .cy-cmd    { color: #c9d1d9; }
+#cyberHistory .cy-out    { color: #3fb950; white-space: pre-wrap; }
+#cyberHistory .cy-err    { color: #f85149; white-space: pre-wrap; }
+#cyberHistory .cy-sys    { color: #8b949e; font-style: italic; }
+
+#cyberInputRow {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: #0d1117;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+#cyberPromptLabel {
+  color: #58a6ff;
+  font-size: 13px;
+  white-space: nowrap;
+  user-select: none;
+}
+
+#cyberInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #c9d1d9;
+  font-family: inherit;
+  font-size: 13px;
+  caret-color: #58a6ff;
+}
+
+#cyberInput::placeholder { color: #4a5568; }
+
+/* Language colour badges */
+.lang-python     { background: rgba(59,130,246,0.15); color: #60a5fa; }
+.lang-javascript { background: rgba(234,179,8,0.15);  color: #fbbf24; }
+.lang-html       { background: rgba(239,68,68,0.15);  color: #f87171; }
+.lang-css        { background: rgba(139,92,246,0.15); color: #c4b5fd; }
+.lang-txt        { background: rgba(107,114,128,0.15);color: #9ca3af; }
+.lang-other      { background: rgba(107,114,128,0.15);color: #9ca3af; }
+
+/* ── Subject tab bar / voice / subjects CSS ── */
+.subject-tab-bar {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 0 12px;
+  height: 42px;
+  background: var(--glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  flex-shrink: 0;
+  z-index: 5;
+}
+
+.subject-tab-bar::-webkit-scrollbar { display: none; }
+
+.subject-tab {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 14px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  height: 100%;
+  font-family: inherit;
+  border-radius: 0;
+  position: relative;
+}
+
+.subject-tab:hover {
+  color: var(--tab-color, var(--accent));
+  background: var(--hover-bg);
+}
+
+[data-theme="dark"] .subject-tab:hover { background: rgba(255,255,255,0.04); }
+
+.subject-tab.active {
+  color: var(--tab-color, var(--accent));
+  border-bottom-color: var(--tab-color, var(--accent));
+  font-weight: 600;
+}
+
+[data-theme="dark"] .subject-tab.active { background: transparent; }
+
+.tab-emoji { font-size: 15px; line-height: 1; }
+.tab-label { font-size: 13px; }
+
+@media (max-width: 640px) {
+  .tab-label { display: none; }
+  .subject-tab { padding: 0 10px; }
+  .tab-emoji { font-size: 17px; }
+}
+
+.subject-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  animation: bubbleIn 0.3s ease;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 16px);
+  margin: 12px 0;
+  background: var(--panel);
+  box-shadow: 0 2px 8px var(--shadow, rgba(0,0,0,0.04));
+}
+
+.mic-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 17px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.mic-btn:hover { background: var(--panel); border-color: var(--accent); }
+.mic-btn:active { transform: scale(0.94); }
+
+.mic-btn.listening {
+  background: rgba(217,48,37,0.08);
+  border-color: var(--error);
+  animation: pulse-mic 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse-mic {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217,48,37,0.3); }
+  50%       { box-shadow: 0 0 0 6px rgba(217,48,37,0); }
+}
+
+#testModeBanner { font-family: system-ui, sans-serif; }

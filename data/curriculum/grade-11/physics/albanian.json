@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "physics",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Fizikë Klasa 11",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Elektrostatika",
+      "topics": [
+        {
+          "title": "Ngarkesa dhe fusha elektrike",
+          "concepts": [
+            "ngarkesa",
+            "ligji i Kulonit",
+            "fusha elektrike",
+            "potenciali"
+          ],
+          "keyFormulas": [
+            "F=kq₁q₂/r²",
+            "E=F/q=kQ/r²",
+            "V=kQ/r",
+            "k=9×10⁹ N·m²/C²"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Qarqet elektrike",
+      "topics": [
+        {
+          "title": "Ligji i Omit dhe Kirhofit",
+          "concepts": [
+            "rryma",
+            "tensioni",
+            "rezistenca",
+            "seria",
+            "paraleli"
+          ],
+          "keyFormulas": [
+            "V=IR",
+            "P=IV=I²R",
+            "R_tot=R₁+R₂ (seri)",
+            "1/R_tot=1/R₁+1/R₂ (paralel)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Magnetizmi",
+      "topics": [
+        {
+          "title": "Fusha magnetike dhe induksioni",
+          "concepts": [
+            "forca Lorenc",
+            "induksioni elektromagnetik",
+            "ligji i Faradeit"
+          ],
+          "keyFormulas": [
+            "F=qvBsinθ",
+            "F=BILsinθ",
+            "ε=-dΦ/dt",
+            "Φ=BA·cosθ"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

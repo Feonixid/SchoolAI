@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "economics",
+    "curriculum": "greek",
+    "curriculumName": "Greek Lykeio — Μακροοικονομία",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Macroeconomics",
+      "topics": [
+        {
+          "title": "National Income and AD-AS",
+          "concepts": [
+            "GDP",
+            "multiplier",
+            "fiscal policy",
+            "monetary policy"
+          ],
+          "keyFormulas": [
+            "Y=C+I+G+NX",
+            "Multiplier=1/(1-MPC)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

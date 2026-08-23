@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "economics",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Ekonomi Klasa 12 (Int'l & Albania)",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Ekonomia ndërkombëtare dhe Shqipëria",
+      "topics": [
+        {
+          "title": "Tregtia ndërkombëtare",
+          "concepts": [
+            "avantazhi krahasues",
+            "bilanci i pagesave",
+            "kursi i këmbimit",
+            "proteksionizmi"
+          ],
+          "keyFacts": [
+            "Shqipëria: eksporton tekstile, mbathje, materiale ndërtimi",
+            "Remitancat: ~10% e GDP (diaspora në Itali, Greqi)",
+            "Procesi i integrimit në BE: kapitulli i negociatave"
+          ]
+        },
+        {
+          "title": "Zhvillimi ekonomik",
+          "concepts": [
+            "GDP per capita",
+            "HDI",
+            "varfëria",
+            "pabarazia",
+            "FDI",
+            "turizmi"
+          ],
+          "keyFacts": [
+            "INSTAT: Instituti i Statistikave",
+            "Banka e Shqipërisë: banka qendrore",
+            "Sfidat: ekonomia informale, korrupcioni, emigracioni i trurit",
+            "Turizmi: sektor në rritje, bregdeti, trashëgimia kulturore"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

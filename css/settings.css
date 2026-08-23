@@ -1,0 +1,619 @@
+/* css/settings.css */
+/* Settings Panel & Accessibility Styles */
+
+/* Settings Panel Overlay */
+.settings-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.settings-content {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  width: 600px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.settings-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #1e293b;
+}
+
+.settings-close {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #f1f5f9;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s;
+}
+
+.settings-close:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+/* Tabs */
+.settings-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 12px 24px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  background: #e2e8f0;
+}
+
+.tab-btn.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Tab Content */
+.settings-tab {
+  display: none;
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.settings-tab.active {
+  display: block;
+}
+
+/* Setting Groups */
+.setting-group {
+  margin-bottom: 20px;
+}
+
+.setting-group label {
+  display: block;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.setting-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.setting-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.setting-desc {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Hardware Info */
+.hardware-info {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.hardware-info h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.hardware-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.hw-item {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.hw-label {
+  display: block;
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hw-value {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 4px 0;
+}
+
+.hw-detail {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Profile Details */
+.profile-details {
+  background: #eff6ff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.profile-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.profile-item span {
+  color: #64748b;
+}
+
+.profile-item strong {
+  color: #1e293b;
+}
+
+/* Custom Settings */
+.custom-settings {
+  background: #fef3c7;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  border: 1px solid #fcd34d;
+}
+
+/* About Tab */
+.about-content {
+  text-align: center;
+}
+
+.about-content h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #1e293b;
+}
+
+.version {
+  color: #64748b;
+  font-size: 14px;
+  margin: 4px 0 16px;
+}
+
+.description {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.about-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.about-links a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.about-links a:hover {
+  text-decoration: underline;
+}
+
+.tech-stack {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: left;
+}
+
+.tech-stack h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.tech-stack ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #475569;
+  font-size: 13px;
+}
+
+.tech-stack li {
+  margin: 4px 0;
+}
+
+/* Footer */
+.settings-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.btn-primary {
+  padding: 10px 24px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+.btn-secondary {
+  padding: 10px 24px;
+  background: white;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* ============================================
+   ACCESSIBILITY STYLES
+   ============================================ */
+
+/* High Contrast Mode */
+.high-contrast {
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff;
+  --border-color: #000000;
+}
+
+.high-contrast * {
+  border-color: #000000 !important;
+}
+
+.high-contrast button,
+.high-contrast input,
+.high-contrast select {
+  border: 2px solid #000000 !important;
+}
+
+.high-contrast .message.assistant {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .message.user {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+
+/* Dyslexia-Friendly Font */
+.dyslexia-font {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', cursive, sans-serif !important;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+.dyslexia-font * {
+  font-family: inherit !important;
+}
+
+/* Font Size Adjustments */
+:root {
+  --base-font-size: 16px;
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+
+/* Screen Reader Mode - Enhanced ARIA */
+.screen-reader-mode .hidden-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus Indicators for Keyboard Navigation */
+*:focus-visible {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px;
+}
+
+/* Settings Button in Header */
+.settings-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.settings-btn:hover {
+  background: #f1f5f9;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .settings-content {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .settings-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  
+  .hardware-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   MULTIMODAL STYLES
+   ============================================ */
+
+.image-btn:hover {
+  background: var(--accent) !important;
+  color: white !important;
+  border-color: var(--accent) !important;
+}
+
+.drag-over {
+  border: 2px dashed var(--accent) !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* ============================================
+   TEXTBOOK RAG STYLES
+   ============================================ */
+
+.textbook-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.textbook-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.upload-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   LEARNING ANALYTICS STYLES
+   ============================================ */
+
+.stat-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   STREAMING MESSAGE STYLES
+   ============================================ */
+
+.row.streaming .bubble {
+  background: linear-gradient(90deg, var(--panel) 0%, rgba(59, 130, 246, 0.1) 100%);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ============================================
+   READ ALOUD BUTTON
+   ============================================ */
+
+.read-aloud-btn {
+  transition: all 0.2s;
+}
+
+.read-aloud-btn:hover {
+  background: var(--accent) !important;
+  color: white !important;
+}
+
+.read-aloud-btn.speaking {
+  background: var(--accent) !important;
+  color: white !important;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* ============================================
+   PROFICIENCY BADGE
+   ============================================ */
+
+.proficiency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.proficiency-badge.beginner {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.proficiency-badge.intermediate {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.proficiency-badge.advanced {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+/* ============================================
+   HARDWARE TIER BADGE
+   ============================================ */
+
+.hw-tier-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hw-tier-badge.ultra {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: white;
+}
+
+.hw-tier-badge.high {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.hw-tier-badge.medium {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.hw-tier-badge.low {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.hw-tier-badge.minimal {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  color: white;
+}

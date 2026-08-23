@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "economics",
+    "curriculum": "greek",
+    "curriculumName": "Greek Lykeio — Αρχές Οικονομίας",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Introduction to Economics",
+      "topics": [
+        {
+          "title": "Basic Economic Concepts",
+          "concepts": [
+            "scarcity",
+            "production possibilities",
+            "economic systems"
+          ],
+          "keyFacts": [
+            "Greek curriculum introduces circular flow and basic market mechanism"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

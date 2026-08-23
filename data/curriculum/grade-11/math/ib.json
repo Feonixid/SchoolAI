@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "math",
+    "curriculum": "ib",
+    "curriculumName": "IB Math AA SL — Exam Preparation",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Advanced Calculus",
+      "topics": [
+        {
+          "title": "Integration Techniques",
+          "concepts": [
+            "substitution",
+            "integration by parts",
+            "partial fractions"
+          ],
+          "keyFormulas": [
+            "∫f(g(x))g'(x)dx = F(g(x))+C",
+            "∫u·dv = uv - ∫v·du"
+          ]
+        },
+        {
+          "title": "Differential Equations",
+          "concepts": [
+            "separable ODEs",
+            "particular solutions",
+            "growth/decay"
+          ],
+          "keyFormulas": [
+            "dy/dx = ky → y = Ae^(kt)"
+          ],
+          "keyFacts": [
+            "Separable: rewrite as g(y)dy = f(x)dx then integrate both sides"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Vectors in 3D",
+      "topics": [
+        {
+          "title": "Vector Operations",
+          "concepts": [
+            "dot product",
+            "cross product",
+            "angle between vectors",
+            "vector equation of line"
+          ],
+          "keyFormulas": [
+            "a·b = |a||b|cosθ",
+            "r = a + tb (line equation)"
+          ],
+          "keyFacts": [
+            "Perpendicular vectors: a·b = 0",
+            "Parallel vectors: a = kb"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exploration (Internal Assessment)",
+      "topics": [
+        {
+          "title": "Mathematical Exploration",
+          "concepts": [
+            "personal engagement",
+            "mathematical communication",
+            "use of mathematics"
+          ],
+          "keyFacts": [
+            "6-12 pages recommended",
+            "Must include personal interest topic",
+            "Criteria: A (Presentation), B (Mathematical communication), C (Personal engagement), D (Reflection), E (Use of mathematics)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

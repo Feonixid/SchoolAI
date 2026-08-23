@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "physics",
+    "curriculum": "ib",
+    "curriculumName": "IB Physics SL — Topics 4-5: Mechanics and Electricity",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Mechanics",
+      "topics": [
+        {
+          "title": "Newton's Laws and Forces",
+          "concepts": [
+            "inertia",
+            "F=ma",
+            "action-reaction",
+            "free body diagrams",
+            "friction"
+          ],
+          "keyFormulas": [
+            "F=ma",
+            "W=mg",
+            "f=μN"
+          ],
+          "keyFacts": [
+            "Free body diagram: essential first step",
+            "Net force = 0 ⟹ constant velocity or at rest"
+          ]
+        },
+        {
+          "title": "Work, Energy, Power",
+          "concepts": [
+            "work",
+            "kinetic energy",
+            "potential energy",
+            "conservation of energy",
+            "power",
+            "efficiency"
+          ],
+          "keyFormulas": [
+            "W=Fs·cosθ",
+            "KE=½mv²",
+            "PE=mgh",
+            "P=W/t=Fv",
+            "η=useful/total"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Electricity",
+      "topics": [
+        {
+          "title": "Electric Circuits",
+          "concepts": [
+            "current",
+            "voltage",
+            "resistance",
+            "Ohm's law",
+            "Kirchhoff's laws",
+            "series/parallel"
+          ],
+          "keyFormulas": [
+            "V=IR",
+            "P=IV=I²R=V²/R",
+            "Series: R_total=R₁+R₂+...",
+            "Parallel: 1/R_total=1/R₁+1/R₂+..."
+          ],
+          "keyFacts": [
+            "Kirchhoff I: ΣI_in = ΣI_out (junction)",
+            "Kirchhoff II: ΣV = 0 (loop)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

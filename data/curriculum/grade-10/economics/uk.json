@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "economics",
+    "curriculum": "uk",
+    "curriculumName": "UK A-Level Economics — Microeconomics",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Microeconomics",
+      "topics": [
+        {
+          "title": "Elasticity and Market Failure",
+          "concepts": [
+            "PED",
+            "YED",
+            "XED",
+            "PES",
+            "externalities",
+            "public goods"
+          ],
+          "keyFormulas": [
+            "PED = %ΔQd/%ΔP"
+          ],
+          "keyFacts": [
+            "UK exams heavily test diagram analysis and evaluation",
+            "Always consider government failure when discussing intervention"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

@@ -1,0 +1,657 @@
+/* css/school-os.css — School Mini OS Styling */
+/* =================================================================== */
+
+.school-os-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 4500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: osFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes osFadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.school-os-window {
+  width: 980px;
+  max-width: 96vw;
+  height: 680px;
+  max-height: 92vh;
+  background: var(--panel, #ffffff);
+  color: var(--text, #1e293b);
+  border-radius: 18px;
+  border: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+[data-theme="dark"] .school-os-window {
+  background: #111827;
+  color: #f3f4f6;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* OS Titlebar */
+.school-os-titlebar {
+  padding: 14px 20px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.08));
+  border-bottom: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.school-os-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.school-os-brand .badge {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.school-os-brand h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.school-os-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.school-os-close-btn {
+  background: rgba(148, 163, 184, 0.15);
+  border: none;
+  color: var(--text, #475569);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.school-os-close-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* OS Main Layout */
+.school-os-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar Dock */
+.school-os-dock {
+  width: 220px;
+  background: rgba(248, 250, 252, 0.75);
+  border-right: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  display: flex;
+  flex-direction: column;
+  padding: 12px 8px;
+  gap: 4px;
+  overflow-y: auto;
+}
+
+[data-theme="dark"] .school-os-dock {
+  background: #0f172a;
+}
+
+.school-os-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted, #64748b);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.school-os-nav-item:hover {
+  background: rgba(99, 102, 241, 0.08);
+  color: #6366f1;
+}
+
+.school-os-nav-item.active {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.school-os-nav-item .icon {
+  font-size: 17px;
+  width: 22px;
+  text-align: center;
+}
+
+/* OS App Content Area */
+.school-os-content {
+  flex: 1;
+  padding: 20px 24px;
+  overflow-y: auto;
+  background: var(--bg-main, #ffffff);
+}
+
+[data-theme="dark"] .school-os-content {
+  background: #111827;
+}
+
+/* App View Shell */
+.os-app-view {
+  display: none;
+  animation: osTabSwitch 0.18s ease;
+}
+
+.os-app-view.active {
+  display: block;
+}
+
+@keyframes osTabSwitch {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.os-app-header {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.os-app-header h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.os-app-header p {
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: var(--text-muted, #64748b);
+}
+
+/* =================================================================== */
+/* APP 1: POMODORO TIMER */
+/* =================================================================== */
+.pomodoro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.pomodoro-modes {
+  display: flex;
+  gap: 8px;
+  background: rgba(148, 163, 184, 0.12);
+  padding: 5px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.pomodoro-mode-btn {
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted, #64748b);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.pomodoro-mode-btn.active {
+  background: var(--panel, #ffffff);
+  color: #6366f1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .pomodoro-mode-btn.active {
+  background: #1f2937;
+}
+
+.pomodoro-clock {
+  font-size: 68px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -2px;
+  color: #6366f1;
+  margin: 10px 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.pomodoro-task-input {
+  width: 320px;
+  max-width: 90%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border, #cbd5e1);
+  background: var(--input-bg, #f8fafc);
+  color: var(--text, #0f172a);
+  font-size: 13.5px;
+  text-align: center;
+  margin-bottom: 20px;
+  outline: none;
+  font-family: inherit;
+}
+
+.pomodoro-task-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.pomodoro-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.os-btn-primary {
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.os-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+}
+
+.os-btn-secondary {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border, #cbd5e1);
+  background: transparent;
+  color: var(--text, #475569);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.os-btn-secondary:hover {
+  background: rgba(148, 163, 184, 0.1);
+}
+
+/* =================================================================== */
+/* APP 2: SCRATCHPAD & QUICK NOTES */
+/* =================================================================== */
+.scratchpad-container {
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  gap: 12px;
+}
+
+.scratchpad-toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.scratchpad-textarea {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border, #cbd5e1);
+  background: var(--input-bg, #f8fafc);
+  color: var(--text, #0f172a);
+  font-family: 'Cascadia Code', 'Fira Code', monospace;
+  font-size: 13.5px;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+}
+
+.scratchpad-textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* =================================================================== */
+/* APP 3: FLASHCARDS DECK */
+/* =================================================================== */
+.flashcards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.deck-selector {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border, #cbd5e1);
+  background: var(--input-bg, #f8fafc);
+  color: var(--text, #0f172a);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+}
+
+.flashcard-card {
+  width: 480px;
+  max-width: 95%;
+  height: 240px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.flashcard-card.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  border: 2px solid var(--border, rgba(226, 232, 240, 0.8));
+}
+
+.flashcard-front {
+  background: linear-gradient(135deg, var(--panel, #ffffff), rgba(99, 102, 241, 0.05));
+}
+
+.flashcard-back {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), var(--panel, #ffffff));
+  transform: rotateY(180deg);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.flashcard-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6366f1;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.flashcard-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.flashcard-hint {
+  font-size: 12px;
+  color: var(--text-muted, #94a3b8);
+  margin-top: 12px;
+}
+
+.flashcard-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* =================================================================== */
+/* APP 4: AMBIENT SOUNDSCAPES */
+/* =================================================================== */
+.soundscapes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.soundscape-card {
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border, #e2e8f0);
+  background: rgba(148, 163, 184, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.soundscape-card:hover {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.soundscape-card.active {
+  border-color: #6366f1;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.1));
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.2);
+}
+
+.soundscape-icon {
+  font-size: 32px;
+}
+
+.soundscape-title {
+  font-size: 14.5px;
+  font-weight: 700;
+}
+
+.soundscape-desc {
+  font-size: 12px;
+  color: var(--text-muted, #64748b);
+}
+
+.soundscape-controls {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: rgba(148, 163, 184, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =================================================================== */
+/* APP 5: UNIT CONVERTER */
+/* =================================================================== */
+.converter-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.converter-type-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.converter-chip {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border, #cbd5e1);
+  background: transparent;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text, #475569);
+  transition: all 0.15s ease;
+}
+
+.converter-chip.active {
+  background: #6366f1;
+  color: white;
+  border-color: #6366f1;
+}
+
+.converter-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.converter-input-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.converter-input-box input, .converter-input-box select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border, #cbd5e1);
+  background: var(--input-bg, #f8fafc);
+  color: var(--text, #0f172a);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.converter-input-box input:focus, .converter-input-box select:focus {
+  border-color: #6366f1;
+}
+
+/* =================================================================== */
+/* APP 6: HOMEWORK & TASK PLANNER */
+/* =================================================================== */
+.planner-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.planner-input-row input, .planner-input-row select {
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border, #cbd5e1);
+  background: var(--input-bg, #f8fafc);
+  color: var(--text, #0f172a);
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.planner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.planner-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border, #e2e8f0);
+  background: var(--panel, #ffffff);
+  transition: all 0.15s ease;
+}
+
+[data-theme="dark"] .planner-item {
+  background: #1e293b;
+}
+
+.planner-item.done {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+.planner-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.planner-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priority-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.priority-high { background: #fee2e2; color: #b91c1c; }
+.priority-med  { background: #fef3c7; color: #b45309; }
+.priority-low  { background: #dcfce7; color: #15803d; }

@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "economics",
+    "curriculum": "ib",
+    "curriculumName": "IB Economics SL — Units 3-4: International & Development",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "International Economics",
+      "topics": [
+        {
+          "title": "Trade Theory and Policy",
+          "concepts": [
+            "absolute advantage",
+            "comparative advantage",
+            "terms of trade",
+            "WTO",
+            "trade blocs",
+            "protectionism"
+          ],
+          "keyFacts": [
+            "Comparative advantage: produce where opportunity cost is lowest",
+            "Protectionism tools: tariffs, quotas, subsidies, administrative barriers",
+            "Free trade area vs customs union vs common market vs economic union"
+          ]
+        },
+        {
+          "title": "Exchange Rates",
+          "concepts": [
+            "floating",
+            "fixed",
+            "managed float",
+            "appreciation",
+            "depreciation"
+          ],
+          "keyFacts": [
+            "Appreciation: currency strengthens → imports cheaper, exports expensive → current account worsens",
+            "Depreciation: opposite effect",
+            "Marshall-Lerner condition: devaluation improves BoP if PED_x + PED_m > 1",
+            "J-curve effect: BoP worsens before improving after depreciation"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Development Economics",
+      "topics": [
+        {
+          "title": "Economic Development",
+          "concepts": [
+            "HDI",
+            "GNI per capita",
+            "sustainability",
+            "poverty trap",
+            "foreign aid",
+            "microfinance"
+          ],
+          "keyFacts": [
+            "Development ≠ Growth: development includes human well-being",
+            "HDI: life expectancy, education, GNI per capita",
+            "Barriers: institutional, geographical, historical (colonial legacy)",
+            "Strategies: import substitution vs export promotion, FDI, aid, trade"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

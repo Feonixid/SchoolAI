@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "physics",
+    "curriculum": "greek",
+    "curriculumName": "Greek Lykeio A — Physics",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Thermodynamics",
+      "topics": [
+        {
+          "title": "Heat and Temperature",
+          "concepts": [
+            "specific heat",
+            "latent heat",
+            "gas laws"
+          ],
+          "keyFormulas": [
+            "Q=mcΔT",
+            "Q=mL",
+            "PV=nRT"
+          ],
+          "keyFacts": [
+            "Greek curriculum: heavy focus on ideal gas derivations and problem-solving"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Waves",
+      "topics": [
+        {
+          "title": "Mechanical Waves",
+          "concepts": [
+            "transverse",
+            "longitudinal",
+            "superposition",
+            "standing waves"
+          ],
+          "keyFormulas": [
+            "v=fλ",
+            "v=√(T/μ) for string"
+          ],
+          "keyFacts": [
+            "Standing wave: nodes fixed, antinodes maximum displacement"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

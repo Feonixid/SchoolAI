@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "economics",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 11 — VWL (Makroökonomie)",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Makroökonomie",
+      "topics": [
+        {
+          "title": "BIP und Konjunktur",
+          "concepts": [
+            "BIP",
+            "Konjunkturzyklus",
+            "Wirtschaftswachstum",
+            "Rezession"
+          ],
+          "keyFormulas": [
+            "BIP = C+I+G+(X-M)"
+          ],
+          "keyFacts": [
+            "Konjunkturphasen: Aufschwung, Hochkonjunktur, Abschwung, Depression"
+          ]
+        },
+        {
+          "title": "Geldpolitik der EZB",
+          "concepts": [
+            "Leitzins",
+            "Geldmenge",
+            "Inflation",
+            "Deflation"
+          ],
+          "keyFacts": [
+            "EZB-Ziel: Preisstabilität, nahe 2%",
+            "Leitzinssenkung → billige Kredite → mehr Investition → AD↑"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

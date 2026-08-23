@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "economics",
+    "curriculum": "ib",
+    "curriculumName": "IB Economics SL — Unit 1: Microeconomics",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Microeconomics",
+      "topics": [
+        {
+          "title": "Elasticity",
+          "concepts": [
+            "PED",
+            "YED",
+            "XED",
+            "PES",
+            "tax incidence"
+          ],
+          "keyFormulas": [
+            "PED = %ΔQd/%ΔP",
+            "PES = %ΔQs/%ΔP"
+          ],
+          "keyFacts": [
+            "Elastic demand: PED > 1 (luxury goods)",
+            "Inelastic demand: PED < 1 (necessities, addictive goods)",
+            "Perfectly elastic: horizontal demand curve",
+            "Perfectly inelastic: vertical demand curve",
+            "Tax burden falls more on inelastic side"
+          ]
+        },
+        {
+          "title": "Market Failure",
+          "concepts": [
+            "externalities",
+            "public goods",
+            "merit goods",
+            "demerit goods",
+            "common pool resources"
+          ],
+          "keyFacts": [
+            "MSC = MPC + MEC (negative externality)",
+            "MSB = MPB + MEB (positive externality)",
+            "Optimal output: MSC = MSB",
+            "Government: taxes (Pigouvian), subsidies, regulation, cap-and-trade"
+          ]
+        },
+        {
+          "title": "Government Intervention",
+          "concepts": [
+            "price ceiling",
+            "price floor",
+            "indirect tax",
+            "subsidy",
+            "regulation"
+          ],
+          "keyFacts": [
+            "Price ceiling below equilibrium → shortage",
+            "Price floor above equilibrium → surplus",
+            "Indirect tax: shifts supply left → higher price, lower quantity, deadweight loss"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "math",
+    "curriculum": "uk",
+    "curriculumName": "UK GCSE Higher — Year 11",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Advanced Algebra",
+      "topics": [
+        {
+          "title": "Algebraic Fractions",
+          "concepts": [
+            "simplifying",
+            "adding/subtracting",
+            "solving equations with fractions"
+          ],
+          "keyFacts": [
+            "Factor numerator and denominator first",
+            "Find LCD for addition"
+          ]
+        },
+        {
+          "title": "Surds",
+          "concepts": [
+            "simplifying surds",
+            "rationalising the denominator"
+          ],
+          "keyFormulas": [
+            "√a × √b = √(ab)",
+            "a/(√b) = a√b/b",
+            "(a+√b)(a-√b) = a²-b"
+          ]
+        },
+        {
+          "title": "Functions and Iteration",
+          "concepts": [
+            "function notation",
+            "inverse functions",
+            "iteration"
+          ],
+          "keyFacts": [
+            "Iteration: xₙ₊₁ = g(xₙ), converges to root of x = g(x)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Trigonometry Extended",
+      "topics": [
+        {
+          "title": "Sine and Cosine Rules",
+          "concepts": [
+            "non-right triangles",
+            "bearings"
+          ],
+          "keyFormulas": [
+            "a/sinA = b/sinB = c/sinC",
+            "a² = b²+c²-2bc·cosA",
+            "Area = ½ab·sinC"
+          ]
+        },
+        {
+          "title": "Trigonometric Graphs",
+          "concepts": [
+            "y=sinx",
+            "y=cosx",
+            "y=tanx",
+            "transformations"
+          ],
+          "keyFacts": [
+            "Period of sin/cos: 360°",
+            "Period of tan: 180°"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Vectors",
+      "topics": [
+        {
+          "title": "Vector Geometry",
+          "concepts": [
+            "position vectors",
+            "column vectors",
+            "magnitude",
+            "direction"
+          ],
+          "keyFormulas": [
+            "|v| = √(a²+b²)",
+            "AB = b - a (position vectors)"
+          ],
+          "keyFacts": [
+            "Parallel vectors: one is scalar multiple of other",
+            "Midpoint M: m = (a+b)/2"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Paper 1 (non-calc)",
+      "Paper 2 (calc)",
+      "Paper 3 (calc)"
+    ],
+    "commandWords": [
+      "work out",
+      "prove",
+      "explain why",
+      "give reasons"
+    ],
+    "tips": [
+      "State circle theorem names",
+      "Show working for 'prove' questions"
+    ]
+  }
+}

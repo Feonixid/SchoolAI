@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "math",
+    "curriculum": "uk",
+    "curriculumName": "UK GCSE Mathematics (Year 10 — Foundation/Higher)",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Algebra",
+      "topics": [
+        {
+          "title": "Quadratic Equations",
+          "concepts": [
+            "factorising",
+            "quadratic formula",
+            "completing the square"
+          ],
+          "keyFormulas": [
+            "x = (-b±√(b²-4ac))/2a"
+          ],
+          "keyFacts": [
+            "Higher tier: completing the square and discriminant",
+            "Foundation: factorising and formula"
+          ]
+        },
+        {
+          "title": "Simultaneous Equations",
+          "concepts": [
+            "elimination",
+            "substitution",
+            "linear-quadratic pairs"
+          ],
+          "keyFacts": [
+            "Linear-quadratic: substitute linear into quadratic, solve resulting quadratic"
+          ]
+        },
+        {
+          "title": "Inequalities",
+          "concepts": [
+            "solving",
+            "graphing",
+            "set notation"
+          ],
+          "keyFacts": [
+            "Use open circle for < >, closed circle for ≤ ≥",
+            "Shade the region that satisfies all inequalities"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ratio, Proportion and Rates of Change",
+      "topics": [
+        {
+          "title": "Direct and Inverse Proportion",
+          "concepts": [
+            "y ∝ x",
+            "y ∝ 1/x",
+            "constant of proportionality"
+          ],
+          "keyFormulas": [
+            "y = kx (direct)",
+            "y = k/x (inverse)"
+          ],
+          "keyFacts": [
+            "Direct: as x doubles, y doubles",
+            "Inverse: as x doubles, y halves"
+          ]
+        },
+        {
+          "title": "Compound Measures",
+          "concepts": [
+            "speed",
+            "density",
+            "pressure"
+          ],
+          "keyFormulas": [
+            "speed = distance/time",
+            "density = mass/volume",
+            "pressure = force/area"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Geometry and Measures",
+      "topics": [
+        {
+          "title": "Trigonometry (SOHCAHTOA)",
+          "concepts": [
+            "sine",
+            "cosine",
+            "tangent",
+            "finding angles and sides"
+          ],
+          "keyFormulas": [
+            "sinθ = O/H",
+            "cosθ = A/H",
+            "tanθ = O/A"
+          ]
+        },
+        {
+          "title": "Pythagoras' Theorem",
+          "concepts": [
+            "hypotenuse",
+            "2D and 3D problems"
+          ],
+          "keyFormulas": [
+            "a²+b²=c²"
+          ]
+        },
+        {
+          "title": "Circle Theorems (Higher)",
+          "concepts": [
+            "angle at centre",
+            "angle in semicircle",
+            "cyclic quadrilateral",
+            "tangent"
+          ],
+          "keyFacts": [
+            "Angle at centre = 2× angle at circumference",
+            "Angle in semicircle = 90°",
+            "Opposite angles in cyclic quad sum to 180°"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Probability and Statistics",
+      "topics": [
+        {
+          "title": "Probability",
+          "concepts": [
+            "tree diagrams",
+            "Venn diagrams",
+            "relative frequency",
+            "conditional probability"
+          ],
+          "keyFormulas": [
+            "P(A or B) = P(A)+P(B)-P(A and B)",
+            "P(A') = 1-P(A)"
+          ]
+        },
+        {
+          "title": "Statistics",
+          "concepts": [
+            "mean",
+            "median",
+            "mode",
+            "range",
+            "IQR",
+            "box plots",
+            "cumulative frequency"
+          ],
+          "keyFacts": [
+            "Median from grouped data: use cumulative frequency graph",
+            "Mean from grouped data: use midpoints"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Paper 1 (non-calculator, 1h30)",
+      "Paper 2 (calculator, 1h30)",
+      "Paper 3 (calculator, 1h30)"
+    ],
+    "commandWords": [
+      "work out",
+      "show that",
+      "explain",
+      "prove",
+      "give reasons"
+    ],
+    "tips": [
+      "'Show that' requires full working to the given answer",
+      "'Give reasons' means cite the theorem name"
+    ]
+  }
+}

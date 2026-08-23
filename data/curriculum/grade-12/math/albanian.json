@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "math",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Klasa 12 (Matura)",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Integrali",
+      "topics": [
+        {
+          "title": "Integrali i pacaktuar",
+          "concepts": [
+            "antiderivati",
+            "konstantja e integrimit"
+          ],
+          "keyFormulas": [
+            "∫xⁿdx = xⁿ⁺¹/(n+1)+C",
+            "∫sinxdx = -cosx+C",
+            "∫cosxdx = sinx+C",
+            "∫eˣdx = eˣ+C",
+            "∫(1/x)dx = ln|x|+C"
+          ]
+        },
+        {
+          "title": "Integrali i caktuar dhe sipërfaqja",
+          "concepts": [
+            "sipërfaqja nën grafik",
+            "teorema themelore e kalkulusit"
+          ],
+          "keyFormulas": [
+            "∫ₐᵇf(x)dx = F(b)-F(a)",
+            "Sipërfaqja = ∫ₐᵇ|f(x)|dx"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Numrat kompleksë",
+      "topics": [
+        {
+          "title": "Forma algjebrike dhe trigonometrike",
+          "concepts": [
+            "njësia imagjinare i",
+            "moduli",
+            "argumenti",
+            "forma trigonometrike"
+          ],
+          "keyFormulas": [
+            "i² = -1",
+            "|z| = √(a²+b²)",
+            "z = r(cosθ + isinθ)",
+            "z₁·z₂ = r₁r₂[cos(θ₁+θ₂)+isin(θ₁+θ₂)]"
+          ],
+          "keyFacts": [
+            "Konjugati: z̄ = a-bi",
+            "z·z̄ = |z|²",
+            "Formula e Moivrit: zⁿ = rⁿ(cos(nθ)+isin(nθ))"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Përgatitje për Maturën Shtetërore",
+      "topics": [
+        {
+          "title": "Ripërsëritje gjithëpërfshirëse",
+          "concepts": [
+            "ekuacione",
+            "funksione",
+            "derivate",
+            "integrale",
+            "trigonometri",
+            "gjeometri",
+            "probabilitet"
+          ],
+          "keyFacts": [
+            "Provimi: 4 detyra me zgjidhje, 3 orë",
+            "Llogaritësi nuk lejohet",
+            "Trego të gjitha hapat e zgjidhjes"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Matura Shtetërore (3 orë, 4 detyra)"
+    ],
+    "commandWords": [
+      "llogarit",
+      "vërteto",
+      "gjej",
+      "skico"
+    ],
+    "tips": [
+      "Fokus te limitet, derivatet, integralet",
+      "Ushtrohu me provimet e viteve të mëparshme"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "economics",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 10 — Wirtschaft",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Markt und Preis",
+      "topics": [
+        {
+          "title": "Marktmechanismus",
+          "concepts": [
+            "Angebot",
+            "Nachfrage",
+            "Gleichgewichtspreis",
+            "Marktversagen"
+          ],
+          "keyFacts": [
+            "Preismechanismus: unsichtbare Hand koordiniert Ressourcenallokation",
+            "Externe Effekte führen zu Marktversagen"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

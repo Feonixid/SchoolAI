@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "physics",
+    "curriculum": "uk",
+    "curriculumName": "UK A-Level Physics (Year 12)",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Electricity",
+      "topics": [
+        {
+          "title": "Advanced Circuits",
+          "concepts": [
+            "EMF",
+            "internal resistance",
+            "potential divider"
+          ],
+          "keyFormulas": [
+            "ε=I(R+r)",
+            "V_out=V_in·R₂/(R₁+R₂)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Waves and Optics",
+      "topics": [
+        {
+          "title": "Interference and Diffraction",
+          "concepts": [
+            "Young's double slit",
+            "diffraction grating",
+            "coherence"
+          ],
+          "keyFormulas": [
+            "λ=ax/D (double slit)",
+            "dsinθ=nλ (grating)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Particle Physics",
+      "topics": [
+        {
+          "title": "Standard Model",
+          "concepts": [
+            "quarks",
+            "leptons",
+            "bosons",
+            "hadrons",
+            "conservation laws"
+          ],
+          "keyFacts": [
+            "Up quark: +2/3e, Down quark: -1/3e",
+            "Proton=uud, Neutron=udd",
+            "Conservation: charge, baryon number, lepton number"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

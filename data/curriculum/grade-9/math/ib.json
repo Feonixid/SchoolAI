@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "math",
+    "curriculum": "ib",
+    "curriculumName": "IB Mathematics: Analysis & Approaches SL (Year 1)",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "id": "9-math-ib-1",
+      "title": "Number & Algebra",
+      "topics": [
+        {
+          "title": "Sequences and Series",
+          "concepts": ["arithmetic sequences", "geometric sequences", "sigma notation", "common difference", "common ratio"],
+          "keyFormulas": [
+            "uₙ = u₁ + (n-1)d",
+            "Sₙ = n/2 (2u₁ + (n-1)d)  = n/2 (u₁ + uₙ)",
+            "uₙ = u₁ · rⁿ⁻¹",
+            "Sₙ = u₁(rⁿ - 1)/(r - 1)  for r ≠ 1",
+            "S∞ = u₁/(1-r) for |r| < 1"
+          ],
+          "keyFacts": [
+            "Arithmetic: constant difference between terms",
+            "Geometric: constant ratio between terms",
+            "Convergent geometric series: |r| < 1",
+            "Sigma notation: Σ(i=1 to n) uᵢ represents the sum"
+          ]
+        },
+        {
+          "title": "Exponents and Logarithms",
+          "concepts": ["laws of exponents", "logarithms", "change of base", "natural log"],
+          "keyFormulas": [
+            "aˣ · aʸ = aˣ⁺ʸ",
+            "logₐ(xy) = logₐx + logₐy",
+            "logₐ(x/y) = logₐx - logₐy",
+            "logₐ(xⁿ) = n·logₐx",
+            "logₐb = ln(b)/ln(a)"
+          ],
+          "keyFacts": [
+            "ln(e) = 1, log₁₀(10) = 1",
+            "aˡᵒᵍₐˣ = x (inverse property)",
+            "Logarithms are only defined for positive arguments"
+          ]
+        },
+        {
+          "title": "Binomial Theorem",
+          "concepts": ["Pascal's triangle", "binomial coefficient", "expansion"],
+          "keyFormulas": [
+            "(a+b)ⁿ = Σ C(n,r) · aⁿ⁻ʳ · bʳ",
+            "C(n,r) = n! / (r!(n-r)!)"
+          ]
+        }
+      ],
+      "commonMisconceptions": [
+        "Confusing arithmetic and geometric sequences",
+        "Forgetting that log of a negative number is undefined",
+        "Applying sum formula when r = 1"
+      ]
+    },
+    {
+      "id": "9-math-ib-2",
+      "title": "Functions",
+      "topics": [
+        {
+          "title": "Function Notation & Properties",
+          "concepts": ["domain", "range", "inverse function", "composite function", "transformations"],
+          "keyFormulas": [
+            "(f∘g)(x) = f(g(x))",
+            "f⁻¹(f(x)) = x",
+            "Domain of f∘g: values in domain of g where g(x) is in domain of f"
+          ],
+          "keyFacts": [
+            "A function assigns exactly one output to each input",
+            "Horizontal line test: if it passes, f⁻¹ exists",
+            "Reflect f in y=x to get f⁻¹ graphically"
+          ]
+        },
+        {
+          "title": "Quadratic Functions",
+          "concepts": ["vertex form", "factored form", "discriminant", "axis of symmetry"],
+          "keyFormulas": [
+            "f(x) = a(x-h)² + k  (vertex form, vertex at (h,k))",
+            "f(x) = a(x-p)(x-q)  (factored form, roots p,q)",
+            "Δ = b²-4ac",
+            "Axis: x = -b/(2a)"
+          ]
+        },
+        {
+          "title": "Graph Transformations",
+          "concepts": ["translation", "reflection", "stretch", "vertical/horizontal shifts"],
+          "keyFacts": [
+            "f(x) + k: shift up k units",
+            "f(x-h): shift right h units",
+            "-f(x): reflect in x-axis",
+            "f(-x): reflect in y-axis",
+            "af(x): vertical stretch by factor a",
+            "f(bx): horizontal compression by factor 1/b"
+          ]
+        }
+      ],
+      "commonMisconceptions": [
+        "f(x-3) shifts LEFT (it shifts RIGHT!)",
+        "Confusing domain restriction of composite functions"
+      ]
+    },
+    {
+      "id": "9-math-ib-3",
+      "title": "Geometry & Trigonometry",
+      "topics": [
+        {
+          "title": "Right-Angle Trigonometry",
+          "concepts": ["SOHCAHTOA", "Pythagorean theorem", "exact values"],
+          "keyFormulas": [
+            "sin θ = O/H, cos θ = A/H, tan θ = O/A",
+            "a² + b² = c²",
+            "sin²θ + cos²θ = 1"
+          ]
+        },
+        {
+          "title": "Non-Right Triangle Trigonometry",
+          "concepts": ["sine rule", "cosine rule", "area of triangle"],
+          "keyFormulas": [
+            "a/sinA = b/sinB = c/sinC",
+            "a² = b² + c² - 2bc·cosA",
+            "Area = ½ab·sinC"
+          ],
+          "keyFacts": [
+            "Sine rule: use when you have angle-side pairs",
+            "Cosine rule: use when you have SAS or SSS",
+            "Ambiguous case of sine rule: two possible triangles when given SSA"
+          ]
+        },
+        {
+          "title": "Radian Measure",
+          "concepts": ["radians", "arc length", "sector area", "unit circle"],
+          "keyFormulas": [
+            "π rad = 180°",
+            "Arc length: l = rθ",
+            "Sector area: A = ½r²θ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9-math-ib-4",
+      "title": "Statistics & Probability",
+      "topics": [
+        {
+          "title": "Descriptive Statistics",
+          "concepts": ["mean", "median", "mode", "standard deviation", "quartiles", "IQR", "box plots"],
+          "keyFormulas": [
+            "Mean: x̄ = Σxᵢ/n",
+            "σ = √(Σ(xᵢ-x̄)²/n)",
+            "IQR = Q₃ - Q₁",
+            "Outlier: below Q₁-1.5·IQR or above Q₃+1.5·IQR"
+          ]
+        },
+        {
+          "title": "Probability Fundamentals",
+          "concepts": ["sample space", "complementary events", "independent events", "conditional probability"],
+          "keyFormulas": [
+            "P(A') = 1 - P(A)",
+            "P(A∪B) = P(A) + P(B) - P(A∩B)",
+            "P(A|B) = P(A∩B)/P(B)",
+            "Independent: P(A∩B) = P(A)·P(B)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": ["Paper 1 (no calculator, 80 marks, 1.5h)", "Paper 2 (calculator, 80 marks, 1.5h)"],
+    "commandWords": ["find", "show that", "hence", "determine", "explain", "write down"],
+    "tips": [
+      "'Show that' means the answer is given — you must show working",
+      "'Hence' means use your previous answer",
+      "GDC expected on Paper 2 for graphs and stats",
+      "Always give exact values unless told to round"
+    ]
+  }
+}

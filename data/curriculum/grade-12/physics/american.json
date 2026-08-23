@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "physics",
+    "curriculum": "american",
+    "curriculumName": "AP Physics C — Mechanics/E&M",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Advanced Mechanics",
+      "topics": [
+        {
+          "title": "Rotational Dynamics and Calculus-Based Mechanics",
+          "concepts": [
+            "moment of inertia",
+            "torque",
+            "angular momentum",
+            "oscillations"
+          ],
+          "keyFormulas": [
+            "τ=Iα",
+            "L=Iω",
+            "KE=½Iω²",
+            "I=∫r²dm"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Electromagnetism (Calculus)",
+      "topics": [
+        {
+          "title": "Maxwell's Equations and Applications",
+          "concepts": [
+            "Gauss's law",
+            "Ampere's law",
+            "Faraday's law",
+            "displacement current"
+          ],
+          "keyFormulas": [
+            "∮E·dA=Q/ε₀",
+            "∮B·dl=μ₀I",
+            "ε=-dΦ_B/dt"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

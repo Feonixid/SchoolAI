@@ -1,0 +1,131 @@
+/* css/pronunciation-coach.css — Multi-Language Speech & Pronunciation Coach */
+/* =================================================================== */
+
+.speech-coach-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 4750;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: speechFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes speechFadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.speech-coach-window {
+  width: 900px;
+  max-width: 96vw;
+  height: 640px;
+  max-height: 92vh;
+  background: var(--panel, #ffffff);
+  color: var(--text, #1e293b);
+  border-radius: 20px;
+  border: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .speech-coach-window {
+  background: #0f172a;
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.speech-coach-header {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(59, 130, 246, 0.12));
+  border-bottom: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.speech-coach-body {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.speech-sentence-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--panel, rgba(248, 250, 252, 0.8));
+  border: 1px solid var(--border, #cbd5e1);
+  text-align: center;
+}
+
+[data-theme="dark"] .speech-sentence-card {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.speech-word {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 4px 3px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.speech-word.correct {
+  background: #10b98125;
+  color: #10b981;
+}
+
+.speech-word.imperfect {
+  background: #f59e0b25;
+  color: #f59e0b;
+}
+
+.speech-word.missed {
+  background: #ef444425;
+  color: #ef4444;
+}
+
+.speech-mic-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.speech-mic-btn:hover {
+  transform: scale(1.08);
+}
+
+.speech-mic-btn.recording {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+  animation: micPulse 1.2s infinite;
+}
+
+@keyframes micPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

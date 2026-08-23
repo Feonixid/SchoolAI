@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "physics",
+    "curriculum": "ib",
+    "curriculumName": "IB Physics SL — Revision & Exam Prep",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Full Syllabus Review",
+      "topics": [
+        {
+          "title": "Core Topics 1-8 Review",
+          "concepts": [
+            "mechanics",
+            "thermal",
+            "waves",
+            "electricity",
+            "circular motion",
+            "nuclear"
+          ],
+          "keyFacts": [
+            "Paper 1: 30 MC (45 min)",
+            "Paper 2: structured questions (75 min)",
+            "Paper 3: option + data-based (60 min)",
+            "Data booklet provided"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

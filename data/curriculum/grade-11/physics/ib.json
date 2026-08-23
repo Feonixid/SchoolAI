@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "physics",
+    "curriculum": "ib",
+    "curriculumName": "IB Physics SL — Topics 6-8",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Circular Motion and Gravitation",
+      "topics": [
+        {
+          "title": "Uniform Circular Motion",
+          "concepts": [
+            "centripetal acceleration",
+            "centripetal force",
+            "period"
+          ],
+          "keyFormulas": [
+            "a=v²/r=ω²r",
+            "F=mv²/r",
+            "v=2πr/T",
+            "ω=2π/T"
+          ]
+        },
+        {
+          "title": "Gravitational Fields",
+          "concepts": [
+            "Newton's law of gravitation",
+            "gravitational field strength",
+            "orbital mechanics"
+          ],
+          "keyFormulas": [
+            "F=GMm/r²",
+            "g=GM/r²",
+            "v_orbital=√(GM/r)",
+            "T²=4π²r³/GM (Kepler III)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Atomic and Nuclear Physics",
+      "topics": [
+        {
+          "title": "Nuclear Reactions",
+          "concepts": [
+            "mass-energy equivalence",
+            "binding energy",
+            "fission",
+            "fusion",
+            "radioactive decay"
+          ],
+          "keyFormulas": [
+            "E=mc²",
+            "N=N₀e^(-λt)",
+            "t₁/₂=ln2/λ"
+          ],
+          "keyFacts": [
+            "Fission: heavy nucleus splits → energy released",
+            "Fusion: light nuclei combine → energy released",
+            "Binding energy per nucleon: maximum at Fe-56 (most stable)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

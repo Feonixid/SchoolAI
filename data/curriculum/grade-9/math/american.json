@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "math",
+    "curriculum": "american",
+    "curriculumName": "US Algebra I / Geometry (Common Core)",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Linear Equations and Inequalities",
+      "topics": [
+        {
+          "title": "Solving multi-step equations",
+          "concepts": [
+            "distributive property",
+            "combining like terms",
+            "variables on both sides"
+          ],
+          "keyFormulas": [
+            "ax + b = c → x = (c-b)/a"
+          ],
+          "keyFacts": [
+            "Always check solution by substituting back",
+            "No solution when you get a contradiction like 5 = 3",
+            "Infinite solutions when you get an identity like 0 = 0"
+          ]
+        },
+        {
+          "title": "Systems of Linear Equations",
+          "concepts": [
+            "substitution",
+            "elimination",
+            "graphing method"
+          ],
+          "keyFormulas": [
+            "y = mx + b",
+            "Ax + By = C (standard form)"
+          ],
+          "keyFacts": [
+            "Parallel lines: no solution",
+            "Same line: infinite solutions",
+            "Intersecting: exactly one solution"
+          ]
+        },
+        {
+          "title": "Linear Inequalities",
+          "concepts": [
+            "inequality symbols",
+            "graphing on number line",
+            "compound inequalities"
+          ],
+          "keyFacts": [
+            "Flip the inequality sign when multiplying or dividing by a negative",
+            "AND inequalities: intersection",
+            "OR inequalities: union"
+          ]
+        }
+      ],
+      "commonMisconceptions": [
+        "Forgetting to flip inequality when dividing by negative",
+        "Distributing without changing all signs"
+      ]
+    },
+    {
+      "title": "Exponents and Polynomials",
+      "topics": [
+        {
+          "title": "Laws of Exponents",
+          "concepts": [
+            "product rule",
+            "quotient rule",
+            "power rule",
+            "zero exponent",
+            "negative exponent"
+          ],
+          "keyFormulas": [
+            "aᵐ·aⁿ = aᵐ⁺ⁿ",
+            "(aᵐ)ⁿ = aᵐⁿ",
+            "a⁰ = 1",
+            "a⁻ⁿ = 1/aⁿ"
+          ]
+        },
+        {
+          "title": "Polynomial Operations",
+          "concepts": [
+            "degree",
+            "leading coefficient",
+            "FOIL",
+            "special products"
+          ],
+          "keyFormulas": [
+            "(a+b)² = a²+2ab+b²",
+            "(a-b)² = a²-2ab+b²",
+            "(a+b)(a-b) = a²-b²"
+          ]
+        },
+        {
+          "title": "Factoring",
+          "concepts": [
+            "GCF",
+            "trinomial factoring",
+            "difference of squares",
+            "grouping"
+          ],
+          "keyFacts": [
+            "Always factor out GCF first",
+            "a²-b² = (a+b)(a-b)",
+            "Perfect square trinomial: a²±2ab+b² = (a±b)²"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Quadratic Functions",
+      "topics": [
+        {
+          "title": "Graphing Parabolas",
+          "concepts": [
+            "vertex",
+            "axis of symmetry",
+            "direction of opening",
+            "intercepts"
+          ],
+          "keyFormulas": [
+            "y = ax²+bx+c",
+            "vertex: (-b/2a, f(-b/2a))",
+            "y = a(x-h)²+k"
+          ],
+          "keyFacts": [
+            "a > 0: opens up (minimum)",
+            "a < 0: opens down (maximum)"
+          ]
+        },
+        {
+          "title": "Solving Quadratics",
+          "concepts": [
+            "factoring",
+            "quadratic formula",
+            "completing the square"
+          ],
+          "keyFormulas": [
+            "x = (-b ± √(b²-4ac)) / 2a",
+            "Discriminant Δ = b²-4ac"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Introduction to Geometry",
+      "topics": [
+        {
+          "title": "Pythagorean Theorem",
+          "concepts": [
+            "right triangles",
+            "hypotenuse",
+            "legs",
+            "Pythagorean triples"
+          ],
+          "keyFormulas": [
+            "a² + b² = c²"
+          ],
+          "keyFacts": [
+            "Common triples: (3,4,5), (5,12,13), (8,15,17)"
+          ]
+        },
+        {
+          "title": "Coordinate Geometry",
+          "concepts": [
+            "distance formula",
+            "midpoint formula",
+            "slope"
+          ],
+          "keyFormulas": [
+            "d = √((x₂-x₁)²+(y₂-y₁)²)",
+            "M = ((x₁+x₂)/2, (y₁+y₂)/2)",
+            "m = (y₂-y₁)/(x₂-x₁)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Unit Tests",
+      "Semester Exam (cumulative)"
+    ],
+    "commandWords": [
+      "solve",
+      "simplify",
+      "graph",
+      "factor",
+      "evaluate"
+    ],
+    "tips": [
+      "Show all work for full credit",
+      "Always check for extraneous solutions"
+    ]
+  }
+}

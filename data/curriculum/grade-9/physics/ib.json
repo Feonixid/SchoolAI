@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "physics",
+    "curriculum": "ib",
+    "curriculumName": "IB Physics SL — Topic 3: Thermal Physics",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Thermal Concepts",
+      "topics": [
+        {
+          "title": "Temperature and Heat",
+          "concepts": [
+            "internal energy",
+            "temperature",
+            "heat",
+            "specific heat capacity",
+            "phase changes"
+          ],
+          "keyFormulas": [
+            "Q = mcΔT",
+            "Q = mL (latent heat)"
+          ],
+          "keyFacts": [
+            "Temperature: average KE of particles",
+            "Internal energy: total KE + PE of particles",
+            "During phase change: temperature stays constant, energy changes PE"
+          ]
+        },
+        {
+          "title": "Ideal Gas Law",
+          "concepts": [
+            "moles",
+            "Avogadro",
+            "ideal gas",
+            "Boltzmann constant"
+          ],
+          "keyFormulas": [
+            "PV = nRT",
+            "PV = NkT",
+            "KE_avg = 3/2 kT"
+          ],
+          "keyFacts": [
+            "R = 8.314 J/(mol·K)",
+            "k = 1.38×10⁻²³ J/K",
+            "Ideal gas assumptions: point particles, elastic collisions, no intermolecular forces"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Waves",
+      "topics": [
+        {
+          "title": "Wave Properties",
+          "concepts": [
+            "transverse",
+            "longitudinal",
+            "wavelength",
+            "frequency",
+            "amplitude",
+            "speed"
+          ],
+          "keyFormulas": [
+            "v = fλ",
+            "T = 1/f"
+          ],
+          "keyFacts": [
+            "Sound: longitudinal",
+            "Light: transverse",
+            "EM waves travel at c = 3×10⁸ m/s in vacuum"
+          ]
+        },
+        {
+          "title": "Wave Phenomena",
+          "concepts": [
+            "reflection",
+            "refraction",
+            "diffraction",
+            "superposition",
+            "standing waves"
+          ],
+          "keyFormulas": [
+            "n₁sinθ₁ = n₂sinθ₂ (Snell's law)",
+            "sin θ_c = n₂/n₁ (critical angle)"
+          ],
+          "keyFacts": [
+            "Diffraction greatest when gap ≈ wavelength",
+            "Standing waves: nodes and antinodes",
+            "Doppler: higher pitch when approaching"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

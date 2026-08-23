@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "economics",
+    "curriculum": "american",
+    "curriculumName": "US AP Economics — Review & International",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "International Economics & Review",
+      "topics": [
+        {
+          "title": "Trade and Finance",
+          "concepts": [
+            "comparative advantage",
+            "tariffs",
+            "exchange rates"
+          ],
+          "keyFacts": [
+            "AP exam: draw graphs for tariff analysis showing deadweight loss",
+            "Know the difference between financial account and current account"
+          ]
+        },
+        {
+          "title": "Full AP Review",
+          "concepts": [
+            "all micro + macro topics"
+          ],
+          "keyFacts": [
+            "AP Micro: 60 MC + 3 FRQ",
+            "AP Macro: 60 MC + 3 FRQ",
+            "Graph drawing is essential for FRQ full marks"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

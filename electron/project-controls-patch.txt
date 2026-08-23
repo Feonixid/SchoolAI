@@ -1,0 +1,47 @@
+  // Project controls — all prompt/confirm replaced with Dialog.*
+  function initProjectControls() {
+    const sel = document.getElementById('devProjectSelect');
+    sel?.addEventListener('change', () => {
+      saveCurrentEditorContent();
+      window.Projects.setActiveProject(sel.value);
+      renderFileTabs();
+      loadActiveFileIntoEditor();
+    });
+
+    document.getElementById('devNewProjectBtn')?.addEventListener('click', async () => {
+      const name = await window.Dialog.prompt('Project name:');
+      if (!name) return;
+      window.Projects.createProject(name.trim());
+      renderProjectSelect();
+      renderFileTabs();
+      loadActiveFileIntoEditor();
+    });
+
+    document.getElementById('devDelProjectBtn')?.addEventListener('click', async () => {
+      const proj = window.Projects.getActiveProject();
+      if (!proj) return;
+      const ok = await window.Dialog.confirm(`Delete project "${proj.name}" and all its files?`);
+      if (!ok) return;
+      window.Projects.deleteProject(proj.id);
+      renderProjectSelect();
+      renderFileTabs();
+      loadActiveFileIntoEditor();
+    });
+
+    document.getElementById('devAddFileBtn')?.addEventListener('click', async () => {
+      const name = await window.Dialog.prompt(
+        'File name:\n(Use slashes for folders, e.g. src/utils.py, pages/index.html)'
+      );
+      if (!name) return;
+      saveCurrentEditorContent();
+      window.Projects.createFile(name.trim());
+      renderProjectSelect();
+      renderFileTabs();
+      loadActiveFileIntoEditor();
+    });
+
+    document.getElementById('devClearOutputBtn')?.addEventListener('click', () => {
+      const out = document.getElementById('devOutput');
+      if (out) out.innerHTML = '';
+    });
+  }

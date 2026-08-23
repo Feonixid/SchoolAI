@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "math",
+    "curriculum": "greek",
+    "curriculumName": "Ελληνικό Λύκειο Β' Τάξη — Μαθηματικά",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Trigonometry Extended",
+      "topics": [
+        {
+          "title": "Trigonometric Identities",
+          "concepts": [
+            "addition formulas",
+            "double angle",
+            "transformations"
+          ],
+          "keyFormulas": [
+            "sin(α±β)=sinαcosβ±cosαsinβ",
+            "cos(α±β)=cosαcosβ∓sinαsinβ",
+            "sin2α=2sinαcosα",
+            "cos2α=cos²α-sin²α"
+          ]
+        },
+        {
+          "title": "Trigonometric Equations",
+          "concepts": [
+            "general solution",
+            "auxiliary angle"
+          ],
+          "keyFacts": [
+            "General solution for sinx=k: x=(-1)ⁿarcsin(k)+nπ",
+            "General solution for cosx=k: x=±arccos(k)+2nπ"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exponential and Logarithmic Functions",
+      "topics": [
+        {
+          "title": "Properties and Equations",
+          "concepts": [
+            "exponential function",
+            "logarithmic function",
+            "growth models"
+          ],
+          "keyFormulas": [
+            "logₐ(xy)=logₐx+logₐy",
+            "logₐ(xⁿ)=nlogₐx"
+          ],
+          "keyFacts": [
+            "Greek curriculum requires proofs of logarithm properties"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sequences",
+      "topics": [
+        {
+          "title": "Arithmetic and Geometric Sequences",
+          "concepts": [
+            "general term",
+            "sum formula",
+            "convergence"
+          ],
+          "keyFormulas": [
+            "aₙ=a₁+(n-1)d",
+            "Sₙ=n(a₁+aₙ)/2",
+            "aₙ=a₁·rⁿ⁻¹",
+            "S∞=a₁/(1-r) for |r|<1"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Γραπτή εξέταση (3 ώρες)"
+    ],
+    "commandWords": [
+      "Να αποδείξετε",
+      "Να λύσετε",
+      "Να βρείτε"
+    ]
+  }
+}

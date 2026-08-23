@@ -1,0 +1,20 @@
+# === SECURITY - NEVER COMMIT THESE ===
+.env
+accounts-data.json
+
+# === NODE ===
+node_modules/
+npm-debug.log*
+
+# === OS FILES ===
+.DS_Store
+Thumbs.db
+
+# === LOGS ===
+boot_log.txt
+boot_log_utf8.txt
+*.log
+
+# === EDITOR ===
+.vscode/settings.json
+*.code-workspace

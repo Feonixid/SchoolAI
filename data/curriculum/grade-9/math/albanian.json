@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "math",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS (Ministria e Arsimit dhe Sportit)",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "id": "9-math-al-1",
+      "title": "Ekuacionet kuadratike",
+      "topics": [
+        {
+          "title": "Forma e përgjithshme ax² + bx + c = 0",
+          "concepts": ["trinomi kuadratik", "koeficienti drejtues", "termi i lirë", "drejtëza e simetrisë"],
+          "keyFormulas": ["ax² + bx + c = 0", "x = (-b ± √(b²-4ac)) / 2a", "Δ = b² - 4ac"],
+          "keyFacts": [
+            "Nëse Δ > 0: dy rrënjë reale të ndryshme",
+            "Nëse Δ = 0: një rrënjë e dyfishtë (x = -b/2a)",
+            "Nëse Δ < 0: asnjë rrënjë reale (rrënjë komplekse)",
+            "Drejtëza e simetrisë: x = -b/(2a)",
+            "Kulmi: V(-b/2a, -Δ/4a)"
+          ],
+          "procedures": [
+            "Identifiko koeficientët a, b, c",
+            "Llogarit diskriminantën Δ = b² - 4ac",
+            "Apliko formulën e zgjidhjes",
+            "Kontrollo duke zëvendësuar në ekuacion"
+          ]
+        },
+        {
+          "title": "Faktorizimi i trinomit kuadratik",
+          "concepts": ["faktorizim", "metoda e grumbullimit", "rrënjët e trinomit"],
+          "keyFormulas": ["a(x - x₁)(x - x₂) = 0", "x₁ + x₂ = -b/a", "x₁ · x₂ = c/a"],
+          "keyFacts": [
+            "Lidhja e Vietës: shuma e rrënjëve = -b/a, prodhimi = c/a",
+            "Faktorizimi kërkon gjetjen e dy numrave me shumë -b dhe prodhim c (kur a=1)"
+          ]
+        },
+        {
+          "title": "Problemet me ekuacione kuadratike",
+          "concepts": ["modelim", "interpretim gjeometrik", "kontroll i rrënjëve"],
+          "keyFacts": [
+            "Gjithmonë kontrollo nëse rrënja ka kuptim në kontekstin e problemit",
+            "Problemet me sipërfaqe: vendos x si njërën dimension, zgjidh ekuacionin"
+          ],
+          "examples": ["Gjej dy numra me shumë 14 dhe prodhim 48: x + y = 14, xy = 48 → x² - 14x + 48 = 0"]
+        }
+      ],
+      "commonMisconceptions": [
+        "Harresa e shenjës ± kur aplikon formulën",
+        "Ngatërrimi i diskriminantës me rrënjën",
+        "Mosvlerësimi i rastit kur a ≠ 1 gjatë faktorizimit"
+      ]
+    },
+    {
+      "id": "9-math-al-2",
+      "title": "Sistemet e ekuacioneve",
+      "topics": [
+        {
+          "title": "Sistemet lineare me dy ekuacione dhe dy të panjohura",
+          "concepts": ["zëvendësimi", "eliminimi", "sistem i pajtushëm", "sistem i pacaktuar"],
+          "keyFormulas": ["a₁x + b₁y = c₁", "a₂x + b₂y = c₂"],
+          "procedures": [
+            "Metoda e zëvendësimit: zgjidh njërën ekuacion për x, zëvendëso në tjetrën",
+            "Metoda e eliminimit: shumo ekuacionet për të eliminuar një ndryshore",
+            "Kontrollo zgjidhjen duke zëvendësuar në TË DY ekuacionet"
+          ],
+          "keyFacts": [
+            "Zgjidhja grafike: pika e prerjes së dy drejtëzave",
+            "Sistem i pajtushëm: drejtëza paralele (a₁/a₂ = b₁/b₂ ≠ c₁/c₂)",
+            "Sistem i pacaktuar: drejtëza të njëjta (a₁/a₂ = b₁/b₂ = c₁/c₂)"
+          ]
+        }
+      ],
+      "commonMisconceptions": [
+        "Zgjidhja vetëm e njërës ndryshore pa kontrollin e tjetrës",
+        "Ngatërrimi i sistemit pa zgjidhje me sistemin me pafundësi zgjidhjesh"
+      ]
+    },
+    {
+      "id": "9-math-al-3",
+      "title": "Funksionet dhe grafiku",
+      "topics": [
+        {
+          "title": "Funksioni linear y = kx + b",
+          "concepts": ["koeficienti këndor", "ordinata në origjinë", "monotonia"],
+          "keyFormulas": ["y = kx + b", "k = (y₂-y₁)/(x₂-x₁)", "k = tan(α)"],
+          "keyFacts": [
+            "k > 0: funksion rritës, k < 0: funksion zbritës",
+            "k = 0: drejtëz horizontale",
+            "Drejtëza paralele: k₁ = k₂, drejtëza pingule: k₁·k₂ = -1"
+          ]
+        },
+        {
+          "title": "Funksioni kuadratik y = ax² + bx + c",
+          "concepts": ["parabola", "kulmi", "boshti i simetrisë", "hapja"],
+          "keyFormulas": ["Kulmi: V(-b/2a, f(-b/2a))", "a > 0: hapet lart, a < 0: hapet poshtë"],
+          "keyFacts": [
+            "Grafiku pret boshtin Oy në pikën (0, c)",
+            "Grafiku pret boshtin Ox në rrënjët e ekuacionit ax²+bx+c=0",
+            "Vlera minimale/maksimale gjendet në kulm"
+          ]
+        }
+      ],
+      "commonMisconceptions": [
+        "Ngatërrimi i k pozitiv me grafik që kalon nga pikë pozitive",
+        "Harresa se kulmi nuk ndodh gjithmonë në boshtin Oy"
+      ]
+    },
+    {
+      "id": "9-math-al-4",
+      "title": "Trigonometria në trekëndëshën kënddrejtë",
+      "topics": [
+        {
+          "title": "Raportet trigonometrike",
+          "concepts": ["sinus", "kosinus", "tangjent", "këndi i ngritjes"],
+          "keyFormulas": [
+            "sin(α) = brinja përballë / hipotenuza",
+            "cos(α) = brinja ngjitur / hipotenuza", 
+            "tan(α) = brinja përballë / brinja ngjitur",
+            "sin²(α) + cos²(α) = 1"
+          ],
+          "keyFacts": [
+            "Vlerat standarde: sin30°=1/2, cos30°=√3/2, tan30°=√3/3",
+            "sin45°=√2/2, cos45°=√2/2, tan45°=1",
+            "sin60°=√3/2, cos60°=1/2, tan60°=√3",
+            "sin0°=0, cos0°=1, sin90°=1, cos90°=0"
+          ]
+        },
+        {
+          "title": "Teorema e Pitagorës",
+          "concepts": ["hipotenuza", "katete", "trekëndësha pitagorik"],
+          "keyFormulas": ["a² + b² = c²"],
+          "keyFacts": [
+            "Treshtë pitagorike: (3,4,5), (5,12,13), (8,15,17), (7,24,25)",
+            "Reciproku: nëse a²+b²=c², trekëndëshi është kënddrejtë"
+          ]
+        }
+      ],
+      "practicalWork": ["Matja e lartësive me këndin e ngritjes", "Llogaritja e distancave me trigonometri"],
+      "commonMisconceptions": [
+        "Përdorimi i sin/cos/tan në trekëndësha që nuk janë kënddrejtë",
+        "Ngatërrimi i brinjës përballë me brinjën ngjitur"
+      ]
+    },
+    {
+      "id": "9-math-al-5",
+      "title": "Fuqitë dhe rrënjët",
+      "topics": [
+        {
+          "title": "Veti të fuqive",
+          "concepts": ["bazë", "eksponent", "fuqi me eksponent negativ", "fuqi me eksponent racional"],
+          "keyFormulas": [
+            "aⁿ · aᵐ = aⁿ⁺ᵐ",
+            "aⁿ / aᵐ = aⁿ⁻ᵐ",
+            "(aⁿ)ᵐ = aⁿᵐ",
+            "a⁰ = 1 (a ≠ 0)",
+            "a⁻ⁿ = 1/aⁿ",
+            "a^(1/n) = ⁿ√a"
+          ]
+        },
+        {
+          "title": "Rrënjë katrore dhe kubike",
+          "concepts": ["rrënjë", "racionalizim", "thjeshtëzim"],
+          "keyFormulas": ["√(ab) = √a · √b", "√(a/b) = √a / √b", "√a² = |a|"],
+          "keyFacts": [
+            "Racionalizimi i emëruesit: a/√b = a√b/b",
+            "√a + √b ≠ √(a+b) — ky është gabim i zakonshëm!"
+          ]
+        }
+      ],
+      "commonMisconceptions": [
+        "√(a+b) = √a + √b (GABIM!)",
+        "(a+b)² = a² + b² (harresa e 2ab)"
+      ]
+    },
+    {
+      "id": "9-math-al-6",
+      "title": "Statistika bazë",
+      "topics": [
+        {
+          "title": "Masat e tendencës qendrore",
+          "concepts": ["mesatarja", "mesorja", "moda", "amplitude"],
+          "keyFormulas": [
+            "Mesatarja = (x₁+x₂+...+xₙ)/n",
+            "Mesorja: vlera e mesme në rendin e renditur",
+            "Moda: vlera me frekuencë më të lartë",
+            "Amplituda = xmax - xmin"
+          ]
+        },
+        {
+          "title": "Paraqitja e të dhënave",
+          "concepts": ["diagram shtyllash", "diagram rrethore", "tabelat e frekuencës", "histogram"],
+          "keyFacts": [
+            "Diagrami rrethor: këndi = (frekuenca/totali) × 360°",
+            "Histogrami përdoret për të dhëna të vazhdueshme",
+            "Diagrami shtyllash për të dhëna diskrete"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": ["Detyrë e shkruar (2 orë)", "Provimi vjetor (3 orë)"],
+    "commandWords": ["llogarit", "trego", "vërteto", "skico", "gjej"],
+    "tips": [
+      "Shkruaj gjithmonë formulën para se të zëvendësosh numrat",
+      "Kontrollo njësinë e matjes në fund",
+      "Vizato grafikun me boshte të etiketuara"
+    ]
+  }
+}

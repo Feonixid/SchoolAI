@@ -1,0 +1,32 @@
+  <!-- ============================================================ -->
+  <!-- SCRIPTS — state.js MUST be first                            -->
+  <!-- ============================================================ -->
+  <script src="js/state.js?v=1.4"></script>
+  <script src="js/security.js?v=1.3"></script>
+  <script src="js/fingerprint.js?v=1.3"></script>
+  <script src="js/accounts.js?v=1.3"></script>
+  <script src="js/personalization.js?v=1.0"></script>
+  <script src="js/models.js?v=1.3"></script>
+  <script src="js/subjects.js?v=2.1"></script>
+  <script src="js/classroom.js?v=1.0"></script>
+  <script src="js/connectivity.js?v=1.0"></script>
+  <script src="js/ui.js?v=1.3"></script>
+  <script src="js/students.js?v=1.3"></script>
+  <script src="js/quiz.js?v=1.3"></script>
+  <script src="js/ai-core.js?v=1.5"></script>
+  <script src="js/attendance.js?v=1.3"></script>
+  <script src="js/behavior.js?v=1.3"></script>
+  <script src="js/calendar.js?v=1.3"></script>
+  <script src="js/communication.js?v=1.3"></script>
+  <script src="js/analytics.js?v=1.3"></script>
+  <script src="js/assignments.js?v=1.3"></script>
+  <script src="js/reports.js?v=1.3"></script>
+  <script src="js/gamification.js?v=1.3"></script>
+  <script src="js/quiz-game.js?v=1.3"></script>
+  <script src="js/ai-feedback.js?v=1.3"></script>
+  <script src="js/initialize-features.js?v=1.3"></script>
+  <!-- dialog.js MUST load before terminal.js and projects.js -->
+  <script src="js/dialog.js?v=1.0"></script>
+  <script src="js/projects.js?v=2.0"></script>
+  <script src="js/terminal.js?v=2.1"></script>
+  <script src="js/voice.js?v=1.0"></script>

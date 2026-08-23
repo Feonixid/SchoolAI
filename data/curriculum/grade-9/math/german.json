@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "math",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 9 — Mathematik",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Quadratische Funktionen und Gleichungen",
+      "topics": [
+        {
+          "title": "Normalparabel und Verschiebung",
+          "concepts": [
+            "Scheitelform",
+            "Normalform",
+            "Nullstellen",
+            "Scheitelpunkt"
+          ],
+          "keyFormulas": [
+            "f(x) = a(x-d)²+e (Scheitelform)",
+            "f(x) = ax²+bx+c (Normalform)",
+            "S(d|e) = (-b/2a | -Δ/4a)"
+          ],
+          "keyFacts": [
+            "a > 0: nach oben geöffnet",
+            "a < 0: nach unten geöffnet",
+            "Nullstellen: Lösungen von f(x)=0"
+          ]
+        },
+        {
+          "title": "Quadratische Gleichungen lösen",
+          "concepts": [
+            "p-q-Formel",
+            "Diskriminante",
+            "Faktorisierung"
+          ],
+          "keyFormulas": [
+            "x² + px + q = 0 → x₁,₂ = -p/2 ± √((p/2)²-q)",
+            "Δ = (p/2)²-q"
+          ]
+        }
+      ],
+      "commonMisconceptions": [
+        "Vorzeichenfehler bei der p-q-Formel",
+        "Verwechslung von Scheitelform und Normalform"
+      ]
+    },
+    {
+      "title": "Ähnlichkeit und Strahlensätze",
+      "topics": [
+        {
+          "title": "Strahlensätze",
+          "concepts": [
+            "Erster Strahlensatz",
+            "Zweiter Strahlensatz",
+            "Ähnlichkeit"
+          ],
+          "keyFormulas": [
+            "a/a' = b/b' (1. Strahlensatz)",
+            "a/b = a'/b' (2. Strahlensatz)"
+          ],
+          "keyFacts": [
+            "Strahlensätze gelten nur bei parallelen Geraden",
+            "Ähnliche Dreiecke: gleiche Winkel, proportionale Seiten"
+          ]
+        },
+        {
+          "title": "Zentrische Streckung",
+          "concepts": [
+            "Streckzentrum",
+            "Streckfaktor k",
+            "Vergrößerung und Verkleinerung"
+          ],
+          "keyFacts": [
+            "|k| > 1: Vergrößerung",
+            "|k| < 1: Verkleinerung",
+            "k < 0: Punktspiegelung + Streckung"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Potenzen und Wurzeln",
+      "topics": [
+        {
+          "title": "Potenzgesetze",
+          "concepts": [
+            "Basis",
+            "Exponent",
+            "negative Exponenten",
+            "rationale Exponenten"
+          ],
+          "keyFormulas": [
+            "aⁿ·aᵐ = aⁿ⁺ᵐ",
+            "aⁿ/aᵐ = aⁿ⁻ᵐ",
+            "(aⁿ)ᵐ = aⁿᵐ",
+            "a^(1/n) = ⁿ√a"
+          ]
+        },
+        {
+          "title": "Wurzelrechnung",
+          "concepts": [
+            "Quadratwurzel",
+            "Kubikwurzel",
+            "Rationalmachen des Nenners"
+          ],
+          "keyFormulas": [
+            "√(a·b) = √a·√b",
+            "√(a/b) = √a/√b"
+          ],
+          "keyFacts": [
+            "√(a+b) ≠ √a + √b !!!"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Wahrscheinlichkeitsrechnung",
+      "topics": [
+        {
+          "title": "Mehrstufige Zufallsexperimente",
+          "concepts": [
+            "Baumdiagramm",
+            "Pfadregel",
+            "Pfadadditionsregel",
+            "Gegenwahrscheinlichkeit"
+          ],
+          "keyFormulas": [
+            "P(Pfad) = Produkt der Einzelwahrscheinlichkeiten",
+            "P(A̅) = 1 - P(A)"
+          ],
+          "keyFacts": [
+            "Pfadmultiplikationsregel: entlang eines Pfades multiplizieren",
+            "Pfadadditionsregel: verschiedene Pfade addieren"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Schulaufgabe (45 min)",
+      "Stegreifaufgabe (20 min)",
+      "Jahresabschlusstest"
+    ],
+    "commandWords": [
+      "berechne",
+      "bestimme",
+      "zeige",
+      "begründe",
+      "skizziere"
+    ],
+    "tips": [
+      "Immer die Formel zuerst aufschreiben",
+      "Einheiten nicht vergessen"
+    ]
+  }
+}

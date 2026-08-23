@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "economics",
+    "curriculum": "american",
+    "curriculumName": "US AP Microeconomics",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "AP Microeconomics",
+      "topics": [
+        {
+          "title": "Consumer and Producer Theory",
+          "concepts": [
+            "utility maximization",
+            "marginal utility",
+            "budget constraint",
+            "production function",
+            "costs"
+          ],
+          "keyFormulas": [
+            "MU/P should be equal across goods (utility max)",
+            "MC = ΔTC/ΔQ",
+            "ATC = TC/Q",
+            "Profit = TR - TC"
+          ],
+          "keyFacts": [
+            "Diminishing marginal returns: MP eventually decreases as input increases",
+            "Profit maximization: MR = MC"
+          ]
+        },
+        {
+          "title": "Market Structures",
+          "concepts": [
+            "perfect competition",
+            "monopoly",
+            "monopolistic competition",
+            "oligopoly"
+          ],
+          "keyFacts": [
+            "Perfect competition: P=MR=AR, long-run: P=min ATC (zero economic profit)",
+            "Monopoly: P>MR, produces where MR=MC, deadweight loss",
+            "Oligopoly: game theory, Nash equilibrium, prisoner's dilemma"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

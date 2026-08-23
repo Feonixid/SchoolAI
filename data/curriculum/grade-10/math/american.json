@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "math",
+    "curriculum": "american",
+    "curriculumName": "US Geometry / Algebra II",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Geometric Proofs and Congruence",
+      "topics": [
+        {
+          "title": "Triangle Congruence",
+          "concepts": [
+            "SSS",
+            "SAS",
+            "ASA",
+            "AAS",
+            "HL (right triangles)"
+          ],
+          "keyFacts": [
+            "SSA is NOT a valid congruence criterion (ambiguous case)",
+            "CPCTC: Corresponding Parts of Congruent Triangles are Congruent"
+          ]
+        },
+        {
+          "title": "Parallel Lines and Transversals",
+          "concepts": [
+            "corresponding angles",
+            "alternate interior",
+            "alternate exterior",
+            "co-interior"
+          ],
+          "keyFacts": [
+            "Corresponding angles equal ↔ lines parallel",
+            "Alternate interior angles equal ↔ lines parallel"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Polynomial and Rational Functions",
+      "topics": [
+        {
+          "title": "Polynomial Division",
+          "concepts": [
+            "synthetic division",
+            "Remainder Theorem",
+            "Factor Theorem"
+          ],
+          "keyFormulas": [
+            "f(a) = 0 ⟹ (x-a) is a factor"
+          ],
+          "keyFacts": [
+            "Degree n polynomial has at most n real roots"
+          ]
+        },
+        {
+          "title": "Rational Expressions",
+          "concepts": [
+            "simplifying",
+            "asymptotes",
+            "domain restrictions"
+          ],
+          "keyFacts": [
+            "Vertical asymptote: denominator = 0",
+            "Horizontal asymptote: compare degrees"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exponential and Logarithmic Functions",
+      "topics": [
+        {
+          "title": "Exponential Growth and Decay",
+          "concepts": [
+            "base e",
+            "half-life",
+            "doubling time",
+            "compound interest"
+          ],
+          "keyFormulas": [
+            "A = P(1+r/n)ⁿᵗ",
+            "A = Pe^(rt)",
+            "t₁/₂ = ln2/k"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Unit tests",
+      "State assessment (End of Course)"
+    ],
+    "commandWords": [
+      "solve",
+      "prove",
+      "justify",
+      "construct"
+    ],
+    "tips": [
+      "Show all work",
+      "Justify each step in proofs"
+    ]
+  }
+}

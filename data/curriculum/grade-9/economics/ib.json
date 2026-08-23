@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "economics",
+    "curriculum": "ib",
+    "curriculumName": "IB Economics SL — Unit 1: Microeconomics Intro",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Introduction to Economics",
+      "topics": [
+        {
+          "title": "The Economic Problem",
+          "concepts": [
+            "scarcity",
+            "choice",
+            "opportunity cost",
+            "factors of production",
+            "PPF"
+          ],
+          "definitions": {
+            "Scarcity": "Unlimited wants exceed limited resources",
+            "Opportunity cost": "The next best alternative forgone",
+            "PPF": "Shows maximum combinations of two goods that can be produced with existing resources"
+          },
+          "keyFacts": [
+            "Inside PPF: inefficient",
+            "On PPF: efficient",
+            "Outside PPF: unattainable with current resources",
+            "Factors of production: Land, Labour, Capital, Enterprise"
+          ]
+        },
+        {
+          "title": "Demand and Supply",
+          "concepts": [
+            "law of demand",
+            "law of supply",
+            "equilibrium",
+            "shortage",
+            "surplus",
+            "price mechanism",
+            "consumer/producer surplus"
+          ],
+          "keyFacts": [
+            "Demand curve: downward sloping (inverse price-quantity relationship)",
+            "Supply curve: upward sloping (direct price-quantity relationship)",
+            "Equilibrium: Qd = Qs",
+            "Consumer surplus: area above price, below demand curve",
+            "Producer surplus: area below price, above supply curve"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

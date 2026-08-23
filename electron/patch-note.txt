@@ -1,0 +1,6 @@
+    // Update input placeholder
+    const input = document.getElementById('input');
+    if (input) input.placeholder = subject.placeholder || 'Type your question here…';
+
+    window.dispatchEvent(new CustomEvent('subjectSwitched', { detail: subjectId }));
+    console.log(`📚 Switched to: ${subject.label} (${subject.lang})`);

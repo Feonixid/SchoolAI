@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "economics",
+    "curriculum": "ib",
+    "curriculumName": "IB Economics SL — Unit 2: Macroeconomics",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Macroeconomics",
+      "topics": [
+        {
+          "title": "GDP and Economic Activity",
+          "concepts": [
+            "GDP",
+            "GNI",
+            "real vs nominal",
+            "GDP per capita",
+            "green GDP"
+          ],
+          "keyFormulas": [
+            "GDP = C+I+G+(X-M)"
+          ],
+          "keyFacts": [
+            "GDP limitations: ignores inequality, informal economy, externalities, non-market activity"
+          ]
+        },
+        {
+          "title": "AD-AS Model",
+          "concepts": [
+            "aggregate demand",
+            "short-run aggregate supply",
+            "long-run aggregate supply",
+            "Keynesian vs monetarist"
+          ],
+          "keyFacts": [
+            "AD shifts: C, I, G, NX changes",
+            "SRAS shifts: input costs, productivity, exchange rate",
+            "LRAS shifts: technology, labour force, capital stock",
+            "Full employment: AD intersects LRAS"
+          ]
+        },
+        {
+          "title": "Fiscal and Monetary Policy",
+          "concepts": [
+            "expansionary fiscal",
+            "contractionary fiscal",
+            "interest rates",
+            "money supply",
+            "quantitative easing"
+          ],
+          "keyFacts": [
+            "Fiscal: government changes G or T",
+            "Monetary: central bank changes interest rates or money supply",
+            "Multiplier effect: ΔY = k × ΔG where k = 1/(1-MPC)",
+            "Time lags limit policy effectiveness"
+          ]
+        },
+        {
+          "title": "Unemployment and Inflation",
+          "concepts": [
+            "natural rate of unemployment",
+            "Phillips curve",
+            "demand-pull",
+            "cost-push",
+            "deflation"
+          ],
+          "keyFormulas": [
+            "Unemployment rate = (Unemployed/Labour force) × 100"
+          ],
+          "keyFacts": [
+            "Short-run Phillips curve: inverse relationship between inflation and unemployment",
+            "Long-run: vertical at natural rate (expectations-augmented Phillips curve)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

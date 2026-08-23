@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "physics",
+    "curriculum": "uk",
+    "curriculumName": "UK GCSE Physics — Waves and Energy",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Energy",
+      "topics": [
+        {
+          "title": "Energy Stores and Transfers",
+          "concepts": [
+            "kinetic",
+            "gravitational PE",
+            "elastic PE",
+            "thermal",
+            "specific heat capacity"
+          ],
+          "keyFormulas": [
+            "KE = ½mv²",
+            "GPE = mgh",
+            "Q = mcΔT",
+            "Efficiency = useful output / total input"
+          ],
+          "keyFacts": [
+            "Energy cannot be created or destroyed",
+            "Efficiency always < 100% due to thermal waste"
+          ]
+        },
+        {
+          "title": "Power and Energy Resources",
+          "concepts": [
+            "power",
+            "renewable",
+            "non-renewable",
+            "nuclear",
+            "fossil fuels"
+          ],
+          "keyFormulas": [
+            "P = E/t",
+            "P = W/t"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Waves",
+      "topics": [
+        {
+          "title": "Properties of Waves",
+          "concepts": [
+            "transverse",
+            "longitudinal",
+            "frequency",
+            "period",
+            "wave speed"
+          ],
+          "keyFormulas": [
+            "v = fλ",
+            "T = 1/f"
+          ]
+        },
+        {
+          "title": "EM Spectrum",
+          "concepts": [
+            "radio",
+            "microwave",
+            "infrared",
+            "visible",
+            "UV",
+            "X-ray",
+            "gamma"
+          ],
+          "keyFacts": [
+            "All EM waves travel at c = 3×10⁸ m/s in vacuum",
+            "Higher frequency = more energy = more dangerous"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

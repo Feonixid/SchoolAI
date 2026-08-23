@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "physics",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 11 — Physik (Qualifikationsphase)",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Elektromagnetismus",
+      "topics": [
+        {
+          "title": "Elektrische und magnetische Felder",
+          "concepts": [
+            "Coulomb-Kraft",
+            "Feldlinien",
+            "Lorentzkraft",
+            "Induktion"
+          ],
+          "keyFormulas": [
+            "F=kq₁q₂/r²",
+            "F=qvB",
+            "U_ind=-NdΦ/dt"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

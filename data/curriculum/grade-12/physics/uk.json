@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "physics",
+    "curriculum": "uk",
+    "curriculumName": "UK A-Level Physics (Year 13)",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Fields",
+      "topics": [
+        {
+          "title": "Gravitational and Electric Fields",
+          "concepts": [
+            "radial fields",
+            "uniform fields",
+            "potential",
+            "field lines"
+          ],
+          "keyFormulas": [
+            "g=GM/r²",
+            "E=kQ/r²",
+            "V_grav=-GM/r",
+            "V_elec=kQ/r"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Nuclear Physics",
+      "topics": [
+        {
+          "title": "Radioactivity and Nuclear Energy",
+          "concepts": [
+            "alpha",
+            "beta",
+            "gamma",
+            "half-life",
+            "binding energy",
+            "fission",
+            "fusion"
+          ],
+          "keyFormulas": [
+            "N=N₀e^(-λt)",
+            "A=λN",
+            "t₁/₂=ln2/λ",
+            "E=mc²"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

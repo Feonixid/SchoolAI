@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "math",
+    "curriculum": "american",
+    "curriculumName": "US Pre-Calculus / AP Precalculus",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Trigonometric Functions",
+      "topics": [
+        {
+          "title": "Unit Circle and Graphs",
+          "concepts": [
+            "radian measure",
+            "amplitude",
+            "period",
+            "phase shift"
+          ],
+          "keyFormulas": [
+            "y = Asin(B(x-C))+D",
+            "Period = 2π/B",
+            "Amplitude = |A|"
+          ]
+        },
+        {
+          "title": "Trigonometric Identities",
+          "concepts": [
+            "Pythagorean",
+            "double angle",
+            "sum-to-product"
+          ],
+          "keyFormulas": [
+            "sin²θ+cos²θ=1",
+            "sin2θ=2sinθcosθ",
+            "cos2θ=2cos²θ-1"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Limits and Introduction to Calculus",
+      "topics": [
+        {
+          "title": "Concept of Limit",
+          "concepts": [
+            "intuitive understanding",
+            "one-sided limits",
+            "continuity"
+          ],
+          "keyFormulas": [
+            "lim(x→a) f(x) = L"
+          ]
+        },
+        {
+          "title": "Rate of Change",
+          "concepts": [
+            "average rate",
+            "instantaneous rate",
+            "secant vs tangent"
+          ],
+          "keyFacts": [
+            "Average rate = Δy/Δx",
+            "Instantaneous rate = limit of average rate as Δx→0"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Conic Sections",
+      "topics": [
+        {
+          "title": "Circles, Ellipses, Parabolas, Hyperbolas",
+          "concepts": [
+            "standard form",
+            "foci",
+            "directrix",
+            "eccentricity"
+          ],
+          "keyFormulas": [
+            "Circle: (x-h)²+(y-k)²=r²",
+            "Ellipse: (x-h)²/a²+(y-k)²/b²=1",
+            "Parabola: y=a(x-h)²+k",
+            "Hyperbola: (x-h)²/a²-(y-k)²/b²=1"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

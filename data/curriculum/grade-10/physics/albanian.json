@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "physics",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Fizikë Klasa 10",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Valët dhe optika",
+      "topics": [
+        {
+          "title": "Valët mekanike",
+          "concepts": [
+            "valë tërthore",
+            "valë gjatësore",
+            "shpejtësia",
+            "gjatësia valore"
+          ],
+          "keyFormulas": [
+            "v = fλ",
+            "T = 1/f"
+          ]
+        },
+        {
+          "title": "Optika gjeometrike",
+          "concepts": [
+            "pasqyrimi",
+            "përthyerja",
+            "ligji i Snell-it",
+            "lente"
+          ],
+          "keyFormulas": [
+            "n₁sinθ₁ = n₂sinθ₂",
+            "1/f = 1/do + 1/di",
+            "M = -di/do"
+          ],
+          "keyFacts": [
+            "Lente konvergjente: f > 0",
+            "Lente divergjente: f < 0",
+            "Këndi kritik: sinθ_c = n₂/n₁"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

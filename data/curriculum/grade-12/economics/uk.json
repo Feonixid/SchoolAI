@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "economics",
+    "curriculum": "uk",
+    "curriculumName": "UK A-Level Economics — Year 13",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Global Economics",
+      "topics": [
+        {
+          "title": "Globalisation, Trade and Development",
+          "concepts": [
+            "globalisation",
+            "trade liberalisation",
+            "development indicators",
+            "poverty",
+            "inequality"
+          ],
+          "keyFacts": [
+            "UK exam: evaluation is key — always discuss limitations, unintended consequences",
+            "Discuss developed vs developing country perspectives"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

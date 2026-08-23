@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "economics",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Ekonomi Klasa 11 (Makroekonomi)",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Makroekonomia",
+      "topics": [
+        {
+          "title": "GDP dhe të ardhurat kombëtare",
+          "concepts": [
+            "GDP",
+            "GNP",
+            "GDP nominal vs real",
+            "deflatori"
+          ],
+          "keyFormulas": [
+            "GDP = C + I + G + (X-M)",
+            "GDP real = GDP nominal / Deflatori × 100"
+          ],
+          "keyFacts": [
+            "GDP mat vlerën e mallrave dhe shërbimeve finale",
+            "GDP real eliminon efektin e inflacionit",
+            "Use /graph gdp to calculate components!"
+          ]
+        },
+        {
+          "title": "Papunësia",
+          "concepts": [
+            "shkalla e papunësisë",
+            "lloje: frikcionare, strukturore, ciklike"
+          ],
+          "keyFormulas": [
+            "Shkalla = (Të papunë / Forca punëtore) × 100"
+          ],
+          "keyFacts": [
+            "Papunësia frikcionare: kalimtare, e shëndetshme",
+            "Papunësia strukturore: ndryshime teknologjike",
+            "Papunësia ciklike: rënie ekonomike"
+          ]
+        },
+        {
+          "title": "Inflacioni",
+          "concepts": [
+            "CPI",
+            "inflacion i kërkesës",
+            "inflacion i kostove",
+            "kurba e Filipsit"
+          ],
+          "keyFormulas": [
+            "CPI = (Kosto korente / Kosto e vitit bazë) × 100",
+            "Shkalla e inflacionit = ((CPI_new - CPI_old)/CPI_old) × 100"
+          ],
+          "keyFacts": [
+            "Use /graph inflation to calculate CPI!",
+            "Inflacioni i kërkesës: shumë para ndjekin pak mallra",
+            "Inflacioni i kostove: rritja e kostove të prodhimit"
+          ]
+        },
+        {
+          "title": "Modeli AD-AS",
+          "concepts": [
+            "kërkesa agregate",
+            "oferta agregate afatshkurtër",
+            "oferta agregate afatgjatë",
+            "hendeku recesionar",
+            "hendeku inflacionar"
+          ],
+          "keyFacts": [
+            "AD zhvendoset djathtas: rritje ekonomike + inflacion",
+            "SRAS zhvendoset majtas: stagflacion",
+            "LRAS vertikale: prodhimi potencial",
+            "Use /graph adas to simulate!"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

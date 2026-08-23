@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "math",
+    "curriculum": "uk",
+    "curriculumName": "UK A-Level Mathematics (Year 12)",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Differentiation",
+      "topics": [
+        {
+          "title": "Rules and Applications",
+          "concepts": [
+            "power rule",
+            "chain rule",
+            "product rule",
+            "quotient rule",
+            "stationary points"
+          ],
+          "keyFormulas": [
+            "d/dx(xⁿ)=nxⁿ⁻¹",
+            "d/dx(eˣ)=eˣ",
+            "d/dx(lnx)=1/x",
+            "d/dx(sinx)=cosx",
+            "d/dx(cosx)=-sinx"
+          ]
+        },
+        {
+          "title": "Tangents and Normals",
+          "concepts": [
+            "gradient at a point",
+            "equation of tangent",
+            "equation of normal"
+          ],
+          "keyFormulas": [
+            "Tangent: y-y₁=f'(x₁)(x-x₁)",
+            "Normal: y-y₁=-1/f'(x₁)·(x-x₁)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Integration",
+      "topics": [
+        {
+          "title": "Indefinite and Definite Integrals",
+          "concepts": [
+            "reverse of differentiation",
+            "area under curve",
+            "trapezium rule"
+          ],
+          "keyFormulas": [
+            "∫xⁿdx = xⁿ⁺¹/(n+1)+C",
+            "∫eˣdx=eˣ+C",
+            "Area = ∫ₐᵇf(x)dx"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Mechanics",
+      "topics": [
+        {
+          "title": "Kinematics",
+          "concepts": [
+            "displacement",
+            "velocity",
+            "acceleration",
+            "constant acceleration"
+          ],
+          "keyFormulas": [
+            "v=u+at",
+            "s=ut+½at²",
+            "v²=u²+2as",
+            "s=½(u+v)t"
+          ],
+          "keyFacts": [
+            "SUVAT equations assume CONSTANT acceleration",
+            "Take one direction as positive and be consistent"
+          ]
+        },
+        {
+          "title": "Forces and Newton's Laws",
+          "concepts": [
+            "weight",
+            "normal reaction",
+            "friction",
+            "tension",
+            "F=ma"
+          ],
+          "keyFormulas": [
+            "W=mg",
+            "F=ma",
+            "F≤μR (friction)"
+          ],
+          "keyFacts": [
+            "Draw a force diagram first",
+            "Resolve forces parallel and perpendicular to motion"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Statistics",
+      "topics": [
+        {
+          "title": "Statistical Distributions",
+          "concepts": [
+            "binomial",
+            "normal",
+            "hypothesis testing"
+          ],
+          "keyFormulas": [
+            "X~B(n,p): P(X=r)=C(n,r)pʳ(1-p)ⁿ⁻ʳ",
+            "X~N(μ,σ²): Z=(X-μ)/σ"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

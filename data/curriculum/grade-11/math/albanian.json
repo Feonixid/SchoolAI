@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "math",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Klasa 11",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Limitet dhe vazhdueshmëria",
+      "topics": [
+        {
+          "title": "Koncepti i limitit",
+          "concepts": [
+            "limit",
+            "limiti i funksionit",
+            "limiti i pafund"
+          ],
+          "keyFormulas": [
+            "lim(x→a) f(x) = L",
+            "lim(x→∞) 1/x = 0",
+            "lim(x→0) sinx/x = 1"
+          ],
+          "keyFacts": [
+            "Limiti ekziston nëse limiti nga e majta = limiti nga e djathta",
+            "0/0 është formë e pacaktuar — duhet thjeshtëzim"
+          ]
+        },
+        {
+          "title": "Vazhdueshmëria",
+          "concepts": [
+            "funksion i vazhdueshëm",
+            "pikat e ndërprerjes"
+          ],
+          "keyFacts": [
+            "f vazhdueshëm në a nëse: 1) f(a) ekziston, 2) lim f(x) ekziston, 3) lim f(x)=f(a)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Derivati",
+      "topics": [
+        {
+          "title": "Derivati i funksionit",
+          "concepts": [
+            "shkalla e ndryshimit",
+            "derivati",
+            "tangjentja"
+          ],
+          "keyFormulas": [
+            "f'(x) = lim(h→0) [f(x+h)-f(x)]/h",
+            "(xⁿ)' = nxⁿ⁻¹",
+            "(sinx)' = cosx",
+            "(cosx)' = -sinx",
+            "(eˣ)' = eˣ",
+            "(lnx)' = 1/x"
+          ],
+          "keyFacts": [
+            "Derivati jep koeficientin këndor të tangjentes",
+            "f'(x₀) = 0 → pikë stacionare"
+          ]
+        },
+        {
+          "title": "Rregullat e derivimit",
+          "concepts": [
+            "rregulla e prodhimit",
+            "rregulla e herësit",
+            "rregulla e zinxhirit"
+          ],
+          "keyFormulas": [
+            "(fg)' = f'g + fg'",
+            "(f/g)' = (f'g-fg')/g²",
+            "[f(g(x))]' = f'(g(x))·g'(x)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Aplikimet e derivatit",
+      "topics": [
+        {
+          "title": "Ekstremumet dhe monotonia",
+          "concepts": [
+            "pikë minimumi",
+            "pikë maksimumi",
+            "intervale rritëse/zbritëse"
+          ],
+          "keyFacts": [
+            "f'(x) > 0: funksion rritës",
+            "f'(x) < 0: funksion zbritës",
+            "Derivati i dytë: f''(x₀)>0 → minimum, f''(x₀)<0 → maksimum"
+          ]
+        },
+        {
+          "title": "Problemet e optimizimit",
+          "concepts": [
+            "vlera maksimale",
+            "vlera minimale",
+            "modelim"
+          ],
+          "keyFacts": [
+            "Hapat: 1) Shkruaj funksionin objektiv, 2) Gjej derivatin, 3) Zgjidh f'(x)=0, 4) Kontrollo me f''"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Kombinatorika",
+      "topics": [
+        {
+          "title": "Permutacione dhe kombinacione",
+          "concepts": [
+            "faktorial",
+            "permutacion",
+            "kombinacion"
+          ],
+          "keyFormulas": [
+            "n! = n·(n-1)·...·1",
+            "P(n,r) = n!/(n-r)!",
+            "C(n,r) = n!/(r!(n-r)!)"
+          ],
+          "keyFacts": [
+            "Permutacione: radha ka rëndësi",
+            "Kombinacione: radha nuk ka rëndësi",
+            "C(n,0) = C(n,n) = 1"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

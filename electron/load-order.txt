@@ -1,0 +1,6 @@
+    // Add scripts to index.html — replace the SCRIPTS section
+    // classroom.js goes between subjects.js and ui.js
+    // This is the correct load order:
+    // state → security → fingerprint → accounts → personalization → models
+    // → subjects → classroom → ui → students → quiz → ai-core
+    // → [feature modules] → initialize-features → voice

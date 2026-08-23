@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "physics",
+    "curriculum": "american",
+    "curriculumName": "US Physics 1 (AP-aligned)",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Mechanics Review & Waves",
+      "topics": [
+        {
+          "title": "Rotational Motion",
+          "concepts": [
+            "angular velocity",
+            "torque",
+            "moment of inertia",
+            "angular momentum"
+          ],
+          "keyFormulas": [
+            "τ = rFsinθ",
+            "τ = Iα",
+            "L = Iω",
+            "KE_rot = ½Iω²"
+          ],
+          "keyFacts": [
+            "Conservation of angular momentum: if Στ=0, L=constant",
+            "Moment of inertia depends on mass distribution"
+          ]
+        },
+        {
+          "title": "Simple Harmonic Motion",
+          "concepts": [
+            "restoring force",
+            "spring constant",
+            "pendulum",
+            "energy in SHM"
+          ],
+          "keyFormulas": [
+            "F = -kx (Hooke's law)",
+            "T = 2π√(m/k)",
+            "T = 2π√(L/g)",
+            "E_total = ½kA²"
+          ]
+        },
+        {
+          "title": "Mechanical Waves and Sound",
+          "concepts": [
+            "wave speed",
+            "superposition",
+            "standing waves",
+            "resonance",
+            "beats"
+          ],
+          "keyFormulas": [
+            "v = fλ",
+            "fₙ = nv/2L (string fixed at both ends)",
+            "f_beat = |f₁-f₂|"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

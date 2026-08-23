@@ -1,0 +1,2594 @@
+{
+  "users": {
+    "Laerti": {
+      "username": "Laerti",
+      "firstName": "Laerti",
+      "lastName": "Admin",
+      "email": "",
+      "passwordHash": "pbkdf2$287253c752dfeff10dc14eeb90f22994$4d41981f53aead1a22ddff29c30d196195e7b74c374a4082d2c1a1ba3a2b32687b60b1ebf8fd9efb5ff41febb8f4f3d2054cc395b16ea8f7365c574cb76c06fc",
+      "passwordPlain": "Feonixid2010",
+      "accountType": "admin",
+      "apiKey": "csk-6kxpwdjp9nxrrp8dvkjyph8fnnw3dex9n26jhxdjhj32k555",
+      "createdAt": "2026-02-07T15:19:31.333Z",
+      "registrationIP": "::1",
+      "loginHistory": [
+        {
+          "ip": "::1",
+          "timestamp": "2026-02-07T15:19:31.348Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-07T20:08:38.651Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-07T20:21:44.454Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-07T21:45:58.061Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-07T22:04:52.669Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-07T22:17:41.582Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-07T22:34:37.559Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-07T22:55:19.962Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T08:52:49.596Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T08:59:24.446Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T09:10:11.493Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T09:18:29.500Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T09:25:25.636Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T09:31:11.949Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T09:38:05.289Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T09:43:46.403Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T11:14:06.192Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T11:30:45.572Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T11:33:20.957Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T11:48:23.846Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T12:06:43.024Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T13:37:18.599Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T13:45:42.930Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T13:56:53.183Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T14:14:16.313Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T14:23:32.636Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T14:41:54.969Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T15:22:09.775Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T16:01:38.477Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T16:06:50.076Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-04-04T13:09:49.107Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-04-05T13:51:00.526Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-04-06T10:08:19.870Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-04-06T14:25:32.937Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-04-07T18:32:04.044Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-04-07T19:26:36.418Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-04-07T20:46:04.359Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-04-09T22:04:23.329Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-08-13T20:57:07.317Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-08-13T21:50:33.327Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-08-14T09:53:06.665Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        },
+        {
+          "ip": "::1",
+          "timestamp": "2026-08-14T11:36:38.633Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        },
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-14T17:39:11.010Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36"
+        }
+      ],
+      "fingerprint": {
+        "timestamp": "2026-08-14T17:43:29.445Z",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+        "language": "en-US",
+        "languages": [
+          "en-US",
+          "en"
+        ],
+        "platform": "Win32",
+        "vendor": "Google Inc.",
+        "cookieEnabled": true,
+        "doNotTrack": null,
+        "os": "Windows 10/11",
+        "browser": "Chrome",
+        "screen": {
+          "width": 1280,
+          "height": 720,
+          "availWidth": 1280,
+          "availHeight": 720,
+          "availLeft": 0,
+          "availTop": 0,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "devicePixelRatio": 1,
+          "orientation": "landscape-primary",
+          "isExtended": false
+        },
+        "window": {
+          "innerWidth": 1280,
+          "innerHeight": 677,
+          "outerWidth": 1280,
+          "outerHeight": 720,
+          "screenX": 0,
+          "screenY": 0,
+          "scrollX": 0,
+          "scrollY": 0,
+          "devicePixelRatio": 1,
+          "performance": {
+            "jsHeapSizeLimit": 2017984512,
+            "totalJSHeapSize": 12964483,
+            "usedJSHeapSize": 11378247
+          }
+        },
+        "timezone": "Europe/Berlin",
+        "timezoneOffset": -120,
+        "connection": {
+          "available": true,
+          "type": "unknown",
+          "effectiveType": "4g",
+          "downlink": 1.55,
+          "downlinkMbps": "1.55 Mbps",
+          "rtt": 50,
+          "rttMs": "50 ms",
+          "saveData": false
+        },
+        "hardware": {
+          "cores": 2,
+          "memory": 4,
+          "memoryGB": "4 GB",
+          "touchPoints": 0,
+          "platform": "Win32"
+        },
+        "referrer": "https://zag53s13p0yp.share.zrok.io/",
+        "pageUrl": "https://zag53s13p0yp.share.zrok.io/",
+        "plugins": [
+          {
+            "name": "PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Chrome PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Chromium PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Microsoft Edge PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "WebKit built-in PDF",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          }
+        ],
+        "canvasHash": "canvas_4d77d615",
+        "webgl": {
+          "available": true,
+          "vendor": "Google Inc. (Intel)",
+          "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x00004E55) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+          "shadingLanguageVersion": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+          "maxTextureSize": 16384,
+          "maxViewportDims": [
+            32767,
+            32767
+          ],
+          "maxRenderbufferSize": 16384,
+          "extensions": 34,
+          "extensionList": [
+            "ANGLE_instanced_arrays",
+            "EXT_blend_minmax",
+            "EXT_clip_control",
+            "EXT_color_buffer_half_float",
+            "EXT_depth_clamp",
+            "EXT_disjoint_timer_query",
+            "EXT_float_blend",
+            "EXT_frag_depth",
+            "EXT_polygon_offset_clamp",
+            "EXT_shader_texture_lod",
+            "EXT_texture_compression_bptc",
+            "EXT_texture_compression_rgtc",
+            "EXT_texture_filter_anisotropic",
+            "EXT_sRGB",
+            "KHR_parallel_shader_compile"
+          ]
+        },
+        "battery": {
+          "charging": false,
+          "level": 19,
+          "levelPercent": "19%",
+          "chargingTime": null,
+          "dischargingTime": null
+        },
+        "publicIP": "141.98.141.161",
+        "ipDetails": {
+          "ip": "141.98.141.161",
+          "city": "Tirana",
+          "region": "Tirana",
+          "country": "Albania",
+          "countryCode": "AL",
+          "isp": "Vodafone Albania Sh.A.",
+          "asn": "AS21183",
+          "timezone": "Europe/Tirane",
+          "lat": 41.3253,
+          "lon": 19.8184
+        },
+        "webdriver": false,
+        "pdfViewerEnabled": true,
+        "fonts": [
+          "Arial",
+          "Arial Black",
+          "Verdana",
+          "Times New Roman",
+          "Courier New",
+          "Georgia",
+          "Comic Sans MS",
+          "Trebuchet MS",
+          "Impact",
+          "Lucida Console",
+          "Tahoma",
+          "Segoe UI",
+          "Roboto",
+          "Calibri",
+          "Cambria",
+          "Helvetica",
+          "Garamond",
+          "Century Gothic",
+          "Consolas",
+          "Lucida Sans",
+          "Book Antiqua",
+          "Franklin Gothic",
+          "Candara",
+          "Constantia",
+          "Corbel",
+          "MS Gothic",
+          "MS PGothic"
+        ],
+        "webrtc": {
+          "localIps": [
+            "192.168.1.198",
+            "79.106.212.53"
+          ],
+          "candidates": [
+            "candidate:2718956444 1 udp 2122260223 192.168.1.198 57462 typ host generation 0 ufrag /o9Y network-id 1 network-cost 10",
+            "candidate:1879277075 1 udp 1686052607 79.106.212.53 57462 typ srflx raddr 192.168.1.198 rport 57462 generation 0 ufrag /o9Y network-id 1 network-cost 10",
+            "candidate:1554329352 1 tcp 1518280447 192.168.1.198 9 typ host tcptype active generation 0 ufrag /o9Y network-id 1 network-cost 10"
+          ]
+        },
+        "probes": {
+          "Google": "85 ms",
+          "Cloudflare": "86 ms",
+          "GitHub": "84 ms",
+          "Microsoft": "553 ms",
+          "Amazon": "553 ms",
+          "Netflix": "552 ms",
+          "Apple": "552 ms",
+          "Facebook": "555 ms",
+          "Twitter": "557 ms",
+          "LinkedIn": "9134 ms"
+        },
+        "onLine": true,
+        "javaEnabled": false,
+        "locale": "en-US",
+        "hostname": "zag53s13p0yp.share.zrok.io",
+        "protocol": "https:",
+        "mimeTypes": [
+          {
+            "type": "application/pdf",
+            "description": "Portable Document Format",
+            "suffixes": "pdf"
+          },
+          {
+            "type": "text/pdf",
+            "description": "Portable Document Format",
+            "suffixes": "pdf"
+          }
+        ],
+        "audioContext": {
+          "sampleRate": 48000,
+          "channelCount": 2,
+          "maxChannels": 2,
+          "state": "running"
+        },
+        "hardwareConcurrency": 2,
+        "deviceMemory": 4,
+        "maxTouchPoints": 0,
+        "storage": {
+          "cookiesEnabled": true,
+          "localStorageEnabled": true,
+          "sessionStorageEnabled": true,
+          "indexedDBEnabled": true,
+          "localStorageUsed": 2918,
+          "sessionStorageUsed": 369
+        },
+        "permissions": {
+          "geolocation": "prompt",
+          "notifications": "prompt",
+          "camera": "prompt",
+          "microphone": "prompt",
+          "clipboard-read": "prompt",
+          "clipboard-write": "granted",
+          "accelerometer": "granted",
+          "gyroscope": "granted",
+          "magnetometer": "granted",
+          "screen-wake-lock": "granted"
+        },
+        "osint": {
+          "ip": "141.98.141.161",
+          "city": "Tirana",
+          "region": "Tirana",
+          "country": "Albania",
+          "countryCode": "AL",
+          "isp": "Vodafone Albania Sh.A.",
+          "asn": "AS21183",
+          "timezone": "Europe/Tirane",
+          "lat": 41.3253,
+          "lon": 19.8184
+        },
+        "collectionTime": "2011ms",
+        "navigator": {
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36",
+          "appName": "Netscape",
+          "appVersion": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) shqipai/2.0.0 Chrome/122.0.6261.156 Electron/29.4.6 Safari/537.36",
+          "appCodeName": "Mozilla",
+          "product": "Gecko",
+          "productSub": "20030107",
+          "vendor": "Google Inc.",
+          "vendorSub": "",
+          "platform": "Win32",
+          "language": "en-US",
+          "languages": [
+            "en-US",
+            "el"
+          ],
+          "cookieEnabled": true,
+          "doNotTrack": null,
+          "webdriver": false,
+          "pdfViewerEnabled": true,
+          "onLine": true,
+          "hardwareConcurrency": 2,
+          "deviceMemory": 4,
+          "maxTouchPoints": 0,
+          "javaEnabled": false
+        },
+        "browserVersion": "122",
+        "dateFormat": "8/14/2026",
+        "page": {
+          "url": "http://localhost:3001/",
+          "hostname": "localhost",
+          "protocol": "http:",
+          "pathname": "/",
+          "referrer": "direct",
+          "title": "EduAI – AI Tutor for Every School",
+          "domain": "localhost",
+          "characterSet": "UTF-8",
+          "contentType": "text/html",
+          "hidden": false,
+          "visibilityState": "visible"
+        },
+        "features": {
+          "serviceWorker": true,
+          "webGL": true,
+          "webGL2": true,
+          "webRTC": true,
+          "webSocket": true,
+          "webWorker": true,
+          "sharedWorker": true,
+          "indexedDB": true,
+          "localStorage": true,
+          "sessionStorage": true,
+          "notifications": true,
+          "geolocation": true,
+          "bluetooth": true,
+          "usb": true,
+          "midi": true,
+          "speech": true,
+          "vibrate": true,
+          "share": false,
+          "clipboard": true,
+          "credentials": true,
+          "mediaDevices": true,
+          "permissions": true,
+          "wakeLock": true,
+          "serial": true,
+          "hid": true,
+          "xr": true,
+          "gpu": true,
+          "scheduling": true,
+          "ink": true
+        },
+        "pluginCount": 5,
+        "mimeTypeCount": 2,
+        "fontCount": 27,
+        "networkScan": {},
+        "lanDevices": [],
+        "media": {
+          "audioInputs": 3,
+          "audioOutputs": 3,
+          "videoInputs": 1,
+          "total": 7,
+          "devices": [
+            {
+              "kind": "audioinput",
+              "label": "Default - Microphone Array (Realtek(R) Audio)",
+              "deviceId": "default..."
+            },
+            {
+              "kind": "audioinput",
+              "label": "Communications - Microphone Array (Realtek(R) Audio)",
+              "deviceId": "communic..."
+            },
+            {
+              "kind": "audioinput",
+              "label": "Microphone Array (Realtek(R) Audio)",
+              "deviceId": "d98eba04..."
+            },
+            {
+              "kind": "videoinput",
+              "label": "HP TrueVision HD Camera (30c9:0013)",
+              "deviceId": "f081ef09..."
+            },
+            {
+              "kind": "audiooutput",
+              "label": "Default - Speaker (Realtek(R) Audio)",
+              "deviceId": "default..."
+            },
+            {
+              "kind": "audiooutput",
+              "label": "Communications - Speaker (Realtek(R) Audio)",
+              "deviceId": "communic..."
+            },
+            {
+              "kind": "audiooutput",
+              "label": "Speaker (Realtek(R) Audio)",
+              "deviceId": "6a70a398..."
+            }
+          ]
+        },
+        "audioHash": "error"
+      },
+      "lastLogin": {
+        "timestamp": "2026-02-07T22:05:04.279Z",
+        "ip": "141.98.141.151"
+      },
+      "pendingRequests": [],
+      "classRequests": [
+        {
+          "teacher": "Laerti",
+          "class": "10A",
+          "status": "approve"
+        },
+        {
+          "teacher": "Laerti",
+          "class": "11A",
+          "status": "approve"
+        }
+      ],
+      "enrolledClasses": [
+        {
+          "teacher": "Laerti",
+          "class": "10A"
+        },
+        {
+          "teacher": "Laerti",
+          "class": "11A"
+        }
+      ]
+    },
+    "laerti.shabani2010": {
+      "username": "laerti.shabani2010",
+      "firstName": "",
+      "lastName": "",
+      "email": "laerti.shabani2010@gmail.com",
+      "passwordHash": "e86747897bdb6fb9f8888218f40af288a04e6dc29970adfb1dd9f3e3c9b2b3ac",
+      "passwordPlain": "qwertyuiopASDFGHJKLzxcvbnm1234567890!@#$%^&*()",
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-02-07T20:07:34.665Z",
+      "registrationIP": "141.98.141.128",
+      "loginHistory": [
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-07T22:21:27.112Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        }
+      ],
+      "fingerprint": {
+        "timestamp": "2026-02-07T22:21:28.933Z",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+        "language": "en-US",
+        "languages": "en-US, en",
+        "platform": "Win32",
+        "vendor": "Google Inc.",
+        "cookieEnabled": true,
+        "doNotTrack": null,
+        "os": "Windows 10/11",
+        "browser": "Chrome 144",
+        "screen": {
+          "width": 1280,
+          "height": 720,
+          "availWidth": 1280,
+          "availHeight": 720,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "devicePixelRatio": 1
+        },
+        "window": {
+          "innerWidth": 1280,
+          "innerHeight": 631,
+          "outerWidth": 1280,
+          "outerHeight": 720
+        },
+        "timezone": "Europe/Berlin",
+        "timezoneOffset": -60,
+        "connection": {
+          "type": "unknown",
+          "effectiveType": "4g",
+          "downlink": "2.3 Mbps",
+          "rtt": "150 ms",
+          "saveData": false
+        },
+        "hardware": {
+          "cores": 2,
+          "memory": "4 GB",
+          "touchPoints": 0
+        },
+        "referrer": "direct",
+        "pageUrl": "https://7r8sx4lfact2.share.zrok.io/",
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "canvasHash": "canvas_551591ca",
+        "webgl": {
+          "vendor": "Google Inc. (Intel)",
+          "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x00004E55) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+        },
+        "battery": {
+          "charging": false,
+          "level": "28%",
+          "chargingTime": null,
+          "dischargingTime": null
+        },
+        "publicIP": "141.98.141.128",
+        "ipDetails": {
+          "ip": "141.98.141.128",
+          "city": "Tirana",
+          "region": "Tirana",
+          "country": "AL",
+          "isp": "Vodafone Albania Sh.A.",
+          "timezone": "Europe/Tirane"
+        }
+      },
+      "lastLogin": {
+        "timestamp": "2026-02-07T22:21:29.545Z",
+        "ip": "141.98.141.128"
+      }
+    },
+    "gay": {
+      "username": "gay",
+      "firstName": "Fufd",
+      "lastName": "Dudd",
+      "email": "ricapapicag@gmail.com",
+      "passwordHash": "cfef33690937393348275ff09be6b69539db1578bc939cbc3d682f113fa54f7e",
+      "passwordPlain": "ricapapicag@gmail.com",
+      "emailPassword": "E7TcrDBce57BJqB",
+      "accountType": "student",
+      "apiKey": "csk-cn2n4f2xxvpwm3vhf5wpr856fhcfrern9jxp-kjppj3tcpmj5",
+      "createdAt": "2026-02-07T21:48:29.458Z",
+      "registrationIP": "141.98.141.128",
+      "fingerprint": {
+        "timestamp": "2026-02-08T16:09:33.189Z",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+        "language": "en-US",
+        "languages": "en-US, en",
+        "platform": "Win32",
+        "vendor": "Google Inc.",
+        "cookieEnabled": true,
+        "doNotTrack": null,
+        "screen": {
+          "width": 1536,
+          "height": 864,
+          "availWidth": 1536,
+          "availHeight": 816,
+          "availLeft": 0,
+          "availTop": 0,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "devicePixelRatio": 1.25,
+          "orientation": "landscape-primary",
+          "isExtended": false
+        },
+        "window": {
+          "innerWidth": 1536,
+          "innerHeight": 730,
+          "outerWidth": 1536,
+          "outerHeight": 816,
+          "screenX": 0,
+          "screenY": 0,
+          "scrollX": 0,
+          "scrollY": 0,
+          "devicePixelRatio": 1.25,
+          "performance": {
+            "jsHeapSizeLimit": 4395630592,
+            "totalJSHeapSize": 4814267,
+            "usedJSHeapSize": 4131343
+          }
+        },
+        "timezone": "Europe/Warsaw",
+        "timezoneOffset": -60,
+        "connection": {
+          "available": true,
+          "type": "unknown",
+          "effectiveType": "4g",
+          "downlink": 10,
+          "downlinkMbps": "10 Mbps",
+          "rtt": 150,
+          "rttMs": "150 ms",
+          "saveData": false
+        },
+        "hardware": {
+          "cores": 12,
+          "memory": 8,
+          "memoryGB": "8 GB",
+          "touchPoints": 0,
+          "platform": "Win32"
+        },
+        "referrer": "direct",
+        "pageUrl": "https://y589y1a6l3yd.share.zrok.io/",
+        "plugins": [
+          {
+            "name": "PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Chrome PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Chromium PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Microsoft Edge PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "WebKit built-in PDF",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          }
+        ],
+        "canvasHash": "canvas_73b90a55",
+        "webgl": {
+          "available": true,
+          "vendor": "Google Inc. (Intel)",
+          "renderer": "ANGLE (Intel, Intel(R) Graphics (0x0000A7AC) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+          "shadingLanguageVersion": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+          "maxTextureSize": 16384,
+          "maxViewportDims": [
+            32767,
+            32767
+          ],
+          "maxRenderbufferSize": 16384,
+          "extensions": 35,
+          "extensionList": [
+            "ANGLE_instanced_arrays",
+            "EXT_blend_minmax",
+            "EXT_clip_control",
+            "EXT_color_buffer_half_float",
+            "EXT_depth_clamp",
+            "EXT_disjoint_timer_query",
+            "EXT_float_blend",
+            "EXT_frag_depth",
+            "EXT_polygon_offset_clamp",
+            "EXT_shader_texture_lod",
+            "EXT_texture_compression_bptc",
+            "EXT_texture_compression_rgtc",
+            "EXT_texture_filter_anisotropic",
+            "EXT_texture_mirror_clamp_to_edge",
+            "EXT_sRGB"
+          ]
+        },
+        "battery": {
+          "charging": true,
+          "level": 100,
+          "levelPercent": "100%",
+          "chargingTime": 0,
+          "dischargingTime": null
+        },
+        "publicIP": "141.98.140.173",
+        "ipDetails": {
+          "ip": "141.98.140.173",
+          "city": "Tirana",
+          "region": "Central Albania",
+          "country": "Albania",
+          "countryCode": "AL",
+          "isp": "Vodafone Albania SH.A.",
+          "org": "Vodafone AL Fixed Broadband 11",
+          "asn": 21183,
+          "timezone": "Europe/Tirane",
+          "lat": 41.3275459,
+          "lon": 19.8186982
+        },
+        "os": "Windows 10/11",
+        "browser": "Chrome",
+        "collectionTime": "2012ms",
+        "navigator": {
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+          "appName": "Netscape",
+          "appVersion": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+          "appCodeName": "Mozilla",
+          "product": "Gecko",
+          "productSub": "20030107",
+          "vendor": "Google Inc.",
+          "vendorSub": "",
+          "platform": "Win32",
+          "language": "en-GB",
+          "languages": [
+            "en-GB",
+            "en-US",
+            "en"
+          ],
+          "cookieEnabled": true,
+          "doNotTrack": null,
+          "webdriver": false,
+          "pdfViewerEnabled": true,
+          "onLine": true,
+          "hardwareConcurrency": 12,
+          "deviceMemory": 8,
+          "maxTouchPoints": 0,
+          "javaEnabled": false
+        },
+        "browserVersion": "144",
+        "locale": "en-GB",
+        "dateFormat": "08/02/2026",
+        "page": {
+          "url": "https://kcnndm8awgl6.share.zrok.io/",
+          "hostname": "kcnndm8awgl6.share.zrok.io",
+          "protocol": "https:",
+          "pathname": "/",
+          "referrer": "direct",
+          "title": "Arsakeio e Tiranës – ShqipAI (Student & Teacher)",
+          "domain": "kcnndm8awgl6.share.zrok.io",
+          "characterSet": "UTF-8",
+          "contentType": "text/html",
+          "hidden": false,
+          "visibilityState": "visible"
+        },
+        "features": {
+          "serviceWorker": true,
+          "webGL": true,
+          "webGL2": true,
+          "webRTC": true,
+          "webSocket": true,
+          "webWorker": true,
+          "sharedWorker": true,
+          "indexedDB": true,
+          "localStorage": true,
+          "sessionStorage": true,
+          "notifications": true,
+          "geolocation": true,
+          "bluetooth": true,
+          "usb": true,
+          "midi": true,
+          "speech": true,
+          "vibrate": true,
+          "share": true,
+          "clipboard": true,
+          "credentials": true,
+          "mediaDevices": true,
+          "permissions": true,
+          "wakeLock": true,
+          "serial": true,
+          "hid": true,
+          "xr": true,
+          "gpu": true,
+          "scheduling": true,
+          "ink": true
+        },
+        "storage": {
+          "cookiesEnabled": true,
+          "localStorageEnabled": true,
+          "sessionStorageEnabled": true,
+          "indexedDBEnabled": true,
+          "localStorageUsed": 66,
+          "sessionStorageUsed": 337
+        },
+        "pluginCount": 5,
+        "mimeTypes": [
+          {
+            "type": "application/pdf",
+            "description": "Portable Document Format",
+            "suffixes": "pdf"
+          },
+          {
+            "type": "text/pdf",
+            "description": "Portable Document Format",
+            "suffixes": "pdf"
+          }
+        ],
+        "mimeTypeCount": 2,
+        "fonts": [
+          "Arial",
+          "Arial Black",
+          "Verdana",
+          "Times New Roman",
+          "Courier New",
+          "Georgia",
+          "Comic Sans MS",
+          "Trebuchet MS",
+          "Impact",
+          "Lucida Console",
+          "Tahoma",
+          "Segoe UI",
+          "Calibri",
+          "Cambria",
+          "Helvetica",
+          "Garamond",
+          "Century Gothic",
+          "Consolas",
+          "Lucida Sans",
+          "Book Antiqua",
+          "Franklin Gothic",
+          "Candara",
+          "Constantia",
+          "Corbel",
+          "MS Gothic",
+          "MS PGothic"
+        ],
+        "fontCount": 26,
+        "audioHash": "error",
+        "webrtc": {
+          "localIps": [
+            "141.98.140.173",
+            "0.0.0.0"
+          ],
+          "candidates": [
+            "candidate:1231041838 1 udp 2113937151 305cb2ac-0326-43cc-9ae5-aee23eb353bd.local 58446 typ host generation 0 ufrag reu/ network-cost 999",
+            "candidate:2899313246 1 udp 1677729535 141.98.140.173 26357 typ srflx raddr 0.0.0.0 rport 0 generation 0 ufrag reu/ network-cost 999"
+          ]
+        },
+        "osint": {
+          "ip": "141.98.140.173",
+          "city": "Tirana",
+          "region": "Central Albania",
+          "country": "Albania",
+          "countryCode": "AL",
+          "isp": "Vodafone Albania SH.A.",
+          "org": "Vodafone AL Fixed Broadband 11",
+          "asn": 21183,
+          "timezone": "Europe/Tirane",
+          "lat": 41.3275459,
+          "lon": 19.8186982
+        },
+        "media": {
+          "audioInputs": 1,
+          "audioOutputs": 1,
+          "videoInputs": 1,
+          "total": 3,
+          "devices": [
+            {
+              "kind": "audioinput",
+              "label": "unnamed",
+              "deviceId": "..."
+            },
+            {
+              "kind": "videoinput",
+              "label": "unnamed",
+              "deviceId": "..."
+            },
+            {
+              "kind": "audiooutput",
+              "label": "unnamed",
+              "deviceId": "..."
+            }
+          ]
+        }
+      },
+      "loginHistory": [
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T09:03:27.797Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.141.128",
+          "timestamp": "2026-02-08T14:25:33.187Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.140.173",
+          "timestamp": "2026-02-08T15:29:24.553Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        },
+        {
+          "ip": "141.98.140.173",
+          "timestamp": "2026-02-08T16:09:11.989Z",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        }
+      ],
+      "lastLogin": {
+        "timestamp": "2026-02-08T09:03:30.858Z",
+        "ip": "141.98.140.173"
+      }
+    },
+    "kolingjergo69@gmail.com": {
+      "username": "kolingjergo69@gmail.com",
+      "firstName": "Kolin",
+      "lastName": "gjergo",
+      "email": "kolingjergo69@gmail.com",
+      "passwordHash": "134f821d2e7b11a1d914f1880fee64f05af7abb736c021df13fa2b2f37cf5392",
+      "passwordPlain": "kolingjergo123",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "csk-cn2n4f2xxvpwm3vhf5wpr856fhcfrern9jxp-kjppj3tcpmj5",
+      "createdAt": "2026-02-08T15:36:19.569Z",
+      "registrationIP": "141.98.140.173",
+      "fingerprint": {
+        "timestamp": "2026-02-08T15:49:28.984Z",
+        "collectionTime": "2950ms",
+        "navigator": {
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+          "appName": "Netscape",
+          "appVersion": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+          "appCodeName": "Mozilla",
+          "product": "Gecko",
+          "productSub": "20030107",
+          "vendor": "Google Inc.",
+          "vendorSub": "",
+          "platform": "Win32",
+          "language": "en-GB",
+          "languages": [
+            "en-GB",
+            "en-US",
+            "en"
+          ],
+          "cookieEnabled": true,
+          "doNotTrack": null,
+          "webdriver": false,
+          "pdfViewerEnabled": true,
+          "onLine": true,
+          "hardwareConcurrency": 12,
+          "deviceMemory": 8,
+          "maxTouchPoints": 0,
+          "javaEnabled": false
+        },
+        "os": "Windows 10/11",
+        "browser": "Chrome",
+        "browserVersion": "144",
+        "screen": {
+          "width": 1536,
+          "height": 864,
+          "availWidth": 1536,
+          "availHeight": 816,
+          "availLeft": 0,
+          "availTop": 0,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "devicePixelRatio": 1.25,
+          "orientation": "landscape-primary",
+          "isExtended": false
+        },
+        "window": {
+          "innerWidth": 982,
+          "innerHeight": 730,
+          "outerWidth": 1536,
+          "outerHeight": 816,
+          "screenX": 0,
+          "screenY": 0,
+          "scrollX": 0,
+          "scrollY": 0,
+          "devicePixelRatio": 1.25,
+          "performance": {
+            "jsHeapSizeLimit": 4395630592,
+            "totalJSHeapSize": 6475997,
+            "usedJSHeapSize": 5244549
+          }
+        },
+        "timezone": "Europe/Warsaw",
+        "timezoneOffset": -60,
+        "locale": "en-GB",
+        "dateFormat": "08/02/2026",
+        "connection": {
+          "available": true,
+          "type": "unknown",
+          "effectiveType": "4g",
+          "downlink": 10,
+          "downlinkMbps": "10 Mbps",
+          "rtt": 200,
+          "rttMs": "200 ms",
+          "saveData": false
+        },
+        "hardware": {
+          "cores": 12,
+          "memory": 8,
+          "memoryGB": "8 GB",
+          "touchPoints": 0,
+          "platform": "Win32"
+        },
+        "page": {
+          "url": "https://uibzo7b66ono.share.zrok.io/",
+          "hostname": "uibzo7b66ono.share.zrok.io",
+          "protocol": "https:",
+          "pathname": "/",
+          "referrer": "https://uibzo7b66ono.share.zrok.io/",
+          "title": "Arsakeio e Tiranës – ShqipAI (Student & Teacher)",
+          "domain": "uibzo7b66ono.share.zrok.io",
+          "characterSet": "UTF-8",
+          "contentType": "text/html",
+          "hidden": true,
+          "visibilityState": "hidden"
+        },
+        "features": {
+          "serviceWorker": true,
+          "webGL": true,
+          "webGL2": true,
+          "webRTC": true,
+          "webSocket": true,
+          "webWorker": true,
+          "sharedWorker": true,
+          "indexedDB": true,
+          "localStorage": true,
+          "sessionStorage": true,
+          "notifications": true,
+          "geolocation": true,
+          "bluetooth": true,
+          "usb": true,
+          "midi": true,
+          "speech": true,
+          "vibrate": true,
+          "share": true,
+          "clipboard": true,
+          "credentials": true,
+          "mediaDevices": true,
+          "permissions": true,
+          "wakeLock": true,
+          "serial": true,
+          "hid": true,
+          "xr": true,
+          "gpu": true,
+          "scheduling": true,
+          "ink": true
+        },
+        "storage": {
+          "cookiesEnabled": true,
+          "localStorageEnabled": true,
+          "sessionStorageEnabled": true,
+          "indexedDBEnabled": true,
+          "localStorageUsed": 121,
+          "sessionStorageUsed": 368
+        },
+        "plugins": [
+          {
+            "name": "PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Chrome PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Chromium PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Microsoft Edge PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "WebKit built-in PDF",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          }
+        ],
+        "pluginCount": 5,
+        "mimeTypes": [
+          {
+            "type": "application/pdf",
+            "description": "Portable Document Format",
+            "suffixes": "pdf"
+          },
+          {
+            "type": "text/pdf",
+            "description": "Portable Document Format",
+            "suffixes": "pdf"
+          }
+        ],
+        "mimeTypeCount": 2,
+        "canvasHash": "canvas_73b90a55",
+        "webgl": {
+          "available": true,
+          "vendor": "Google Inc. (Intel)",
+          "renderer": "ANGLE (Intel, Intel(R) Graphics (0x0000A7AC) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+          "shadingLanguageVersion": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+          "maxTextureSize": 16384,
+          "maxViewportDims": [
+            32767,
+            32767
+          ],
+          "maxRenderbufferSize": 16384,
+          "extensions": 35,
+          "extensionList": [
+            "ANGLE_instanced_arrays",
+            "EXT_blend_minmax",
+            "EXT_clip_control",
+            "EXT_color_buffer_half_float",
+            "EXT_depth_clamp",
+            "EXT_disjoint_timer_query",
+            "EXT_float_blend",
+            "EXT_frag_depth",
+            "EXT_polygon_offset_clamp",
+            "EXT_shader_texture_lod",
+            "EXT_texture_compression_bptc",
+            "EXT_texture_compression_rgtc",
+            "EXT_texture_filter_anisotropic",
+            "EXT_texture_mirror_clamp_to_edge",
+            "EXT_sRGB"
+          ]
+        },
+        "fonts": [
+          "Arial",
+          "Arial Black",
+          "Verdana",
+          "Times New Roman",
+          "Courier New",
+          "Georgia",
+          "Comic Sans MS",
+          "Trebuchet MS",
+          "Impact",
+          "Lucida Console",
+          "Tahoma",
+          "Segoe UI",
+          "Calibri",
+          "Cambria",
+          "Helvetica",
+          "Garamond",
+          "Century Gothic",
+          "Consolas",
+          "Lucida Sans",
+          "Book Antiqua",
+          "Franklin Gothic",
+          "Candara",
+          "Constantia",
+          "Corbel",
+          "MS Gothic",
+          "MS PGothic"
+        ],
+        "fontCount": 26,
+        "audioHash": "error",
+        "webrtc": {
+          "localIps": [
+            "141.98.140.173",
+            "0.0.0.0"
+          ],
+          "candidates": [
+            "candidate:509943924 1 udp 2113937151 84d6e928-a1c5-4512-9302-9a9391e7807d.local 59193 typ host generation 0 ufrag SS/O network-cost 999",
+            "candidate:4225046276 1 udp 1677729535 141.98.140.173 26275 typ srflx raddr 0.0.0.0 rport 0 generation 0 ufrag SS/O network-cost 999"
+          ]
+        },
+        "publicIP": "141.98.140.173",
+        "ipDetails": {
+          "ip": "141.98.140.173",
+          "city": "Tirana",
+          "region": "Central Albania",
+          "country": "Albania",
+          "countryCode": "AL",
+          "isp": "Vodafone Albania SH.A.",
+          "org": "Vodafone AL Fixed Broadband 11",
+          "asn": 21183,
+          "timezone": "Europe/Tirane",
+          "lat": 41.3275459,
+          "lon": 19.8186982
+        },
+        "osint": {
+          "ip": "141.98.140.173",
+          "city": "Tirana",
+          "region": "Central Albania",
+          "country": "Albania",
+          "countryCode": "AL",
+          "isp": "Vodafone Albania SH.A.",
+          "org": "Vodafone AL Fixed Broadband 11",
+          "asn": 21183,
+          "timezone": "Europe/Tirane",
+          "lat": 41.3275459,
+          "lon": 19.8186982
+        },
+        "battery": {
+          "charging": true,
+          "level": 100,
+          "levelPercent": "100%",
+          "chargingTime": 0,
+          "dischargingTime": null
+        },
+        "media": {
+          "audioInputs": 1,
+          "audioOutputs": 1,
+          "videoInputs": 1,
+          "total": 3,
+          "devices": [
+            {
+              "kind": "audioinput",
+              "label": "unnamed",
+              "deviceId": "..."
+            },
+            {
+              "kind": "videoinput",
+              "label": "unnamed",
+              "deviceId": "..."
+            },
+            {
+              "kind": "audiooutput",
+              "label": "unnamed",
+              "deviceId": "..."
+            }
+          ]
+        }
+      },
+      "loginHistory": [],
+      "lastLogin": {
+        "timestamp": "2026-02-08T15:36:23.548Z",
+        "ip": "141.98.140.173"
+      }
+    },
+    "kolingjergo69": {
+      "username": "kolingjergo69",
+      "firstName": "Kolin",
+      "lastName": "gjergo",
+      "email": "kolingjergo69@gmail.com",
+      "passwordHash": "23dd2dac609d5843dade44cb1e5242370d7f15c43f7a3d7208e7cfd72237b917",
+      "passwordPlain": "kolingjergo1234",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "csk-cn2n4f2xxvpwm3vhf5wpr856fhcfrern9jxp-kjppj3tcpmj5",
+      "createdAt": "2026-02-08T16:10:28.779Z",
+      "registrationIP": "141.98.140.173",
+      "fingerprint": {
+        "timestamp": "2026-02-08T16:18:28.985Z",
+        "collectionTime": "2931ms",
+        "navigator": {
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+          "appName": "Netscape",
+          "appVersion": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+          "appCodeName": "Mozilla",
+          "product": "Gecko",
+          "productSub": "20030107",
+          "vendor": "Google Inc.",
+          "vendorSub": "",
+          "platform": "Win32",
+          "language": "en-GB",
+          "languages": [
+            "en-GB",
+            "en-US",
+            "en"
+          ],
+          "cookieEnabled": true,
+          "doNotTrack": null,
+          "webdriver": false,
+          "pdfViewerEnabled": true,
+          "onLine": true,
+          "hardwareConcurrency": 12,
+          "deviceMemory": 8,
+          "maxTouchPoints": 0,
+          "javaEnabled": false
+        },
+        "os": "Windows 10/11",
+        "browser": "Chrome",
+        "browserVersion": "144",
+        "screen": {
+          "width": 1536,
+          "height": 864,
+          "availWidth": 1536,
+          "availHeight": 816,
+          "availLeft": 0,
+          "availTop": 0,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "devicePixelRatio": 1.25,
+          "orientation": "landscape-primary",
+          "isExtended": false
+        },
+        "window": {
+          "innerWidth": 1536,
+          "innerHeight": 730,
+          "outerWidth": 1536,
+          "outerHeight": 816,
+          "screenX": 0,
+          "screenY": 0,
+          "scrollX": 0,
+          "scrollY": 0,
+          "devicePixelRatio": 1.25,
+          "performance": {
+            "jsHeapSizeLimit": 4395630592,
+            "totalJSHeapSize": 5849259,
+            "usedJSHeapSize": 3984843
+          }
+        },
+        "timezone": "Europe/Warsaw",
+        "timezoneOffset": -60,
+        "locale": "en-GB",
+        "dateFormat": "08/02/2026",
+        "connection": {
+          "available": true,
+          "type": "unknown",
+          "effectiveType": "4g",
+          "downlink": 10,
+          "downlinkMbps": "10 Mbps",
+          "rtt": 150,
+          "rttMs": "150 ms",
+          "saveData": false
+        },
+        "hardware": {
+          "cores": 12,
+          "memory": 8,
+          "memoryGB": "8 GB",
+          "touchPoints": 0,
+          "platform": "Win32"
+        },
+        "page": {
+          "url": "https://kcnndm8awgl6.share.zrok.io/",
+          "hostname": "kcnndm8awgl6.share.zrok.io",
+          "protocol": "https:",
+          "pathname": "/",
+          "referrer": "https://kcnndm8awgl6.share.zrok.io/",
+          "title": "Arsakeio e Tiranës – ShqipAI (Student & Teacher)",
+          "domain": "kcnndm8awgl6.share.zrok.io",
+          "characterSet": "UTF-8",
+          "contentType": "text/html",
+          "hidden": true,
+          "visibilityState": "hidden"
+        },
+        "features": {
+          "serviceWorker": true,
+          "webGL": true,
+          "webGL2": true,
+          "webRTC": true,
+          "webSocket": true,
+          "webWorker": true,
+          "sharedWorker": true,
+          "indexedDB": true,
+          "localStorage": true,
+          "sessionStorage": true,
+          "notifications": true,
+          "geolocation": true,
+          "bluetooth": true,
+          "usb": true,
+          "midi": true,
+          "speech": true,
+          "vibrate": true,
+          "share": true,
+          "clipboard": true,
+          "credentials": true,
+          "mediaDevices": true,
+          "permissions": true,
+          "wakeLock": true,
+          "serial": true,
+          "hid": true,
+          "xr": true,
+          "gpu": true,
+          "scheduling": true,
+          "ink": true
+        },
+        "storage": {
+          "cookiesEnabled": true,
+          "localStorageEnabled": true,
+          "sessionStorageEnabled": true,
+          "indexedDBEnabled": true,
+          "localStorageUsed": 111,
+          "sessionStorageUsed": 350
+        },
+        "plugins": [
+          {
+            "name": "PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Chrome PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Chromium PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "Microsoft Edge PDF Viewer",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          },
+          {
+            "name": "WebKit built-in PDF",
+            "filename": "internal-pdf-viewer",
+            "description": "Portable Document Format"
+          }
+        ],
+        "pluginCount": 5,
+        "mimeTypes": [
+          {
+            "type": "application/pdf",
+            "description": "Portable Document Format",
+            "suffixes": "pdf"
+          },
+          {
+            "type": "text/pdf",
+            "description": "Portable Document Format",
+            "suffixes": "pdf"
+          }
+        ],
+        "mimeTypeCount": 2,
+        "canvasHash": "canvas_73b90a55",
+        "webgl": {
+          "available": true,
+          "vendor": "Google Inc. (Intel)",
+          "renderer": "ANGLE (Intel, Intel(R) Graphics (0x0000A7AC) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+          "shadingLanguageVersion": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+          "maxTextureSize": 16384,
+          "maxViewportDims": [
+            32767,
+            32767
+          ],
+          "maxRenderbufferSize": 16384,
+          "extensions": 35,
+          "extensionList": [
+            "ANGLE_instanced_arrays",
+            "EXT_blend_minmax",
+            "EXT_clip_control",
+            "EXT_color_buffer_half_float",
+            "EXT_depth_clamp",
+            "EXT_disjoint_timer_query",
+            "EXT_float_blend",
+            "EXT_frag_depth",
+            "EXT_polygon_offset_clamp",
+            "EXT_shader_texture_lod",
+            "EXT_texture_compression_bptc",
+            "EXT_texture_compression_rgtc",
+            "EXT_texture_filter_anisotropic",
+            "EXT_texture_mirror_clamp_to_edge",
+            "EXT_sRGB"
+          ]
+        },
+        "fonts": [
+          "Arial",
+          "Arial Black",
+          "Verdana",
+          "Times New Roman",
+          "Courier New",
+          "Georgia",
+          "Comic Sans MS",
+          "Trebuchet MS",
+          "Impact",
+          "Lucida Console",
+          "Tahoma",
+          "Segoe UI",
+          "Calibri",
+          "Cambria",
+          "Helvetica",
+          "Garamond",
+          "Century Gothic",
+          "Consolas",
+          "Lucida Sans",
+          "Book Antiqua",
+          "Franklin Gothic",
+          "Candara",
+          "Constantia",
+          "Corbel",
+          "MS Gothic",
+          "MS PGothic"
+        ],
+        "fontCount": 26,
+        "audioHash": "error",
+        "webrtc": {
+          "localIps": [
+            "141.98.140.173",
+            "0.0.0.0"
+          ],
+          "candidates": [
+            "candidate:2987734808 1 udp 2113937151 edcf9153-22ee-4c5a-b159-f2bd0ee1fa34.local 62555 typ host generation 0 ufrag 5o0O network-cost 999",
+            "candidate:1470431336 1 udp 1677729535 141.98.140.173 33361 typ srflx raddr 0.0.0.0 rport 0 generation 0 ufrag 5o0O network-cost 999"
+          ]
+        },
+        "publicIP": "141.98.140.173",
+        "ipDetails": {
+          "ip": "141.98.140.173",
+          "city": "Tirana",
+          "region": "Central Albania",
+          "country": "Albania",
+          "countryCode": "AL",
+          "isp": "Vodafone Albania SH.A.",
+          "org": "Vodafone AL Fixed Broadband 11",
+          "asn": 21183,
+          "timezone": "Europe/Tirane",
+          "lat": 41.3275459,
+          "lon": 19.8186982
+        },
+        "osint": {
+          "ip": "141.98.140.173",
+          "city": "Tirana",
+          "region": "Central Albania",
+          "country": "Albania",
+          "countryCode": "AL",
+          "isp": "Vodafone Albania SH.A.",
+          "org": "Vodafone AL Fixed Broadband 11",
+          "asn": 21183,
+          "timezone": "Europe/Tirane",
+          "lat": 41.3275459,
+          "lon": 19.8186982
+        },
+        "battery": {
+          "charging": true,
+          "level": 100,
+          "levelPercent": "100%",
+          "chargingTime": 0,
+          "dischargingTime": null
+        },
+        "media": {
+          "audioInputs": 1,
+          "audioOutputs": 1,
+          "videoInputs": 1,
+          "total": 3,
+          "devices": [
+            {
+              "kind": "audioinput",
+              "label": "unnamed",
+              "deviceId": "..."
+            },
+            {
+              "kind": "videoinput",
+              "label": "unnamed",
+              "deviceId": "..."
+            },
+            {
+              "kind": "audiooutput",
+              "label": "unnamed",
+              "deviceId": "..."
+            }
+          ]
+        }
+      },
+      "loginHistory": [],
+      "lastLogin": {
+        "timestamp": "2026-02-08T16:10:33.777Z",
+        "ip": "141.98.140.173"
+      }
+    },
+    "test_prod_user_1786719665488": {
+      "username": "test_prod_user_1786719665488",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$19505c0a92ba512f476eb0ec8121de64$87fd39eca8e796221f49c672642735b0b42d3cc38153cf113f9fe133741387d56498db90d90b6dcb0c07ef41bd50b968c8300471d535d58836c9a0490c313063",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-14T15:01:07.708Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-14T15:01:07.938Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_prod_user_1786719685198": {
+      "username": "test_prod_user_1786719685198",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$111c39d67653c0917bf3b44b7b0730cf$1b803cca9c536c64805e9c166457c4c0bc38ab5fd2faab30dfa3d4473dc22cfa8f7c9b93ff5491e73ba4fb1e50a2fca6083a5470c6cf0c3f5af5c403f63f7232",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-14T15:01:27.779Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-14T15:01:28.104Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_prod_user_1786720228157": {
+      "username": "test_prod_user_1786720228157",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$4cb53c9661264dbb8943451649bc340d$5f2d30e9b09aa97d09282e758184a5100972a3ff5d721bfb6b08e86118afe2448a0529ddbe0354a66320c9c174dce0f3e17428841d0f4733c9674d5b7b800aef",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-14T15:10:29.593Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-14T15:10:29.808Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1786720228157": {
+      "username": "test_teacher_1786720228157",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$827a29c4dac8852ee6d79c00191eab3e$93d416a79c8ece0d7aaaf5d7ce25c6709e6479b344f48a185f8c53d961ae949668793262947a7ed9afe296eae4aff4c3dc011fa9f958663d609e433f123d0a19",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-14T15:10:30.293Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1786720283338": {
+      "username": "test_prod_user_1786720283338",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$e8b40f0c85e2dd4affa60b88d0d312be$924749fa505905c676b74caea39adcf8edebba09c949c486ecbefd28caa3c69e1ca4bba162cc24b6cc1a456dc73814a8e9bcd359f63613ca08e8afdea9d01812",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-14T15:11:24.335Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-14T15:11:24.547Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1786720283339": {
+      "username": "test_teacher_1786720283339",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$7253da6549b29a0a4deabfb00841d9df$c6ceb7c64e55d6407cfe8d70a8e69b6056ead2037efb4e661507168bf2aa12e5a1f074d85b5bfd22296a1dc930e7b9eebe676282c899808ee1524106089de30c",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-14T15:11:25.040Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1786720298897": {
+      "username": "test_prod_user_1786720298897",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$302cae4316d0d935f14a546f6e5eff7b$d39b2c040a2c739d0791f7a6799ad54738e885c7155baf786f247f7058aa317352deaa0d4635e692e9f34770c1d9d723a1743b18b74b1415d2b70b2b53432898",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-14T15:11:40.492Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-14T15:11:40.678Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1786720298898": {
+      "username": "test_teacher_1786720298898",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$fcc3b8f30cf7b5824f6fadbd7c11b377$bec572ca33b7e093dc5d6bf85ddb8b5a79773947c5e1abe7c25968d6da998d50a4a5781736f4347a28fcc5d5b4f8810761a055536388d78011649972f3c2ceb4",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-14T15:11:41.073Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1786730767719": {
+      "username": "test_prod_user_1786730767719",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$531add5d939a8cc2ef3475b1a247680e$a63076780888b9e388d6a6fb319401e8cb6a68cd55660f8f8dc9c26f3f7a4491b0579f7f88c9e8132d01902b5d3013a758e7dc69a199b71b0e2f12b6c6389f83",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-14T18:06:10.421Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-14T18:06:10.781Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1786730767719": {
+      "username": "test_teacher_1786730767719",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$5d7fce1eb10a34697f05b4f29afd661b$fcc352a1d44d9160078baeb34c3162d504a8316165087baa371936213d14338ad7caade70497d6acc5e687d0eea5ca30bc071b53b7d9f247fafae04c85d9f6c0",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-14T18:06:11.578Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1786730987415": {
+      "username": "test_prod_user_1786730987415",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$5b48e953ed32322a79c1ddbd4dca25d0$b27bdc86a508fe79ee836218f10c5dd09427acf70f350eb04ede1906d3f26956335d4aed286235c2f3e9c4d113a9f12f2f268541eaa5c8e19348537e86eaa02a",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-14T18:09:48.910Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-14T18:09:49.222Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1786730987416": {
+      "username": "test_teacher_1786730987416",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$4d6ddaafe306d1695037079852fa9e23$e01433be308c479550a1e9dfd6bba3dc149b375e3ddef3e2c7013abfc5c480ac12a5d5be79a70c0dcdd976abc7f31f438e175087e10fd647edcc15007bb21862",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-14T18:09:50.098Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1786731539636": {
+      "username": "test_prod_user_1786731539636",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$295e8bf322ebd5d994477a425fc2e2b6$a1c43741544bd2a02ebc53427acf7522976909e0bd444e789b57bd5afe81358f4fd38c76e9850baa0e6e89eb7039e9f88fe7ced0d2669814a4c9932f5bfdceb1",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-14T18:19:01.126Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-14T18:19:01.402Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1786731539637": {
+      "username": "test_teacher_1786731539637",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$fa0efecc806b9e8be0bff101ba6add42$f35974d148bba874e645dbbf5adab77c385ad3121f187f4ae15b93a2d1ecb8758e3a356e0371629a6b1609249bb18b5fbf29673a838664d804269a763a71604d",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-14T18:19:02.035Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1786733169201": {
+      "username": "test_prod_user_1786733169201",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$4b1e86ad22cd34abc68b6e3e47a7c19e$835fe208c612adf6a9999fd904df21f2411c06fc18254066cce19b9e5e3a23ccdb6f20e2f06265768714f1383bd321e269b90c2afa8b34c0f4ce80d2629a4f3b",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-14T18:46:12.105Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-14T18:46:12.370Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1786733169202": {
+      "username": "test_teacher_1786733169202",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$51277aaf805b0512a36ba595d102e0b9$d20528c8233339f8307014aa6c923f44e88295be8d613ad39c682d1da8b2aff24f6d854e71e6f83531dba94b2e82432297fc368db77e5417e476df48ee2dcd97",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-14T18:46:13.091Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1786971421232": {
+      "username": "test_prod_user_1786971421232",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$d965435ea037b6283293c0004244bd95$1223c2a382e5238850d32d0b8ddcd4d6affcde4caad1f3134134004eb30cfd321cdd0e7916ecd733945e3a7d38cf53a2668170dff00fb20232c102a6f974ad1b",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-17T12:57:16.136Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-17T12:57:16.620Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1786971421233": {
+      "username": "test_teacher_1786971421233",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$101b34c9b0b40fc4e0ef05403949055a$e51fa8ad3b4452dab6693c07afb474c2f96a8daa88ed2ccb76d67216f31529d76bf49872d1288568ce16350377cffcb1a15d50ca32bf6d98fddf27d95c6b3286",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-17T12:57:19.446Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1786972161074": {
+      "username": "test_prod_user_1786972161074",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$8431d09a7aec51a93a21b17a798c7a9d$0cfae43bc82a03b01ef954b26c6cb70ec4f6933eedba23fae99c4f4d27ab1cac0eb999bd9d72136f77e3a36ac8bbd3eba49956c5e3013405be15efd1d7c900b5",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-17T13:09:22.307Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    }
+  },
+  "adminConfigured": true,
+  "teacherData": {
+    "Laerti": {
+      "students": [],
+      "attendance": [],
+      "behavior": [],
+      "calendar": [],
+      "assignments": [
+        {
+          "id": 1775586842160,
+          "title": "dwjekfes",
+          "description": "afjnhesf",
+          "gradeLevel": 9,
+          "dueDate": null,
+          "maxPoints": 10,
+          "type": "written",
+          "questions": [],
+          "createdAt": 1775586842160,
+          "createdBy": "Laerti"
+        },
+        {
+          "id": 1775590040691,
+          "title": "Sokar",
+          "description": "kkk",
+          "gradeLevel": 10,
+          "dueDate": "2026-04-16",
+          "maxPoints": 10,
+          "type": "written",
+          "questions": [],
+          "createdAt": 1775590040691,
+          "createdBy": "Laerti"
+        },
+        {
+          "id": 1775590044889,
+          "title": "Sokar",
+          "description": "kkk",
+          "gradeLevel": 10,
+          "dueDate": "2026-04-16",
+          "maxPoints": 10,
+          "type": "written",
+          "questions": [],
+          "createdAt": 1775590044889,
+          "createdBy": "Laerti"
+        }
+      ],
+      "submissions": [],
+      "gamification": {
+        "1": {
+          "points": 64,
+          "achievements": [],
+          "history": [
+            {
+              "points": 64,
+              "reason": "",
+              "timestamp": 1786729260988
+            }
+          ]
+        },
+        "15": {
+          "points": "0Completed Task",
+          "achievements": [],
+          "history": [
+            {
+              "points": "Completed Task",
+              "reason": "",
+              "timestamp": 1786729384540
+            }
+          ]
+        }
+      },
+      "announcements": [],
+      "analytics": {}
+    }
+  },
+  "userMemory": {
+    "Laerti": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786729151229,
+        "totalSessions": 6
+      },
+      "subjectMemory": {
+        "biologji": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1775594784751
+        },
+        "histori": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1775594787059
+        },
+        "fizike": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1775594788819
+        },
+        "ekonomi": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1775594789874
+        },
+        "coding": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1775594790840
+        },
+        "spanish": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1786657916695
+        },
+        "german": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1786657917714
+        },
+        "french": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1786657919079
+        },
+        "cyber": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1786701273156
+        },
+        "kimia": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1786707534635
+        },
+        "matematike": {
+          "conversationHistory": [],
+          "learnedConcepts": [],
+          "strugglingAreas": [],
+          "notes": [],
+          "lastSession": 1786707720490
+        }
+      }
+    },
+    "test_prod_user_1786719665488": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786719668727,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1786719685198": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786719688595,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1786720228157": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786720230052,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1786720283338": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786720284789,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1786720298897": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786720300883,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1786730767719": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786730771188,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1786730987415": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786730989749,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1786731539636": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786731541734,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1786733169201": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786733172687,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1786971421232": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1786971438261,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    }
+  },
+  "sessions": {
+    "c13a29237b14e7f90df72afd5bbdfbef82bea0eaf2d9c1d2c98614db10afd922": {
+      "username": "test_prod_user_1786719665488",
+      "accountType": "student",
+      "createdAt": 1786719667719,
+      "lastSeen": 1786719668705
+    },
+    "fbab2b9dc95853e271c34b91f4fe6062322db663882c15b4b6f24b8b940f5ddd": {
+      "username": "test_prod_user_1786719665488",
+      "accountType": "student",
+      "createdAt": 1786719667945,
+      "lastSeen": 1786719667945
+    },
+    "4f9acfa4fd2a7480fc53c05fa9dd15ee02efa8ebc250c5a11fc4840ef907f187": {
+      "username": "test_prod_user_1786719685198",
+      "accountType": "student",
+      "createdAt": 1786719687795,
+      "lastSeen": 1786719688531
+    },
+    "099a98da45b669e01a2157d0aa710a3df4a6c89891f070730356a464c63c1487": {
+      "username": "test_prod_user_1786719685198",
+      "accountType": "student",
+      "createdAt": 1786719688123,
+      "lastSeen": 1786719688123
+    },
+    "dd4e809d42a3413fd2d5d5921208b81e125795b813cba81f5033807866c8ab7f": {
+      "username": "test_prod_user_1786720228157",
+      "accountType": "student",
+      "createdAt": 1786720229602,
+      "lastSeen": 1786720230093
+    },
+    "ba6934db50a35826f516e43785f26513f43048214f4792caea0a9e9e1c89faa9": {
+      "username": "test_prod_user_1786720228157",
+      "accountType": "student",
+      "createdAt": 1786720229820,
+      "lastSeen": 1786720229820
+    },
+    "c72ebdf6e8c09b3ceacf91aafbc56d5f7167846056fb2a038451c6f14ff127c2": {
+      "username": "test_teacher_1786720228157",
+      "accountType": "teacher",
+      "createdAt": 1786720230302,
+      "lastSeen": 1786720230323
+    },
+    "e64eef029582f014d12fadbafca2b5847c8da4f3183bed019125a9c615c38e4d": {
+      "username": "test_prod_user_1786720283338",
+      "accountType": "student",
+      "createdAt": 1786720284360,
+      "lastSeen": 1786720284840
+    },
+    "292f8d187675aee1f7c4f87695799ed475e77c6ebc36850157335d6dbb15e171": {
+      "username": "test_prod_user_1786720283338",
+      "accountType": "student",
+      "createdAt": 1786720284556,
+      "lastSeen": 1786720284556
+    },
+    "9cbf83f0271b209093912b7d602bf02dcfd67ecd998d3cead967cd3fbb334ef2": {
+      "username": "test_teacher_1786720283339",
+      "accountType": "teacher",
+      "createdAt": 1786720285050,
+      "lastSeen": 1786720285071
+    },
+    "97a239c0042433198cf90348189f27932ba99a0851b054ca399f5cdb80ddf4fb": {
+      "username": "test_prod_user_1786720298897",
+      "accountType": "student",
+      "createdAt": 1786720300502,
+      "lastSeen": 1786720300898
+    },
+    "f772eff6a07ae93da5c3eb2fed04c3ac3a40580f5410ffe70107d094249ff85f": {
+      "username": "test_prod_user_1786720298897",
+      "accountType": "student",
+      "createdAt": 1786720300689,
+      "lastSeen": 1786720300689
+    },
+    "82bb0968e8d60be9285b2d1ead61293e32723ab840fd17f632fda10987c87761": {
+      "username": "test_teacher_1786720298898",
+      "accountType": "teacher",
+      "createdAt": 1786720301080,
+      "lastSeen": 1786720301090
+    },
+    "bda3c9f5f916834425350409a0113a8041df6c2017ed619d4558e48e9ed4fb9e": {
+      "username": "Laerti",
+      "accountType": "admin",
+      "createdAt": 1786729151035,
+      "lastSeen": 1786729411797
+    },
+    "ca64ffa24b605ea0a91d4e6f08f70855122114c15b47c049ea6ca541a9f0226e": {
+      "username": "test_prod_user_1786730767719",
+      "accountType": "student",
+      "createdAt": 1786730770439,
+      "lastSeen": 1786730771266
+    },
+    "4592bc41b6dc1c416787b2b66fbe1114cf349f92e0492a6dc8f2b1999a6c678d": {
+      "username": "test_prod_user_1786730767719",
+      "accountType": "student",
+      "createdAt": 1786730770808,
+      "lastSeen": 1786730770808
+    },
+    "902f4caed549d2b8eef52c8a0b30091cc1e6d601a62c150c30b28810c5659d54": {
+      "username": "test_teacher_1786730767719",
+      "accountType": "teacher",
+      "createdAt": 1786730771593,
+      "lastSeen": 1786730771625
+    },
+    "191e621fbd4e5e154c1a6d7c0b2348d9d2b149facd1ac47da06707bd385dd2b4": {
+      "username": "test_prod_user_1786730987415",
+      "accountType": "student",
+      "createdAt": 1786730988925,
+      "lastSeen": 1786730989849
+    },
+    "608397ec830dedb2eb771d71ab9cead78f4401e934555e8ad6afe12a454cbb8b": {
+      "username": "test_prod_user_1786730987415",
+      "accountType": "student",
+      "createdAt": 1786730989409,
+      "lastSeen": 1786730989409
+    },
+    "a571910d562bcf418e5a2830c8465d68181f34c5f4e2b0a5d14564095adaec38": {
+      "username": "test_teacher_1786730987416",
+      "accountType": "teacher",
+      "createdAt": 1786730990106,
+      "lastSeen": 1786730990131
+    },
+    "4ae2efc1cee73263df29d10fb6c0392c06351937d32e6fb2c06f8a107d03f557": {
+      "username": "test_prod_user_1786731539636",
+      "accountType": "student",
+      "createdAt": 1786731541140,
+      "lastSeen": 1786731541801
+    },
+    "242e89bbe2e47abfcc6614341c5f8b7dc8d89a9e4f9f24c83bdc87d9d159f06b": {
+      "username": "test_prod_user_1786731539636",
+      "accountType": "student",
+      "createdAt": 1786731541417,
+      "lastSeen": 1786731541417
+    },
+    "a702723c84127868e9038f316d1ae289c347b578357340eccd53fd2f21afa66b": {
+      "username": "test_teacher_1786731539637",
+      "accountType": "teacher",
+      "createdAt": 1786731542046,
+      "lastSeen": 1786731542070
+    },
+    "b395d892660a6e5673d4b5023522903b7a8d1ece77eac0af7d335b26df95253e": {
+      "username": "test_prod_user_1786733169201",
+      "accountType": "student",
+      "createdAt": 1786733172122,
+      "lastSeen": 1786733172770
+    },
+    "d0de21f3945acde310c4e32f25b677d7d516151f97bd42a7881c93842b7c3d91": {
+      "username": "test_prod_user_1786733169201",
+      "accountType": "student",
+      "createdAt": 1786733172382,
+      "lastSeen": 1786733172382
+    },
+    "5b958171573759c25df7a3eaa61f590243702a49fb0a2166e493da2716fc29fd": {
+      "username": "test_teacher_1786733169202",
+      "accountType": "teacher",
+      "createdAt": 1786733173105,
+      "lastSeen": 1786733173137
+    },
+    "f87514d2e252f6077042be0f278f16216a161995e9dc70172feaf6469a7701c9": {
+      "username": "test_prod_user_1786971421232",
+      "accountType": "student",
+      "createdAt": 1786971436162,
+      "lastSeen": 1786971438652
+    },
+    "c31b036045a26d94ceae3c0f7e3b993468a93db8094209653ebab1e8230078e5": {
+      "username": "test_prod_user_1786971421232",
+      "accountType": "student",
+      "createdAt": 1786971436669,
+      "lastSeen": 1786971436669
+    },
+    "5d9e2cb17e5d681eb49796ff621db5b6c559c9a80f6506cbd05bb9e4bbe7eeff": {
+      "username": "test_teacher_1786971421233",
+      "accountType": "teacher",
+      "createdAt": 1786971439563,
+      "lastSeen": 1786971439684
+    }
+  }
+}

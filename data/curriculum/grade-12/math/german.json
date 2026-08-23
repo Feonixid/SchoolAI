@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "math",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 12 (Q2) — Abitur-Vorbereitung",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Analytische Geometrie",
+      "topics": [
+        {
+          "title": "Geraden und Ebenen im Raum",
+          "concepts": [
+            "Parameterform",
+            "Normalenform",
+            "Lagebeziehungen",
+            "Abstände"
+          ],
+          "keyFormulas": [
+            "Gerade: r=a+t·b",
+            "Ebene: r=a+s·b+t·c",
+            "n·(r-a)=0 (Normalenform)"
+          ],
+          "keyFacts": [
+            "Abstand Punkt-Ebene: d=|n·(p-a)|/|n|",
+            "Schnittwinkel: cosα=|n₁·n₂|/(|n₁||n₂|)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Stochastik (Abitur)",
+      "topics": [
+        {
+          "title": "Binomialverteilung und Hypothesentest",
+          "concepts": [
+            "Binomialverteilung",
+            "Erwartungswert",
+            "Standardabweichung",
+            "Signifikanztest"
+          ],
+          "keyFormulas": [
+            "P(X=k)=C(n,k)·pᵏ·(1-p)ⁿ⁻ᵏ",
+            "E(X)=np",
+            "σ=√(np(1-p))"
+          ],
+          "keyFacts": [
+            "Ablehnungsbereich bestimmen mit kumulierter Binomialverteilung",
+            "Fehler 1. Art: H₀ fälschlich ablehnen"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Abiturprüfung (4-5 Stunden)",
+      "Analysis + Analytische Geometrie + Stochastik"
+    ],
+    "tips": [
+      "Alle drei Gebiete werden geprüft",
+      "Hilfsmittel: CAS oder wissenschaftlicher Taschenrechner (je nach Bundesland)"
+    ]
+  }
+}

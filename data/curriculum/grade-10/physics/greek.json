@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "physics",
+    "curriculum": "greek",
+    "curriculumName": "Greek Lykeio B — Physics",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Electromagnetism",
+      "topics": [
+        {
+          "title": "Electric Fields and Circuits",
+          "concepts": [
+            "Coulomb's law",
+            "electric field",
+            "Ohm's law",
+            "Kirchhoff's laws"
+          ],
+          "keyFormulas": [
+            "F=kq₁q₂/r²",
+            "V=IR"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

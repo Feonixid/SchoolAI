@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "physics",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 9 — Physik",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Wärmelehre",
+      "topics": [
+        {
+          "title": "Temperatur und Wärme",
+          "concepts": [
+            "Temperatur",
+            "Wärme",
+            "spezifische Wärmekapazität",
+            "Phasenübergänge"
+          ],
+          "keyFormulas": [
+            "Q = mcΔT",
+            "Q = mL (Schmelz-/Verdampfungswärme)"
+          ],
+          "keyFacts": [
+            "Bei Phasenübergang: T bleibt konstant",
+            "Wärmeleitung, Konvektion, Wärmestrahlung"
+          ]
+        },
+        {
+          "title": "Ideales Gas",
+          "concepts": [
+            "Druck",
+            "Volumen",
+            "Temperatur",
+            "Gasgesetz"
+          ],
+          "keyFormulas": [
+            "pV = nRT",
+            "p₁V₁/T₁ = p₂V₂/T₂"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Mechanische Schwingungen und Wellen",
+      "topics": [
+        {
+          "title": "Schwingungen",
+          "concepts": [
+            "Federpendel",
+            "Fadenpendel",
+            "Amplitude",
+            "Periode",
+            "Frequenz"
+          ],
+          "keyFormulas": [
+            "T = 2π√(m/k)",
+            "T = 2π√(l/g)",
+            "f = 1/T"
+          ]
+        },
+        {
+          "title": "Wellen",
+          "concepts": [
+            "Transversalwelle",
+            "Longitudinalwelle",
+            "Wellenlänge",
+            "Ausbreitungsgeschwindigkeit"
+          ],
+          "keyFormulas": [
+            "v = f·λ"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

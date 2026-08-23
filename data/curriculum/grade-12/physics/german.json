@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "physics",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 12 — Physik (Abitur)",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Quantenphysik",
+      "topics": [
+        {
+          "title": "Photoelektrischer Effekt und Materiewellen",
+          "concepts": [
+            "Photon",
+            "Photoeffekt",
+            "de-Broglie-Wellenlänge",
+            "Heisenberg"
+          ],
+          "keyFormulas": [
+            "E=hf",
+            "λ=h/p",
+            "ΔxΔp≥h/4π"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Atomphysik",
+      "topics": [
+        {
+          "title": "Bohr'sches Atommodell und Spektrallinien",
+          "concepts": [
+            "Energieniveaus",
+            "Emission",
+            "Absorption",
+            "Franck-Hertz"
+          ],
+          "keyFormulas": [
+            "E_n=-13.6/n² eV",
+            "ΔE=hf"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

@@ -1,0 +1,121 @@
+/* css/teacher-grading.css — Teacher Assignment Grading & Rubric Studio */
+/* =================================================================== */
+
+.teacher-grading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 4900;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: gradingFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes gradingFadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.teacher-grading-window {
+  width: 1140px;
+  max-width: 96vw;
+  height: 780px;
+  max-height: 94vh;
+  background: var(--panel, #ffffff);
+  color: var(--text, #1e293b);
+  border-radius: 20px;
+  border: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .teacher-grading-window {
+  background: #111827;
+  color: #f3f4f6;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.teacher-grading-header {
+  padding: 16px 24px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(16, 185, 129, 0.12));
+  border-bottom: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teacher-grading-body {
+  display: grid;
+  grid-template-columns: 280px 1.2fr 1fr;
+  flex: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 960px) {
+  .teacher-grading-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grading-students-sidebar {
+  border-right: 1px solid var(--border, #cbd5e1);
+  padding: 16px;
+  overflow-y: auto;
+  background: rgba(248, 250, 252, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+[data-theme="dark"] .grading-students-sidebar {
+  background: rgba(15, 23, 42, 0.4);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.student-submission-item {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border, #cbd5e1);
+  background: var(--panel, #ffffff);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+[data-theme="dark"] .student-submission-item {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.student-submission-item.active {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.grading-submission-viewer {
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid var(--border, #cbd5e1);
+}
+
+[data-theme="dark"] .grading-submission-viewer {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.grading-rubric-pane {
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(248, 250, 252, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+[data-theme="dark"] .grading-rubric-pane {
+  background: rgba(15, 23, 42, 0.3);
+}

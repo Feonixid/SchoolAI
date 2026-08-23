@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "math",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 11 (Qualifikationsphase Q1)",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Analysis: Differentialrechnung",
+      "topics": [
+        {
+          "title": "Ableitungsregeln",
+          "concepts": [
+            "Potenzregel",
+            "Kettenregel",
+            "Produktregel",
+            "Quotientenregel"
+          ],
+          "keyFormulas": [
+            "(xⁿ)'=nxⁿ⁻¹",
+            "(eˣ)'=eˣ",
+            "(ln x)'=1/x",
+            "(sin x)'=cos x",
+            "(f·g)'=f'g+fg'"
+          ]
+        },
+        {
+          "title": "Kurvendiskussion",
+          "concepts": [
+            "Nullstellen",
+            "Extrempunkte",
+            "Wendepunkte",
+            "Monotonie",
+            "Krümmung"
+          ],
+          "keyFacts": [
+            "f'(x₀)=0 und f''(x₀)>0 → Minimum",
+            "f'(x₀)=0 und f''(x₀)<0 → Maximum",
+            "f''(x₀)=0 und f'''(x₀)≠0 → Wendepunkt"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Analysis: Integralrechnung",
+      "topics": [
+        {
+          "title": "Stammfunktion und bestimmtes Integral",
+          "concepts": [
+            "Stammfunktion",
+            "Hauptsatz",
+            "Flächenberechnung"
+          ],
+          "keyFormulas": [
+            "∫xⁿdx = xⁿ⁺¹/(n+1)+C",
+            "∫ₐᵇf(x)dx = F(b)-F(a)"
+          ],
+          "keyFacts": [
+            "Fläche zwischen Kurve und x-Achse: Vorzeichen beachten!",
+            "Fläche zwischen zwei Kurven: ∫|f(x)-g(x)|dx"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

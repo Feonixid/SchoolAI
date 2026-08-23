@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "math",
+    "curriculum": "uk",
+    "curriculumName": "UK A-Level Mathematics (Year 13)",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Further Calculus",
+      "topics": [
+        {
+          "title": "Advanced Integration",
+          "concepts": [
+            "integration by parts",
+            "partial fractions",
+            "parametric integration"
+          ],
+          "keyFormulas": [
+            "∫u dv = uv - ∫v du",
+            "∫1/(x-a)dx=ln|x-a|+C"
+          ]
+        },
+        {
+          "title": "Differential Equations",
+          "concepts": [
+            "first order separable",
+            "integrating factor",
+            "family of curves"
+          ],
+          "keyFormulas": [
+            "dy/dx+P(x)y=Q(x), IF=e^∫P dx"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Further Mechanics",
+      "topics": [
+        {
+          "title": "Moments and Equilibrium",
+          "concepts": [
+            "moments",
+            "centre of mass",
+            "tilting and toppling"
+          ],
+          "keyFormulas": [
+            "Moment = Force × perpendicular distance"
+          ],
+          "keyFacts": [
+            "For equilibrium: ΣF=0 and ΣM=0 about any point"
+          ]
+        },
+        {
+          "title": "Projectiles",
+          "concepts": [
+            "horizontal/vertical components",
+            "range",
+            "maximum height",
+            "time of flight"
+          ],
+          "keyFormulas": [
+            "Horizontal: x=ucosθ·t",
+            "Vertical: y=usinθ·t-½gt²",
+            "Range=u²sin2θ/g"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Further Statistics",
+      "topics": [
+        {
+          "title": "Normal Distribution and Hypothesis Testing",
+          "concepts": [
+            "Z-test",
+            "significance level",
+            "p-value",
+            "critical region",
+            "Type I/II errors"
+          ],
+          "keyFormulas": [
+            "Z=(X̄-μ)/(σ/√n)"
+          ],
+          "keyFacts": [
+            "If p-value < significance level → reject H₀",
+            "Type I error: rejecting true H₀",
+            "Type II error: accepting false H₀"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

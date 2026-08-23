@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "math",
+    "curriculum": "german",
+    "curriculumName": "Gymnasium Klasse 10 — Mathematik",
+    "language": "de",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Trigonometrie",
+      "topics": [
+        {
+          "title": "Sinus, Kosinus, Tangens am Einheitskreis",
+          "concepts": [
+            "Einheitskreis",
+            "Bogenmaß",
+            "Sinusfunktion",
+            "Kosinusfunktion"
+          ],
+          "keyFormulas": [
+            "sin²α+cos²α=1",
+            "Bogenmaß: α(rad)=α°·π/180"
+          ],
+          "keyFacts": [
+            "Sinus: y-Koordinate am Einheitskreis",
+            "Kosinus: x-Koordinate am Einheitskreis"
+          ]
+        },
+        {
+          "title": "Sinussatz und Kosinussatz",
+          "concepts": [
+            "allgemeines Dreieck",
+            "Flächenberechnung"
+          ],
+          "keyFormulas": [
+            "a/sinA=b/sinB=c/sinC",
+            "a²=b²+c²-2bc·cosA",
+            "A=½ab·sinC"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exponentialfunktion und Logarithmus",
+      "topics": [
+        {
+          "title": "Exponentielles Wachstum und Zerfall",
+          "concepts": [
+            "Wachstumsfaktor",
+            "Halbwertszeit",
+            "Verdopplungszeit"
+          ],
+          "keyFormulas": [
+            "f(t) = a·bᵗ",
+            "t₁/₂ = ln2/k",
+            "f(t) = a·e^(kt)"
+          ]
+        },
+        {
+          "title": "Logarithmengesetze",
+          "concepts": [
+            "Logarithmus",
+            "natürlicher Logarithmus",
+            "Umkehrfunktion"
+          ],
+          "keyFormulas": [
+            "log(a·b)=log(a)+log(b)",
+            "log(aⁿ)=n·log(a)",
+            "log_b(x)=ln(x)/ln(b)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Stochastik",
+      "topics": [
+        {
+          "title": "Bedingte Wahrscheinlichkeit",
+          "concepts": [
+            "Vierfeldertafel",
+            "Baumdiagramm",
+            "stochastische Unabhängigkeit"
+          ],
+          "keyFormulas": [
+            "P(A|B)=P(A∩B)/P(B)",
+            "Unabhängig: P(A∩B)=P(A)·P(B)"
+          ],
+          "keyFacts": [
+            "Bayes: P(A|B)=P(B|A)·P(A)/P(B)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Schulaufgabe (45-60 min)"
+    ],
+    "commandWords": [
+      "berechne",
+      "bestimme",
+      "zeige",
+      "begründe",
+      "untersuche"
+    ],
+    "tips": [
+      "Immer Einheit angeben"
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "math",
+    "curriculum": "ib",
+    "curriculumName": "IB Math AA SL — Final Exam Review",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Full Syllabus Review",
+      "topics": [
+        {
+          "title": "Number & Algebra Review",
+          "concepts": [
+            "sequences",
+            "exponents",
+            "logarithms",
+            "binomial"
+          ],
+          "keyFormulas": [
+            "uₙ=u₁+(n-1)d",
+            "S∞=u₁/(1-r)",
+            "logₐb=lnb/lna"
+          ]
+        },
+        {
+          "title": "Functions Review",
+          "concepts": [
+            "transformations",
+            "quadratics",
+            "rational functions",
+            "exponential"
+          ],
+          "keyFacts": [
+            "Know all transformation rules cold",
+            "Sketch key features: intercepts, asymptotes, turning points"
+          ]
+        },
+        {
+          "title": "Calculus Review",
+          "concepts": [
+            "differentiation rules",
+            "integration",
+            "optimization",
+            "kinematics"
+          ],
+          "keyFormulas": [
+            "v=ds/dt, a=dv/dt",
+            "s=∫v dt",
+            "Area=∫|f(x)|dx"
+          ]
+        },
+        {
+          "title": "Probability & Statistics Review",
+          "concepts": [
+            "binomial",
+            "normal",
+            "probability rules",
+            "descriptive stats"
+          ],
+          "keyFormulas": [
+            "E(X)=np",
+            "Z=(X-μ)/σ"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Paper 1 non-calc (90 min, 80 marks)",
+      "Paper 2 calc (90 min, 80 marks)"
+    ],
+    "tips": [
+      "Manage time: ~1.1 min per mark",
+      "Read 'hence' questions carefully",
+      "Check units in applied problems"
+    ]
+  }
+}

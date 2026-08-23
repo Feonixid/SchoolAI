@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "physics",
+    "curriculum": "american",
+    "curriculumName": "AP Physics 2",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Electricity and Magnetism",
+      "topics": [
+        {
+          "title": "Electrostatics and Gauss's Law",
+          "concepts": [
+            "electric flux",
+            "Gauss's law",
+            "conductors",
+            "capacitors"
+          ],
+          "keyFormulas": [
+            "Φ=EA·cosθ",
+            "Φ=Q_enc/ε₀ (Gauss)",
+            "C=Q/V",
+            "U=½CV²=½QV"
+          ]
+        },
+        {
+          "title": "Magnetic Fields",
+          "concepts": [
+            "Lorentz force",
+            "magnetic flux",
+            "Faraday's law",
+            "Lenz's law"
+          ],
+          "keyFormulas": [
+            "F=qvBsinθ",
+            "F=BIL",
+            "ε=-NdΦ/dt"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Modern Physics",
+      "topics": [
+        {
+          "title": "Quantum and Nuclear Physics",
+          "concepts": [
+            "photoelectric effect",
+            "photon energy",
+            "de Broglie wavelength",
+            "nuclear decay"
+          ],
+          "keyFormulas": [
+            "E=hf",
+            "λ=h/p=h/mv",
+            "E=mc²",
+            "KE_max=hf-φ"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

@@ -1,0 +1,143 @@
+/* css/flashcards.css — Spaced Repetition AI Flashcards & Leitner System */
+/* =================================================================== */
+
+.flashcards-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 4760;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: cardModalFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cardModalFadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.flashcards-window {
+  width: 820px;
+  max-width: 96vw;
+  height: 620px;
+  max-height: 92vh;
+  background: var(--panel, #ffffff);
+  color: var(--text, #1e293b);
+  border-radius: 20px;
+  border: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .flashcards-window {
+  background: #0f172a;
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.flashcards-header {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(99, 102, 241, 0.12));
+  border-bottom: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flashcards-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+/* 3D Flippable Card */
+.flashcard-scene {
+  width: 480px;
+  max-width: 90vw;
+  height: 260px;
+  perspective: 1000px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+.flashcard-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--border, rgba(226, 232, 240, 0.8));
+}
+
+.flashcard-front {
+  background: linear-gradient(135deg, var(--panel, #ffffff), rgba(99, 102, 241, 0.05));
+}
+
+[data-theme="dark"] .flashcard-front {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.flashcard-back {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), var(--panel, #ffffff));
+  transform: rotateY(180deg);
+}
+
+[data-theme="dark"] .flashcard-back {
+  background: linear-gradient(135deg, #064e3b, #1e293b);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.leitner-boxes-bar {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.leitner-box-slot {
+  flex: 1;
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.15);
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.leitner-box-slot.active {
+  background: #6366f1;
+  color: white;
+}

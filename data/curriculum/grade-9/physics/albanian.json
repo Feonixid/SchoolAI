@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "physics",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Fizikë Klasa 9",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Termodinamika",
+      "topics": [
+        {
+          "title": "Temperatura dhe nxehtësia",
+          "concepts": [
+            "temperatura",
+            "nxehtësia",
+            "ekuilibri termik",
+            "shkallët e temperaturës"
+          ],
+          "keyFormulas": [
+            "Q = mcΔT",
+            "T(K) = T(°C) + 273.15"
+          ],
+          "keyFacts": [
+            "Nxehtësia lëviz nga trupi më i nxehtë tek më i ftohtë",
+            "Ekuilibri termik: temperatura e njëjtë",
+            "Kapaciteti specifik termik: energjia për 1°C për 1 kg"
+          ]
+        },
+        {
+          "title": "Ligjet e termodinamikës",
+          "concepts": [
+            "ligji i parë",
+            "ligji i dytë",
+            "entropia"
+          ],
+          "keyFormulas": [
+            "ΔU = Q - W",
+            "η = W/Q_h = 1 - Q_c/Q_h"
+          ],
+          "keyFacts": [
+            "Ligji I: energjia ruhet (konservohet)",
+            "Ligji II: entropia e universit rritet gjithmonë",
+            "Efiqenca e Carnot: η_max = 1 - T_c/T_h"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Vetitë e lëndës",
+      "topics": [
+        {
+          "title": "Lëngjet dhe gazet",
+          "concepts": [
+            "dendësia",
+            "shtypja",
+            "ligji i Paskalit",
+            "ligji i Arkimedit",
+            "ligji i Bernulit"
+          ],
+          "keyFormulas": [
+            "ρ = m/V",
+            "P = F/A",
+            "P = ρgh",
+            "F_ngjitëse = ρ_lëng·g·V_zhytur"
+          ],
+          "keyFacts": [
+            "Shtypja atmosferike: ~101325 Pa = 1 atm",
+            "Arkimedi: forca ngjitëse = pesha e lëngut të zhvendosur"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Lëvizja harmonike e thjeshtë",
+      "topics": [
+        {
+          "title": "Oshilimet",
+          "concepts": [
+            "perioda",
+            "frekuenca",
+            "amplituda",
+            "lavjerrësi",
+            "sustë"
+          ],
+          "keyFormulas": [
+            "T = 2π√(l/g) (lavjerrësi)",
+            "T = 2π√(m/k) (sustë)",
+            "f = 1/T",
+            "x = A·sin(ωt)"
+          ],
+          "keyFacts": [
+            "ω = 2πf = 2π/T",
+            "Energjia totale e oshilatorit është konstante në mungesë të fërkimit"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

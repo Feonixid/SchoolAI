@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "economics",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Ekonomi Klasa 9",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Hyrje në ekonomi",
+      "topics": [
+        {
+          "title": "Problemi ekonomik",
+          "concepts": [
+            "mungesa",
+            "zgjedhja",
+            "kosto oportune",
+            "sisteme ekonomike"
+          ],
+          "definitions": {
+            "Mungesa": "Burimet janë të kufizuara ndërsa nevojat janë të pakufizuara",
+            "Kosto oportune": "Vlera e alternativës më të mirë të hequr dorë",
+            "PPF": "Kufiri i mundësive të prodhimit — tregon kombinimet maksimale"
+          },
+          "keyFacts": [
+            "Ekonomia e tregut: vendime nga tregu (ashku i padukshëm)",
+            "Ekonomia e planifikuar: vendime nga shteti",
+            "Ekonomia e përzier: kombinim i të dyjave (shumica e vendeve sot)"
+          ]
+        },
+        {
+          "title": "Kërkesa dhe oferta",
+          "concepts": [
+            "ligji i kërkesës",
+            "ligji i ofertës",
+            "ekuilibri",
+            "teprica",
+            "mungesa"
+          ],
+          "keyFacts": [
+            "Kërkesa rritet → kurbës zhvendoset djathtas → çmimi rritet",
+            "Oferta rritet → kurbës zhvendoset djathtas → çmimi bie",
+            "Ekuilibri: sasia e kërkuar = sasia e ofruar"
+          ],
+          "keyFormulas": [
+            "Use /graph supply-demand to visualize!"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

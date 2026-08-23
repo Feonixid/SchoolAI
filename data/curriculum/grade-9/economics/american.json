@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "economics",
+    "curriculum": "american",
+    "curriculumName": "US Economics — Introduction",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Fundamentals of Economics",
+      "topics": [
+        {
+          "title": "Economic Systems",
+          "concepts": [
+            "market economy",
+            "command economy",
+            "mixed economy",
+            "invisible hand",
+            "circular flow"
+          ],
+          "keyFacts": [
+            "Adam Smith's invisible hand: self-interest leads to social benefit in free markets",
+            "Circular flow: households provide factors, firms provide goods/services"
+          ]
+        },
+        {
+          "title": "Supply and Demand Basics",
+          "concepts": [
+            "demand schedule",
+            "supply schedule",
+            "equilibrium price",
+            "shifts vs movements"
+          ],
+          "keyFacts": [
+            "Change in PRICE: movement along curve",
+            "Change in other factors (income, tastes): shift of curve"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

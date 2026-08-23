@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "math",
+    "curriculum": "ib",
+    "curriculumName": "IB Mathematics: Analysis & Approaches SL (Year 2)",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Calculus — Introduction to Differentiation",
+      "topics": [
+        {
+          "title": "Limits and First Principles",
+          "concepts": [
+            "limit definition",
+            "derivative from first principles",
+            "gradient function"
+          ],
+          "keyFormulas": [
+            "f'(x) = lim(h→0) [f(x+h)-f(x)]/h"
+          ]
+        },
+        {
+          "title": "Differentiation Rules",
+          "concepts": [
+            "power rule",
+            "chain rule",
+            "product rule",
+            "quotient rule"
+          ],
+          "keyFormulas": [
+            "d/dx(xⁿ) = nxⁿ⁻¹",
+            "d/dx[f(g(x))] = f'(g(x))·g'(x)",
+            "d/dx[uv] = u'v+uv'",
+            "d/dx[u/v] = (u'v-uv')/v²"
+          ],
+          "keyFacts": [
+            "Tangent gradient = f'(x₀)",
+            "Normal gradient = -1/f'(x₀)",
+            "Stationary point: f'(x)=0"
+          ]
+        },
+        {
+          "title": "Applications of Differentiation",
+          "concepts": [
+            "optimization",
+            "related rates",
+            "increasing/decreasing functions",
+            "concavity"
+          ],
+          "keyFacts": [
+            "f'(x)>0: increasing",
+            "f'(x)<0: decreasing",
+            "f''(x)>0: concave up (minimum)",
+            "f''(x)<0: concave down (maximum)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Calculus — Integration",
+      "topics": [
+        {
+          "title": "Indefinite Integration",
+          "concepts": [
+            "antiderivative",
+            "constant of integration"
+          ],
+          "keyFormulas": [
+            "∫xⁿdx = xⁿ⁺¹/(n+1)+C for n≠-1",
+            "∫eˣdx = eˣ+C",
+            "∫(1/x)dx = ln|x|+C"
+          ]
+        },
+        {
+          "title": "Definite Integration & Area",
+          "concepts": [
+            "area under curve",
+            "area between curves",
+            "Fundamental Theorem"
+          ],
+          "keyFormulas": [
+            "∫ₐᵇf(x)dx = F(b)-F(a)",
+            "Area = ∫ₐᵇ|f(x)|dx"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Probability Distributions",
+      "topics": [
+        {
+          "title": "Binomial Distribution",
+          "concepts": [
+            "n trials",
+            "probability p",
+            "expected value",
+            "variance"
+          ],
+          "keyFormulas": [
+            "P(X=r) = C(n,r)pʳ(1-p)ⁿ⁻ʳ",
+            "E(X) = np",
+            "Var(X) = np(1-p)"
+          ]
+        },
+        {
+          "title": "Normal Distribution",
+          "concepts": [
+            "bell curve",
+            "z-score",
+            "standard normal",
+            "68-95-99.7 rule"
+          ],
+          "keyFormulas": [
+            "Z = (X-μ)/σ",
+            "P(μ-σ<X<μ+σ) ≈ 0.68"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Paper 1 (non-calc)",
+      "Paper 2 (calc)"
+    ],
+    "commandWords": [
+      "find",
+      "show",
+      "hence",
+      "write down"
+    ],
+    "tips": [
+      "Use GDC for normal distribution on Paper 2"
+    ]
+  }
+}

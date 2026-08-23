@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "math",
+    "curriculum": "greek",
+    "curriculumName": "Πανελλαδικές Εξετάσεις — Μαθηματικά",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Integral Calculus (Full)",
+      "topics": [
+        {
+          "title": "Integration Techniques",
+          "concepts": [
+            "substitution",
+            "integration by parts",
+            "definite integrals",
+            "area"
+          ],
+          "keyFormulas": [
+            "∫f(g(x))g'(x)dx=F(g(x))+C",
+            "∫udv=uv-∫vdu"
+          ],
+          "keyFacts": [
+            "Panhellenic exams: heavy emphasis on proving integrability and FTC application"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Complex Numbers",
+      "topics": [
+        {
+          "title": "Algebraic and Trigonometric Form",
+          "concepts": [
+            "imaginary unit",
+            "modulus",
+            "argument",
+            "De Moivre's theorem"
+          ],
+          "keyFormulas": [
+            "z=a+bi",
+            "|z|=√(a²+b²)",
+            "zⁿ=rⁿ(cosnθ+isinnθ)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Πανελλαδικές (3 ώρες, 4 θέματα)"
+    ],
+    "tips": [
+      "Θέμα Α: θεωρία",
+      "Θέματα Β-Δ: ασκήσεις με αυξανόμενη δυσκολία"
+    ]
+  }
+}

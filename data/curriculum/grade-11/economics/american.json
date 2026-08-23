@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "economics",
+    "curriculum": "american",
+    "curriculumName": "US AP Macroeconomics",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "AP Macroeconomics",
+      "topics": [
+        {
+          "title": "National Income Accounting",
+          "concepts": [
+            "GDP calculation methods",
+            "expenditure approach",
+            "income approach"
+          ],
+          "keyFormulas": [
+            "GDP = C+I+G+NX",
+            "Real GDP = Nominal GDP / Price level × 100"
+          ],
+          "keyFacts": [
+            "Expenditure approach: most common on AP exam",
+            "Transfer payments NOT included in G"
+          ]
+        },
+        {
+          "title": "Money, Banking, and Monetary Policy",
+          "concepts": [
+            "money multiplier",
+            "Federal Reserve",
+            "open market operations",
+            "discount rate",
+            "reserve requirement"
+          ],
+          "keyFormulas": [
+            "Money multiplier = 1/rr",
+            "ΔM = ΔD × (1/rr)"
+          ],
+          "keyFacts": [
+            "Fed buys bonds → money supply ↑ → interest rate ↓ → investment ↑ → AD ↑",
+            "Quantity theory: MV = PY"
+          ]
+        },
+        {
+          "title": "International Trade and Finance",
+          "concepts": [
+            "comparative advantage",
+            "balance of payments",
+            "exchange rates",
+            "capital flows"
+          ],
+          "keyFormulas": [
+            "Terms of trade",
+            "Real exchange rate = e × (P*/P)"
+          ],
+          "keyFacts": [
+            "Current account + Capital account = 0 (in theory)",
+            "Currency appreciation: imports cheaper, exports more expensive"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

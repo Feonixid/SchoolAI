@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "math",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Klasa 10",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Funksionet trigonometrike",
+      "topics": [
+        {
+          "title": "Rrethi trigonometrik",
+          "concepts": [
+            "sinus",
+            "kosinus",
+            "tangjent",
+            "kotangjent",
+            "rrethi njësi"
+          ],
+          "keyFormulas": [
+            "sin²α + cos²α = 1",
+            "tanα = sinα/cosα",
+            "sin(α+β) = sinα·cosβ + cosα·sinβ",
+            "cos(α+β) = cosα·cosβ - sinα·sinβ"
+          ],
+          "keyFacts": [
+            "Kuadranti I: sin>0, cos>0",
+            "Kuadranti II: sin>0, cos<0",
+            "Kuadranti III: sin<0, cos<0",
+            "Kuadranti IV: sin<0, cos>0"
+          ]
+        },
+        {
+          "title": "Ekuacione trigonometrike bazë",
+          "concepts": [
+            "sinx=a",
+            "cosx=a",
+            "tanx=a"
+          ],
+          "keyFormulas": [
+            "sinx=a → x=(-1)ⁿarcsin(a)+nπ",
+            "cosx=a → x=±arccos(a)+2nπ",
+            "tanx=a → x=arctan(a)+nπ"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Vargjet dhe seritë",
+      "topics": [
+        {
+          "title": "Progresioni aritmetik",
+          "concepts": [
+            "diferenca",
+            "termi i përgjithshëm",
+            "shuma e n termave"
+          ],
+          "keyFormulas": [
+            "aₙ = a₁ + (n-1)d",
+            "Sₙ = n(a₁+aₙ)/2"
+          ]
+        },
+        {
+          "title": "Progresioni gjeometrik",
+          "concepts": [
+            "raporti",
+            "termi i përgjithshëm",
+            "shuma"
+          ],
+          "keyFormulas": [
+            "aₙ = a₁·qⁿ⁻¹",
+            "Sₙ = a₁(qⁿ-1)/(q-1)",
+            "S∞ = a₁/(1-q) për |q|<1"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Vektorët në plan",
+      "topics": [
+        {
+          "title": "Veprime me vektorë",
+          "concepts": [
+            "mbledhja",
+            "zbritja",
+            "shumëzimi me skalar",
+            "prodhimi skalar"
+          ],
+          "keyFormulas": [
+            "ā·b̄ = |ā||b̄|cosθ",
+            "ā·b̄ = a₁b₁+a₂b₂",
+            "|ā| = √(a₁²+a₂²)"
+          ],
+          "keyFacts": [
+            "Vektorë pingulë: ā·b̄ = 0",
+            "Vektorë paralelë: a₁/b₁ = a₂/b₂"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Gjeometria analitike",
+      "topics": [
+        {
+          "title": "Rrethi",
+          "concepts": [
+            "ekuacioni i rrethit",
+            "qendra",
+            "rrezja",
+            "tangjentja"
+          ],
+          "keyFormulas": [
+            "(x-a)²+(y-b)²=r²",
+            "Distanca pikë-drejtëz: d=|Ax₀+By₀+C|/√(A²+B²)"
+          ],
+          "keyFacts": [
+            "Tangjentja është pingule me rrezen në pikën e tangencës"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Provimi vjetor (3 orë)"
+    ],
+    "commandWords": [
+      "llogarit",
+      "vërteto",
+      "gjej",
+      "skico"
+    ],
+    "tips": [
+      "Shkruaj formulën para zëvendësimit"
+    ]
+  }
+}

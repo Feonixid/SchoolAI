@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "economics",
+    "curriculum": "greek",
+    "curriculumName": "Greek Lykeio — Μικροοικονομία",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Microeconomics",
+      "topics": [
+        {
+          "title": "Market Structures and Efficiency",
+          "concepts": [
+            "perfect competition",
+            "monopoly",
+            "elasticity"
+          ],
+          "keyFacts": [
+            "Greek curriculum focuses on mathematical derivation of equilibrium"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

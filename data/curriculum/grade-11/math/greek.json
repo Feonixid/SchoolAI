@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "math",
+    "curriculum": "greek",
+    "curriculumName": "Ελληνικό Λύκειο Γ' Τάξη — Μαθηματικά Κατεύθυνσης",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Limits and Continuity",
+      "topics": [
+        {
+          "title": "Limit Theory",
+          "concepts": [
+            "definition of limit",
+            "limit properties",
+            "squeeze theorem",
+            "indeterminate forms"
+          ],
+          "keyFormulas": [
+            "lim(x→a)[f(x)±g(x)] = lim f(x) ± lim g(x)",
+            "lim(x→0) sinx/x = 1"
+          ],
+          "keyFacts": [
+            "Greek curriculum emphasizes epsilon-delta proofs at this level"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Differential Calculus",
+      "topics": [
+        {
+          "title": "Derivative and Applications",
+          "concepts": [
+            "derivative definition",
+            "differentiation rules",
+            "L'Hôpital's rule",
+            "Rolle's theorem",
+            "Mean Value Theorem"
+          ],
+          "keyFormulas": [
+            "(fⁿ)'=nfⁿ⁻¹·f'",
+            "L'Hôpital: lim f/g = lim f'/g' (for 0/0 or ∞/∞)"
+          ],
+          "keyFacts": [
+            "Rolle's: if f(a)=f(b), ∃c∈(a,b) with f'(c)=0",
+            "MVT: ∃c with f'(c)=(f(b)-f(a))/(b-a)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Integral Calculus",
+      "topics": [
+        {
+          "title": "Definite and Indefinite Integrals",
+          "concepts": [
+            "antiderivative",
+            "FTC",
+            "area calculation"
+          ],
+          "keyFormulas": [
+            "∫xⁿdx=xⁿ⁺¹/(n+1)+C",
+            "∫ₐᵇf(x)dx=F(b)-F(a)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

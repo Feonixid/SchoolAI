@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "physics",
+    "curriculum": "american",
+    "curriculumName": "US Physics 1/2 — Electricity",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Electrostatics",
+      "topics": [
+        {
+          "title": "Coulomb's Law and Electric Fields",
+          "concepts": [
+            "charge",
+            "Coulomb's law",
+            "electric field",
+            "field lines",
+            "potential"
+          ],
+          "keyFormulas": [
+            "F=kq₁q₂/r²",
+            "E=F/q=kQ/r²",
+            "V=kQ/r",
+            "k=8.99×10⁹ N·m²/C²"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DC Circuits",
+      "topics": [
+        {
+          "title": "Ohm's Law and Circuit Analysis",
+          "concepts": [
+            "resistance",
+            "current",
+            "voltage",
+            "power",
+            "series",
+            "parallel",
+            "Kirchhoff"
+          ],
+          "keyFormulas": [
+            "V=IR",
+            "P=IV",
+            "R_series=R₁+R₂",
+            "1/R_par=1/R₁+1/R₂"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

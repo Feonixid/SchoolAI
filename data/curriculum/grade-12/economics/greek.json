@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "grade": 12,
+    "subject": "economics",
+    "curriculum": "greek",
+    "curriculumName": "Greek — International Economics & Review",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "International Economics",
+      "topics": [
+        {
+          "title": "Trade and Development",
+          "concepts": [
+            "comparative advantage",
+            "balance of payments",
+            "exchange rates"
+          ],
+          "keyFacts": [
+            "Greek curriculum: emphasis on EU integration and eurozone economics"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

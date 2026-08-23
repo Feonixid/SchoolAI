@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "grade": 11,
+    "subject": "economics",
+    "curriculum": "uk",
+    "curriculumName": "UK A-Level Economics — Macroeconomics",
+    "language": "en",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Macroeconomics",
+      "topics": [
+        {
+          "title": "Economic Performance and Policy",
+          "concepts": [
+            "GDP",
+            "inflation",
+            "unemployment",
+            "BoP",
+            "fiscal policy",
+            "monetary policy",
+            "supply-side"
+          ],
+          "keyFacts": [
+            "UK exams want EVALUATION: advantages AND limitations of each policy",
+            "Always mention time lags, crowding out, government failure"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

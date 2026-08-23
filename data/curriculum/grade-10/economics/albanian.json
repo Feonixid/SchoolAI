@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "grade": 10,
+    "subject": "economics",
+    "curriculum": "albanian",
+    "curriculumName": "Albanian MAS — Ekonomi Klasa 10 (Mikroekonomi)",
+    "language": "sq",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Mikroekonomia",
+      "topics": [
+        {
+          "title": "Elasticiteti",
+          "concepts": [
+            "elasticiteti i çmimit",
+            "elasticiteti i të ardhurës",
+            "elasticiteti kryq"
+          ],
+          "keyFormulas": [
+            "PED = %ΔQd / %ΔP",
+            "YED = %ΔQd / %ΔY",
+            "XED = %ΔQd_A / %ΔP_B"
+          ],
+          "keyFacts": [
+            "|PED|>1: elastike (luksoze)",
+            "|PED|<1: joelastike (domosdoshmëri)",
+            "|PED|=1: njësi elastike",
+            "YED>0: mall normal, YED<0: mall inferior"
+          ]
+        },
+        {
+          "title": "Strukturat e tregut",
+          "concepts": [
+            "konkurrenca e plotë",
+            "monopoli",
+            "oligopoli",
+            "konkurrenca monopolistike"
+          ],
+          "keyFacts": [
+            "Konkurrenca e plotë: shumë firma, produkt identik, çmimmarrëse",
+            "Monopoli: një firmë, barriera hyrjeje, çmimvendosëse",
+            "Oligopoli: pak firma dominante, ndërvarësi strategjike"
+          ]
+        },
+        {
+          "title": "Dështimet e tregut",
+          "concepts": [
+            "eksternalitete",
+            "të mira publike",
+            "informacion asimetrik",
+            "ndërhyrja e qeverisë"
+          ],
+          "keyFacts": [
+            "Eksternalitet negativ: kosto sociale > kosto private (ndotja)",
+            "Eksternalitet pozitiv: përfitim social > përfitim privat (arsimi)",
+            "Të mira publike: jo-përjashtuese dhe jo-rivale"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": null
+}

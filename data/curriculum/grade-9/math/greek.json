@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "grade": 9,
+    "subject": "math",
+    "curriculum": "greek",
+    "curriculumName": "Ελληνικό Λύκειο Α' Τάξη — Μαθηματικά",
+    "language": "el",
+    "version": "2024"
+  },
+  "units": [
+    {
+      "title": "Equations and Inequalities",
+      "topics": [
+        {
+          "title": "Quadratic Equations",
+          "concepts": [
+            "discriminant",
+            "Vieta's formulas",
+            "factoring"
+          ],
+          "keyFormulas": [
+            "ax²+bx+c=0",
+            "x = (-b±√Δ)/2a",
+            "Δ=b²-4ac",
+            "x₁+x₂=-b/a",
+            "x₁·x₂=c/a"
+          ],
+          "keyFacts": [
+            "Greek curriculum emphasizes Vieta's relations heavily",
+            "Sign analysis of quadratic trinomial required"
+          ]
+        },
+        {
+          "title": "Quadratic Inequalities",
+          "concepts": [
+            "sign table",
+            "solution intervals",
+            "parabola sign"
+          ],
+          "keyFacts": [
+            "For ax²+bx+c > 0: find roots, determine sign between/outside roots",
+            "If Δ < 0 and a > 0: expression always positive"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Functions",
+      "topics": [
+        {
+          "title": "Real Functions",
+          "concepts": [
+            "domain",
+            "range",
+            "monotonicity",
+            "parity"
+          ],
+          "keyFacts": [
+            "Even function: f(-x) = f(x), symmetric about y-axis",
+            "Odd function: f(-x) = -f(x), symmetric about origin",
+            "Monotonicity proven via f(x₁)-f(x₂) sign analysis"
+          ]
+        },
+        {
+          "title": "Quadratic Function",
+          "concepts": [
+            "vertex",
+            "axis of symmetry",
+            "maximum/minimum"
+          ],
+          "keyFormulas": [
+            "f(x) = ax²+bx+c",
+            "Vertex: (-b/2a, -Δ/4a)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Trigonometry",
+      "topics": [
+        {
+          "title": "Trigonometric Ratios and Identities",
+          "concepts": [
+            "unit circle",
+            "reference angle",
+            "fundamental identity"
+          ],
+          "keyFormulas": [
+            "sin²θ+cos²θ=1",
+            "tanθ=sinθ/cosθ",
+            "1+tan²θ=1/cos²θ"
+          ],
+          "keyFacts": [
+            "Greek curriculum covers all four quadrants in Year 1",
+            "Sign rules: All Students Take Calculus (ASTC)"
+          ]
+        }
+      ]
+    }
+  ],
+  "examFormat": {
+    "papers": [
+      "Γραπτή εξέταση (3 ώρες)"
+    ],
+    "commandWords": [
+      "Να αποδείξετε",
+      "Να λύσετε",
+      "Να βρείτε",
+      "Να σχεδιάσετε"
+    ],
+    "tips": [
+      "Proofs are heavily weighted in Greek exams",
+      "Always state which theorem you are using"
+    ]
+  }
+}
