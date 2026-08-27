@@ -1747,16 +1747,37 @@ app.get('/api/network-info', (req, res) => {
   });
 });
 
-// Cloud Sync: Push local teacher database to central cloud
+// Cloud Sync: Push local teacher database to central cloud (Supports Full & Delta Sync)
 app.post('/api/sync/cloud-push', requireAdmin, async (req, res) => {
   const centralUrl = req.body.centralUrl || process.env.CENTRAL_SERVER_URL;
   if (!centralUrl) {
     return res.status(400).json({ error: 'No central cloud server URL specified.' });
   }
 
+  const since = parseInt(req.body.since || req.query.since || '0', 10);
+
   try {
     const localData = loadData();
     const syncToken = process.env.CENTRAL_SYNC_KEY || 'eduai_cloud_sync_secret';
+
+    // Delta packaging: Filter records modified since timestamp to save bandwidth
+    let payloadData = localData;
+    if (since > 0) {
+      payloadData = {
+        isDelta: true,
+        sinceTimestamp: since,
+        students: {},
+        attendance: (localData.attendance || []).filter(r => (r.updatedAt || r.timestamp || 0) >= since),
+        submissions: (localData.submissions || []).filter(s => (s.updatedAt || s.timestamp || 0) >= since),
+        announcements: (localData.announcements || []).filter(a => (a.timestamp || 0) >= since)
+      };
+
+      Object.entries(localData.students || {}).forEach(([id, std]) => {
+        if ((std.updatedAt || std.timestamp || 0) >= since) {
+          payloadData.students[id] = std;
+        }
+      });
+    }
 
     const response = await fetch(`${centralUrl.replace(/\/$/, '')}/api/sync/cloud-receive`, {
       method: 'POST',
@@ -1767,7 +1788,8 @@ app.post('/api/sync/cloud-push', requireAdmin, async (req, res) => {
       body: JSON.stringify({
         sourceHostname: require('os').hostname(),
         timestamp: Date.now(),
-        data: localData
+        isDelta: since > 0,
+        data: payloadData
       })
     });
 
@@ -1778,7 +1800,8 @@ app.post('/api/sync/cloud-push', requireAdmin, async (req, res) => {
     const cloudRes = await response.json();
     res.json({
       success: true,
-      message: 'Classroom data successfully synced to central school cloud server!',
+      message: since > 0 ? 'Delta sync successfully reconciled on central cloud!' : 'Classroom data successfully synced to central school cloud server!',
+      isDelta: since > 0,
       cloudResult: cloudRes
     });
   } catch (err) {
@@ -1843,6 +1866,14 @@ function resolveSyncConflict(existingItem, incomingItem, entityType) {
   const incomingTime = incomingItem.updatedAt || incomingItem.timestamp || 0;
 
   switch (entityType) {
+    case 'students':
+      const mergedStudent = { ...existingItem, ...incomingItem };
+      mergedStudent.updatedAt = Math.max(existingTime, incomingTime, Date.now());
+      if (existingItem.finalGrade && incomingItem.finalGrade && existingItem.finalGrade !== incomingItem.finalGrade) {
+        mergedStudent.syncConflictWarning = `Divergjencë notash: Mësuesi 1="${existingItem.finalGrade}", Mësuesi 2="${incomingItem.finalGrade}".`;
+      }
+      return mergedStudent;
+
     case 'attendance':
       if (incomingTime > existingTime) return incomingItem;
       if (existingTime > incomingTime) return existingItem;

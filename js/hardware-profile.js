@@ -301,7 +301,7 @@
     return hardwareInfo;
   }
 
-  // Load saved hardware info
+  // Load saved hardware info from prior session
   function loadSaved() {
     const saved = localStorage.getItem('shqipai_hardware');
     if (saved) {
@@ -315,6 +315,94 @@
     return false;
   }
 
+  // Adaptive rendering loop — slower CPUs get a lower tick rate to prevent
+  // frame drops and thermal throttling on chips like the i5-4xxx Haswell line.
+  // Ultra/High targets 60fps, Medium targets 30fps, Low/Minimal 15fps.
+  function createThrottledLoop(drawCallback) {
+    const settings = getProfileSettings();
+    const targetFps = settings.animations ? (settings.minCores >= 8 ? 60 : 30) : 15;
+    const frameInterval = 1000 / targetFps;
+    let lastFrameTime = 0;
+    let loopId = null;
+    let running = false;
+
+    function tick(timestamp) {
+      if (!running) return;
+      loopId = requestAnimationFrame(tick);
+
+      const elapsed = timestamp - lastFrameTime;
+      if (elapsed < frameInterval) return;
+      lastFrameTime = timestamp - (elapsed % frameInterval);
+
+      drawCallback(timestamp);
+    }
+
+    return {
+      start() {
+        if (running) return;
+        running = true;
+        loopId = requestAnimationFrame(tick);
+      },
+      stop() {
+        running = false;
+        if (loopId !== null) cancelAnimationFrame(loopId);
+        loopId = null;
+      },
+      get fps() { return targetFps; }
+    };
+  }
+
+  // Adaptive debounce — input handlers, search filters, and autosave fire
+  // at different rates depending on CPU headroom.
+  function adaptiveDebounce(fn, opts = {}) {
+    const settings = getProfileSettings();
+    let baseDelay;
+    if (settings.minCores >= 8)       baseDelay = opts.fast   || 150;
+    else if (settings.minCores >= 4)  baseDelay = opts.medium || 300;
+    else                               baseDelay = opts.slow   || 600;
+
+    let timer = null;
+    return function debounced(...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn.apply(this, args), baseDelay);
+    };
+  }
+
+  // Batched DOM mutations — on low-end hardware, accumulate DOM writes
+  // into a single rAF frame instead of triggering layout thrashing.
+  function batchDomWrite(writeFn) {
+    const settings = getProfileSettings();
+    if (settings.minCores >= 8) {
+      writeFn();
+      return;
+    }
+    requestAnimationFrame(() => writeFn());
+  }
+
+  // Conditional feature flag — check if a heavy feature should run on this hw.
+  // Usage: if (HardwareProfile.canRun('docker')) { ... }
+  function canRun(feature) {
+    const s = getProfileSettings();
+    switch (feature) {
+      case 'docker':       return s.docker === true;
+      case 'analytics':    return s.analytics !== false;
+      case 'animations':   return s.animations !== false;
+      case 'streaming':    return s.streaming !== false;
+      case 'heavyCanvas':  return s.minCores >= 4;
+      case 'particles':    return s.minCores >= 8;
+      case 'blur':         return s.minCores >= 4;
+      default:             return true;
+    }
+  }
+
+  // History pruning — trim chat history based on the tier's maxHistory cap
+  // to stop older CPUs from choking on massive context windows.
+  function pruneHistory(messages) {
+    const cap = getProfileSettings().maxHistory || 30;
+    if (messages.length <= cap) return messages;
+    return messages.slice(messages.length - cap);
+  }
+
   // Export
   window.HardwareProfile = {
     detect,
@@ -324,6 +412,11 @@
     clearCustomSettings,
     getProfiles,
     loadSaved,
+    createThrottledLoop,
+    adaptiveDebounce,
+    batchDomWrite,
+    canRun,
+    pruneHistory,
     get PROFILES() { return PROFILES; }
   };
 

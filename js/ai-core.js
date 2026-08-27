@@ -399,7 +399,10 @@
 
       const messages = [{ role: 'system', content: systemPrompt }];
       if (!state.modes.privacy && state.chat.history.length > 0) {
-        messages.push(...state.chat.history.slice(-10));
+        const trimmed = window.HardwareProfile
+          ? window.HardwareProfile.pruneHistory(state.chat.history)
+          : state.chat.history.slice(-10);
+        messages.push(...trimmed);
       }
 
       // Add textbook RAG context if available
