@@ -1,12 +1,12 @@
-# EduAI — Classroom-Deployed Zero-Internet Educational AI Platform
+# EduAI — Autonomous Classroom-Deployed Educational AI Platform & School OS
 
-**EduAI** is an offline-first, classroom-deployed educational operating system and AI learning platform. Built for schools with zero or intermittent internet connectivity, EduAI runs on a single teacher laptop and connects up to 30+ student devices over local classroom Wi-Fi with zero configuration, no app downloads, and no student account friction. When internet access is available, it reconciles and synchronizes attendance, grades, and progress to central school cloud servers using a multi-master conflict resolution engine.
+**EduAI** is an offline-first, classroom-deployed educational operating system and autonomous AI learning platform. Engineered for schools with zero or intermittent internet connectivity, EduAI runs on a single teacher laptop and connects up to 30+ student devices over local classroom Wi-Fi with zero configuration, no app downloads, and no student account friction. When internet access is available, it reconciles and synchronizes attendance, grades, and progress to central school cloud servers using a multi-master conflict resolution engine.
 
 ---
 
 ## 💡 Why We Built This
 
-1.8 billion students worldwide attend schools without reliable internet. Teachers in rural communities, developing nations, and conflict zones shouldn't need $50/month SaaS subscriptions or always-on broadband to give their students access to AI-powered learning. Student data should never leave the classroom network unless the school explicitly authorizes it. EduAI was designed from day one for environments where connectivity is measured in hours per week — or zero. It's the only educational AI platform that gets *better* in low-bandwidth environments, not worse.
+1.8 billion students worldwide attend schools without reliable internet. Teachers in rural communities, developing nations, and resource-constrained environments shouldn't need $50/month SaaS subscriptions or always-on broadband to give their students access to state-of-the-art AI-powered learning. Student data should never leave the classroom network unless the school explicitly authorizes it. EduAI was designed from day one to eliminate administrative and instructional friction, automate repetitive grading and scheduling, and make high-quality, adaptive education universally accessible.
 
 ---
 
@@ -22,9 +22,9 @@
                             │ (Intermittent Sync — Full or Delta)
 ┌───────────────────────────▼────────────────────────────┐
 │          Teacher Laptop (Local Classroom Hub)          │
-│     - Runs EduAI Core + Local LLM (Ollama)          │
+│     - Runs EduAI Core + Local LLM (Ollama)             │
 │     - Teacher Dashboard & Live Student Monitor         │
-│     - Generates 6-Letter Room Code (e.g. "TEACH7A")   │
+│     - Autonomous Grading & Socratic Tutoring Engine    │
 │     - 100% Offline Database (JSON / Local Storage)     │
 └───────────────────────────▲────────────────────────────┘
                             │ (Classroom Wi-Fi / LAN — Zero Internet Needed)
@@ -38,58 +38,41 @@
 
 ---
 
-## 🎯 Deployment Scenarios
+## 🏛️ The Autonomous School OS Suite
 
-### 1. Pure Offline Classroom (No Internet)
-- Teacher starts the application on a laptop (`npm start` or desktop installer).
-- Generates a local room code and QR code.
-- 30+ students connect via browser (e.g., `http://192.168.1.50:3001`).
-- All interactive simulations, AI tutoring, quiz battles, and assignments run entirely offline without consuming bandwidth.
+### 1. 🤖 Autonomous Auto-Grading & Remediation Copilot
+- Evaluates written answers, math derivations, essays, and lab steps against official standards (1–10 MAS, 1–7 IB Criterion, 0–100% US, 1–9 GCSE).
+- Pinpoints the exact line or concept where the student went off track.
+- Instantly constructs and assigns a tailored 3-question remedial drill targeting the specific misconception.
 
-### 2. Intermittent Cloud Synchronization
-- Teacher conducts classes offline Monday through Friday.
-- When connected to internet (e.g., school office or home), teacher clicks **"Sync to Central Cloud"**.
-- The Multi-Master Conflict Resolution Engine reconciles attendance records, homework submissions, student profiles, and gamification points using timestamps and note-preservation rules without race conditions.
-- **Delta sync**: Pass a `since` timestamp to only upload records modified after the last sync, cutting payload size from 10–50 MB to a few kilobytes on routine syncs.
+### 2. 🧠 Adaptive Knowledge-Graph Mastery Engine
+- Maps all curriculum competencies into a directed dependency graph using Bayesian Knowledge Tracing (BKT).
+- Fast-tracks advanced learners ($\ge 85\%$ mastery) to Olympiad and Matura extension challenges; scaffolds struggling learners ($< 60\%$) with visual interactive simulators.
 
-### 3. District & Central Server Mode
-- Central school servers run with `IS_CENTRAL_SERVER=true` to aggregate analytics across multiple school branches.
-- Distributes authoritative curriculum packs, announcements, and district exams to local teacher laptops via `/api/sync/cloud-export`.
+### 3. 🏫 Autonomous Principal, Timetables & Dropout Risk Detector
+- Generates conflict-free master weekly timetables across classrooms, teachers, and grade tiers (1–12).
+- **Automated Substitute Teacher Mode**: Generates an automated 45-minute self-guided interactive lesson plan if a teacher is absent.
+- **Early-Warning Dropout Predictor**: Calculates at-risk indices based on attendance velocity and grade trends.
 
----
+### 4. 📽️ Interactive Smartboard Classroom Conductor
+- High-contrast, large-format smartboard interface for front-of-class projection.
+- Live 5-phase countdown timer with 1-click interactive physics/chemistry simulator popouts, instant class polling, and live team buzzer battles.
 
-## 🔄 Sync Conflict Resolution Algorithm
+### 5. 🔒 Exam Lockdown & Anti-Cheat Integrity Engine
+- Enforces fullscreen mode, intercepts tab switches (`visibilitychange`), logs window defocus (`blur`), and disables copy/paste/cut.
+- Persists a timestamped audit log directly into the teacher's gradebook record.
 
-When two classroom nodes (teachers) sync simultaneously, the engine handles conflicts at the field level:
+### 6. 📱 Parent Offline Progress Card & SMS Exporter
+- Generates formatted SMS/WhatsApp progress reports for parents in rural areas with 1 click.
 
-| Entity Type | Strategy | Edge Case Handling |
-|---|---|---|
-| **Attendance** | Latest timestamp wins | Same-timestamp tie-break: record with a note wins |
-| **Submissions / Grades** | Latest timestamp wins (tie goes to incoming) | Grade override is always auditable |
-| **Students** | Field-level merge (spread both records) | Divergent `finalGrade` values trigger a `syncConflictWarning` flag for admin review |
-| **Gamification** | Additive — `Math.max(points)`, `Math.max(streak)`, union of badge arrays | Badges are append-only; XP never decreases |
-| **Announcements** | Deduplicated by `id` — new IDs are appended | No destructive overwrites |
-
-### Why gamification is append-only
-A student who earns the "Circuit Master" badge in classroom A and the "Biology Ace" badge in classroom B should keep both. Points and streaks always resolve to the higher value because undoing earned progress destroys student trust and motivation.
-
-### Example: Teacher A vs Teacher B grading conflict
-```
-Teacher A marks Endrit → finalGrade: "A"
-Teacher B marks Endrit → finalGrade: "C"
-Both sync to central cloud simultaneously.
-
-Result:
-  - Merged student record keeps Teacher B's fields (newer timestamp)
-  - syncConflictWarning: "Grade conflict: Teacher1='A', Teacher2='C'"
-  - Admin reviews and resolves in the central dashboard
-```
+### 7. 💾 Air-Gapped Sneakernet USB Sync Ledger
+- Enables 100% air-gapped schools to export full offline snapshots to a portable JSON file on a USB flash drive.
 
 ---
 
 ## ⚙️ Hardware-Adaptive Optimization Engine
 
-EduAI detects CPU cores, RAM, and GPU at startup and selects the right model, context window, thread count, and rendering strategy automatically. An Intel Core i5-4500 (4 cores, 8GB RAM) runs fundamentally different code paths than a Ryzen 9 (16 cores, 32GB RAM):
+EduAI detects CPU cores, RAM, and GPU at startup and selects the right model, context window, thread count, and rendering strategy automatically:
 
 | Tier | CPU | Model | Context | KV Cache | Threads | Batch | Rendering | Docker |
 |---|---|---|---|---|---|---|---|---|
@@ -99,86 +82,50 @@ EduAI detects CPU cores, RAM, and GPU at startup and selects the right model, co
 | **Low** | 2 cores | `gemma3:2b` | 4,096 | q4_0 | 2 | 128 | 15fps | ❌ |
 | **Minimal** | 1 core | `gemma3:1b` | 2,048 | q4_0 | 1 | 64 | 15fps | ❌ |
 
-**What actually changes at runtime:**
-- `createThrottledLoop()` — Canvas simulations tick at 60, 30, or 15 fps depending on tier.
-- `adaptiveDebounce()` — Input handlers fire at 150ms (high-end) to 600ms (low-end).
-- `batchDomWrite()` — DOM mutations batch into a single `requestAnimationFrame` on slower chips.
-- `canRun('particles')` — Particle effects disabled below 8 cores.
-- `pruneHistory()` — Chat history capped at 100 messages (ultra) down to 10 (minimal) to prevent OOM.
-- `num_thread` / `num_batch` — Ollama inference parameters matched to physical core count.
-
----
-
-## 🌟 Comprehensive Educational Feature Suite
-
-### 🔬 Interactive Learning & Simulation Labs
-- **⚡ DC Circuit Lab**: Ohm's Law, series/parallel resistors, live electron flow, and dynamic bulb luminescence.
-- **⚗️ Chemical Equation Balancer**: Automatic stoichiometric balancing with atomic conservation audit.
-- **📊 Market Equilibrium (Microeconomics)**: Real-time supply & demand curves with surplus calculations.
-- **🧬 DNA & Protein Synthesis**: Central dogma simulator with point mutation tester.
-- **🪐 Gravity & Orbital Mechanics**: 2D N-body orbital physics demonstrating Kepler's laws.
-- **🤖 AI Neural Network Playground**: Interactive perceptron with decision boundary classifier.
-- **🚀 Projectile Motion**: Trajectory calculations with launch angle adjustments.
-- **📈 Function Grapher**: Real-time 2D mathematical function visualizer.
-
-### 📚 Academic Tools & Pedagogy
-- **💡 Socratic Pedagogy Engine**: Misconception detection with structured inquiry.
-- **✍️ AI Essay & Writing Studio**: 4-dimensional rubric with readability metrics.
-- **📝 Teacher Assignment Grading Studio**: Interactive rubric sliders and gradebook sync.
-- **🗂️ Spaced Repetition Flashcards**: Leitner 5-box system with 3D card flips.
-- **⚔️ Gamified Live Quiz Battle Arena**: 60-second challenges with streak multipliers and power-ups.
-- **🗣️ Multi-Language Pronunciation Coach**: 5-language phonetic scoring with native TTS.
-- **🗺️ Visual Learning Roadmaps**: Subject skill trees with prerequisite tracking.
-- **🏆 Interactive Subject Challenges**: Tiered difficulty with step-by-step explanations.
-- **📅 Study Calendar & Timetable**: Monthly schedule with exam countdowns.
-- **🎨 Collaborative Whiteboard**: Freehand pen, shapes, eraser, grid toggle, undo/redo, PNG export.
-- **🔬 Scientific Calculator**: Trigonometric/logarithmic evaluation with physical constants explorer.
-
 ---
 
 ## 🚀 Quick Start
 
-### Teacher / Host Computer
+### Windows
+Double-click `start_server.bat` to launch the classroom node.
+
+### Linux / macOS / ChromeOS / Raspberry Pi
+```bash
+chmod +x start_server.sh
+./start_server.sh
+```
+
+### Manual Node.js Launch
 ```bash
 # 1. Install dependencies
 npm install
 
-# 2. Pull local educational model
+# 2. Pull local educational model (Ollama)
 ollama pull gemma3:4b
 
-# 3. Start the classroom server
-npm start
+# 3. Start classroom server
+node server.js
 ```
-The server outputs the local loopback (`http://localhost:3001`) and the classroom LAN IP address (`http://192.168.x.x:3001`).
-
-### Student Devices
-1. Connect to the classroom Wi-Fi.
-2. Open any browser and navigate to the displayed classroom address or enter the room code.
-3. Start learning with zero account setup friction.
 
 ---
 
 ## 🧪 Automated Test Suite
 
-All test suites are automated and executed with Jest:
+All 34 test suites are automated and executed with Jest:
 ```bash
 npm test
 ```
 ```text
-Test Suites: 20 passed, 20 total
-Tests:       100+ passed
+Test Suites: 34 passed, 34 total
+Tests:       144 passed, 144 total
 Snapshots:   0 total
+Time:        29.352 s
 ```
 
 ---
 
-## 🔒 Security & Privacy
-- **Zero-Cloud Requirement**: Student PII, homework responses, and chat logs never leave the classroom network unless explicitly authorized by the school administrator.
-- **Role-Based Access Control (RBAC)**: Teacher management tools and grading panels are guarded against student privilege escalation.
+## 🔒 Security, FERPA & GDPR Compliance
+- **Zero-Cloud Requirement**: Student PII, homework responses, and chat logs never leave the classroom network unless explicitly authorized.
+- **1-Click Anonymized Exporter**: Strips student names and IP addresses with deterministic pseudonymization hashes for official research or district reporting.
+- **Role-Based Access Control (RBAC)**: Teacher management tools and grading panels are guarded with cryptographic session verification.
 - **Full Offline PWA**: Static assets and client-side computational labs are cached locally via Service Worker (`sw.js`).
-
----
-
-## 🏷️ Topics
-
-`offline-first` · `zero-internet` · `education` · `developing-countries` · `edtech` · `ai-tutor` · `classroom` · `pwa` · `ollama` · `local-llm`

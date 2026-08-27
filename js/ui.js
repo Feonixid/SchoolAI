@@ -226,6 +226,34 @@
     }
   });
 
+  // Student Direct Help & Ask Teacher wiring
+  const openStudentAskSidebarBtn = document.getElementById('openStudentAskSidebarBtn');
+  openStudentAskSidebarBtn?.addEventListener('click', () => {
+    if (window.InteractiveCommHub && window.InteractiveCommHub.openStudentAskModal) {
+      window.InteractiveCommHub.openStudentAskModal();
+    }
+  });
+
+  // Teacher Interactive Help Desk wiring
+  const openTeacherHelpDeskSidebarBtn = document.getElementById('openTeacherHelpDeskSidebarBtn');
+  openTeacherHelpDeskSidebarBtn?.addEventListener('click', () => {
+    if (window.InteractiveCommHub && window.InteractiveCommHub.openTeacherHelpDesk) {
+      window.InteractiveCommHub.openTeacherHelpDesk();
+    }
+  });
+
+  // Interactive Smartboard Classroom Conductor wiring
+  const openSmartboardSidebarBtn = document.getElementById('openSmartboardSidebarBtn');
+  openSmartboardSidebarBtn?.addEventListener('click', () => {
+    if (window.SmartboardMode && window.SmartboardMode.open) {
+      const activeSubj = window.Subjects?.getActive();
+      window.SmartboardMode.open(
+        state.academic?.activeChapter?.title || 'Mësimi i Ditës',
+        activeSubj?.label || 'Matematikë'
+      );
+    }
+  });
+
   // Teacher Lesson Planner & Exam Studio wiring
   const openLessonPlannerSidebarBtn = document.getElementById('openLessonPlannerSidebarBtn');
   openLessonPlannerSidebarBtn?.addEventListener('click', () => {

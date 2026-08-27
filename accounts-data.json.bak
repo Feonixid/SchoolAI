@@ -2491,6 +2491,142 @@
       "createdAt": "2026-08-27T19:07:20.709Z",
       "registrationIP": "127.0.0.1",
       "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-27T19:07:22.029Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1787857637001": {
+      "username": "test_teacher_1787857637001",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$7049094b1f44a3ced0bca2e9561c7eae$25e1f8b834477aa94a395cb696c6b2e481df0e150f219bb571b7e7e600115c9fbff92dd95c0e624e14db93cdb89c0d212390e1de7dc0cc28be134b99f7604ebb",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-27T19:07:22.922Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1787859257903": {
+      "username": "test_prod_user_1787859257903",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$8bf8adc0b590a95fde75df338ae86ea4$c753b61e413bd727f0e089fa1640fc418e042f404407f27341884ed09cbc69be4dabdd47be265c0d213c749bb23f7e21d4bb74c1bd57eab94d5ffa554dff854e",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-27T19:34:21.421Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-27T19:34:21.841Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1787859257904": {
+      "username": "test_teacher_1787859257904",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$15531d9abbd94467c3b5880eac2ca854$da26dcc8d094b41d5887e5d8644e888b70d7aa898d4427ccd4053399122eb65015da006469985a70743219ab80c814b837dfd337d630f36f48f11d1b5dce53d9",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-27T19:34:22.696Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1787859831924": {
+      "username": "test_prod_user_1787859831924",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$ab123d08b0463e6cc0243840d16cd680$e8e985870eb94f74ab3c304781232c2d151694342a4ca33f57ec5aa3c62fdb392e3dab083d79863c9a49ba56dfd9cd24596a240cea082c6a57cc4f7dfe0d2d8f",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-27T19:43:53.938Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-27T19:43:54.240Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1787859831925": {
+      "username": "test_teacher_1787859831925",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$563d196d91ea7a2ceae23cea3c8cab5d$ed12064c6af1af49c06a96bc86a77c056ed8ce3ffd8c65475e4e053ddd628ab4ff25ea1c294c463361c51d95b997784bdb60b61b4cf4dde1b43dba711f54f9f8",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-27T19:43:54.883Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1787859982269": {
+      "username": "test_prod_user_1787859982269",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$115bab2196c9c78f9fa5d87e31b5fe1f$1df1cdbe1dcbbee99008a717e972f47683869a2faff155e5809d3010dfab5b356f1f3d0981596605c54f2c217bbf551b7877937b8084565dc14abd8e7903a188",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-27T19:46:23.537Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": [
+        {
+          "ip": "127.0.0.1",
+          "timestamp": "2026-08-27T19:46:23.764Z",
+          "userAgent": "unknown"
+        }
+      ]
+    },
+    "test_teacher_1787859982270": {
+      "username": "test_teacher_1787859982270",
+      "firstName": "Lead",
+      "lastName": "Instructor",
+      "email": "teacher@example.com",
+      "passwordHash": "pbkdf2$f58dbdec6e7c01b74b566419501cef32$2a70088cbb277e1b04f88ab143135376c3aa760e43e642b5544a4c56989df903b3a36613f39f3eb333dbe147f7c7c6ff5fe1c974fb9d8e2357992535cc0e0dd4",
+      "emailPassword": null,
+      "accountType": "teacher",
+      "apiKey": "",
+      "createdAt": "2026-08-27T19:46:24.276Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
+      "loginHistory": []
+    },
+    "test_prod_user_1787860319903": {
+      "username": "test_prod_user_1787860319903",
+      "firstName": "Production",
+      "lastName": "Tester",
+      "email": "prod@example.com",
+      "passwordHash": "pbkdf2$5d0e8c73b7e04f0fb3c0150f1f6099b9$9b4c5f7cf390152dee68aae7da5f46f21e9683fa88f43db9cb8879c366be6713a8191999740972b0173924ace8c99efb46de054bb0d658fbfed53d68e83e7e25",
+      "emailPassword": null,
+      "accountType": "student",
+      "apiKey": "",
+      "createdAt": "2026-08-27T19:52:03.842Z",
+      "registrationIP": "127.0.0.1",
+      "fingerprint": null,
       "loginHistory": []
     }
   },
@@ -3102,6 +3238,82 @@
         "totalSessions": 1
       },
       "subjectMemory": {}
+    },
+    "test_prod_user_1787857637000": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1787857642508,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1787859257903": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1787859262278,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1787859831924": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1787859834560,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
+    },
+    "test_prod_user_1787859982269": {
+      "identity": {
+        "type": "student",
+        "name": "",
+        "gradeLevel": null,
+        "preferences": {
+          "theme": "auto",
+          "language": "sq",
+          "difficulty": "medium"
+        },
+        "learningStyle": "",
+        "strengths": [],
+        "weaknesses": [],
+        "goals": [],
+        "lastActive": 1787859983996,
+        "totalSessions": 1
+      },
+      "subjectMemory": {}
     }
   },
   "sessions": {
@@ -3320,6 +3532,78 @@
       "accountType": "teacher",
       "createdAt": 1787857274452,
       "lastSeen": 1787857274500
+    },
+    "613d7fded9320a973fe552ca12e58ae9373724e8aa9ff3d595d8e5409a1c8e18": {
+      "username": "test_prod_user_1787857637000",
+      "accountType": "student",
+      "createdAt": 1787857641506,
+      "lastSeen": 1787857642549
+    },
+    "9d707b2e4c5c8019e9c64bd24d5336458b1c65f63318e7ad640e05369a6e6847": {
+      "username": "test_prod_user_1787857637000",
+      "accountType": "student",
+      "createdAt": 1787857642089,
+      "lastSeen": 1787857642089
+    },
+    "e81d107e58283be7e7138147859fffe9fce420da7d6fc49c4af38c9b6abe91f3": {
+      "username": "test_teacher_1787857637001",
+      "accountType": "teacher",
+      "createdAt": 1787857642946,
+      "lastSeen": 1787857642979
+    },
+    "adb939b7e4c2f68cc0b2b0384dbc97ad559869374b92257f4e46baeb61890f6f": {
+      "username": "test_prod_user_1787859257903",
+      "accountType": "student",
+      "createdAt": 1787859261443,
+      "lastSeen": 1787859262318
+    },
+    "3de481514a7d4295bada1a3183c379dc683ab3982ec372ae15e1ca44cc4c7b25": {
+      "username": "test_prod_user_1787859257903",
+      "accountType": "student",
+      "createdAt": 1787859261863,
+      "lastSeen": 1787859261863
+    },
+    "111a8f59a4f7159c0cee816ec6634b5f8fad1714f216b784659a7783c30f5966": {
+      "username": "test_teacher_1787859257904",
+      "accountType": "teacher",
+      "createdAt": 1787859262708,
+      "lastSeen": 1787859262734
+    },
+    "f9db79067e08ede3a5e49d116a192230ea6d850646765ae0591928ef8f16d417": {
+      "username": "test_prod_user_1787859831924",
+      "accountType": "student",
+      "createdAt": 1787859833957,
+      "lastSeen": 1787859834590
+    },
+    "49a4e5a668c57300e20faa5363a485b17991fe21e94d4c9a2ba61c834384b7b6": {
+      "username": "test_prod_user_1787859831924",
+      "accountType": "student",
+      "createdAt": 1787859834255,
+      "lastSeen": 1787859834255
+    },
+    "f13f455e2556cd73668f942c14c2dcf650a9d7f104a5890976f21348b1c9f558": {
+      "username": "test_teacher_1787859831925",
+      "accountType": "teacher",
+      "createdAt": 1787859834899,
+      "lastSeen": 1787859834934
+    },
+    "b0cfae48dcff958108a4c4cd2d6bb1db41d77dc6ba3ae9975a2025cc9be021db": {
+      "username": "test_prod_user_1787859982269",
+      "accountType": "student",
+      "createdAt": 1787859983553,
+      "lastSeen": 1787859984016
+    },
+    "7d617b2adb9afc80e1c5360b3c5ecf24dbd54284d69d2ff909476d1c246d8073": {
+      "username": "test_prod_user_1787859982269",
+      "accountType": "student",
+      "createdAt": 1787859983772,
+      "lastSeen": 1787859983772
+    },
+    "c712091f088793c0c4da1efdba55e62e208eda672bab2413b7e25c9483a37f56": {
+      "username": "test_teacher_1787859982270",
+      "accountType": "teacher",
+      "createdAt": 1787859984287,
+      "lastSeen": 1787859984303
     }
   }
 }

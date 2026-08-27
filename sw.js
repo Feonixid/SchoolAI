@@ -28,6 +28,9 @@ const STATIC_ASSETS = [
   '/css/collaborative-whiteboard.css',
   '/css/science-calculator.css',
   '/css/lesson-agent.css',
+  '/css/exam-lockdown.css',
+  '/css/smartboard-mode.css',
+  '/css/interactive-comm-hub.css',
   '/css/workspace.css',
   '/js/state.js',
   '/js/security.js',
@@ -107,6 +110,15 @@ const STATIC_ASSETS = [
   '/js/parent-digest.js',
   '/js/voice-dialogue.js',
   '/js/sneakernet-sync.js',
+  '/js/exam-lockdown.js',
+  '/js/onboarding.js',
+  '/js/data-privacy.js',
+  '/js/autonomous-grading.js',
+  '/js/adaptive-mastery.js',
+  '/js/school-scheduler.js',
+  '/js/smartboard-mode.js',
+  '/js/parent-conference.js',
+  '/js/interactive-comm-hub.js',
   '/manifest.json'
 ];
 

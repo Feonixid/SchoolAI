@@ -32,6 +32,9 @@
   <link rel="stylesheet" href="css/collaborative-whiteboard.css?v=1.0" />
   <link rel="stylesheet" href="css/science-calculator.css?v=1.0" />
   <link rel="stylesheet" href="css/lesson-agent.css?v=1.0" />
+  <link rel="stylesheet" href="css/exam-lockdown.css?v=1.0" />
+  <link rel="stylesheet" href="css/smartboard-mode.css?v=1.0" />
+  <link rel="stylesheet" href="css/interactive-comm-hub.css?v=1.0" />
   <link rel="stylesheet" href="css/workspace.css?v=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous" onerror="console.warn('KaTeX CDN offline - using plain text fallback')"></script>
@@ -141,6 +144,9 @@
           <button id="openStudentPortalSidebarBtn" style="width:100%;padding:8px 12px;background:rgba(99,102,241,0.08);color:var(--text);border:1px solid rgba(99,102,241,0.2);border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit">
             <span>🎓</span> <span>Student Portal & Hub</span>
           </button>
+          <button id="openStudentAskSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#f59e0b,#ef4444);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(245,158,11,0.25)">
+            <span>🙋‍♂️</span> <span>Pyet Mësuesin (Ngre Dorën)</span>
+          </button>
           <button id="joinClassBtn" style="width:100%;padding:8px 12px;background:var(--accent);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit">
             <span>🆔</span> <span data-i18n="sidebar.signin">Sign In / Register</span>
           </button>
@@ -203,6 +209,8 @@
         <div style="height:8px"></div>
         <h3 class="panel-title">⚙️ Teacher Studio &amp; Tools</h3>
         <div style="display:flex;flex-direction:column;gap:6px">
+          <button id="openTeacherHelpDeskSidebarBtn" class="quizBtn" style="width:100%;text-align:center;background:linear-gradient(135deg,#06b6d4,#3b82f6);color:white;font-weight:700">💬 Paneli i Pyetjeve &amp; Ndihmës nga Nxënësit</button>
+          <button id="openSmartboardSidebarBtn" class="quizBtn" style="width:100%;text-align:center;background:linear-gradient(135deg,#ec4899,#8b5cf6);color:white;font-weight:700">📽️ Ekrani Interaktiv i Klasës (Smartboard)</button>
           <button id="openLessonPlannerSidebarBtn" class="quizBtn" style="width:100%;text-align:center;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;font-weight:700">📋 Studio Mësimore &amp; Teste 45-Min</button>
           <button id="openSyllabusManagerSidebarBtn" class="quizBtn" style="width:100%;text-align:center;background:linear-gradient(135deg,#0284c7,#0d9488);color:white;font-weight:700">📘 Menaxheri i Progresit të Kapitujve</button>
           <button id="openParentDigestSidebarBtn" class="quizBtn" style="width:100%;text-align:center;background:linear-gradient(135deg,#10b981,#059669);color:white;font-weight:700">📱 Raporti për Prindërit (SMS / WhatsApp)</button>
@@ -421,6 +429,15 @@
 <script src="js/parent-digest.js?v=1.0"></script>
 <script src="js/voice-dialogue.js?v=1.0"></script>
 <script src="js/sneakernet-sync.js?v=1.0"></script>
+<script src="js/exam-lockdown.js?v=1.0"></script>
+<script src="js/onboarding.js?v=1.0"></script>
+<script src="js/data-privacy.js?v=1.0"></script>
+<script src="js/autonomous-grading.js?v=1.0"></script>
+<script src="js/adaptive-mastery.js?v=1.0"></script>
+<script src="js/school-scheduler.js?v=1.0"></script>
+<script src="js/smartboard-mode.js?v=1.0"></script>
+<script src="js/parent-conference.js?v=1.0"></script>
+<script src="js/interactive-comm-hub.js?v=1.0"></script>
 <script>
 // Initialize hardware detection, model selection, and settings
 (async function() {

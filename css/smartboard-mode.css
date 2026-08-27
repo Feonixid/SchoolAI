@@ -1,0 +1,183 @@
+/* css/smartboard-mode.css - Interactive Smartboard Mode Presentation Styling */
+
+.smartboard-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #090d16;
+  color: #f8fafc;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  overflow: auto;
+  font-family: inherit;
+}
+
+.smartboard-container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+}
+
+.sb-badge {
+  background: #6366f1;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sb-main-title {
+  margin: 8px 0 0 0;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.sb-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.sb-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sb-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.sb-btn-primary {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.sb-btn-primary:hover {
+  background: #059669;
+}
+
+.sb-btn-close {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+.sb-timer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, rgba(15, 23, 42, 0.6) 100%);
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  border-radius: 24px;
+  padding: 30px;
+}
+
+.sb-timer-display {
+  font-size: 96px;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 2px;
+  color: #38bdf8;
+  text-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+}
+
+.sb-timer-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.sb-phases-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.sb-phase-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sb-phase-card.active {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
+}
+
+.sb-phase-num {
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin: 0 auto 8px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.sb-phase-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.sb-phase-duration {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.sb-toolbar {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.sb-tool-btn {
+  flex: 1;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sb-tool-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #6366f1;
+}
