@@ -223,5 +223,44 @@ Object.defineProperty(window, 'sessionStorage', { value: createStorageMock(), wr
 global.localStorage = window.localStorage;
 global.sessionStorage = window.sessionStorage;
 
+// HTMLCanvasElement 2D context mock for jsdom environment
+if (typeof HTMLCanvasElement !== 'undefined') {
+  HTMLCanvasElement.prototype.getContext = function () {
+    return {
+      fillRect: jest.fn(),
+      clearRect: jest.fn(),
+      getImageData: jest.fn(() => ({ data: new Array(4) })),
+      putImageData: jest.fn(),
+      createImageData: jest.fn(() => []),
+      setTransform: jest.fn(),
+      drawImage: jest.fn(),
+      save: jest.fn(),
+      fillText: jest.fn(),
+      restore: jest.fn(),
+      beginPath: jest.fn(),
+      moveTo: jest.fn(),
+      lineTo: jest.fn(),
+      closePath: jest.fn(),
+      stroke: jest.fn(),
+      arc: jest.fn(),
+      fill: jest.fn(),
+      rect: jest.fn(),
+      translate: jest.fn(),
+      scale: jest.fn(),
+      rotate: jest.fn(),
+      arcTo: jest.fn(),
+      strokeRect: jest.fn(),
+      strokeText: jest.fn(),
+      measureText: jest.fn(() => ({ width: 0 })),
+      transform: jest.fn(),
+      resetTransform: jest.fn(),
+      setLineDash: jest.fn(),
+      getLineDash: jest.fn(() => []),
+      createLinearGradient: jest.fn(() => ({ addColorStop: jest.fn() })),
+      createRadialGradient: jest.fn(() => ({ addColorStop: jest.fn() }))
+    };
+  };
+}
+
 console.log('Jest test environment initialized');
 

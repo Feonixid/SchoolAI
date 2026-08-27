@@ -1,7 +1,3 @@
-// tests/unit/interactive-lab.test.js
-// Unit tests for Interactive Learning Lab, AI Simulator & Socratic Pedagogy Engine
-// ===================================================================
-
 describe('Interactive Learning Lab, AI Playground & Socratic Tutor', () => {
   beforeEach(() => {
     localStorage.clear();

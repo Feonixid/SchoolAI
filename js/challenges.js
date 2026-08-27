@@ -1,9 +1,3 @@
-// js/challenges.js — Interactive Subject Challenges & Problem Sets
-// ================================================================
-// Multi-subject challenge engine with tiered difficulty (Easy, Medium, Hard),
-// hints, answer verification, XP rewards, and streak tracking.
-// ================================================================
-
 (function () {
   'use strict';
 

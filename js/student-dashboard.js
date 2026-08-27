@@ -308,6 +308,26 @@
           </div>
         </div>
 
+        <div class="quick-action-card" id="quickLaunchWhiteboard">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:26px">🎨</span>
+            <div>
+              <div style="font-weight:700;font-size:14px;color:var(--text)">Tabela e Bardhë (Whiteboard)</div>
+              <div style="font-size:12px;color:var(--muted)">Bashkëpunim &amp; shënime live</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-action-card" id="quickLaunchScienceCalc">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:26px">🧮</span>
+            <div>
+              <div style="font-weight:700;font-size:14px;color:var(--text)">Kalkulatori Shkencor</div>
+              <div style="font-size:12px;color:var(--muted)">Konstante fizike &amp; formula</div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Recent Announcements Banner -->
@@ -365,6 +385,14 @@
     container.querySelector('#quickLaunchCalendar')?.addEventListener('click', () => {
       overlay.remove();
       if (window.StudyCalendar) window.StudyCalendar.open();
+    });
+    container.querySelector('#quickLaunchWhiteboard')?.addEventListener('click', () => {
+      overlay.remove();
+      if (window.CollaborativeWhiteboard) window.CollaborativeWhiteboard.open();
+    });
+    container.querySelector('#quickLaunchScienceCalc')?.addEventListener('click', () => {
+      overlay.remove();
+      if (window.ScienceCalculator) window.ScienceCalculator.open();
     });
   }
 

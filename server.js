@@ -1834,6 +1834,205 @@ app.post('/api/sync/cloud-pull', requireAdmin, async (req, res) => {
   }
 });
 
+// Multi-Master Sync Conflict Resolution Helper
+function resolveSyncConflict(existingItem, incomingItem, entityType) {
+  if (!existingItem) return incomingItem;
+  if (!incomingItem) return existingItem;
+
+  const existingTime = existingItem.updatedAt || existingItem.timestamp || 0;
+  const incomingTime = incomingItem.updatedAt || incomingItem.timestamp || 0;
+
+  switch (entityType) {
+    case 'attendance':
+      if (incomingTime > existingTime) return incomingItem;
+      if (existingTime > incomingTime) return existingItem;
+      if (incomingItem.note && !existingItem.note) return incomingItem;
+      return existingItem;
+
+    case 'grades':
+    case 'submissions':
+      return incomingTime >= existingTime ? incomingItem : existingItem;
+
+    case 'gamification':
+      return {
+        ...existingItem,
+        ...incomingItem,
+        points: Math.max(existingItem.points || 0, incomingItem.points || 0),
+        streak: Math.max(existingItem.streak || 0, incomingItem.streak || 0),
+        badges: Array.from(new Set([...(existingItem.badges || []), ...(incomingItem.badges || [])])),
+        updatedAt: Math.max(existingTime, incomingTime, Date.now())
+      };
+
+    default:
+      return incomingTime >= existingTime ? incomingItem : existingItem;
+  }
+}
+
+// Cloud Sync: Receive and reconcile classroom data on central server
+app.post('/api/sync/cloud-receive', async (req, res) => {
+  const authHeader = req.headers['authorization'] || '';
+  const expectedKey = process.env.CENTRAL_SYNC_KEY || 'eduai_cloud_sync_secret';
+  const providedToken = authHeader.replace(/^Bearer\s+/i, '');
+
+  if (providedToken !== expectedKey) {
+    return res.status(401).json({ error: 'Unauthorized: Invalid central sync authorization token.' });
+  }
+
+  const { sourceHostname, timestamp, data: incomingData } = req.body || {};
+  if (!incomingData || typeof incomingData !== 'object') {
+    return res.status(400).json({ error: 'Invalid payload: Missing incoming sync dataset.' });
+  }
+
+  try {
+    const centralData = loadData();
+    let conflictsResolved = 0;
+    const mergeStats = { students: 0, attendance: 0, submissions: 0, announcements: 0 };
+
+    // 1. Merge Students & User Profiles
+    if (incomingData.students || incomingData.users) {
+      const incomingStudents = incomingData.students || incomingData.users || {};
+      if (!centralData.students) centralData.students = {};
+      
+      Object.keys(incomingStudents).forEach(id => {
+        const existing = centralData.students[id];
+        const incoming = incomingStudents[id];
+        if (existing) {
+          conflictsResolved++;
+          centralData.students[id] = resolveSyncConflict(existing, incoming, 'students');
+        } else {
+          centralData.students[id] = incoming;
+        }
+        mergeStats.students++;
+      });
+    }
+
+    // 2. Merge Attendance Records
+    if (Array.isArray(incomingData.attendance)) {
+      if (!Array.isArray(centralData.attendance)) centralData.attendance = [];
+      const attendanceMap = new Map();
+      
+      centralData.attendance.forEach(rec => {
+        const key = `${rec.studentId || rec.id}_${rec.date}`;
+        attendanceMap.set(key, rec);
+      });
+
+      incomingData.attendance.forEach(incomingRec => {
+        const key = `${incomingRec.studentId || incomingRec.id}_${incomingRec.date}`;
+        const existingRec = attendanceMap.get(key);
+        if (existingRec) {
+          conflictsResolved++;
+          const resolved = resolveSyncConflict(existingRec, incomingRec, 'attendance');
+          attendanceMap.set(key, resolved);
+        } else {
+          attendanceMap.set(key, incomingRec);
+        }
+        mergeStats.attendance++;
+      });
+
+      centralData.attendance = Array.from(attendanceMap.values());
+    }
+
+    // 3. Merge Homework Submissions & Grades
+    if (Array.isArray(incomingData.submissions)) {
+      if (!Array.isArray(centralData.submissions)) centralData.submissions = [];
+      const subMap = new Map();
+
+      centralData.submissions.forEach(sub => {
+        const key = `${sub.studentId || sub.id}_${sub.assignmentId || sub.title}`;
+        subMap.set(key, sub);
+      });
+
+      incomingData.submissions.forEach(incomingSub => {
+        const key = `${incomingSub.studentId || incomingSub.id}_${incomingSub.assignmentId || incomingSub.title}`;
+        const existingSub = subMap.get(key);
+        if (existingSub) {
+          conflictsResolved++;
+          const resolved = resolveSyncConflict(existingSub, incomingSub, 'submissions');
+          subMap.set(key, resolved);
+        } else {
+          subMap.set(key, incomingSub);
+        }
+        mergeStats.submissions++;
+      });
+
+      centralData.submissions = Array.from(subMap.values());
+    }
+
+    // 4. Merge Announcements
+    if (Array.isArray(incomingData.announcements)) {
+      if (!Array.isArray(centralData.announcements)) centralData.announcements = [];
+      const annMap = new Map();
+      centralData.announcements.forEach(a => annMap.set(a.id, a));
+      incomingData.announcements.forEach(a => {
+        if (!annMap.has(a.id)) {
+          annMap.set(a.id, a);
+          mergeStats.announcements++;
+        }
+      });
+      centralData.announcements = Array.from(annMap.values());
+    }
+
+    // Record Sync Event in Audit Log
+    if (!Array.isArray(centralData.syncAuditLog)) centralData.syncAuditLog = [];
+    centralData.syncAuditLog.push({
+      event: 'cloud-receive',
+      source: sourceHostname || 'anonymous-teacher-laptop',
+      timestamp: timestamp || Date.now(),
+      recordedAt: Date.now(),
+      stats: mergeStats,
+      conflictsResolved
+    });
+
+    if (centralData.syncAuditLog.length > 500) {
+      centralData.syncAuditLog = centralData.syncAuditLog.slice(-500);
+    }
+
+    saveData(centralData);
+
+    res.json({
+      success: true,
+      message: 'Central server successfully reconciled and merged classroom sync data.',
+      conflictsResolved,
+      stats: mergeStats,
+      receivedTimestamp: Date.now()
+    });
+  } catch (err) {
+    res.status(500).json({ error: `Central merge error: ${err.message}` });
+  }
+});
+
+// Cloud Sync: Export authoritative curriculum and announcements
+app.get('/api/sync/cloud-export', (req, res) => {
+  const authHeader = req.headers['authorization'] || '';
+  const expectedKey = process.env.CENTRAL_SYNC_KEY || 'eduai_cloud_sync_secret';
+  const providedToken = authHeader.replace(/^Bearer\s+/i, '');
+
+  if (providedToken !== expectedKey) {
+    return res.status(401).json({ error: 'Unauthorized: Invalid central sync authorization token.' });
+  }
+
+  const centralData = loadData();
+  res.json({
+    schoolName: centralData.schoolName || 'Qendra Arsimore Kombëtare',
+    timestamp: Date.now(),
+    announcements: centralData.announcements || [],
+    curriculumUpdates: centralData.curriculum || [],
+    schoolCalendar: centralData.calendar || []
+  });
+});
+
+// Sync Status & Observability
+app.get('/api/sync/status', (req, res) => {
+  const data = loadData();
+  const logs = data.syncAuditLog || [];
+  res.json({
+    mode: process.env.IS_CENTRAL_SERVER ? 'central-cloud' : 'lan-classroom-hub',
+    lastSync: logs.length > 0 ? logs[logs.length - 1] : null,
+    totalSyncEvents: logs.length,
+    recentAuditLogs: logs.slice(-10)
+  });
+});
+
 // ===================================================================
 // HEALTH & OBSERVABILITY
 // ===================================================================

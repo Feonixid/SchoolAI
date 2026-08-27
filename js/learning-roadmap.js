@@ -1,15 +1,6 @@
-// js/learning-roadmap.js — Visual Learning Roadmaps & Skill Trees
-// ================================================================
-// Interactive subject-based progression paths with prerequisite
-// skill nodes, progress tracking, and gamification XP rewards.
-// ================================================================
-
 (function () {
   'use strict';
 
-  // ----------------------------------------------------------------
-  // ROADMAP DATA — Each subject has ordered skill nodes
-  // ----------------------------------------------------------------
   const ROADMAPS = {
     math: {
       title: 'Matematikë — Rruga e Mësimit',

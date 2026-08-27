@@ -1,9 +1,3 @@
-// js/study-calendar.js — Study Calendar, Timetable & Exam Planner
-// ================================================================
-// Full monthly calendar with class schedule, homework deadlines,
-// exam dates, school events, and add-event functionality.
-// ================================================================
-
 (function () {
   'use strict';
 

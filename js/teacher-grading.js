@@ -1,9 +1,3 @@
-// js/teacher-grading.js — Teacher Assignment Grading & Rubric Studio
-// ===================================================================
-// Interactive grading suite with rubric sliders, AI-assisted evaluation,
-// plagiarism metrics, and Gradebook synchronization.
-// ===================================================================
-
 (function () {
   'use strict';
 

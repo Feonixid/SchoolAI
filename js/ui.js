@@ -187,6 +187,22 @@
     }
   });
 
+  // Collaborative Class Whiteboard button wiring
+  const openWhiteboardSidebarBtn = document.getElementById('openWhiteboardSidebarBtn');
+  openWhiteboardSidebarBtn?.addEventListener('click', () => {
+    if (window.CollaborativeWhiteboard && window.CollaborativeWhiteboard.open) {
+      window.CollaborativeWhiteboard.open();
+    }
+  });
+
+  // Science Calculator button wiring
+  const openScienceCalcSidebarBtn = document.getElementById('openScienceCalcSidebarBtn');
+  openScienceCalcSidebarBtn?.addEventListener('click', () => {
+    if (window.ScienceCalculator && window.ScienceCalculator.open) {
+      window.ScienceCalculator.open();
+    }
+  });
+
   // Teacher Grading Studio button wiring
   const openTeacherGradingSidebarBtn = document.getElementById('openTeacherGradingSidebarBtn');
   openTeacherGradingSidebarBtn?.addEventListener('click', () => {

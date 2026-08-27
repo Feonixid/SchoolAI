@@ -550,6 +550,10 @@
   // GENERATE WITH OLLAMA
   // ----------------------------------------------------------------
   async function generateWithOllama(messages, model, contextLength, useStreaming) {
+    const profileSettings = window.HardwareProfile?.getProfileSettings() || {};
+    const numThreads = profileSettings.numThreads || Math.min(navigator.hardwareConcurrency || 4, 8);
+    const numBatch = profileSettings.numBatch || 256;
+
     let response;
     try {
       response = await fetch(state.api.endpoint, {
@@ -562,7 +566,9 @@
           max_tokens:  2000,
           stream:      useStreaming,
           options: {
-            num_ctx: contextLength
+            num_ctx: contextLength,
+            num_thread: numThreads,
+            num_batch: numBatch
           }
         })
       });

@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="css/learning-roadmap.css?v=1.0" />
   <link rel="stylesheet" href="css/challenges.css?v=1.0" />
   <link rel="stylesheet" href="css/study-calendar.css?v=1.0" />
+  <link rel="stylesheet" href="css/collaborative-whiteboard.css?v=1.0" />
+  <link rel="stylesheet" href="css/science-calculator.css?v=1.0" />
   <link rel="stylesheet" href="css/workspace.css?v=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous" onerror="console.warn('KaTeX CDN offline - using plain text fallback')"></script>
@@ -119,6 +121,12 @@
           </button>
           <button id="openCalendarSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(59,130,246,0.25)">
             <span>📅</span> <span>Kalendari &amp; Orari</span>
+          </button>
+          <button id="openWhiteboardSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#6366f1,#10b981);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(99,102,241,0.25)">
+            <span>🎨</span> <span>Tabela e Bardhë (Whiteboard)</span>
+          </button>
+          <button id="openScienceCalcSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#0d9488,#0284c7);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(13,148,136,0.25)">
+            <span>🧮</span> <span>Kalkulatori Shkencor</span>
           </button>
           <button id="openTeacherGradingSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#0284c7,#0d9488);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(2,132,199,0.25)">
             <span>📝</span> <span>Studio e Vlerësimit (Mësuesi)</span>
@@ -397,6 +405,8 @@
 <script src="js/learning-roadmap.js?v=1.0"></script>
 <script src="js/challenges.js?v=1.0"></script>
 <script src="js/study-calendar.js?v=1.0"></script>
+<script src="js/collaborative-whiteboard.js?v=1.0"></script>
+<script src="js/science-calculator.js?v=1.0"></script>
 <script>
 // Initialize hardware detection, model selection, and settings
 (async function() {

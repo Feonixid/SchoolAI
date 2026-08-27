@@ -1,9 +1,3 @@
-// js/quiz-battle.js — Gamified Classroom Peer Battle Arena
-// ===================================================================
-// Real-time 60-second quiz arena with streaks, power-ups, AI rivals,
-// and gamification XP rewards.
-// ===================================================================
-
 (function () {
   'use strict';
 

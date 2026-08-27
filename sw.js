@@ -22,6 +22,11 @@ const STATIC_ASSETS = [
   '/css/pronunciation-coach.css',
   '/css/teacher-grading.css',
   '/css/flashcards.css',
+  '/css/learning-roadmap.css',
+  '/css/challenges.css',
+  '/css/study-calendar.css',
+  '/css/collaborative-whiteboard.css',
+  '/css/science-calculator.css',
   '/css/workspace.css',
   '/js/state.js',
   '/js/security.js',
@@ -90,6 +95,11 @@ const STATIC_ASSETS = [
   '/js/pronunciation-coach.js',
   '/js/teacher-grading.js',
   '/js/flashcards.js',
+  '/js/learning-roadmap.js',
+  '/js/challenges.js',
+  '/js/study-calendar.js',
+  '/js/collaborative-whiteboard.js',
+  '/js/science-calculator.js',
   '/manifest.json'
 ];
 

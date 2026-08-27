@@ -1,9 +1,3 @@
-// js/pronunciation-coach.js — Multi-Language Speech & Pronunciation Coach
-// ===================================================================
-// Interactive speech trainer with phonetic accuracy scoring, word-level
-// feedback, and native TTS pronunciation modeling.
-// ===================================================================
-
 (function () {
   'use strict';
 

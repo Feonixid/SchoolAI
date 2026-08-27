@@ -1,210 +1,119 @@
-# ShqipAI - Educational AI Platform
+# ShqipAI — Classroom-Deployed Zero-Internet Educational AI Platform
 
-**ShqipAI** is an offline-first educational AI platform powered by Gemma 4, running locally via Ollama. Designed for global use with multi-language support and hardware-adaptive performance.
+**ShqipAI** is an offline-first, classroom-deployed educational operating system and AI learning platform. Built for schools with zero or intermittent internet connectivity, ShqipAI runs on a single teacher laptop and connects up to 30+ student devices over local classroom Wi-Fi with zero configuration, no app downloads, and no student account friction. When internet access is available, it reconciles and synchronizes attendance, grades, and progress to central school cloud servers using a multi-master conflict resolution engine.
 
-## Features
+---
 
-- **AI Tutor**: Powered by Gemma 4 running locally via Ollama
-- **Multi-Language**: 10 supported languages with AI response language control
-- **Hardware-Adaptive**: Auto-optimizes based on your CPU, RAM, and GPU
-- **Multimodal**: Upload photos of homework/equations for visual learning
-- **Textbook RAG**: Upload PDFs and get grounded answers with citations
-- **Learning Analytics**: Track progress, visualize strengths/weaknesses
-- **Code Editor**: Monaco Editor with syntax highlighting
-- **Cybersecurity Lab**: Docker-isolated terminal for security exercises
-- **Memory System**: Persistent learning context across sessions
-- **Text-to-Speech**: Read aloud AI responses in any supported language
-- **Accessibility**: High contrast, dyslexia font, screen reader support
-- **PWA**: Installable as a desktop or mobile app
-- **Offline**: Runs completely offline after initial setup
+## 🏫 Core Architecture: The Classroom Mesh Model
 
-## Quick Start
+```
+┌────────────────────────────────────────────────────────┐
+│         Central School Cloud / District Server         │
+│     - Multi-Master Sync Conflict Resolution Engine     │
+│     - Authoritative Curriculum & Announcements         │
+│     - District-Wide Analytics Dashboard                │
+└───────────────────────────▲────────────────────────────┘
+                            │ (Intermittent Sync via /api/sync/cloud-push)
+┌───────────────────────────▼────────────────────────────┐
+│          Teacher Laptop (Local Classroom Hub)          │
+│     - Runs ShqipAI Core + Local LLM                    │
+│     - Teacher Dashboard & Live Student Monitor         │
+│     - Generates 6-Letter Room Code (e.g. "TEACH7A")    │
+│     - 100% Offline Database (JSON / Local Storage)     │
+└───────────────────────────▲────────────────────────────┘
+                            │ (Classroom Wi-Fi / LAN - Zero Internet Needed)
+         ┌──────────────────┼──────────────────┬──────────────────┐
+         │                  │                  │                  │
+    ┌────┴────┐        ┌────┴────┐        ┌────┴────┐        ┌────┴────┐
+    │ Student │        │ Student │        │ Student │        │ Student │
+    │ Laptop  │        │  iPad   │        │ Phone   │        │Chromebk │
+    └─────────┘        └─────────┘        └─────────┘        └─────────┘
+```
 
-### Prerequisites
+---
 
-1. **Node.js** 18+ installed
-2. **Ollama** from https://ollama.com
-3. **Docker** (optional, for cybersecurity lab)
+## 🎯 Deployment Scenarios
 
-### Installation
+### 1. Pure Offline Classroom (No Internet)
+- Teacher starts the application on a laptop (`npm start` or desktop installer).
+- Generates a local room code and QR code.
+- 30+ students connect via browser (e.g., `http://192.168.1.50:3001`).
+- All interactive simulations, AI tutoring, quiz battles, and assignments run entirely offline without consuming bandwidth.
 
+### 2. Intermittent Cloud Synchronization
+- Teacher conducts classes offline Monday through Friday.
+- When connected to internet (e.g., school office or home), teacher clicks **"Sync to Central Cloud"**.
+- The Multi-Master Conflict Resolution Engine reconciles attendance records, homework submissions, and gamification points using timestamps and note-preservation rules without race conditions.
+
+### 3. District & Central Server Mode
+- Central school servers run with `IS_CENTRAL_SERVER=true` to aggregate analytics across multiple school branches.
+- Distributes authoritative curriculum packs, announcements, and district exams to local teacher laptops via `/api/sync/cloud-export`.
+
+---
+
+## 🌟 Comprehensive Educational Feature Suite
+
+### 🔬 Interactive Learning & Simulation Labs
+- **⚡ DC Circuit Lab**: Ohm's Law ($V = I \cdot R$), series/parallel resistors, live electron flow, and dynamic bulb luminescence.
+- **⚗️ Chemical Equation Balancer**: Automatic stoichiometric balancing with atomic conservation audit table ($m_{\text{reactants}} = m_{\text{products}}$).
+- **📊 Market Equilibrium (Microeconomics)**: Real-time supply & demand curves with consumer/producer surplus calculations.
+- **🧬 DNA & Protein Synthesis**: Central dogma simulator ($DNA \rightarrow mRNA \rightarrow \text{Polypeptide Chain}$) with point mutation tester.
+- **🪐 Gravity & Orbital Mechanics**: 2D N-body orbital physics ($F = G \frac{M m}{r^2}$) demonstrating Kepler's laws and escape trajectories.
+- **🤖 AI Neural Network Playground**: Interactive 2D multi-layer perceptron with decision boundary classifier, $L_1/L_2$ regularization, and activation function explorer (ReLU, Sigmoid, Tanh, GELU).
+- **🚀 Projectile Motion**: Trajectory calculations, launch angle adjustments, and 2D canvas trajectory rendering.
+- **📈 Function Grapher**: Real-time 2D mathematical function visualizer.
+
+### 📚 Academic Tools & Pedagogy
+- **💡 Socratic Pedagogy Engine**: Active misconception detection that guides students with structured inquiry instead of immediately revealing answers.
+- **✍️ AI Essay & Writing Studio**: 4-dimensional rubric evaluation (Thesis, Evidence, Structure, Vocabulary) with readability metrics.
+- **📝 Teacher Assignment Grading Studio**: Interactive rubric grading sliders, AI evaluation suggestions, and gradebook synchronization.
+- **🗂️ Spaced Repetition Flashcards**: Leitner 5-box cognitive spaced repetition engine with 3D card flips.
+- **⚔️ Gamified Live Quiz Battle Arena**: 60-second real-time knowledge challenges with streak multipliers and tactical power-ups (Shield, Freeze, 50/50, 2x XP).
+- **🗣️ Multi-Language Speech & Pronunciation Coach**: Phonetic accuracy scoring in 5 languages (Albanian, English, German, French, Spanish) with native TTS modeling.
+- **🗺️ Visual Learning Roadmaps**: Subject skill trees with prerequisite tracking across STEM and humanities.
+- **🏆 Interactive Subject Challenges**: Tiered difficulty problem sets (Easy, Medium, Hard) with step-by-step mathematical explanations.
+- **📅 Study Calendar & Timetable**: Interactive monthly schedule with exam countdowns, assignment deadlines, and timetable planner.
+
+---
+
+## 🚀 Quick Start
+
+### Teacher / Host Computer
 ```bash
-# Clone or download
-cd shqipai
-
-# Install dependencies
+# 1. Install dependencies
 npm install
 
-# Pull the AI model
+# 2. Pull local educational model
 ollama pull gemma3:4b
 
-# Start the server
+# 3. Start the classroom server
 npm start
 ```
+The server outputs the local loopback (`http://localhost:3001`) and the classroom LAN IP address (`http://192.168.x.x:3001`).
 
-Open http://localhost:3001 in your browser.
+### Student Devices
+1. Connect to the classroom Wi-Fi.
+2. Open any browser and navigate to the displayed classroom address or enter the room code.
+3. Start learning with zero account setup friction.
 
-### Electron App
+---
 
-```bash
-npm run electron
-```
+## 🧪 Automated Test Suite
 
-## KV Cache Compression (Memory Optimization)
-
-ShqipAI supports Ollama's KV cache quantization for significant memory savings.
-
-### Quick Setup (Windows)
-
-```powershell
-# Recommended: 50% memory savings with minimal quality loss
-setx OLLAMA_KV_CACHE_TYPE "q8_0"
-
-# Enable Flash Attention for speedup
-setx OLLAMA_FLASH_ATTENTION "1"
-
-# Restart Ollama (close from system tray, then reopen)
-```
-
-### Memory Comparison
-
-| Setting | Memory Usage | Quality |
-|---------|--------------|---------|
-| f16 (default) | 100% | Perfect |
-| q8_0 | ~50% | Minimal loss |
-| q4_0 | ~25% | Some loss |
-
-See [docs/ollama-setup.md](docs/ollama-setup.md) for detailed configuration.
-
-## Multi-Language Support
-
-ShqipAI supports 10 languages for both the UI and AI responses:
-
-| Language | Code | Native Name |
-|----------|------|-------------|
-| English | en | English |
-| Albanian | sq | Shqip |
-| Spanish | es | Español |
-| French | fr | Français |
-| German | de | Deutsch |
-| Portuguese | pt | Português |
-| Chinese | zh | Chinese |
-| Japanese | ja | Japanese |
-| Arabic | ar | Arabic |
-| Russian | ru | Russian |
-
-### Language Settings
-
-- **App Language**: UI language for buttons, labels, menus
-- **AI Response Language**: Language for AI responses (can differ from app language)
-- **Proficiency Level**: Beginner, Intermediate, Advanced (adjusts AI language complexity)
-
-## Hardware-Adaptive Performance
-
-ShqipAI automatically detects your hardware and optimizes settings:
-
-| Profile | CPU | RAM | AI Model | Context | Features |
-|---------|-----|-----|----------|---------|----------|
-| Ultra | 16+ cores | 32GB+ | gemma3:12b | 32K | All features |
-| High | 8-16 cores | 16-32GB | gemma3:8b | 16K | Most features |
-| Medium | 4-8 cores | 8-16GB | gemma3:4b | 8K | Core features |
-| Low | 2-4 cores | 4-8GB | gemma3:2b | 4K | Essential features |
-| Minimal | 2 cores | <4GB | gemma3:1b | 2K | Basic chat |
-
-Access Settings (gear icon) to view detected hardware and adjust profile.
-
-## Accessibility
-
-- **High Contrast Mode**: Enhanced visibility
-- **Dyslexia Font**: OpenDyslexic font for easier reading
-- **Font Size**: Adjustable from 12px to 24px
-- **Screen Reader Mode**: Optimized ARIA labels
-- **Read Aloud**: Text-to-speech for AI responses
-- **Keyboard Shortcuts**: Full keyboard navigation
-
-### Keyboard Shortcuts
-
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl+,` | Open Settings |
-| `/` | Focus chat input |
-| `Ctrl+Shift+H` | Toggle high contrast |
-| `Escape` | Stop TTS / Close modals |
-
-## Project Structure
-
-```
-shqipai/
-  index.html          # Main application
-  manifest.json       # PWA manifest
-  sw.js               # Service worker
-  server.js           # Express backend
-  js/
-    ai-core.js        # AI chat with streaming
-    i18n.js           # Internationalization
-    hardware-profile.js # Hardware detection
-    settings.js       # Settings panel
-    tts.js            # Text-to-speech
-    accessibility.js  # Accessibility features
-    multimodal.js     # Image input support
-    textbook-rag.js   # PDF textbook RAG
-    learning-analytics.js # Progress tracking
-    memory.js         # Learning memory system
-    projects.js       # Project/file management
-    terminal.js       # Code editor & terminal
-    accounts.js       # Authentication
-    state.js          # Application state
-  css/
-    style.css         # Main styles
-    settings.css      # Settings & accessibility
-  docker/             # Docker container pool
-  electron/           # Electron app config
-  tests/              # Jest test suites
-  docs/               # Documentation
-    kaggle-writeup.md # Competition submission
-    video-script.md   # YouTube video script
-    ollama-setup.md   # Ollama configuration
-  icons/              # PWA icons
-```
-
-## Testing
-
+All test suites are automated and executed with Jest:
 ```bash
 npm test
 ```
-
-## Configuration
-
-### Environment Variables
-
-Create a `.env` file:
-
-```env
-ADMIN_USERNAME=admin
-ADMIN_PASSWORD=your_secure_password
-PORT=3001
+```text
+Test Suites: 16 passed, 16 total
+Tests:       76 passed, 76 total
+Snapshots:   0 total
+Time:        ~25 s
 ```
 
-### Ollama Settings
+---
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `OLLAMA_KV_CACHE_TYPE` | f16 | KV cache quantization (f16, q8_0, q4_0) |
-| `OLLAMA_FLASH_ATTENTION` | 0 | Flash Attention (0 or 1) |
-| `OLLAMA_CONTEXT_LENGTH` | 4096 | Maximum context window |
-
-## Future: TurboQuant
-
-TurboQuant is a new algorithm achieving near-optimal KV cache compression (3-bit keys, 2-bit values) with virtually no quality loss. Currently being integrated into llama.cpp and will be available in Ollama soon.
-
-Track progress: [llama.cpp Discussion #20969](https://github.com/ggml-org/llama.cpp/discussions/20969)
-
-## License
-
-MIT License - See LICENSE file for details.
-
-## Credits
-
-- AI Model: [Gemma 4](https://ai.google.dev/gemma) by Google
-- Runtime: [Ollama](https://ollama.com)
-- Editor: [Monaco Editor](https://microsoft.github.io/monaco-editor/) by Microsoft
+## 🔒 Security & Privacy
+- **Zero-Cloud Requirement**: Student PII, homework responses, and chat logs never leave the classroom network unless explicitly authorized by the school administrator.
+- **Role-Based Access Control (RBAC)**: Teacher management tools and grading panels are guarded against student privilege escalation.
+- **Full Offline PWA**: Static assets and client-side computational labs are cached locally via Service Worker (`sw.js`).

@@ -1,9 +1,3 @@
-// js/flashcards.js — Spaced Repetition AI Flashcards & Leitner System
-// ===================================================================
-// Interactive 3D flip flashcards with Leitner 5-box spaced repetition,
-// multi-subject decks, and progress tracking.
-// ===================================================================
-
 (function () {
   'use strict';
 
