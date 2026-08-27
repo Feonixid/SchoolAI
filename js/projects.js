@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  const STORAGE_KEY = 'shqipai_projects_v2';
+  const STORAGE_KEY = 'EduAI_projects_v2';
 
   // ----------------------------------------------------------------
   // HELPERS
@@ -54,11 +54,11 @@
         files: [
           {
             id: 'f_py1', name: 'main.py', lang: 'python',
-            content: '# Welcome to ShqipAI Coding!\n# Press Ctrl+Enter or click ▶ Run to execute\n\nname = input("What is your name? ")\nprint(f"Hello, {name}! Let\'s start coding.")\n'
+            content: '# Welcome to EduAI Coding!\n# Press Ctrl+Enter or click ▶ Run to execute\n\nname = input("What is your name? ")\nprint(f"Hello, {name}! Let\'s start coding.")\n'
           },
           {
             id: 'f_html1', name: 'index.html', lang: 'html',
-            content: '<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>My Page</title>\n  <style>\n    body { font-family: sans-serif; text-align: center; padding: 40px; background: #f0f4ff; }\n    h1 { color: #4a6cf7; }\n  </style>\n</head>\n<body>\n  <h1>Hello World!</h1>\n  <p>Edit me in ShqipAI.</p>\n</body>\n</html>\n'
+            content: '<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>My Page</title>\n  <style>\n    body { font-family: sans-serif; text-align: center; padding: 40px; background: #f0f4ff; }\n    h1 { color: #4a6cf7; }\n  </style>\n</head>\n<body>\n  <h1>Hello World!</h1>\n  <p>Edit me in EduAI.</p>\n</body>\n</html>\n'
           },
           {
             id: 'f_js1', name: 'script.js', lang: 'javascript',

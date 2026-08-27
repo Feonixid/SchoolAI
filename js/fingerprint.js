@@ -447,7 +447,7 @@
             ctx.fillRect(0, 0, 300, 80);
             ctx.fillStyle = '#069';
             ctx.font = '14px Arial';
-            ctx.fillText('ShqipAI v6', 5, 20);
+            ctx.fillText('EduAI v6', 5, 20);
             ctx.fillStyle = 'rgba(102, 204, 0, 0.7)';
             ctx.font = '18px Georgia';
             ctx.fillText('Silent Scanner', 5, 50);

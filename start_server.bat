@@ -1,5 +1,5 @@
 @echo off
-echo Starting ShqipAI Server...
+echo Starting EduAI Server...
 echo ===================================
 cd /d "%~dp0"
 

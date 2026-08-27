@@ -1,4 +1,4 @@
-# ShqipAI: Offline-First Educational AI for Every Classroom
+# EduAI: Offline-First Educational AI for Every Classroom
 
 **Bridging the Digital Divide with Local Gemma 4**
 
@@ -12,11 +12,11 @@ The digital divide in education is widening, and existing AI tools are making it
 
 ## The Solution
 
-**ShqipAI** is an offline-first educational AI platform powered by Gemma 4. It works anywhere, on any hardware, in any language - with **zero installation required**.
+**EduAI** is an offline-first educational AI platform powered by Gemma 4. It works anywhere, on any hardware, in any language - with **zero installation required**.
 
 ### Key Innovation 1: Dual Backend Architecture
 
-ShqipAI supports two inference backends:
+EduAI supports two inference backends:
 
 **Ollama Backend** (Primary):
 - Full Gemma 4 model support (1B to 12B)
@@ -33,7 +33,7 @@ This means a student opens a URL and gets AI tutoring - no IT department, no sof
 
 ### Key Innovation 2: Hardware-Adaptive Performance
 
-ShqipAI automatically detects CPU, RAM, and GPU capabilities, then optimizes itself:
+EduAI automatically detects CPU, RAM, and GPU capabilities, then optimizes itself:
 
 | Profile | Hardware | Model | Context | Memory |
 |---------|----------|-------|---------|--------|
@@ -146,7 +146,7 @@ All data stays local. No cloud APIs, no tracking. Student conversations never le
 
 ## Conclusion
 
-ShqipAI proves AI education doesn't need the cloud. With dual backend support (Ollama + WebLLM), hardware-adaptive optimization, and pedagogical fine-tuning, we bring AI tutoring to the 2.6 billion people currently excluded.
+EduAI proves AI education doesn't need the cloud. With dual backend support (Ollama + WebLLM), hardware-adaptive optimization, and pedagogical fine-tuning, we bring AI tutoring to the 2.6 billion people currently excluded.
 
 The technology exists. The models are open. The impact is waiting to happen.
 

@@ -1,6 +1,6 @@
 {
-  "name": "ShqipAI - Educational AI Platform",
-  "short_name": "ShqipAI",
+  "name": "EduAI - Educational AI Platform",
+  "short_name": "EduAI",
   "description": "Educational AI platform powered by Gemma 4, running locally via Ollama",
   "start_url": "/",
   "display": "standalone",

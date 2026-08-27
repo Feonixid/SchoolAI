@@ -1,6 +1,6 @@
-# Ollama Setup Guide for ShqipAI
+# Ollama Setup Guide for EduAI
 
-This guide covers setting up Ollama with optimal settings for ShqipAI, including KV cache compression for memory efficiency.
+This guide covers setting up Ollama with optimal settings for EduAI, including KV cache compression for memory efficiency.
 
 ## Prerequisites
 

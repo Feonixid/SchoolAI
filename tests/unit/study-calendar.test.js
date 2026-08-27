@@ -37,4 +37,16 @@ describe('Study Calendar, Timetable & Exam Planner', () => {
     expect(titleEl.textContent.length).toBeGreaterThan(0);
     window.StudyCalendar.close();
   });
+
+  test('applyGradeSchedule generates grade-specific period events and updates schedule', () => {
+    window.StudyCalendar.open();
+    window.StudyCalendar.applyGradeSchedule(12);
+
+    const events = window.StudyCalendar.getEvents();
+    expect(events.length).toBeGreaterThan(0);
+    const hasMatura = events.some(e => e.title.includes('Maturë') || e.title.includes('Matematikë'));
+    expect(hasMatura).toBe(true);
+
+    window.StudyCalendar.close();
+  });
 });

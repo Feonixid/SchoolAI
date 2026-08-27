@@ -1,7 +1,7 @@
 {
-  "name": "shqipai",
+  "name": "EduAI",
   "version": "2.0.0",
-  "description": "ShqipAI — Educational AI Platform. Powered by Gemma 4, runs fully offline via Ollama. Multi-language, hardware-adaptive.",
+  "description": "EduAI — Educational AI Platform. Powered by Gemma 4, runs fully offline via Ollama. Multi-language, hardware-adaptive.",
   "main": "electron/main.js",
   "scripts": {
     "start": "node server.js",
@@ -30,9 +30,9 @@
     "wait-on": "^7.2.0"
   },
   "build": {
-    "appId": "com.shqipai.app",
-    "productName": "ShqipAI",
-    "copyright": "Copyright 2026 ShqipAI",
+    "appId": "com.EduAI.app",
+    "productName": "EduAI",
+    "copyright": "Copyright 2026 EduAI",
     "win": {
       "target": [
         "nsis"

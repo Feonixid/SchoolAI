@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ShqipAI — Single-Cell Kaggle Script
+EduAI — Single-Cell Kaggle Script
 =====================================
 Paste this entire file into ONE Kaggle code cell and run it.
 It handles everything automatically:
@@ -10,7 +10,7 @@ It handles everything automatically:
   Stage 2 → Fine-tune Gemma 4 E4B on 2x T4
   Stage 3 → Export GGUF for Ollama + before/after evaluation report
 
-Resumable: uses /kaggle/working/.shqipai_stage to track progress.
+Resumable: uses /kaggle/working/.eduai_stage to track progress.
 Re-run the cell to resume from where it left off.
 
 CONFIGURATION — edit the block below before running.

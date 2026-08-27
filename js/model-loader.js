@@ -1,5 +1,5 @@
 /**
- * Hardware-Adaptive Model Loader for ShqipAI
+ * Hardware-Adaptive Model Loader for EduAI
  * Automatically selects optimal model based on available hardware
  * 
  * Model Tiers:
@@ -24,8 +24,8 @@ class ModelLoader {
         return {
             // Full precision for servers
             'full': {
-                name: 'shqipai-tutor-f16',
-                file: 'shqipai-tutor-f16.gguf',
+                name: 'EduAI-tutor-f16',
+                file: 'EduAI-tutor-f16.gguf',
                 minVram: 32,
                 minRam: 64,
                 description: 'Full precision (server-grade)',
@@ -33,8 +33,8 @@ class ModelLoader {
             },
             // Q8 for workstations
             'q8': {
-                name: 'shqipai-tutor-q8',
-                file: 'shqipai-tutor-q8_0.gguf',
+                name: 'EduAI-tutor-q8',
+                file: 'EduAI-tutor-q8_0.gguf',
                 minVram: 16,
                 minRam: 32,
                 description: 'Q8 quantization (workstation)',
@@ -42,8 +42,8 @@ class ModelLoader {
             },
             // Q4_K_M for gaming PCs
             'q4': {
-                name: 'shqipai-tutor-q4',
-                file: 'shqipai-tutor-q4_k_m.gguf',
+                name: 'EduAI-tutor-q4',
+                file: 'EduAI-tutor-q4_k_m.gguf',
                 minVram: 8,
                 minRam: 16,
                 description: 'Q4_K_M quantization (gaming PC)',
@@ -51,8 +51,8 @@ class ModelLoader {
             },
             // Q4_K_M Small for budget laptops
             'q4-small': {
-                name: 'shqipai-tutor-e4b-q4',
-                file: 'shqipai-tutor-e4b-q4_k_m.gguf',
+                name: 'EduAI-tutor-e4b-q4',
+                file: 'EduAI-tutor-e4b-q4_k_m.gguf',
                 minVram: 4,
                 minRam: 8,
                 description: 'E4B Q4_K_M (budget laptop)',
@@ -60,8 +60,8 @@ class ModelLoader {
             },
             // Q2_K for old laptops
             'q2': {
-                name: 'shqipai-tutor-e4b-q2',
-                file: 'shqipai-tutor-e4b-q2_k.gguf',
+                name: 'EduAI-tutor-e4b-q2',
+                file: 'EduAI-tutor-e4b-q2_k.gguf',
                 minVram: 2,
                 minRam: 4,
                 description: 'E4B Q2_K (old laptop)',
@@ -322,8 +322,8 @@ ${this.generateModelfile()}
 
 Then run:
 \`\`\`bash
-ollama create shqipai-tutor -f Modelfile
-ollama run shqipai-tutor
+ollama create EduAI-tutor -f Modelfile
+ollama run EduAI-tutor
 \`\`\`
 `;
     }
@@ -365,7 +365,7 @@ ollama run shqipai-tutor
     }
 }
 
-// Export for use in ShqipAI
+// Export for use in EduAI
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { ModelLoader };
 }

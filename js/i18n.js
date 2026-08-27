@@ -1,7 +1,7 @@
 // js/i18n.js
 // ===================================================================
 // INTERNATIONALIZATION (i18n) MODULE
-// Multi-language support for ShqipAI - supports 10 languages
+// Multi-language support for EduAI - supports 10 languages
 // ===================================================================
 
 (function () {
@@ -443,9 +443,9 @@
   };
 
   // Default language
-  let currentLanguage = localStorage.getItem('shqipai_language') || 'en';
-  let aiResponseLanguage = localStorage.getItem('shqipai_ai_language') || 'same';
-  let proficiencyLevel = localStorage.getItem('shqipai_proficiency') || 'intermediate';
+  let currentLanguage = localStorage.getItem('EduAI_language') || 'en';
+  let aiResponseLanguage = localStorage.getItem('EduAI_ai_language') || 'same';
+  let proficiencyLevel = localStorage.getItem('EduAI_proficiency') || 'intermediate';
 
   // Get translation
   function t(key, fallback) {
@@ -464,7 +464,7 @@
       code = 'en';
     }
     currentLanguage = code;
-    localStorage.setItem('shqipai_language', code);
+    localStorage.setItem('EduAI_language', code);
     updateAllElements();
     document.documentElement.lang = code;
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: code }));
@@ -474,7 +474,7 @@
   // Set AI response language
   function setAILanguage(lang) {
     aiResponseLanguage = lang;
-    localStorage.setItem('shqipai_ai_language', lang);
+    localStorage.setItem('EduAI_ai_language', lang);
   }
 
   // Get AI language instruction for prompts
@@ -533,7 +533,7 @@
     get proficiency() { return proficiencyLevel; },
     set proficiency(level) {
       proficiencyLevel = level;
-      localStorage.setItem('shqipai_proficiency', level);
+      localStorage.setItem('EduAI_proficiency', level);
     }
   };
 

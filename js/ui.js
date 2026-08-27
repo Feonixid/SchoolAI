@@ -211,6 +211,73 @@
     }
   });
 
+  // Lesson-Specific AI Agent Workspace wiring
+  const openLessonAgentSidebarBtn = document.getElementById('openLessonAgentSidebarBtn');
+  openLessonAgentSidebarBtn?.addEventListener('click', () => {
+    if (window.LessonAgent && window.LessonAgent.open) {
+      const activeSubj = window.Subjects?.getActive();
+      window.LessonAgent.open({
+        id: 'ch_active',
+        title: state.academic?.activeChapter?.title || 'Mësimi Aktiv',
+        subject: activeSubj?.label || 'Matematikë',
+        subjectId: activeSubj?.id || 'matematike',
+        grade: state.academic?.activeGrade || 10
+      });
+    }
+  });
+
+  // Teacher Lesson Planner & Exam Studio wiring
+  const openLessonPlannerSidebarBtn = document.getElementById('openLessonPlannerSidebarBtn');
+  openLessonPlannerSidebarBtn?.addEventListener('click', () => {
+    if (window.LessonPlanner && window.LessonPlanner.openStudio) {
+      window.LessonPlanner.openStudio();
+    }
+  });
+
+  // Syllabus & Chapter Progress Manager wiring
+  const openSyllabusManagerSidebarBtn = document.getElementById('openSyllabusManagerSidebarBtn');
+  openSyllabusManagerSidebarBtn?.addEventListener('click', () => {
+    if (window.ChapterProgress && window.ChapterProgress.openSyllabusManager) {
+      const activeSubj = window.Subjects?.getActive();
+      window.ChapterProgress.openSyllabusManager(activeSubj?.id || 'matematike', state.academic?.activeGrade || 10);
+    }
+  });
+
+  // Parent Progress Digest Exporter wiring
+  const openParentDigestSidebarBtn = document.getElementById('openParentDigestSidebarBtn');
+  openParentDigestSidebarBtn?.addEventListener('click', () => {
+    if (window.ParentDigest && window.ParentDigest.openModal) {
+      window.ParentDigest.openModal({
+        firstName: localStorage.getItem('EduAI_student_name') || 'Nxënës',
+        gradeLevel: state.academic?.activeGrade || 10
+      });
+    }
+  });
+
+  // Sneakernet USB Air-Gapped Sync wiring
+  const openSneakernetSidebarBtn = document.getElementById('openSneakernetSidebarBtn');
+  openSneakernetSidebarBtn?.addEventListener('click', () => {
+    if (window.SneakernetSync) {
+      const action = confirm('Shtyp OK për të Eksportuar regjistrin në USB, ose Cancel për të Importuar.');
+      if (action) {
+        window.SneakernetSync.exportLedger();
+      } else {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.json';
+        input.onchange = (e) => {
+          const file = e.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = (evt) => window.SneakernetSync.importLedger(evt.target.result);
+            reader.readAsText(file);
+          }
+        };
+        input.click();
+      }
+    }
+  });
+
   // Student Portal button wiring
   const studentPortalBtn = document.getElementById('studentPortalBtn');
   const openStudentPortalSidebarBtn = document.getElementById('openStudentPortalSidebarBtn');
@@ -456,10 +523,10 @@
     optBtn.addEventListener('click', () => {
       // Load saved settings
       const saved = {
-        brand: localStorage.getItem('shqipai_opt_brand') || 'auto',
-        gen: localStorage.getItem('shqipai_opt_gen') || 'auto',
-        cpu: localStorage.getItem('shqipai_opt_cpu') || 'balanced',
-        mem: localStorage.getItem('shqipai_opt_mem') || '4096'
+        brand: localStorage.getItem('EduAI_opt_brand') || 'auto',
+        gen: localStorage.getItem('EduAI_opt_gen') || 'auto',
+        cpu: localStorage.getItem('EduAI_opt_cpu') || 'balanced',
+        mem: localStorage.getItem('EduAI_opt_mem') || '4096'
       };
       const brandEl = document.getElementById('cpuBrand');
       const genEl = document.getElementById('cpuGen');
@@ -497,10 +564,10 @@
           body: JSON.stringify({ cpuBrand: brand, cpuGen: gen, cpuPreset: cpu, memoryLimit: mem })
         });
         
-        localStorage.setItem('shqipai_opt_brand', brand);
-        localStorage.setItem('shqipai_opt_gen', gen);
-        localStorage.setItem('shqipai_opt_cpu', cpu);
-        localStorage.setItem('shqipai_opt_mem', mem);
+        localStorage.setItem('EduAI_opt_brand', brand);
+        localStorage.setItem('EduAI_opt_gen', gen);
+        localStorage.setItem('EduAI_opt_cpu', cpu);
+        localStorage.setItem('EduAI_opt_mem', mem);
         
         optSubmit.textContent = '✅ Applied!';
         setTimeout(() => {
@@ -770,7 +837,7 @@
       const g = parseInt(e.target.value);
       user.gradeLevel = g;
       state.academic.activeGrade = g;
-      sessionStorage.setItem('shqipai_session', JSON.stringify({ user }));
+      sessionStorage.setItem('EduAI_session', JSON.stringify({ user }));
       if (window.Toast?.success) window.Toast.success(`Klasa u ndryshua në: Klasa ${g}`);
     });
 
@@ -1581,7 +1648,7 @@
     modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
 
     document.getElementById('copyReport').addEventListener('click', () => {
-      const report = `SHQIPAI FORENSIC REPORT\nTarget: ${user.username}\nDate: ${new Date().toLocaleString()}\n----------------\n${JSON.stringify(d, null, 2)}`;
+      const report = `EduAI FORENSIC REPORT\nTarget: ${user.username}\nDate: ${new Date().toLocaleString()}\n----------------\n${JSON.stringify(d, null, 2)}`;
       navigator.clipboard.writeText(report).then(() => {
         const btn = document.getElementById('copyReport');
         const old = btn.innerText;

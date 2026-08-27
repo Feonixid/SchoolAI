@@ -48,7 +48,23 @@
               <div style="font-size:12px;color:var(--text-muted)">Provimet, detyrat, orët dhe ngjarjet shkollore</div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;gap:8px">
+            <div style="display:flex;align-items:center;gap:6px">
+              <select id="calGradeSelect" style="padding:5px 8px;border-radius:8px;border:1px solid var(--border);background:var(--card-bg, #1e293b);color:var(--text);font-size:12px">
+                <option value="1">Klasa 1 (Fillore - 25min)</option>
+                <option value="2">Klasa 2 (Fillore - 25min)</option>
+                <option value="3">Klasa 3 (Fillore - 25min)</option>
+                <option value="4">Klasa 4 (Fillore - 35min)</option>
+                <option value="5">Klasa 5 (Fillore - 35min)</option>
+                <option value="6">Klasa 6 (Bazë - 45min)</option>
+                <option value="7">Klasa 7 (Bazë - 45min)</option>
+                <option value="8">Klasa 8 (Bazë - 45min)</option>
+                <option value="9" selected>Klasa 9 (Bazë - 45min)</option>
+                <option value="10">Klasa 10 (Gjimnaz - 50min)</option>
+                <option value="11">Klasa 11 (Gjimnaz - 50min)</option>
+                <option value="12">Klasa 12 (Maturë - 60min)</option>
+              </select>
+              <button id="calApplyGradeScheduleBtn" class="os-btn-secondary" style="padding:5px 10px;font-size:12px" title="Apliko orarin zyrtar për këtë klasë">⚡ Orari i Klasës</button>
+            </div>
             <button id="calAddEventBtn" class="os-btn-primary" style="padding:6px 14px;font-size:12.5px">+ Shto Ngjarje</button>
             <button id="closeCalendarBtn" class="school-os-close-btn" title="Mbyll Kalendarin">×</button>
           </div>
@@ -111,6 +127,74 @@
     });
 
     document.getElementById('calAddEventBtn')?.addEventListener('click', addQuickEvent);
+    document.getElementById('calApplyGradeScheduleBtn')?.addEventListener('click', () => {
+      const select = document.getElementById('calGradeSelect');
+      const grade = select ? parseInt(select.value, 10) : 9;
+      applyGradeSchedule(grade);
+    });
+  }
+
+  function applyGradeSchedule(grade) {
+    const g = parseInt(grade || 9, 10);
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = now.getMonth();
+    const d = selectedDay || now.getDate();
+
+    let schedule = [];
+    if (g <= 3) {
+      schedule = [
+        { time: '08:30', title: 'Gjuhë Shqipe & Fonetikë (25 min)', type: 'class', desc: 'Lexim dhe shkronja të reja' },
+        { time: '09:05', title: 'Matematikë & Numërim (25 min)', type: 'class', desc: 'Mbledhje, zbritje dhe forma' },
+        { time: '09:40', title: 'Lojëra Edukative & Pushim (20 min)', type: 'event', desc: 'Zhvillim motorik dhe relaksim' },
+        { time: '10:05', title: 'Dituri Natyre (25 min)', type: 'class', desc: 'Bimët, kafshët dhe stinët' },
+        { time: '10:40', title: 'Arte & Vizatim (25 min)', type: 'class', desc: 'Ngjyrat dhe krijimtaria' }
+      ];
+    } else if (g <= 5) {
+      schedule = [
+        { time: '08:30', title: 'Matematikë: Thyesa & Veprime (35 min)', type: 'class', desc: 'Thyesat dhe problemet me shumë hapa' },
+        { time: '09:15', title: 'Gjuhë Shqipe & Lexim (35 min)', type: 'class', desc: 'Analizë fjalie dhe shkrim tregimi' },
+        { time: '10:00', title: 'Shkenca Natyrore & Trupi i Njeriut (35 min)', type: 'class', desc: 'Sistemet e trupit dhe mjedisi' },
+        { time: '10:45', title: 'Histori & Trashëgimi (35 min)', type: 'class', desc: 'Historia vendase dhe qytetërimet e lashta' },
+        { time: '11:30', title: 'Gjuhë e Huaj (Anglisht) (35 min)', type: 'class', desc: 'Fjalori dhe dialogje të thjeshta' }
+      ];
+    } else if (g <= 9) {
+      schedule = [
+        { time: '08:00', title: 'Matematikë: Algjebër & Ekuacione (45 min)', type: 'class', desc: 'Ekuacionet lineare dhe faktorizimi' },
+        { time: '08:55', title: 'Fizikë: Forcat & Lëvizja (45 min)', type: 'class', desc: 'Ligjet e Njutonit dhe llogaritja e shpejtësisë' },
+        { time: '09:50', title: 'Gjuhë Shqipe & Letërsi (45 min)', type: 'class', desc: 'Sintaksa dhe analiza e veprave' },
+        { time: '10:45', title: 'Pushim i Madh (15 min)', type: 'event', desc: 'Pushim dhe ushqim' },
+        { time: '11:00', title: 'Biologji / Kimi Laborator (45 min)', type: 'class', desc: 'Qeliza, ADN dhe reaksione kimike' },
+        { time: '11:55', title: 'Histori / Qytetari (45 min)', type: 'class', desc: 'Kushtetuta, të drejtat dhe ngjarjet botërore' },
+        { time: '12:50', title: 'TIK & Programim (45 min)', type: 'class', desc: 'Struktura të dhënash dhe algoritme' }
+      ];
+    } else {
+      schedule = [
+        { time: '08:00', title: 'Matematikë e Avancuar / Kalkulus (50 min)', type: 'class', desc: 'Trigonometri, derivate dhe integrale' },
+        { time: '09:00', title: 'Fizikë: Elektromagnetizmi & Optika (50 min)', type: 'class', desc: 'Qarqet elektrike dhe ligjet e ruajtjes' },
+        { time: '10:00', title: 'Kimi: Stekiometria & Kimi Organike (50 min)', type: 'class', desc: 'Reaksionet redoks dhe hidrokarburet' },
+        { time: '11:00', title: 'Letërsi & Shkrim Argumentues (50 min)', type: 'class', desc: 'Ese mature dhe analiza e tekstit letrar' },
+        { time: '12:00', title: 'Ekonomi / Filozofi & Shoqëria (50 min)', type: 'class', desc: 'Tregu, oferta/kërkesa dhe mendimi kritik' },
+        { time: '13:00', title: 'Sesion Përgatitor Mature & Konsultime (60 min)', type: 'exam', desc: 'Ushtrime të testeve zyrtare të maturës' }
+      ];
+    }
+
+    // Replace or merge into events for selected day
+    events = events.filter(ev => !(ev.date.getFullYear() === y && ev.date.getMonth() === m && ev.date.getDate() === d));
+    schedule.forEach(item => {
+      events.push({
+        date: new Date(y, m, d),
+        title: item.title,
+        type: item.type,
+        time: item.time,
+        desc: item.desc
+      });
+    });
+
+    renderCalendar();
+    if (window.Toast?.success) {
+      window.Toast.success(`⚡ Orari zyrtar për Klasën ${g} u aplikua me sukses!`);
+    }
   }
 
   function renderCalendar() {
@@ -293,7 +377,13 @@
     if (overlay) overlay.style.display = 'none';
   }
 
-  window.StudyCalendar = { open, close };
+  window.StudyCalendar = {
+    open,
+    close,
+    applyGradeSchedule,
+    getEvents: () => events,
+    setEvents: (newEvents) => { events = newEvents; renderCalendar(); }
+  };
 
   document.addEventListener('DOMContentLoaded', init);
 })();

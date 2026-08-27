@@ -26,7 +26,7 @@
 
             // Create ID based on Code (sanitize)
             const cleanCode = teacherCode.trim().replace(/[^a-zA-Z0-9]/g, '_');
-            const peerId = `shqipai_teacher_${cleanCode}`;
+            const peerId = `EduAI_teacher_${cleanCode}`;
 
             console.log('🔌 Connectivity: Initializing Teacher with ID:', peerId);
 
@@ -75,7 +75,7 @@
         // Initialize as Student (Sender)
         sendRegistration(teacherCode, studentData) {
             const cleanCode = teacherCode.trim().replace(/[^a-zA-Z0-9]/g, '_');
-            const targetId = `shqipai_teacher_${cleanCode}`;
+            const targetId = `EduAI_teacher_${cleanCode}`;
 
             console.log('🔌 Connectivity: Connecting to Teacher:', targetId);
 

@@ -242,7 +242,7 @@
           <!-- About Tab -->
           <div class="settings-tab" id="tab-about">
             <div class="about-content">
-              <h3>ShqipAI</h3>
+              <h3>EduAI</h3>
               <p class="version">Version 2.0.0</p>
               <p class="description">Educational AI platform powered by Gemma 4, running locally via Ollama.</p>
               
@@ -461,12 +461,12 @@
     }
 
     // Accessibility settings
-    document.getElementById('highContrast').checked = localStorage.getItem('shqipai_highContrast') === 'true';
-    document.getElementById('dyslexiaFont').checked = localStorage.getItem('shqipai_dyslexiaFont') === 'true';
-    document.getElementById('screenReader').checked = localStorage.getItem('shqipai_screenReader') === 'true';
-    document.getElementById('readAloud').checked = localStorage.getItem('shqipai_readAloud') === 'true';
+    document.getElementById('highContrast').checked = localStorage.getItem('EduAI_highContrast') === 'true';
+    document.getElementById('dyslexiaFont').checked = localStorage.getItem('EduAI_dyslexiaFont') === 'true';
+    document.getElementById('screenReader').checked = localStorage.getItem('EduAI_screenReader') === 'true';
+    document.getElementById('readAloud').checked = localStorage.getItem('EduAI_readAloud') === 'true';
     
-    const fontSize = localStorage.getItem('shqipai_fontSize') || '16';
+    const fontSize = localStorage.getItem('EduAI_fontSize') || '16';
     document.getElementById('fontSize').value = fontSize;
     document.getElementById('fontSizeValue').textContent = `${fontSize}px`;
 
@@ -516,11 +516,11 @@
     }
 
     // Accessibility settings
-    localStorage.setItem('shqipai_highContrast', document.getElementById('highContrast')?.checked);
-    localStorage.setItem('shqipai_dyslexiaFont', document.getElementById('dyslexiaFont')?.checked);
-    localStorage.setItem('shqipai_screenReader', document.getElementById('screenReader')?.checked);
-    localStorage.setItem('shqipai_readAloud', document.getElementById('readAloud')?.checked);
-    localStorage.setItem('shqipai_fontSize', document.getElementById('fontSize')?.value);
+    localStorage.setItem('EduAI_highContrast', document.getElementById('highContrast')?.checked);
+    localStorage.setItem('EduAI_dyslexiaFont', document.getElementById('dyslexiaFont')?.checked);
+    localStorage.setItem('EduAI_screenReader', document.getElementById('screenReader')?.checked);
+    localStorage.setItem('EduAI_readAloud', document.getElementById('readAloud')?.checked);
+    localStorage.setItem('EduAI_fontSize', document.getElementById('fontSize')?.value);
 
     // Apply accessibility changes
     applyAccessibilitySettings();
@@ -537,21 +537,21 @@
     const root = document.documentElement;
     
     // High contrast
-    if (localStorage.getItem('shqipai_highContrast') === 'true') {
+    if (localStorage.getItem('EduAI_highContrast') === 'true') {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
     // Dyslexia font
-    if (localStorage.getItem('shqipai_dyslexiaFont') === 'true') {
+    if (localStorage.getItem('EduAI_dyslexiaFont') === 'true') {
       root.classList.add('dyslexia-font');
     } else {
       root.classList.remove('dyslexia-font');
     }
 
     // Font size
-    const fontSize = localStorage.getItem('shqipai_fontSize') || '16';
+    const fontSize = localStorage.getItem('EduAI_fontSize') || '16';
     root.style.fontSize = `${fontSize}px`;
   }
 

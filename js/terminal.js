@@ -447,7 +447,7 @@
           <div id="cyberTerminal" style="display:none; flex-direction:column; background: #000; height:100%;">
             <div id="cyberHeader">
               <span class="cyber-dot" style="background:#3fb950"></span>
-              <span>ShqipAI Cybersecurity Terminal</span>
+              <span>EduAI Cybersecurity Terminal</span>
               <span style="margin-left:auto;color:#3fb950;font-weight:700">LIVE</span>
               <button class="dp-close-panel-btn" id="cyberClosePanelBtn" title="Mbyll Terminalin" style="margin-left:8px">✕ Mbyll</button>
             </div>
@@ -1122,10 +1122,10 @@
     });
     cyberTerm.open(container);
 
-    cyberTerm.writeln('\x1b[1;32mShqipAI Cybersecurity Terminal\x1b[0m');
+    cyberTerm.writeln('\x1b[1;32mEduAI Cybersecurity Terminal\x1b[0m');
     cyberTerm.writeln('Type \'help\' for commands');
     cyberTerm.writeln('─'.repeat(36));
-    cyberTerm.write('\x1b[1;34mshqipai@cyber:~$ \x1b[0m');
+    cyberTerm.write('\x1b[1;34mEduAI@cyber:~$ \x1b[0m');
 
     let currentInput = '';
     
@@ -1140,7 +1140,7 @@
             await runCyberCmd(cmd);
           }
           currentInput = '';
-          cyberTerm.write('\x1b[1;34mshqipai@cyber:~$ \x1b[0m');
+          cyberTerm.write('\x1b[1;34mEduAI@cyber:~$ \x1b[0m');
           break;
         case '\u007F': // Backspace
           if (currentInput.length > 0) {

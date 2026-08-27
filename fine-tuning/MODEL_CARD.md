@@ -26,7 +26,7 @@ metrics:
 - perplexity
 ---
 
-# ShqipAI Tutor - Gemma 4 E4B Fine-Tuned
+# EduAI Tutor - Gemma 4 E4B Fine-Tuned
 
 A fine-tuned version of **Gemma 4 E4B** optimized for educational tutoring across multiple subjects and languages.
 
@@ -34,7 +34,7 @@ A fine-tuned version of **Gemma 4 E4B** optimized for educational tutoring acros
 
 ### Model Description
 
-- **Developed by:** ShqipAI Team
+- **Developed by:** EduAI Team
 - **Model type:** Causal Language Model (Fine-tuned with LoRA)
 - **Language(s):** English, Albanian, German, French, Spanish, Italian, Portuguese, Dutch, Russian, Chinese
 - **License:** Gemma Terms of Use
@@ -44,8 +44,8 @@ A fine-tuned version of **Gemma 4 E4B** optimized for educational tutoring acros
 
 ### Model Sources
 
-- **Repository:** https://github.com/YOUR_USERNAME/shqipai
-- **Demo:** https://huggingface.co/spaces/YOUR_USERNAME/shqipai
+- **Repository:** https://github.com/YOUR_USERNAME/EduAI
+- **Demo:** https://huggingface.co/spaces/YOUR_USERNAME/EduAI
 
 ## Uses
 
@@ -103,13 +103,13 @@ Not suitable for:
 
 ```bash
 # Download model
-ollama pull YOUR_USERNAME/shqipai-tutor
+ollama pull YOUR_USERNAME/EduAI-tutor
 
 # Run interactive session
-ollama run YOUR_USERNAME/shqipai-tutor
+ollama run YOUR_USERNAME/EduAI-tutor
 
 # Or create custom model
-echo 'FROM ./shqipai-tutor-q4_k_m.gguf
+echo 'FROM ./EduAI-tutor-q4_k_m.gguf
 TEMPLATE """{{ .System }}
 
 {{ .Prompt }}"""
@@ -117,7 +117,7 @@ PARAMETER temperature 0.7
 PARAMETER num_ctx 4096
 SYSTEM You are a patient educational tutor.' > Modelfile
 
-ollama create shqipai-tutor -f Modelfile
+ollama create EduAI-tutor -f Modelfile
 ```
 
 ### Using with Transformers
@@ -125,8 +125,8 @@ ollama create shqipai-tutor -f Modelfile
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model = AutoModelForCausalLM.from_pretrained("YOUR_USERNAME/shqipai-tutor-gemma4-e4b")
-tokenizer = AutoTokenizer.from_pretrained("YOUR_USERNAME/shqipai-tutor-gemma4-e4b")
+model = AutoModelForCausalLM.from_pretrained("YOUR_USERNAME/EduAI-tutor-gemma4-e4b")
+tokenizer = AutoTokenizer.from_pretrained("YOUR_USERNAME/EduAI-tutor-gemma4-e4b")
 
 prompt = "Explain photosynthesis to a 10-year-old:"
 inputs = tokenizer(prompt, return_tensors="pt")
@@ -261,27 +261,27 @@ Evaluated on held-out educational questions across subjects:
 **BibTeX:**
 
 ```bibtex
-@misc{shqipai-tutor-2026,
-  title={ShqipAI Tutor: Fine-Tuned Gemma 4 E4B for Educational Tutoring},
-  author={ShqipAI Team},
+@misc{EduAI-tutor-2026,
+  title={EduAI Tutor: Fine-Tuned Gemma 4 E4B for Educational Tutoring},
+  author={EduAI Team},
   year={2026},
   publisher={Hugging Face},
-  url={https://huggingface.co/YOUR_USERNAME/shqipai-tutor-gemma4-e4b}
+  url={https://huggingface.co/YOUR_USERNAME/EduAI-tutor-gemma4-e4b}
 }
 ```
 
 **APA:**
 
-ShqipAI Team. (2026). ShqipAI Tutor: Fine-tuned Gemma 4 E4B for educational tutoring. Hugging Face. https://huggingface.co/YOUR_USERNAME/shqipai-tutor-gemma4-e4b
+EduAI Team. (2026). EduAI Tutor: Fine-tuned Gemma 4 E4B for educational tutoring. Hugging Face. https://huggingface.co/YOUR_USERNAME/EduAI-tutor-gemma4-e4b
 
 ## Model Card Authors
 
-ShqipAI Team
+EduAI Team
 
 ## Model Card Contact
 
-- **GitHub:** https://github.com/YOUR_USERNAME/shqipai
-- **Issues:** https://github.com/YOUR_USERNAME/shqipai/issues
+- **GitHub:** https://github.com/YOUR_USERNAME/EduAI
+- **Issues:** https://github.com/YOUR_USERNAME/EduAI/issues
 
 ## Glossary
 

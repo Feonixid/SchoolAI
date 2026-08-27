@@ -345,7 +345,7 @@
       content: editor.innerHTML,
       savedAt: Date.now()
     };
-    localStorage.setItem(`shqipai_draft_${assignmentId}`, JSON.stringify(draft));
+    localStorage.setItem(`EduAI_draft_${assignmentId}`, JSON.stringify(draft));
 
     if (!silent) {
       const indicator = document.getElementById('workspaceAutoSave');
@@ -364,7 +364,7 @@
     const editor = document.getElementById('workspaceEditor');
     if (!editor) return;
 
-    const saved = localStorage.getItem(`shqipai_draft_${assignmentId}`);
+    const saved = localStorage.getItem(`EduAI_draft_${assignmentId}`);
     if (saved) {
       try {
         const draft = JSON.parse(saved);
@@ -390,7 +390,7 @@
 
     // Get student ID (fallback to active student in list or default)
     let studentId = state.students?.selectedId ||
-                    parseInt(localStorage.getItem('shqipai_logged_student')) ||
+                    parseInt(localStorage.getItem('EduAI_logged_student')) ||
                     (state.students?.list?.[0]?.id) ||
                     1;
 
@@ -417,7 +417,7 @@
     }
 
     // Clear draft
-    localStorage.removeItem(`shqipai_draft_${assignment.id}`);
+    localStorage.removeItem(`EduAI_draft_${assignment.id}`);
 
     // Show success message
     if (window.Toast?.success) {

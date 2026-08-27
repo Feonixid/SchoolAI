@@ -1,9 +1,9 @@
-// sw.js - Service Worker for ShqipAI PWA
+// sw.js - Service Worker for EduAI PWA
 // Provides offline support and caching
 
-const CACHE_NAME = 'shqipai-v3.0.0';
-const STATIC_CACHE = 'shqipai-static-v3';
-const DYNAMIC_CACHE = 'shqipai-dynamic-v3';
+const CACHE_NAME = 'EduAI-v3.0.0';
+const STATIC_CACHE = 'EduAI-static-v3';
+const DYNAMIC_CACHE = 'EduAI-dynamic-v3';
 
 // Static assets to cache immediately
 const STATIC_ASSETS = [
@@ -27,6 +27,7 @@ const STATIC_ASSETS = [
   '/css/study-calendar.css',
   '/css/collaborative-whiteboard.css',
   '/css/science-calculator.css',
+  '/css/lesson-agent.css',
   '/css/workspace.css',
   '/js/state.js',
   '/js/security.js',
@@ -100,6 +101,12 @@ const STATIC_ASSETS = [
   '/js/study-calendar.js',
   '/js/collaborative-whiteboard.js',
   '/js/science-calculator.js',
+  '/js/lesson-agent.js',
+  '/js/chapter-progress.js',
+  '/js/lesson-planner.js',
+  '/js/parent-digest.js',
+  '/js/voice-dialogue.js',
+  '/js/sneakernet-sync.js',
   '/manifest.json'
 ];
 

@@ -351,7 +351,7 @@
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `shqipai-learning-report-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `EduAI-learning-report-${new Date().toISOString().split('T')[0]}.json`;
     a.click();
     URL.revokeObjectURL(url);
 
@@ -361,7 +361,7 @@
   // Save analytics
   function saveAnalytics() {
     try {
-      localStorage.setItem('shqipai_analytics', JSON.stringify(analytics));
+      localStorage.setItem('EduAI_analytics', JSON.stringify(analytics));
     } catch (e) {
       // Trim old data if storage full
       analytics.questions = analytics.questions.slice(-500);
@@ -372,7 +372,7 @@
   // Load analytics
   function loadAnalytics() {
     try {
-      const saved = localStorage.getItem('shqipai_analytics');
+      const saved = localStorage.getItem('EduAI_analytics');
       if (saved) analytics = JSON.parse(saved);
     } catch (e) {
       console.warn('Failed to load analytics');

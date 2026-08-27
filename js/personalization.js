@@ -7,7 +7,7 @@
 (function () {
     'use strict';
 
-    const PERSONALIZATION_KEY = 'shqipai_personalized';
+    const PERSONALIZATION_KEY = 'EduAI_personalized';
 
     // Check if personalization was already completed
     function isPersonalized() {
@@ -197,7 +197,7 @@
     // === AUTO-SHOW AFTER LOGIN ===
     function initPersonalization() {
         // Listen for login events
-        window.addEventListener('shqipai-login', () => {
+        window.addEventListener('EduAI-login', () => {
             setTimeout(() => {
                 showPersonalizationModal();
             }, 1500); // Delay so login feels complete first

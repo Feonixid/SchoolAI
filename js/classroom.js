@@ -323,7 +323,7 @@ Current exam: {{EXAM_TITLE}}
     // Kiosk lock (desktop only)
     document.getElementById('kioskBtn').addEventListener('click', () => {
       if (!window.electronAPI) {
-        alert('Kiosk mode is only available in the desktop app.\nDownload the ShqipAI desktop app to use this feature.');
+        alert('Kiosk mode is only available in the desktop app.\nDownload the EduAI desktop app to use this feature.');
         return;
       }
       state.classroom.kioskLocked = !state.classroom.kioskLocked;
@@ -489,7 +489,7 @@ Current exam: {{EXAM_TITLE}}
   // ASSIGNMENT STORAGE (localStorage for now, syncs to server later)
   // ----------------------------------------------------------------
   function saveAssignment(assignment) {
-    const key   = 'shqipai_assignments';
+    const key   = 'EduAI_assignments';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
     existing.push(assignment);
     localStorage.setItem(key, JSON.stringify(existing));
@@ -497,7 +497,7 @@ Current exam: {{EXAM_TITLE}}
   }
 
   function getAssignments() {
-    return JSON.parse(localStorage.getItem('shqipai_assignments') || '[]');
+    return JSON.parse(localStorage.getItem('EduAI_assignments') || '[]');
   }
   window.getAssignments = getAssignments;
 

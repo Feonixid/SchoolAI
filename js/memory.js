@@ -27,7 +27,7 @@
   // AUTH HEADERS
   // ----------------------------------------------------------------
   function getAuthHeaders() {
-    const token = sessionStorage.getItem('shqipai_session_token');
+    const token = sessionStorage.getItem('EduAI_session_token');
     return {
       'Content-Type': 'application/json',
       ...(token ? { 'Authorization': `Bearer ${token}` } : {})
@@ -371,13 +371,13 @@
   // EVENT LISTENERS
   // ----------------------------------------------------------------
   
-  // Sync on login (accounts.js fires 'shqipai-login')
-  window.addEventListener('shqipai-login', () => {
+  // Sync on login (accounts.js fires 'EduAI-login')
+  window.addEventListener('EduAI-login', () => {
     syncWithBackend();
   });
 
-  // Clear cache on logout (accounts.js fires 'shqipai-logout')
-  window.addEventListener('shqipai-logout', () => {
+  // Clear cache on logout (accounts.js fires 'EduAI-logout')
+  window.addEventListener('EduAI-logout', () => {
     clearCache();
   });
 

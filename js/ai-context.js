@@ -91,8 +91,8 @@
 
     // Fallback to basic info
     const enrolled = state.classroom?.enrolledClass;
-    const studentId = localStorage.getItem('shqipai_logged_student');
-    const studentName = localStorage.getItem('shqipai_student_name');
+    const studentId = localStorage.getItem('EduAI_logged_student');
+    const studentName = localStorage.getItem('EduAI_student_name');
 
     if (!studentName && !enrolled) return null;
 
@@ -146,7 +146,7 @@
     if (!state.assignments?.list || state.assignments.list.length === 0) return null;
 
     const grade = state.academic?.activeGrade;
-    const studentId = parseInt(localStorage.getItem('shqipai_logged_student'));
+    const studentId = parseInt(localStorage.getItem('EduAI_logged_student'));
 
     // Filter assignments relevant to current grade
     const relevant = state.assignments.list.filter(a => {
@@ -189,7 +189,7 @@
   // 4. GRADES & TEACHER FEEDBACK
   // ----------------------------------------------------------------
   function buildGradesContext(subjectLabel) {
-    const studentId = parseInt(localStorage.getItem('shqipai_logged_student'));
+    const studentId = parseInt(localStorage.getItem('EduAI_logged_student'));
     if (!studentId || !state.assignments?.submissions) return null;
 
     const graded = state.assignments.submissions.filter(
@@ -270,7 +270,7 @@
     }
 
     // LocalStorage drafts for coding
-    const draftKey = Object.keys(localStorage).find(k => k.startsWith('shqipai_code_'));
+    const draftKey = Object.keys(localStorage).find(k => k.startsWith('EduAI_code_'));
     if (draftKey) {
       const code = localStorage.getItem(draftKey);
       if (code && code.length > 10 && !parts.some(p => p.includes('CURRENT CODE'))) {

@@ -10,7 +10,7 @@ const fs = require('fs');
 
 // Container configuration
 const CONFIG = {
-  image: 'shqipai-cyber-lab:latest',
+  image: 'EduAI-cyber-lab:latest',
   maxContainers: 50,
   containerTimeout: 30 * 60 * 1000, // 30 minutes
   cpuLimit: '0.5', // 50% of one CPU
@@ -49,7 +49,7 @@ async function buildImage() {
   }
 
   return new Promise((resolve, reject) => {
-    console.log('Building ShqipAI Cyber Lab image...');
+    console.log('Building EduAI Cyber Lab image...');
     
     const build = spawn('docker', [
       'build',
@@ -81,7 +81,7 @@ async function buildImage() {
 // CREATE CONTAINER FOR USER
 // ----------------------------------------------------------------
 async function createContainer(userId, options = {}) {
-  const containerName = `shqipai-${userId}-${Date.now()}`;
+  const containerName = `EduAI-${userId}-${Date.now()}`;
   
   const args = [
     'create',
@@ -256,7 +256,7 @@ async function destroyAllContainers() {
 // ----------------------------------------------------------------
 async function copyFilesToContainer(containerId, files) {
   // Create temp directory with files
-  const tmpDir = path.join(require('os').tmpdir(), `shqipai-${containerId}`);
+  const tmpDir = path.join(require('os').tmpdir(), `EduAI-${containerId}`);
   
   try {
     fs.mkdirSync(tmpDir, { recursive: true });

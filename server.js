@@ -1,4 +1,4 @@
-// server.js - ShqipAI Backend Server
+// server.js - EduAI Backend Server
 // ===================================================================
 require('dotenv').config();
 
@@ -575,7 +575,7 @@ function isSafe(code) {
 
 // Utility: Create ephemeral workspace
 function constructWorkspace(files) {
-  const wsId = `shqipai_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+  const wsId = `EduAI_${Date.now()}_${Math.random().toString(36).slice(2)}`;
   const wsPath = path.join(os.tmpdir(), wsId);
   fs.mkdirSync(wsPath, { recursive: true });
   
@@ -2140,7 +2140,7 @@ if (require.main === module) {
   app.listen(PORT, '0.0.0.0', () => {
     const lanAddrs = getLocalNetworkAddresses();
     console.log('\n========================================================================');
-    console.log('                 [+] ShqipAI Classroom Server Online                   ');
+    console.log('                 [+] EduAI Classroom Server Online                   ');
     console.log('========================================================================');
     console.log(`  * Local Loopback:  http://localhost:${PORT}`);
     lanAddrs.forEach(addr => {

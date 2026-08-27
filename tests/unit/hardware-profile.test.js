@@ -134,13 +134,13 @@ describe('HardwareProfile', () => {
   // --- Persistence ---
 
   test('loadSaved returns false when nothing is stored', () => {
-    localStorage.removeItem('shqipai_hardware');
+    localStorage.removeItem('EduAI_hardware');
     expect(HardwareProfile.loadSaved()).toBe(false);
   });
 
   test('loadSaved returns true and restores data from localStorage', () => {
     const fakeHw = { cpu: { cores: 8, tier: 'high' }, profile: 'high' };
-    localStorage.setItem('shqipai_hardware', JSON.stringify(fakeHw));
+    localStorage.setItem('EduAI_hardware', JSON.stringify(fakeHw));
     expect(HardwareProfile.loadSaved()).toBe(true);
     expect(HardwareProfile.getHardwareInfo().profile).toBe('high');
   });

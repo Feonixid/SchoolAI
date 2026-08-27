@@ -1,6 +1,6 @@
 // electron/main.js
 // ===================================================================
-// ShqipAI Desktop App — Electron Main Process
+// EduAI Desktop App — Electron Main Process
 // Starts the Express backend, then opens the Chromium window.
 // ===================================================================
 
@@ -40,7 +40,7 @@ function createWindow() {
     height:    768,
     minWidth:  1024,
     minHeight: 600,
-    title: 'ShqipAI — Albanian School AI Platform',
+    title: 'EduAI — Albanian School AI Platform',
     backgroundColor: '#f7f5f2',
     show: false,
     webPreferences: {
@@ -104,9 +104,9 @@ function waitForBackend(callback, retries = 40) {
 function buildMenu() {
   const template = [
     {
-      label: 'ShqipAI',
+      label: 'EduAI',
       submenu: [
-        { label: 'About ShqipAI', click: showAbout },
+        { label: 'About EduAI', click: showAbout },
         { type: 'separator' },
         { role: 'quit', label: 'Quit' }
       ]
@@ -194,8 +194,8 @@ ipcMain.on('quit-app', () => {
 function showAbout() {
   dialog.showMessageBox(mainWindow, {
     type:    'info',
-    title:   'About ShqipAI',
-    message: 'ShqipAI — Albanian School AI Platform',
+    title:   'About EduAI',
+    message: 'EduAI — Albanian School AI Platform',
     detail:  'Powered by Gemma 4 · Runs fully offline\nBuilt for Albanian classrooms · v2.0.0'
   });
 }

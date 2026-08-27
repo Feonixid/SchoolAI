@@ -1,4 +1,4 @@
-# ShqipAI Cybersecurity Lab Container
+# EduAI Cybersecurity Lab Container
 # Ubuntu-based image with security tools for educational purposes
 
 FROM ubuntu:22.04

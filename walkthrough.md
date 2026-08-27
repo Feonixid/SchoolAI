@@ -1,93 +1,47 @@
-# Next-Gen Digital School OS & Complete AI Learning Platform Walkthrough
+# EduAI — Next-Gen Digital School OS & Classroom AI Platform Walkthrough
 
-We have unified the entire school platform into an enterprise-grade digital school operating system for students, teachers, and school administrators, featuring a comprehensive STEM and humanities simulation suite, real-time gamified battle arena, multi-language speech coach, AI writing studio, teacher grading studio, spaced repetition flashcards, visual learning roadmaps, interactive subject challenges, study calendar & timetable planner, collaborative interactive whiteboard, scientific calculator & physical constants explorer, and a multi-master offline LAN / cloud sync conflict resolution engine.
-
----
-
-## 🚀 Complete Architecture & Capabilities
-
-### 1. 🔄 Multi-Master Offline LAN & Cloud Sync Engine ([`server.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/server.js), [`tests/integration/cloud-sync.test.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/tests/integration/cloud-sync.test.js))
-- **Classroom LAN Mesh**: Teacher laptop acts as the local offline host for 30+ students via local Wi-Fi and 6-letter room codes without internet.
-- **Conflict Resolution Protocol**: Reconciles multi-teacher datasets on central cloud sync (`/api/sync/cloud-receive`) using entity timestamps and note preservation rules.
-- **Cumulative Gamification Merge**: Merges student XP points, streaks, and earned badges across sessions without loss.
-- **Authoritative Central Export**: Distributes district-wide curriculum updates and announcements to local hubs via `/api/sync/cloud-export`.
-
-### 2. 🎨 Collaborative Class Whiteboard & Annotation Studio ([`js/collaborative-whiteboard.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/collaborative-whiteboard.js), [`css/collaborative-whiteboard.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/collaborative-whiteboard.css))
-- **Interactive Toolset**: Pen with color and stroke width controls, geometric shape tools (Line, Rectangle, Circle), and Eraser.
-- **Grid Overlay & History**: Isometric grid mode toggle and 20-step undo/redo stack.
-- **High-Res Export**: 1-click export of whiteboard annotations as PNG image notes.
-
-### 3. 🧮 Scientific Calculator & Universal Physical Constants ([`js/science-calculator.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/science-calculator.js), [`css/science-calculator.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/science-calculator.css))
-- **Trigonometric & Logarithmic Keypad**: $\sin, \cos, \tan, \sqrt{x}, \ln, \log_{10}, \pi, e, x^y$.
-- **Universal Physical Constants Explorer**: Quick insertion for $c$ (Speed of Light), $G$ (Gravitational Constant), $h$ (Planck's Constant), $N_A$ (Avogadro's Number), $e$ (Elementary Charge), $k_B$ (Boltzmann Constant), and $g$ (Standard Gravity).
-
-### 4. 🗺️ Visual Learning Roadmaps & Skill Trees ([`js/learning-roadmap.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/learning-roadmap.js), [`css/learning-roadmap.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/learning-roadmap.css))
-- **Subject Mastery Trees**: Structured paths across Mathematics, Physics, Biology, Chemistry, Computer Science, History, and Economics.
-- **Node Status Progression**: Clear tracking of completed milestones, active study nodes with pulsating indicators, and locked prerequisite nodes.
-- **Direct Lab Integration**: 1-click launch from roadmap nodes directly into corresponding interactive simulators and tools.
-
-### 5. 🏆 Interactive Subject Challenges & Problem Sets ([`js/challenges.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/challenges.js), [`css/challenges.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/challenges.css))
-- **Tiered Difficulty Architecture**: Easy, Medium, and Hard problem sets with graded XP point rewards.
-- **Cognitive Hint Engine & Explanations**: On-demand conceptual hints and comprehensive step-by-step solutions upon completion.
-- **Streak & Gamification Sync**: Real-time streak tracking and automated XP persistence into the student profile.
-
-### 6. 📅 Study Calendar, Timetable & Exam Planner ([`js/study-calendar.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/study-calendar.js), [`css/study-calendar.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/study-calendar.css))
-- **Interactive Monthly Grid**: Full-featured month switcher, today indicators, and event markers.
-- **Categorized Event Streams**: Clear color-coded badges for Exams, Homework Deadlines, Live Classes, and School Events.
-- **Daily Timetable & Quick Add**: Overview of today's schedule and fast event creation for students and teachers.
-
-### 7. 🪐 Gravity & Orbital Mechanics Simulator ([`js/interactive-lab.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/interactive-lab.js))
-- **Newtonian Gravity Engine**: 2D N-body orbital physics ($F = G \frac{M m}{r^2}$) with Euler-Cromer numerical integration.
-- **Kepler's Laws of Planetary Motion**: Demonstrates elliptical orbits with the central star at one focus and orbital velocity variations ($v$ increases at periapsis).
-- **Orbital Presets**: Circular Stable Orbit ($e \approx 0.0$), Elliptical Kepler Orbit ($e \approx 0.6$), and Hyperbolic Escape Trajectory.
-- **Live Telemetry**: Real-time gravitational force ($F$), orbital velocity ($v$), and orbital path trace.
-
-### 8. 📝 Teacher Assignment Grading & Rubric Studio ([`js/teacher-grading.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/teacher-grading.js), [`css/teacher-grading.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/teacher-grading.css))
-- **Submission Queue**: Instant view of student submissions across subjects (Submitted, Pending, Graded).
-- **4-Dimensional Rubric Sliders**: Saktësia & Koncepti ($0-30$), Analiza & Arsyetimi ($0-30$), Llogaritjet & Të Dhënat ($0-20$), and Struktura & Qartësia ($0-20$).
-- **AI-Assisted Evaluation**: Pre-fills suggested rubric marks, constructive praise, and targeted advice for student growth.
-- **Automatic Gradebook & Portal Sync**: Immediately updates student performance records.
-
-### 9. 🗂️ Spaced Repetition AI Flashcards (Leitner 5-Box Engine) ([`js/flashcards.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/flashcards.js), [`css/flashcards.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/flashcards.css))
-- **Leitner 5-Box Cognitive System**: Spaced intervals optimize memory consolidation for high-stakes exams.
-- **3D Flippable Cards**: Perspective flip animation on mouse click or Spacebar.
-- **Multi-Subject Curricula**: Decks for Biology, Chemistry, Physics, History, and Academic English.
-- **Recall Self-Assessment**: Again (Box 1), Hard (Box 2), Good (+1 Box), Easy (Mastered).
-
-### 10. ⚡ DC Circuit & Ohm's Law Lab ([`js/interactive-lab.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/interactive-lab.js))
-- **Interactive 2D Circuit Engine**: Live battery voltage ($1.5\text{V} - 24\text{V}$), resistor manipulation, and real-time electron particle flow.
-- **Dynamic Bulb Luminescence**: Light bulb glow aura and intensity dynamically scale with calculated power dissipation ($P = V \times I$).
-- **Series & Parallel Configurations**: Automatic calculation of equivalent resistance ($R_{eq}$), total current ($I = \frac{V}{R}$), and power ($P$).
-
-### 11. ⚗️ Chemical Reaction Balancer & Conservation of Mass ([`js/interactive-lab.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/interactive-lab.js))
-- **Automatic Stoichiometric Balancing**: Balances reaction formulas (combustion, acid-base, synthesis, single/double replacement).
-- **Atomic Balance Table**: Reactant vs. product atom verification proving the Law of Conservation of Mass ($m_{\text{reactants}} = m_{\text{products}}$).
-
-### 12. 📊 Market Equilibrium & Supply/Demand Curves ([`js/interactive-lab.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/interactive-lab.js))
-- **Microeconomics Visualizer**: Live 2D Canvas plotting downward-sloping Demand ($D$) and upward-sloping Supply ($S$) curves.
-- **Market Shifts**: Sliders for consumer income/preferences and technology/costs with instant recalculation of equilibrium price ($P^*$), equilibrium quantity ($Q^*$), and Consumer/Producer Surplus.
-
-### 13. 🧬 DNA Transcription & Translation Protein Synthesizer ([`js/interactive-lab.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/interactive-lab.js))
-- **Central Dogma Simulator**: Step-by-step transcription from DNA template to mRNA, followed by ribosomal translation into amino acid polypeptide chains.
-- **Point Mutation Injector**: Allows students to inject base substitutions and immediately observe the downstream effect on amino acids and protein synthesis.
-
-### 14. ⚔️ Gamified Live Quiz Battle Arena ([`js/quiz-battle.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/quiz-battle.js), [`css/quiz-battle.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/quiz-battle.css))
-- **60-Second Real-Time Arena**: Rapid-fire subject questions against AI rivals or classroom peers.
-- **Streak Multipliers & Tactical Power-ups**: Shield, Time Freeze, 50/50 Eliminator, and Double XP.
-
-### 15. 🗣️ Multi-Language Speech & Pronunciation Coach ([`js/pronunciation-coach.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/pronunciation-coach.js), [`css/pronunciation-coach.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/pronunciation-coach.css))
-- **5 Supported Languages**: Albanian, English, German, French, and Spanish.
-- **Speech Accuracy Analysis**: Word-by-word color highlighting with native TTS audio pronunciation modeling.
-
-### 16. ✍️ AI Essay & Academic Writing Studio ([`js/essay-coach.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/essay-coach.js), [`css/essay-coach.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/essay-coach.css))
-- **4-Dimensional Rubric Grading**: Thesis & Clarity, Evidence & Support, Structure & Flow, Vocabulary & Grammar.
-- **Readability Analytics**: Word count, sentence count, reading time estimation, and Socratic revision suggestions.
+EduAI has been expanded with granular lesson-specific AI agents, chapter progress tracking, a 45-minute structured lesson planner, a 1-click exam generator, an offline parent progress card exporter, an early-primary hands-free voice loop, and an air-gapped sneakernet USB sync engine.
 
 ---
 
-## 🔒 Automated Verification Status
-- **Test Suites**: **18 passed, 18 total**
-- **Tests**: **80 passed, 80 total**
-- **Code Quality**: Clean, human-engineered modular design with no artificial comments or synthetic boilerplate.
-- **Offline Readiness**: All assets cached via [`sw.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/sw.js).
-- **Role-Based Access Control**: Strict segregation between student and teacher privileges.
+## 🚀 Complete Architecture & New Capabilities
+
+### 1. 📖 Lesson-Specific Isolated AI Agent Sessions ([`js/lesson-agent.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/lesson-agent.js), [`css/lesson-agent.css`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/css/lesson-agent.css))
+- **Isolated Lesson Context**: Each textbook chapter has its own dedicated chat session and memory storage (`eduai_lesson_chats`).
+- **Granular Chunk Retrieval**: Eliminates full-book context dumping. The AI only receives the specific 2–3 page excerpts, formulas, and definitions for the active lesson.
+- **Dedicated Study Window**: Objective overview, book excerpts, and 1-click launch into corresponding interactive simulators.
+
+### 2. 📘 Teacher Syllabus & Chapter Progress Tracker ([`js/chapter-progress.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/chapter-progress.js))
+- **Status Progression**: Teachers tag chapters as `completed` (mastered), `current` (active topic), or `upcoming` (next lesson).
+- **Prompt Injection**: Injects `[SYLLABUS PROGRESS CONTEXT]` directly into [`js/ai-core.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/ai-core.js). The AI knows what previous knowledge can be assumed as established facts and smoothly transitions to the next lesson.
+
+### 3. 📋 45-Minute Lesson Planner & 1-Click Exam Generator ([`js/lesson-planner.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/lesson-planner.js))
+- **5-Phase Standard Lesson Plan**:
+  - *Phase 1 (00–05 min)*: Retrieval Warm-Up & Prior Knowledge Recall.
+  - *Phase 2 (05–15 min)*: Core Concept Hook & Direct Demonstration.
+  - *Phase 3 (15–30 min)*: Guided Inquiry & Interactive Lab Simulation.
+  - *Phase 4 (30–40 min)*: Socratic Problem Solving & Misconception Remediation.
+  - *Phase 5 (40–45 min)*: Formative Exit Ticket & Homework Assignment.
+- **1-Click AI Exam Generator**: Generates 100-point exams across 3 sections (Multiple Choice, Short Concept Answers, Step-by-Step Problem Solving) with a full **Answer Key & Scoring Scheme**.
+- **Calendar Integration**: 1-click push to the Study Calendar timetable.
+
+### 4. 📱 Parent Offline Progress Card & SMS / WhatsApp Exporter ([`js/parent-digest.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/parent-digest.js))
+- **Offline Parent Link**: For rural schools where parents are not on the school network, teachers generate a formatted text summary with 1 click.
+- **Content**: Attendance %, XP earned, mastered chapters, current topics, and personalized teacher praise.
+- **Channels**: 1-click clipboard copy for SMS/WhatsApp or printable card layout.
+
+### 5. 🎙️ Early Primary & Accessibility Voice Dialogue Loop ([`js/voice-dialogue.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/voice-dialogue.js))
+- **Hands-Free Learning**: Enables speech-driven practice for young learners (Grades 1–3) or visually impaired students without requiring keyboard input.
+- **Listen $\rightarrow$ Socratic Think $\rightarrow$ Speak Loop**: Native SpeechRecognition and TTS audio pronunciation modeling.
+
+### 6. 💾 Air-Gapped Sneakernet USB Sync Ledger ([`js/sneakernet-sync.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/js/sneakernet-sync.js))
+- **Zero-Internet Synchronization**: Teachers export an offline snapshot of student submissions, attendance records, chapter progress, and gamification XP to a portable JSON file (`eduai_school_ledger_*.json`).
+- **Clean Import & Merge**: Imports district-wide syllabus and curriculum updates with automated conflict reconciliation.
+
+---
+
+## 🔒 Automated Verification & Test Scorecard
+- **Test Suites**: **25 passed, 25 total** (100%)
+- **Unit & Integration Tests**: **127 passed, 127 total**
+- **Syntax Integrity**: All 78 JavaScript files verified with zero errors.
+- **PWA Caching**: All new modules cached in [`sw.js`](file:///c:/Users/User/OneDrive/Desktop/SchoolAI/SchoolAI/sw.js) for full offline operation.

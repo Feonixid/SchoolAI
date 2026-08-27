@@ -13,7 +13,7 @@
     : window.location.origin;
 
   function getAuthHeaders() {
-    const token = sessionStorage.getItem('shqipai_session_token');
+    const token = sessionStorage.getItem('EduAI_session_token');
     return token ? { 'Authorization': `Bearer ${token}` } : {};
   }
 

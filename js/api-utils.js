@@ -34,7 +34,7 @@
   // AUTH HEADERS
   // ----------------------------------------------------------------
   function getAuthHeaders() {
-    const token = sessionStorage.getItem('shqipai_session_token');
+    const token = sessionStorage.getItem('EduAI_session_token');
     return {
       'Content-Type': 'application/json',
       ...(token ? { 'Authorization': `Bearer ${token}` } : {})
@@ -197,6 +197,57 @@
   }
 
   // ----------------------------------------------------------------
+  // STORAGE QUOTA GUARD & SAFE LOCALSTORAGE
+  // ----------------------------------------------------------------
+  function safeSetItem(key, value) {
+    try {
+      localStorage.setItem(key, value);
+      return true;
+    } catch (e) {
+      if (e.name === 'QuotaExceededError' || e.code === 22 || e.code === 1014) {
+        console.warn('⚠️ LocalStorage quota exceeded. Pruning old transient logs...');
+        pruneOldStorage();
+        try {
+          localStorage.setItem(key, value);
+          return true;
+        } catch (retryErr) {
+          console.error('❌ Failed to save after storage prune:', retryErr);
+          return false;
+        }
+      }
+      return false;
+    }
+  }
+
+  function pruneOldStorage() {
+    try {
+      // 1. Prune temporary lesson chats down to latest 10 messages each
+      const chatsStr = localStorage.getItem('eduai_lesson_chats');
+      if (chatsStr) {
+        const chats = JSON.parse(chatsStr);
+        Object.keys(chats).forEach(k => {
+          if (chats[k].messages && chats[k].messages.length > 10) {
+            chats[k].messages = chats[k].messages.slice(-10);
+          }
+        });
+        localStorage.setItem('eduai_lesson_chats', JSON.stringify(chats));
+      }
+      // 2. Remove temporary telemetry/draft keys
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && (k.startsWith('temp_') || k.includes('_draft_bak'))) {
+          localStorage.removeItem(k);
+        }
+      }
+    } catch (err) {
+      console.warn('Error during storage prune:', err);
+    }
+  }
+
+  // Auto-wrap window.safeSetItem
+  window.safeSetItem = safeSetItem;
+
+  // ----------------------------------------------------------------
   // EXPORT
   // ----------------------------------------------------------------
   window.Api = {
@@ -214,6 +265,8 @@
     queueOperation,
     processOfflineQueue,
     ApiError,
+    safeSetItem,
+    pruneOldStorage,
 
     // Dynamic Network Topology
     getBaseUrl: getApiBase,
@@ -223,5 +276,5 @@
     queueLength: () => offlineQueue.length
   };
 
-  console.log('API utilities initialized');
+  console.log('API utilities & Storage Guard initialized');
 })();

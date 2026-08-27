@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="css/study-calendar.css?v=1.0" />
   <link rel="stylesheet" href="css/collaborative-whiteboard.css?v=1.0" />
   <link rel="stylesheet" href="css/science-calculator.css?v=1.0" />
+  <link rel="stylesheet" href="css/lesson-agent.css?v=1.0" />
   <link rel="stylesheet" href="css/workspace.css?v=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous" onerror="console.warn('KaTeX CDN offline - using plain text fallback')"></script>
@@ -131,6 +132,9 @@
           <button id="openTeacherGradingSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#0284c7,#0d9488);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(2,132,199,0.25)">
             <span>📝</span> <span>Studio e Vlerësimit (Mësuesi)</span>
           </button>
+          <button id="openLessonAgentSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#6366f1,#06b6d4);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(99,102,241,0.25)">
+            <span>📖</span> <span>Asistenti i Mësimit Aktiv</span>
+          </button>
           <button id="openSchoolOsSidebarBtn" style="width:100%;padding:9px 12px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px;font-family:inherit;box-shadow:0 2px 8px rgba(99,102,241,0.25)">
             <span>🚀</span> <span>School Mini OS Hub</span>
           </button>
@@ -197,8 +201,12 @@
         </div>
         <div class="studentList" id="studentList" role="list"></div>
         <div style="height:8px"></div>
-        <h3 class="panel-title">⚙️ Teacher Tools</h3>
+        <h3 class="panel-title">⚙️ Teacher Studio &amp; Tools</h3>
         <div style="display:flex;flex-direction:column;gap:6px">
+          <button id="openLessonPlannerSidebarBtn" class="quizBtn" style="width:100%;text-align:center;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;font-weight:700">📋 Studio Mësimore &amp; Teste 45-Min</button>
+          <button id="openSyllabusManagerSidebarBtn" class="quizBtn" style="width:100%;text-align:center;background:linear-gradient(135deg,#0284c7,#0d9488);color:white;font-weight:700">📘 Menaxheri i Progresit të Kapitujve</button>
+          <button id="openParentDigestSidebarBtn" class="quizBtn" style="width:100%;text-align:center;background:linear-gradient(135deg,#10b981,#059669);color:white;font-weight:700">📱 Raporti për Prindërit (SMS / WhatsApp)</button>
+          <button id="openSneakernetSidebarBtn" class="quizBtn" style="width:100%;text-align:center;background:linear-gradient(135deg,#f59e0b,#d97706);color:white;font-weight:700">💾 Eksport / Import USB (Air-Gapped)</button>
           <button id="generateQuizBtn" class="quizBtn" style="width:100%;text-align:center">Generate 3 Questions</button>
           <button id="quizHintBtn"     class="quizBtn" style="width:100%;text-align:center">Quick Question Ideas</button>
         </div>
@@ -281,7 +289,7 @@
   <div id="optModal" class="modal" style="max-width:480px;padding:0;overflow:hidden;border-radius:14px">
     <div style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.08)">
       <h3 style="margin:0 0 4px;color:#e0e0e0;font-size:17px">⚙️ Hardware Optimization</h3>
-      <p style="margin:0;font-size:12px;color:#8892a4">Configure ShqipAI for your specific hardware.</p>
+      <p style="margin:0;font-size:12px;color:#8892a4">Configure EduAI for your specific hardware.</p>
     </div>
     <div style="padding:20px 24px">
       <div id="optSysInfo" style="background:rgba(88,166,255,0.06);border:1px solid rgba(88,166,255,0.15);border-radius:8px;padding:12px;margin-bottom:16px;font-size:12px;color:#8892a4;font-family:'Cascadia Code',monospace">
@@ -407,6 +415,12 @@
 <script src="js/study-calendar.js?v=1.0"></script>
 <script src="js/collaborative-whiteboard.js?v=1.0"></script>
 <script src="js/science-calculator.js?v=1.0"></script>
+<script src="js/lesson-agent.js?v=1.0"></script>
+<script src="js/chapter-progress.js?v=1.0"></script>
+<script src="js/lesson-planner.js?v=1.0"></script>
+<script src="js/parent-digest.js?v=1.0"></script>
+<script src="js/voice-dialogue.js?v=1.0"></script>
+<script src="js/sneakernet-sync.js?v=1.0"></script>
 <script>
 // Initialize hardware detection, model selection, and settings
 (async function() {
@@ -465,7 +479,7 @@ if ('serviceWorker' in navigator) {
   function renderGradingOptions() {
     const opts = document.getElementById('gradingOptions');
     if (!opts || !window.GradingSystems) return;
-    const activeId = localStorage.getItem('shqipai_grading') || 'albanian';
+    const activeId = localStorage.getItem('EduAI_grading') || 'albanian';
     opts.innerHTML = '';
     Object.entries(window.GradingSystems).forEach(([id, gs]) => {
       const isActive = activeId === id;

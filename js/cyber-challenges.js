@@ -491,19 +491,19 @@ listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
     'whoami': {
       description: 'Print effective userid',
       usage: 'whoami',
-      execute: () => 'shqipai'
+      execute: () => 'EduAI'
     },
 
     'id': {
       description: 'Print real and effective user and group IDs',
       usage: 'id',
-      execute: () => 'uid=1000(shqipai) gid=1000(shqipai) groups=1000(shqipai),27(sudo),100(users)'
+      execute: () => 'uid=1000(EduAI) gid=1000(EduAI) groups=1000(EduAI),27(sudo),100(users)'
     },
 
     'pwd': {
       description: 'Print name of current/working directory',
       usage: 'pwd',
-      execute: () => '/home/shqipai/lab'
+      execute: () => '/home/EduAI/lab'
     },
 
     'date': {
@@ -551,9 +551,9 @@ udp        0      0 0.0.0.0:68              0.0.0.0:*                          `
       usage: 'ps [aux]',
       execute: () => `USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root           1  0.0  0.1 169348 11420 ?        Ss   08:00   0:02 /sbin/init
-shqipai      412  0.0  0.2  18452  8912 pts/0    Ss   08:15   0:00 -bash
-shqipai      580  0.2  1.4 340120 48120 pts/0    Sl+  08:16   0:04 node server.js
-shqipai      912  0.0  0.1  10420  3412 pts/0    R+   10:14   0:00 ps aux`
+EduAI      412  0.0  0.2  18452  8912 pts/0    Ss   08:15   0:00 -bash
+EduAI      580  0.2  1.4 340120 48120 pts/0    Sl+  08:16   0:04 node server.js
+EduAI      912  0.0  0.1  10420  3412 pts/0    R+   10:14   0:00 ps aux`
     }
   };
 
@@ -582,7 +582,7 @@ shqipai      912  0.0  0.1  10420  3412 pts/0    R+   10:14   0:00 ps aux`
       difficulty: 'Easy',
       points: 100,
       hint: 'Run: base64 -d U2hxaXBBSXtlZHVfY3liZXJfZGVmZW5kZXJfcHJvfQ==',
-      verify: (cmd, out) => (cmd.includes('base64') && out.includes('ShqipAI{')) || out.includes('edu_cyber_defender_pro')
+      verify: (cmd, out) => (cmd.includes('base64') && out.includes('EduAI{')) || out.includes('edu_cyber_defender_pro')
     },
     {
       id: 3,

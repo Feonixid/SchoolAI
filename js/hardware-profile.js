@@ -257,7 +257,7 @@
     };
 
     // Save to localStorage
-    localStorage.setItem('shqipai_hardware', JSON.stringify(hardwareInfo));
+    localStorage.setItem('EduAI_hardware', JSON.stringify(hardwareInfo));
     
     console.log('Hardware detected:', hardwareInfo);
     return hardwareInfo;
@@ -282,13 +282,13 @@
       ...hardwareInfo.customSettings,
       ...settings
     };
-    localStorage.setItem('shqipai_hardware', JSON.stringify(hardwareInfo));
+    localStorage.setItem('EduAI_hardware', JSON.stringify(hardwareInfo));
   }
 
   // Clear custom settings
   function clearCustomSettings() {
     hardwareInfo.customSettings = null;
-    localStorage.setItem('shqipai_hardware', JSON.stringify(hardwareInfo));
+    localStorage.setItem('EduAI_hardware', JSON.stringify(hardwareInfo));
   }
 
   // Get all profiles
@@ -303,7 +303,7 @@
 
   // Load saved hardware info from prior session
   function loadSaved() {
-    const saved = localStorage.getItem('shqipai_hardware');
+    const saved = localStorage.getItem('EduAI_hardware');
     if (saved) {
       try {
         hardwareInfo = JSON.parse(saved);

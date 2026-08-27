@@ -253,8 +253,8 @@
   // Save to localStorage
   function saveToStorage() {
     try {
-      localStorage.setItem('shqipai_textbooks', JSON.stringify(textbooks));
-      localStorage.setItem('shqipai_chunks', JSON.stringify(chunks));
+      localStorage.setItem('EduAI_textbooks', JSON.stringify(textbooks));
+      localStorage.setItem('EduAI_chunks', JSON.stringify(chunks));
     } catch (e) {
       console.warn('Storage full, clearing old data');
       // Keep only recent textbooks
@@ -269,8 +269,8 @@
   // Load saved textbooks
   function loadSavedTextbooks() {
     try {
-      const saved = localStorage.getItem('shqipai_textbooks');
-      const savedChunks = localStorage.getItem('shqipai_chunks');
+      const saved = localStorage.getItem('EduAI_textbooks');
+      const savedChunks = localStorage.getItem('EduAI_chunks');
       if (saved) textbooks = JSON.parse(saved);
       if (savedChunks) chunks = JSON.parse(savedChunks);
     } catch (e) {

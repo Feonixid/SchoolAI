@@ -117,7 +117,7 @@
   };
 
   // Active grading system (default: Albanian)
-  let activeGradingSystemId = localStorage.getItem('shqipai_grading') || 'albanian';
+  let activeGradingSystemId = localStorage.getItem('EduAI_grading') || 'albanian';
 
   function getGradingSystem() {
     return GRADING_SYSTEMS[activeGradingSystemId] || GRADING_SYSTEMS.albanian;
@@ -128,7 +128,7 @@
   function setGradingSystem(id) {
     if (!GRADING_SYSTEMS[id]) return;
     activeGradingSystemId = id;
-    localStorage.setItem('shqipai_grading', id);
+    localStorage.setItem('EduAI_grading', id);
     window.dispatchEvent(new CustomEvent('gradingSystemChanged', { detail: id }));
 
     // Reverse-sync curriculum if IDs match (avoid infinite loop)
@@ -319,7 +319,7 @@
     obj[keys[keys.length - 1]] = value;
   };
 
-  window.ShqipAIModels = {
+  window.EduAIModels = {
     getModeSnapshot: () => ({
       teacherMode:  AppState.ui.teacherMode,
       activeTool:   AppState.ui.activeTool,

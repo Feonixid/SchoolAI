@@ -37,7 +37,7 @@
     : window.location.origin;
 
   function getAuthHeaders() {
-    const token = sessionStorage.getItem('shqipai_session_token');
+    const token = sessionStorage.getItem('EduAI_session_token');
     return token ? { 'Authorization': `Bearer ${token}` } : {};
   }
 
@@ -49,14 +49,14 @@
         const data = await res.json();
         if (data.students && data.students.length > 0) {
           state.students.list = data.students;
-          localStorage.setItem('shqipai_students', JSON.stringify(data.students));
+          localStorage.setItem('EduAI_students', JSON.stringify(data.students));
         }
       }
     } catch (e) { console.warn('Could not sync students:', e.message); }
   }
 
   async function saveStudentToBackend(student) {
-    if (!window.Accounts?.isLoggedIn()) { localStorage.setItem('shqipai_students', JSON.stringify(state.students.list)); return; }
+    if (!window.Accounts?.isLoggedIn()) { localStorage.setItem('EduAI_students', JSON.stringify(state.students.list)); return; }
     try {
       await fetch(`${API_BASE}/api/students/${student.id}`, {
         method: 'PUT',
@@ -64,11 +64,11 @@
         body: JSON.stringify({ student })
       });
     } catch (e) { console.warn('Could not save student:', e.message); }
-    localStorage.setItem('shqipai_students', JSON.stringify(state.students.list));
+    localStorage.setItem('EduAI_students', JSON.stringify(state.students.list));
   }
 
   async function addStudentToBackend(student) {
-    if (!window.Accounts?.isLoggedIn()) { localStorage.setItem('shqipai_students', JSON.stringify(state.students.list)); return; }
+    if (!window.Accounts?.isLoggedIn()) { localStorage.setItem('EduAI_students', JSON.stringify(state.students.list)); return; }
     try {
       await fetch(`${API_BASE}/api/students`, {
         method: 'POST',
@@ -76,28 +76,28 @@
         body: JSON.stringify({ student })
       });
     } catch (e) { console.warn('Could not add student:', e.message); }
-    localStorage.setItem('shqipai_students', JSON.stringify(state.students.list));
+    localStorage.setItem('EduAI_students', JSON.stringify(state.students.list));
   }
 
   async function deleteStudentFromBackend(studentId) {
-    if (!window.Accounts?.isLoggedIn()) { localStorage.setItem('shqipai_students', JSON.stringify(state.students.list)); return; }
+    if (!window.Accounts?.isLoggedIn()) { localStorage.setItem('EduAI_students', JSON.stringify(state.students.list)); return; }
     try {
       await fetch(`${API_BASE}/api/students/${studentId}`, { method: 'DELETE', headers: { ...getAuthHeaders() } });
     } catch (e) { console.warn('Could not delete student:', e.message); }
-    localStorage.setItem('shqipai_students', JSON.stringify(state.students.list));
+    localStorage.setItem('EduAI_students', JSON.stringify(state.students.list));
   }
 
   async function loadStudents() {
-    const saved = localStorage.getItem('shqipai_students');
+    const saved = localStorage.getItem('EduAI_students');
     if (saved) { state.students.list = JSON.parse(saved); }
     else { state.students.list = DEFAULT_STUDENTS; }
     if (window.Accounts?.isLoggedIn()) { await syncStudentsWithBackend(); }
-    const loggedInId = localStorage.getItem('shqipai_logged_student');
+    const loggedInId = localStorage.getItem('EduAI_logged_student');
     if (loggedInId) { state.students.selectedId = parseInt(loggedInId); }
   }
 
   function persistStudentLogin(id) {
-    localStorage.setItem('shqipai_logged_student', id);
+    localStorage.setItem('EduAI_logged_student', id);
   }
 
   loadStudents();

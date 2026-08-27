@@ -1,12 +1,12 @@
 # Hardware-Adaptive Model Loader
 
-ShqipAI automatically selects the optimal model based on available hardware, ensuring schools can run the AI tutor on any device.
+EduAI automatically selects the optimal model based on available hardware, ensuring schools can run the AI tutor on any device.
 
 ## How It Works
 
 ### 1. Hardware Detection
 
-When ShqipAI loads, it detects:
+When EduAI loads, it detects:
 - **System Memory** (RAM)
 - **GPU** (WebGPU support, VRAM estimation)
 - **CPU Cores** (performance estimation)
@@ -40,13 +40,13 @@ const model = loader.selectModel();
 ### For Schools with Servers
 
 **Full Precision (F16)**
-- File: `shqipai-tutor-f16.gguf`
+- File: `EduAI-tutor-f16.gguf`
 - Size: ~18GB
 - Quality: Maximum
 - Requires: Server with 32GB+ VRAM
 
 **Q8 Quantization**
-- File: `shqipai-tutor-q8_0.gguf`
+- File: `EduAI-tutor-q8_0.gguf`
 - Size: ~9GB
 - Quality: Near-maximum
 - Requires: Workstation with 16GB+ VRAM
@@ -54,7 +54,7 @@ const model = loader.selectModel();
 ### For Schools with Gaming PCs
 
 **Q4_K_M Quantization**
-- File: `shqipai-tutor-q4_k_m.gguf`
+- File: `EduAI-tutor-q4_k_m.gguf`
 - Size: ~5GB
 - Quality: High
 - Requires: Gaming PC with 8GB+ VRAM
@@ -62,13 +62,13 @@ const model = loader.selectModel();
 ### For Schools with Budget Laptops
 
 **E4B Q4_K_M** (Recommended for most schools)
-- File: `shqipai-tutor-e4b-q4_k_m.gguf`
+- File: `EduAI-tutor-e4b-q4_k_m.gguf`
 - Size: ~2.5GB
 - Quality: Good
 - Requires: Any laptop with 4GB+ RAM
 
 **E4B Q2_K** (For very old hardware)
-- File: `shqipai-tutor-e4b-q2_k.gguf`
+- File: `EduAI-tutor-e4b-q2_k.gguf`
 - Size: ~1.5GB
 - Quality: Acceptable
 - Requires: Old laptop with 2GB+ RAM
@@ -77,10 +77,10 @@ const model = loader.selectModel();
 
 ### Option 1: Automatic (Recommended)
 
-ShqipAI automatically selects the model when you first load it:
+EduAI automatically selects the model when you first load it:
 
 1. Install Ollama: https://ollama.ai
-2. Open ShqipAI in browser
+2. Open EduAI in browser
 3. The system detects hardware and recommends model
 4. Follow the instructions shown
 
@@ -90,32 +90,32 @@ If you know your hardware:
 
 **For Server (32GB+ VRAM):**
 ```bash
-ollama pull shqipai-tutor-f16
-ollama run shqipai-tutor-f16
+ollama pull EduAI-tutor-f16
+ollama run EduAI-tutor-f16
 ```
 
 **For Workstation (16GB+ VRAM):**
 ```bash
-ollama pull shqipai-tutor-q8
-ollama run shqipai-tutor-q8
+ollama pull EduAI-tutor-q8
+ollama run EduAI-tutor-q8
 ```
 
 **For Gaming PC (8GB+ VRAM):**
 ```bash
-ollama pull shqipai-tutor-q4
-ollama run shqipai-tutor-q4
+ollama pull EduAI-tutor-q4
+ollama run EduAI-tutor-q4
 ```
 
 **For Budget Laptop (4GB+ RAM):**
 ```bash
-ollama pull shqipai-tutor-e4b-q4
-ollama run shqipai-tutor-e4b-q4
+ollama pull EduAI-tutor-e4b-q4
+ollama run EduAI-tutor-e4b-q4
 ```
 
 **For Old Laptop (2GB+ RAM):**
 ```bash
-ollama pull shqipai-tutor-e4b-q2
-ollama run shqipai-tutor-e4b-q2
+ollama pull EduAI-tutor-e4b-q2
+ollama run EduAI-tutor-e4b-q2
 ```
 
 ### Option 3: Custom Modelfile
@@ -124,11 +124,11 @@ Create a `Modelfile` for your hardware:
 
 ```bash
 # Download the appropriate GGUF file
-wget https://huggingface.co/YOUR_USERNAME/shqipai-tutor/resolve/main/shqipai-tutor-e4b-q4_k_m.gguf
+wget https://huggingface.co/YOUR_USERNAME/EduAI-tutor/resolve/main/EduAI-tutor-e4b-q4_k_m.gguf
 
 # Create Modelfile
 cat > Modelfile << EOF
-FROM ./shqipai-tutor-e4b-q4_k_m.gguf
+FROM ./EduAI-tutor-e4b-q4_k_m.gguf
 TEMPLATE """{{ .System }}
 
 {{ .Prompt }}"""
@@ -138,8 +138,8 @@ SYSTEM You are a patient educational tutor.
 EOF
 
 # Create and run
-ollama create shqipai-tutor -f Modelfile
-ollama run shqipai-tutor
+ollama create EduAI-tutor -f Modelfile
+ollama run EduAI-tutor
 ```
 
 ## Quality vs Performance
@@ -203,14 +203,14 @@ All models work **completely offline** after download:
 
 Make sure you've pulled the model:
 ```bash
-ollama pull shqipai-tutor-e4b-q4
+ollama pull EduAI-tutor-e4b-q4
 ```
 
 ### "Out of memory"
 
 Try a smaller model:
 ```bash
-ollama run shqipai-tutor-e4b-q2
+ollama run EduAI-tutor-e4b-q2
 ```
 
 ### "Slow response"

@@ -1,12 +1,12 @@
-# ShqipAI — Classroom-Deployed Zero-Internet Educational AI Platform
+# EduAI — Classroom-Deployed Zero-Internet Educational AI Platform
 
-**ShqipAI** is an offline-first, classroom-deployed educational operating system and AI learning platform. Built for schools with zero or intermittent internet connectivity, ShqipAI runs on a single teacher laptop and connects up to 30+ student devices over local classroom Wi-Fi with zero configuration, no app downloads, and no student account friction. When internet access is available, it reconciles and synchronizes attendance, grades, and progress to central school cloud servers using a multi-master conflict resolution engine.
+**EduAI** is an offline-first, classroom-deployed educational operating system and AI learning platform. Built for schools with zero or intermittent internet connectivity, EduAI runs on a single teacher laptop and connects up to 30+ student devices over local classroom Wi-Fi with zero configuration, no app downloads, and no student account friction. When internet access is available, it reconciles and synchronizes attendance, grades, and progress to central school cloud servers using a multi-master conflict resolution engine.
 
 ---
 
 ## 💡 Why We Built This
 
-1.8 billion students worldwide attend schools without reliable internet. Teachers in rural communities, developing nations, and conflict zones shouldn't need $50/month SaaS subscriptions or always-on broadband to give their students access to AI-powered learning. Student data should never leave the classroom network unless the school explicitly authorizes it. ShqipAI was designed from day one for environments where connectivity is measured in hours per week — or zero. It's the only educational AI platform that gets *better* in low-bandwidth environments, not worse.
+1.8 billion students worldwide attend schools without reliable internet. Teachers in rural communities, developing nations, and conflict zones shouldn't need $50/month SaaS subscriptions or always-on broadband to give their students access to AI-powered learning. Student data should never leave the classroom network unless the school explicitly authorizes it. EduAI was designed from day one for environments where connectivity is measured in hours per week — or zero. It's the only educational AI platform that gets *better* in low-bandwidth environments, not worse.
 
 ---
 
@@ -22,7 +22,7 @@
                             │ (Intermittent Sync — Full or Delta)
 ┌───────────────────────────▼────────────────────────────┐
 │          Teacher Laptop (Local Classroom Hub)          │
-│     - Runs ShqipAI Core + Local LLM (Ollama)          │
+│     - Runs EduAI Core + Local LLM (Ollama)          │
 │     - Teacher Dashboard & Live Student Monitor         │
 │     - Generates 6-Letter Room Code (e.g. "TEACH7A")   │
 │     - 100% Offline Database (JSON / Local Storage)     │
@@ -89,7 +89,7 @@ Result:
 
 ## ⚙️ Hardware-Adaptive Optimization Engine
 
-ShqipAI detects CPU cores, RAM, and GPU at startup and selects the right model, context window, thread count, and rendering strategy automatically. An Intel Core i5-4500 (4 cores, 8GB RAM) runs fundamentally different code paths than a Ryzen 9 (16 cores, 32GB RAM):
+EduAI detects CPU cores, RAM, and GPU at startup and selects the right model, context window, thread count, and rendering strategy automatically. An Intel Core i5-4500 (4 cores, 8GB RAM) runs fundamentally different code paths than a Ryzen 9 (16 cores, 32GB RAM):
 
 | Tier | CPU | Model | Context | KV Cache | Threads | Batch | Rendering | Docker |
 |---|---|---|---|---|---|---|---|---|

@@ -32,13 +32,13 @@
 
   // Track subject switches
   window.addEventListener('subjectSwitched', (e) => {
-    const studentId = parseInt(localStorage.getItem('shqipai_logged_student'));
+    const studentId = parseInt(localStorage.getItem('EduAI_logged_student'));
     if (studentId) updateSession(studentId, { subject: e.detail });
   });
 
   // Mark student online on any activity
   function heartbeat() {
-    const studentId = parseInt(localStorage.getItem('shqipai_logged_student'));
+    const studentId = parseInt(localStorage.getItem('EduAI_logged_student'));
     if (studentId) updateSession(studentId, {});
   }
 

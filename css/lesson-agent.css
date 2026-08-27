@@ -1,0 +1,167 @@
+/* css/lesson-agent.css - Styling for Isolated Lesson-Specific AI Workspace */
+
+.lesson-agent-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5500;
+  padding: 16px;
+}
+
+.lesson-agent-window {
+  width: 900px;
+  max-width: 96vw;
+  height: 650px;
+  max-height: 90vh;
+  background: var(--card-bg, #1e293b);
+  border: 1px solid var(--border, rgba(255,255,255,0.12));
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.lesson-agent-header {
+  padding: 16px 20px;
+  background: var(--nav-bg, #0f172a);
+  border-bottom: 1px solid var(--border, rgba(255,255,255,0.08));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lesson-badge-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.lesson-agent-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.lesson-sidebar {
+  width: 300px;
+  background: rgba(15, 23, 42, 0.4);
+  border-right: 1px solid var(--border, rgba(255,255,255,0.08));
+  padding: 16px;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.lesson-objective-card {
+  padding: 12px;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 10px;
+}
+
+.lesson-excerpt-card {
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.lesson-chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg, #1e293b);
+  overflow: hidden;
+}
+
+.lesson-chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lesson-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  color: var(--text-muted);
+}
+
+.lesson-msg-row {
+  display: flex;
+  width: 100%;
+}
+
+.lesson-msg-row.user {
+  justify-content: flex-end;
+}
+
+.lesson-msg-row.assistant {
+  justify-content: flex-start;
+}
+
+.lesson-msg-bubble {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.lesson-msg-bubble.user {
+  background: #6366f1;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.lesson-msg-bubble.assistant {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  border-bottom-left-radius: 4px;
+}
+
+.lesson-chat-input-row {
+  padding: 14px 20px;
+  background: var(--nav-bg, #0f172a);
+  border-top: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  display: flex;
+  gap: 10px;
+}
+
+.lesson-input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.12));
+  color: var(--text);
+  font-size: 13.5px;
+  outline: none;
+}
+
+.lesson-input:focus {
+  border-color: #6366f1;
+}

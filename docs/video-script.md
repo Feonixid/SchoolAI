@@ -1,4 +1,4 @@
-# ShqipAI Video Script (3 Minutes)
+# EduAI Video Script (3 Minutes)
 
 ## Gemma 4 Good Hackathon Submission
 
@@ -21,10 +21,10 @@ The digital divide in education isn't closing. It's widening."
 
 ### SCENE 2: THE SOLUTION REVEAL (0:30 - 1:00)
 
-**Visual**: Close-up of an old laptop (think N4500 processor, 4GB RAM). Screen shows ShqipAI loading. No WiFi icon.
+**Visual**: Close-up of an old laptop (think N4500 processor, 4GB RAM). Screen shows EduAI loading. No WiFi icon.
 
 **Narrator**:
-"Meet ShqipAI. An AI tutor that works anywhere, on anything, without internet.
+"Meet EduAI. An AI tutor that works anywhere, on anything, without internet.
 
 Powered by Gemma 4 running locally via Ollama. No cloud. No API calls. No data leaving your device."
 
@@ -39,7 +39,7 @@ Powered by Gemma 4 running locally via Ollama. No cloud. No API calls. No data l
 **Visual**: Settings panel showing detected hardware: "CPU: 2 cores (Low tier)" "RAM: 4GB"
 
 **Narrator**:
-"ShqipAI automatically detects your hardware and optimizes itself.
+"EduAI automatically detects your hardware and optimizes itself.
 
 On this old laptop with just 4GB of RAM, it uses Gemma 3 2B with compressed KV cache.
 
@@ -90,17 +90,17 @@ Because education should be for everyone."
 **Visual**: Montage of different use cases - student studying, teacher in classroom, person with visual impairment using screen reader
 
 **Narrator**:
-"ShqipAI proves AI education doesn't need the cloud.
+"EduAI proves AI education doesn't need the cloud.
 
 Privacy by design. Works offline. Adapts to any hardware. Speaks your language.
 
 The technology exists. The models are open. The impact is waiting to happen.
 
-This is ShqipAI. Education AI for everyone, everywhere."
+This is EduAI. Education AI for everyone, everywhere."
 
 **Visual**: Logo animation with tagline
 
-**Text on screen**: "ShqipAI - Education AI for Everyone"
+**Text on screen**: "EduAI - Education AI for Everyone"
 
 ---
 
@@ -133,7 +133,7 @@ This is ShqipAI. Education AI for everyone, everywhere."
 
 ## Thumbnail Concept
 
-**Image**: Split screen - old laptop on left, modern desktop on right, both showing ShqipAI
+**Image**: Split screen - old laptop on left, modern desktop on right, both showing EduAI
 
 **Text**: "AI Tutor That Works OFFLINE"
 

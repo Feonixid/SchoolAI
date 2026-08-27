@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate synthetic training data for ShqipAI Tutor fine-tuning.
+Generate synthetic training data for EduAI Tutor fine-tuning.
 
 This script generates high-quality educational conversations across
 subjects, levels, and languages for pedagogical fine-tuning.

@@ -12,7 +12,7 @@
     const root = document.documentElement;
 
     // High Contrast Mode
-    if (localStorage.getItem('shqipai_highContrast') === 'true') {
+    if (localStorage.getItem('EduAI_highContrast') === 'true') {
       root.classList.add('high-contrast');
       console.log('High contrast mode enabled');
     } else {
@@ -20,7 +20,7 @@
     }
 
     // Dyslexia Font
-    if (localStorage.getItem('shqipai_dyslexiaFont') === 'true') {
+    if (localStorage.getItem('EduAI_dyslexiaFont') === 'true') {
       root.classList.add('dyslexia-font');
       loadDyslexiaFont();
       console.log('Dyslexia font enabled');
@@ -29,11 +29,11 @@
     }
 
     // Font Size
-    const fontSize = localStorage.getItem('shqipai_fontSize') || '16';
+    const fontSize = localStorage.getItem('EduAI_fontSize') || '16';
     root.style.fontSize = `${fontSize}px`;
 
     // Screen Reader Mode
-    if (localStorage.getItem('shqipai_screenReader') === 'true') {
+    if (localStorage.getItem('EduAI_screenReader') === 'true') {
       root.classList.add('screen-reader-mode');
       enhanceARIA();
       console.log('Screen reader mode enabled');
@@ -42,7 +42,7 @@
     }
 
     // Reduce Motion
-    if (localStorage.getItem('shqipai_reduceMotion') === 'true') {
+    if (localStorage.getItem('EduAI_reduceMotion') === 'true') {
       root.classList.add('reduce-motion');
       console.log('Reduced motion enabled');
     } else {
@@ -148,16 +148,16 @@
 
   // Toggle high contrast
   function toggleHighContrast() {
-    const current = localStorage.getItem('shqipai_highContrast') === 'true';
-    localStorage.setItem('shqipai_highContrast', (!current).toString());
+    const current = localStorage.getItem('EduAI_highContrast') === 'true';
+    localStorage.setItem('EduAI_highContrast', (!current).toString());
     applySettings();
     window.Toast?.info(current ? 'High contrast disabled' : 'High contrast enabled');
   }
 
   // Toggle dyslexia font
   function toggleDyslexiaFont() {
-    const current = localStorage.getItem('shqipai_dyslexiaFont') === 'true';
-    localStorage.setItem('shqipai_dyslexiaFont', (!current).toString());
+    const current = localStorage.getItem('EduAI_dyslexiaFont') === 'true';
+    localStorage.setItem('EduAI_dyslexiaFont', (!current).toString());
     applySettings();
     window.Toast?.info(current ? 'Dyslexia font disabled' : 'Dyslexia font enabled');
   }
@@ -165,31 +165,31 @@
   // Set font size
   function setFontSize(size) {
     const sizeNum = Math.max(12, Math.min(24, parseInt(size) || 16));
-    localStorage.setItem('shqipai_fontSize', sizeNum.toString());
+    localStorage.setItem('EduAI_fontSize', sizeNum.toString());
     applySettings();
   }
 
   // Increase font size
   function increaseFontSize() {
-    const current = parseInt(localStorage.getItem('shqipai_fontSize') || '16');
+    const current = parseInt(localStorage.getItem('EduAI_fontSize') || '16');
     setFontSize(current + 2);
   }
 
   // Decrease font size
   function decreaseFontSize() {
-    const current = parseInt(localStorage.getItem('shqipai_fontSize') || '16');
+    const current = parseInt(localStorage.getItem('EduAI_fontSize') || '16');
     setFontSize(current - 2);
   }
 
   // Get current settings
   function getSettings() {
     return {
-      highContrast: localStorage.getItem('shqipai_highContrast') === 'true',
-      dyslexiaFont: localStorage.getItem('shqipai_dyslexiaFont') === 'true',
-      fontSize: parseInt(localStorage.getItem('shqipai_fontSize') || '16'),
-      screenReader: localStorage.getItem('shqipai_screenReader') === 'true',
-      reduceMotion: localStorage.getItem('shqipai_reduceMotion') === 'true',
-      readAloud: localStorage.getItem('shqipai_readAloud') === 'true'
+      highContrast: localStorage.getItem('EduAI_highContrast') === 'true',
+      dyslexiaFont: localStorage.getItem('EduAI_dyslexiaFont') === 'true',
+      fontSize: parseInt(localStorage.getItem('EduAI_fontSize') || '16'),
+      screenReader: localStorage.getItem('EduAI_screenReader') === 'true',
+      reduceMotion: localStorage.getItem('EduAI_reduceMotion') === 'true',
+      readAloud: localStorage.getItem('EduAI_readAloud') === 'true'
     };
   }
 
@@ -227,7 +227,7 @@
 
     // Re-apply on storage change (for multi-tab sync)
     window.addEventListener('storage', (e) => {
-      if (e.key?.startsWith('shqipai_')) {
+      if (e.key?.startsWith('EduAI_')) {
         applySettings();
       }
     });

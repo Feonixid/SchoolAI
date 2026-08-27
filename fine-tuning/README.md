@@ -1,4 +1,4 @@
-# ShqipAI Fine-Tuning Guide (Complete Beginner Edition)
+# EduAI Fine-Tuning Guide (Complete Beginner Edition)
 
 ## What You Need (All Free!)
 
@@ -15,7 +15,7 @@
 - Supports audio input (speech recognition)
 - 128K context window
 - **Beats Gemma 3 27B on benchmarks**
-- Perfect for ShqipAI's target users
+- Perfect for EduAI's target users
 
 **Benchmarks:**
 - E4B outperforms Gemma 3 27B on reasoning
@@ -73,7 +73,7 @@ T4 (1 hour)     -->  Convert to GGUF (or use Unsloth's built-in export)
 3. Click your profile picture > **Settings**
 4. Click **Access Tokens** on the left
 5. Click **Create new token**
-6. Name it: `shqipai-training`
+6. Name it: `EduAI-training`
 7. Select **Read** permission
 8. Click **Generate token**
 9. **COPY THE TOKEN** - you'll need it!
@@ -100,7 +100,7 @@ T4 (1 hour)     -->  Convert to GGUF (or use Unsloth's built-in export)
 6. Edit the notebook: Replace `YOUR_HUGGING_FACE_TOKEN_HERE` with your token
 7. Click **Run All**
 8. **WAIT ~4 HOURS** - Unsloth is 2x faster!
-9. Download `shqipai-tutor-e4b/unsloth.Q4_K_M.gguf`
+9. Download `EduAI-tutor-e4b/unsloth.Q4_K_M.gguf`
 
 ### STEP 4: Convert to GGUF
 
@@ -109,7 +109,7 @@ T4 (1 hour)     -->  Convert to GGUF (or use Unsloth's built-in export)
 3. Upload: `phase3-convert-gguf.ipynb`
 4. Upload your trained model files
 5. Click **Run All**
-6. Download `shqipai-tutor-q4_k_m.gguf`
+6. Download `EduAI-tutor-q4_k_m.gguf`
 
 ### STEP 5: Use with Ollama
 
@@ -117,7 +117,7 @@ On your computer:
 
 ```bash
 # Create Modelfile
-echo 'FROM ./shqipai-tutor-q4_k_m.gguf
+echo 'FROM ./EduAI-tutor-q4_k_m.gguf
 TEMPLATE """{{ .System }}
 
 {{ .Prompt }}"""
@@ -126,10 +126,10 @@ PARAMETER num_ctx 4096
 SYSTEM You are a patient educational tutor.' > Modelfile
 
 # Create model
-ollama create shqipai-tutor -f Modelfile
+ollama create EduAI-tutor -f Modelfile
 
 # Run it!
-ollama run shqipai-tutor
+ollama run EduAI-tutor
 ```
 
 ---

@@ -14,8 +14,8 @@
     console.log('🔗 API Base URL:', API_BASE);
 
     // Local session storage
-    const SESSION_KEY = 'shqipai_session';
-    const TOKEN_KEY = 'shqipai_session_token';
+    const SESSION_KEY = 'EduAI_session';
+    const TOKEN_KEY = 'EduAI_session_token';
 
     // Current user state
     let currentUser = null;
@@ -166,7 +166,7 @@
         }
         
         // Dispatch logout event for memory.js and other listeners
-        window.dispatchEvent(new CustomEvent('shqipai-logout'));
+        window.dispatchEvent(new CustomEvent('EduAI-logout'));
         
         if (window.electronAPI && window.electronAPI.loginStatusChanged) {
             window.electronAPI.loginStatusChanged(null);
@@ -288,7 +288,7 @@
             }
 
             // Dispatch login event for personalization modal
-            window.dispatchEvent(new CustomEvent('shqipai-login', { detail: { user } }));
+            window.dispatchEvent(new CustomEvent('EduAI-login', { detail: { user } }));
         }
     }
 

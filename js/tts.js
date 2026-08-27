@@ -26,7 +26,7 @@
 
         utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = lang;
-        utterance.rate = parseFloat(localStorage.getItem('shqipai_tts_rate') || '1.0');
+        utterance.rate = parseFloat(localStorage.getItem('EduAI_tts_rate') || '1.0');
         utterance.pitch = 1;
         utterance.volume = 1;
 
@@ -116,7 +116,7 @@
     if (!cleanText) return;
 
     const lang = getTTSLanguage();
-    const rate = parseFloat(localStorage.getItem('shqipai_tts_rate') || '1.0');
+    const rate = parseFloat(localStorage.getItem('EduAI_tts_rate') || '1.0');
 
     console.log(`TTS: Speaking in ${lang} at rate ${rate}`);
 
@@ -153,12 +153,12 @@
 
   // Set speech rate
   function setRate(rate) {
-    localStorage.setItem('shqipai_tts_rate', rate.toString());
+    localStorage.setItem('EduAI_tts_rate', rate.toString());
   }
 
   // Get speech rate
   function getRate() {
-    return parseFloat(localStorage.getItem('shqipai_tts_rate') || '1.0');
+    return parseFloat(localStorage.getItem('EduAI_tts_rate') || '1.0');
   }
 
   // Add "Read Aloud" button to messages
@@ -199,7 +199,7 @@
 
   // Auto-read if enabled
   function autoRead(text) {
-    if (localStorage.getItem('shqipai_readAloud') === 'true') {
+    if (localStorage.getItem('EduAI_readAloud') === 'true') {
       speak(text);
     }
   }

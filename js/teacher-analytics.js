@@ -57,13 +57,13 @@
 
     // Persist
     try {
-      localStorage.setItem('shqipai_analytics', JSON.stringify(state.analytics));
+      localStorage.setItem('EduAI_analytics', JSON.stringify(state.analytics));
     } catch (e) { /* storage full */ }
   }
 
   // Restore from localStorage
   try {
-    const saved = localStorage.getItem('shqipai_analytics');
+    const saved = localStorage.getItem('EduAI_analytics');
     if (saved) {
       const parsed = JSON.parse(saved);
       Object.assign(state.analytics, parsed);
@@ -218,7 +218,7 @@
         state.analytics.queries = [];
         state.analytics.timeSpent = {};
         state.analytics.topicHits = {};
-        localStorage.removeItem('shqipai_analytics');
+        localStorage.removeItem('EduAI_analytics');
         overlay.remove();
         window.Toast?.success('Analytics data cleared');
       }

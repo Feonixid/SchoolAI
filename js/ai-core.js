@@ -227,7 +227,7 @@
     row.id        = 'thinking-indicator';
     const bubble  = document.createElement('div');
     bubble.className = 'bubble thinking';
-    const subjectLabel = window.Subjects ? window.Subjects.getActive().label : 'ShqipAI';
+    const subjectLabel = window.Subjects ? window.Subjects.getActive().label : 'EduAI';
     bubble.textContent = `${subjectLabel} is thinking…`;
     row.appendChild(bubble);
     chatDiv.appendChild(row);
@@ -338,6 +338,15 @@
       }
     }
 
+    // Add Teacher Chapter & Syllabus Progress (completed vs current vs upcoming)
+    if (window.ChapterProgress) {
+      const activeSubject = window.Subjects?.getActive();
+      const syllabusCtx = window.ChapterProgress.getSyllabusAIContext(activeSubject?.id, state.academic?.activeGrade);
+      if (syllabusCtx) {
+        systemPrompt += '\n\n' + syllabusCtx;
+      }
+    }
+
     // Add Smart Context: student profile, grades, assignments, workspace,
     // terminal, analytics — all modular based on active subject tab
     if (window.AIContext) {
@@ -428,7 +437,7 @@
       const useStreaming = profileSettings.streaming !== false;
 
       // Determine backend (Ollama vs WebLLM)
-      const preferWebLLM = localStorage.getItem('shqipai_backend') === 'webllm';
+      const preferWebLLM = localStorage.getItem('EduAI_backend') === 'webllm';
       let assistantMessage = '';
 
       // Try WebLLM first if preferred and available
@@ -456,7 +465,7 @@
       window.Multimodal?.clearImage();
 
       // Auto-read if enabled
-      if (window.TTS && localStorage.getItem('shqipai_readAloud') === 'true') {
+      if (window.TTS && localStorage.getItem('EduAI_readAloud') === 'true') {
         window.TTS.speak(assistantMessage);
       }
 

@@ -10,7 +10,7 @@
 
   // Inject base styles once
   const style = document.createElement('style');
-  style.id = 'shqipai-dialog-styles';
+  style.id = 'EduAI-dialog-styles';
   style.textContent = `
     .sai-dialog-overlay {
       position: fixed; inset: 0;
@@ -97,7 +97,7 @@
       color: #fff;
     }
   `;
-  if (!document.getElementById('shqipai-dialog-styles')) {
+  if (!document.getElementById('EduAI-dialog-styles')) {
     document.head.appendChild(style);
   }
 
@@ -111,7 +111,7 @@
       overlay.className = 'sai-dialog-overlay';
       overlay.innerHTML = `
         <div class="sai-dialog-box">
-          <div class="sai-dialog-title">ShqipAI</div>
+          <div class="sai-dialog-title">EduAI</div>
           <div class="sai-dialog-msg">${message}</div>
           <input class="sai-dialog-input" type="text" value="${defaultValue.replace(/"/g, '&quot;')}" />
           <div class="sai-dialog-btns">
@@ -191,7 +191,7 @@
       overlay.className = 'sai-dialog-overlay';
       overlay.innerHTML = `
         <div class="sai-dialog-box">
-          <div class="sai-dialog-title">ShqipAI</div>
+          <div class="sai-dialog-title">EduAI</div>
           <div class="sai-dialog-msg">${message}</div>
           <div class="sai-dialog-btns">
             <button class="sai-btn sai-btn-primary" id="sai-ok">OK</button>
