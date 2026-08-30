@@ -4,13 +4,13 @@
 
 ---
 
-## 💡 Why We Built This
+## Why We Built This
 
 1.8 billion students worldwide attend schools without reliable internet. Teachers in rural communities, developing nations, and resource-constrained environments shouldn't need $50/month SaaS subscriptions or always-on broadband to give their students access to state-of-the-art AI-powered learning. Student data should never leave the classroom network unless the school explicitly authorizes it. EduAI was designed from day one to eliminate administrative and instructional friction, automate repetitive grading and scheduling, and make high-quality, adaptive education universally accessible.
 
 ---
 
-## 🏫 Core Architecture: The Classroom Mesh Model
+## Core Architecture: The Classroom Mesh Model
 
 ```
 ┌────────────────────────────────────────────────────────┐
@@ -38,39 +38,39 @@
 
 ---
 
-## 🏛️ The Autonomous School OS Suite
+## The Autonomous School OS Suite
 
-### 1. 🤖 Autonomous Auto-Grading & Remediation Copilot
+### 1. Autonomous Auto-Grading & Remediation Copilot
 - Evaluates written answers, math derivations, essays, and lab steps against official standards (1–10 MAS, 1–7 IB Criterion, 0–100% US, 1–9 GCSE).
 - Pinpoints the exact line or concept where the student went off track.
 - Instantly constructs and assigns a tailored 3-question remedial drill targeting the specific misconception.
 
-### 2. 🧠 Adaptive Knowledge-Graph Mastery Engine
+### 2. Adaptive Knowledge-Graph Mastery Engine
 - Maps all curriculum competencies into a directed dependency graph using Bayesian Knowledge Tracing (BKT).
 - Fast-tracks advanced learners ($\ge 85\%$ mastery) to Olympiad and Matura extension challenges; scaffolds struggling learners ($< 60\%$) with visual interactive simulators.
 
-### 3. 🏫 Autonomous Principal, Timetables & Dropout Risk Detector
+### 3. Autonomous Principal, Timetables & Dropout Risk Detector
 - Generates conflict-free master weekly timetables across classrooms, teachers, and grade tiers (1–12).
 - **Automated Substitute Teacher Mode**: Generates an automated 45-minute self-guided interactive lesson plan if a teacher is absent.
 - **Early-Warning Dropout Predictor**: Calculates at-risk indices based on attendance velocity and grade trends.
 
-### 4. 📽️ Interactive Smartboard Classroom Conductor
+### 4. Interactive Smartboard Classroom Conductor
 - High-contrast, large-format smartboard interface for front-of-class projection.
 - Live 5-phase countdown timer with 1-click interactive physics/chemistry simulator popouts, instant class polling, and live team buzzer battles.
 
-### 5. 🔒 Exam Lockdown & Anti-Cheat Integrity Engine
+### 5. Exam Lockdown & Anti-Cheat Integrity Engine
 - Enforces fullscreen mode, intercepts tab switches (`visibilitychange`), logs window defocus (`blur`), and disables copy/paste/cut.
 - Persists a timestamped audit log directly into the teacher's gradebook record.
 
-### 6. 📱 Parent Offline Progress Card & SMS Exporter
+### 6. Parent Offline Progress Card & SMS Exporter
 - Generates formatted SMS/WhatsApp progress reports for parents in rural areas with 1 click.
 
-### 7. 💾 Air-Gapped Sneakernet USB Sync Ledger
+### 7. Air-Gapped Sneakernet USB Sync Ledger
 - Enables 100% air-gapped schools to export full offline snapshots to a portable JSON file on a USB flash drive.
 
 ---
 
-## ⚙️ Hardware-Adaptive Optimization Engine
+## Hardware-Adaptive Optimization Engine
 
 EduAI detects CPU cores, RAM, and GPU at startup and selects the right model, context window, thread count, and rendering strategy automatically:
 
@@ -84,7 +84,7 @@ EduAI detects CPU cores, RAM, and GPU at startup and selects the right model, co
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Windows
 Double-click `start_server.bat` to launch the classroom node.
@@ -109,7 +109,7 @@ node server.js
 
 ---
 
-## 🧪 Automated Test Suite
+## Automated Test Suite
 
 All 34 test suites are automated and executed with Jest:
 ```bash
@@ -124,7 +124,7 @@ Time:        29.352 s
 
 ---
 
-## 🔒 Security, FERPA & GDPR Compliance
+## Security, FERPA & GDPR Compliance
 - **Zero-Cloud Requirement**: Student PII, homework responses, and chat logs never leave the classroom network unless explicitly authorized.
 - **1-Click Anonymized Exporter**: Strips student names and IP addresses with deterministic pseudonymization hashes for official research or district reporting.
 - **Role-Based Access Control (RBAC)**: Teacher management tools and grading panels are guarded with cryptographic session verification.
